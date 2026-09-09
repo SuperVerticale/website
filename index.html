@@ -72,13 +72,19 @@
       }
 
       @media (max-width: 600px) {
+        .background-videos {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          grid-template-rows: repeat(3, minmax(0, 1fr));
+          gap: 0.75rem;
+          padding: 0.75rem;
+          row-gap: 0.75rem;
+        }
+
         .background-video {
           object-fit: contain;
           object-position: center;
-        }
-
-        .background-videos {
-          row-gap: 2rem;
+          transform: scale(0.99);
+          transform-origin: center center;
         }
       }
 
@@ -150,31 +156,31 @@
   <body>
     <div class="background-videos" aria-hidden="true">
       <video class="background-video" autoplay muted loop playsinline>
-        <source src="assets/run_wine.mov" type="video/mp4" />
+        <source src="assets/run_wine-mobile.mp4" type="video/mp4" />
       </video>
       <video class="background-video" autoplay muted loop playsinline>
-        <source src="assets/run_wine.mov" type="video/mp4" />
+        <source src="assets/run_wine-mobile.mp4" type="video/mp4" />
       </video>
       <video class="background-video" autoplay muted loop playsinline>
-        <source src="assets/run_wine.mov" type="video/mp4" />
+        <source src="assets/run_wine-mobile.mp4" type="video/mp4" />
       </video>
       <video class="background-video" autoplay muted loop playsinline>
-        <source src="assets/run_wine.mov" type="video/mp4" />
+        <source src="assets/run_wine-mobile.mp4" type="video/mp4" />
       </video>
       <video class="background-video" autoplay muted loop playsinline>
-        <source src="assets/run_wine.mov" type="video/mp4" />
+        <source src="assets/run_wine-mobile.mp4" type="video/mp4" />
       </video>
       <video class="background-video" autoplay muted loop playsinline>
-        <source src="assets/run_wine.mov" type="video/mp4" />
+        <source src="assets/run_wine-mobile.mp4" type="video/mp4" />
       </video>
       <video class="background-video" autoplay muted loop playsinline>
-        <source src="assets/run_wine.mov" type="video/mp4" />
+        <source src="assets/run_wine-mobile.mp4" type="video/mp4" />
       </video>
       <video class="background-video" autoplay muted loop playsinline>
-        <source src="assets/run_wine.mov" type="video/mp4" />
+        <source src="assets/run_wine-mobile.mp4" type="video/mp4" />
       </video>
       <video class="background-video" autoplay muted loop playsinline>
-        <source src="assets/run_wine.mov" type="video/mp4" />
+        <source src="assets/run_wine-mobile.mp4" type="video/mp4" />
       </video>
     </div>
     <main>
