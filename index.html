@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#10231f" />
+    <meta
+      name="description"
+      content="Super Verticale trailrunning event."
+    />
+    <title>Super Verticale</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --brown: rgb(61, 27, 15);
+        --olive: rgb(99, 93, 35);
+        --rust: rgb(157, 47, 0);
+        --neon: rgb(216, 245, 0);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        min-height: 100%;
+        margin: 0;
+      }
+
+      body {
+        display: grid;
+        min-height: 100vh;
+        place-items: center;
+        overflow: hidden;
+        background: var(--brown);
+        color: var(--rust);
+        font-family: Georgia, 'Times New Roman', serif;
+      }
+
+      main {
+        padding: 2rem;
+        text-align: center;
+      }
+      
+      .credit {
+        position: fixed;
+        right: 1rem;
+        bottom: 1rem;
+        color: var(--neon);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.65rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+      }
+
+      .logo {
+        width: min(88vw, 31rem);
+        height: auto;
+      }
+
+      .logo-mark {
+        fill: none;
+        stroke: var(--rust);
+        stroke-linecap: square;
+        stroke-linejoin: miter;
+        stroke-width: 3;
+      }
+
+      .logo-type {
+        fill: var(--neon);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 40px;
+        font-weight: 800;
+        letter-spacing: 3px;
+      }
+
+      .logo-subtitle {
+        fill: var(--rust);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 5px;
+      }
+
+      @media (prefers-reduced-motion: no-preference) {
+        .logo {
+          animation: arrive 900ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+        }
+      }
+
+      @keyframes arrive {
+        from {
+          opacity: 0;
+          transform: translateY(1rem);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <svg
+        class="logo"
+        viewBox="0 0 500 190"
+        role="img"
+        aria-labelledby="logo-title logo-description"
+      >
+        <title id="logo-title">Super Verticale</title>
+        <desc id="logo-description">Logo for the Super Verticale trailrunning event</desc>
+        <polyline
+          class="logo-mark"
+          points="48,92 104,24 132,56 170,14 232,92"
+        />
+        <polyline
+          class="logo-mark"
+          points="222,92 264,43 283,65 317,25 367,92"
+          opacity=".72"
+        />
+        <text class="logo-type" x="250" y="139" text-anchor="middle">SUPER VERTICALE</text>
+        <text class="logo-subtitle" x="250" y="165" text-anchor="middle">UP WE GO</text>
+      </svg>
+    </main>
+    <small class="credit">by CAPRA</small>
+  </body>
+</html>
