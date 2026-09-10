@@ -158,34 +158,39 @@
   </head>
   <body>
     <div class="background-videos" aria-hidden="true">
-      <video class="background-video" autoplay muted loop playsinline>
-        <source src="assets/run_wine-mobile.mp4" type="video/mp4" />
+      <video class="background-video" autoplay muted loop playsinline preload="auto">
+        <source src="assets/wine_jump_down_up.mp4" type="video/mp4" />
       </video>
-      <video class="background-video" autoplay muted loop playsinline>
-        <source src="assets/run_wine-mobile.mp4" type="video/mp4" />
+      <video class="background-video" autoplay muted loop playsinline preload="auto">
+        <source src="assets/wine_steep_left_right.mp4" type="video/mp4" />
       </video>
-      <video class="background-video" autoplay muted loop playsinline>
-        <source src="assets/run_wine-mobile.mp4" type="video/mp4" />
+      <video class="background-video" autoplay muted loop playsinline preload="auto">
+        <source src="assets/wine_straight.mp4" type="video/mp4" />
       </video>
-      <video class="background-video" autoplay muted loop playsinline>
-        <source src="assets/run_wine-mobile.mp4" type="video/mp4" />
+      <video class="background-video" autoplay muted loop playsinline preload="auto">
+        <source src="assets/wine_uphill_left_right.mp4" type="video/mp4" />
       </video>
-      <video class="background-video" autoplay muted loop playsinline>
-        <source src="assets/run_wine-mobile.mp4" type="video/mp4" />
+      <video class="background-video" autoplay muted loop playsinline preload="auto">
+        <source src="assets/wine_uphill_right_left.mp4" type="video/mp4" />
       </video>
-      <video class="background-video" autoplay muted loop playsinline>
-        <source src="assets/run_wine-mobile.mp4" type="video/mp4" />
+      <video class="background-video" autoplay muted loop playsinline preload="auto">
+        <source src="assets/wine_uphill_straight_front.mp4" type="video/mp4" />
       </video>
-      <video class="background-video" autoplay muted loop playsinline>
-        <source src="assets/run_wine-mobile.mp4" type="video/mp4" />
+      <video class="background-video" autoplay muted loop playsinline preload="auto">
+        <source src="assets/wine_foot.mp4" type="video/mp4" />
       </video>
-      <video class="background-video" autoplay muted loop playsinline>
-        <source src="assets/run_wine-mobile.mp4" type="video/mp4" />
+      <video class="background-video" autoplay muted loop playsinline preload="auto">
+        <source src="assets/wine_portrait.mp4" type="video/mp4" />
       </video>
-      <video class="background-video" autoplay muted loop playsinline>
-        <source src="assets/run_wine-mobile.mp4" type="video/mp4" />
+      <video class="background-video" autoplay muted loop playsinline preload="auto">
+        <source src="assets/wine_wqalking_on_woods.mp4" type="video/mp4" />
       </video>
     </div>
+    <script>
+      document.querySelectorAll('.background-video').forEach((video) => {
+        video.play().catch(() => {});
+      });
+    </script>
     <main>
       <svg
         class="logo"
