@@ -64,8 +64,8 @@
         position: fixed;
         inset: 0;
         display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        grid-template-rows: repeat(7, minmax(0, 1fr));
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-rows: repeat(4, minmax(0, 1fr));
         gap: 0.35rem;
         padding: 0.35rem;
         background: var(--brown);
@@ -76,6 +76,8 @@
 
       @media (max-width: 600px) {
         .background-videos {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          grid-template-rows: repeat(8, minmax(0, 1fr));
           gap: 0.2rem;
           padding: 0.2rem;
         }
@@ -103,6 +105,25 @@
         letter-spacing: 0.12em;
       }
 
+      .dashboard-link {
+        position: fixed;
+        left: 1rem;
+        bottom: 1rem;
+        color: rgb(216 245 0 / 72%);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.65rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-decoration: none;
+        transition: color 180ms ease;
+        z-index: 3;
+      }
+
+      .dashboard-link:hover,
+      .dashboard-link:focus-visible {
+        color: var(--neon);
+      }
+
       .logo {
         width: min(88vw, 31rem);
         height: auto;
@@ -121,7 +142,7 @@
         font-family: Arial, Helvetica, sans-serif;
         font-size: 46px;
         font-weight: 800;
-        letter-spacing: 3px;
+        letter-spacing: 1px;
       }
 
       .logo-subtitle {
@@ -224,10 +245,18 @@
           points="222,92 264,43 283,65 317,25 367,92"
           opacity=".72"
         />
-        <text class="logo-type" x="250" y="139" text-anchor="middle">SUPER VERTICALE</text>
+        <text
+          class="logo-type"
+          x="250"
+          y="139"
+          text-anchor="middle"
+          textLength="440"
+          lengthAdjust="spacingAndGlyphs"
+        >SUPER VERTICALE</text>
         <text class="logo-subtitle" x="250" y="165" text-anchor="middle">UP WE GO</text>
       </svg>
     </main>
+    <a class="dashboard-link" href="dashboard.html" aria-label="Privates Dashboard öffnen">DATA</a>
     <small class="credit">by CAPRA</small>
   </body>
 </html>

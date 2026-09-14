@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#111615" />
+    <title>Super Verticale | Data</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --background: #111615;
+        --panel: #1b2220;
+        --line: #38433e;
+        --text: #e7ebe4;
+        --muted: #9aa69d;
+        --neon: #d8f500;
+        --error: #ff8d72;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        min-height: 100%;
+        margin: 0;
+      }
+
+      body {
+        min-height: 100vh;
+        padding: 1.25rem;
+        background: radial-gradient(circle at 85% 0%, #29332e 0, var(--background) 34rem);
+        color: var(--text);
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1500px;
+        margin: 0 auto 1.25rem;
+      }
+
+      .brand,
+      .back-link {
+        color: var(--neon);
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .back-link {
+        color: var(--muted);
+      }
+
+      .back-link:hover,
+      .back-link:focus-visible {
+        color: var(--text);
+      }
+
+      .gate {
+        display: grid;
+        min-height: calc(100vh - 5rem);
+        place-items: center;
+      }
+
+      .gate.is-hidden {
+        display: none;
+      }
+
+      .login-panel {
+        width: min(100%, 24rem);
+        padding: 2rem;
+        border: 1px solid var(--line);
+        background: rgb(27 34 32 / 92%);
+        box-shadow: 0 1.5rem 4rem rgb(0 0 0 / 24%);
+      }
+
+      h1 {
+        margin: 0 0 0.5rem;
+        font-size: clamp(1.5rem, 5vw, 2.25rem);
+        letter-spacing: -0.03em;
+      }
+
+      .intro {
+        margin: 0 0 1.5rem;
+        color: var(--muted);
+        font-size: 0.9rem;
+        line-height: 1.5;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 0.45rem;
+        color: var(--muted);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .password-row {
+        display: flex;
+        gap: 0.5rem;
+      }
+
+      input,
+      button {
+        min-height: 2.75rem;
+        border: 1px solid var(--line);
+        border-radius: 0;
+        font: inherit;
+      }
+
+      input {
+        min-width: 0;
+        flex: 1;
+        padding: 0 0.75rem;
+        background: #111615;
+        color: var(--text);
+      }
+
+      input:focus-visible,
+      button:focus-visible {
+        outline: 2px solid var(--neon);
+        outline-offset: 2px;
+      }
+
+      button {
+        padding: 0 1rem;
+        background: var(--neon);
+        color: #111615;
+        cursor: pointer;
+        font-weight: 700;
+      }
+
+      .status {
+        min-height: 1.25rem;
+        margin: 0.75rem 0 0;
+        color: var(--error);
+        font-size: 0.8rem;
+      }
+
+      .dashboard {
+        display: none;
+        max-width: 1500px;
+        min-height: calc(100vh - 5rem);
+        margin: 0 auto;
+      }
+
+      .dashboard iframe {
+        display: block;
+        width: 100%;
+        min-height: calc(100vh - 5rem);
+        border: 1px solid var(--line);
+        background: #fff;
+      }
+
+      .missing-dashboard {
+        display: none;
+        min-height: calc(100vh - 5rem);
+        place-items: center;
+        padding: 2rem;
+        border: 1px solid var(--line);
+        color: var(--muted);
+        text-align: center;
+      }
+
+      .missing-dashboard strong {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: var(--text);
+      }
+
+      .missing-dashboard.is-visible {
+        display: grid;
+      }
+
+      @media (max-width: 480px) {
+        body {
+          padding: 1rem;
+        }
+
+        .login-panel {
+          padding: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html">Super Verticale</a>
+      <a class="back-link" href="index.html">Zurück</a>
+    </header>
+
+    <main>
+      <section class="gate" id="gate">
+        <form class="login-panel" id="login-form">
+          <h1>Private Data</h1>
+          <p class="intro">Geschützter Bereich für das Super-Verticale-Dashboard.</p>
+          <label for="password">Passwort</label>
+          <div class="password-row">
+            <input id="password" name="password" type="password" autocomplete="current-password" required />
+            <button type="submit">Öffnen</button>
+          </div>
+          <p class="status" id="status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="dashboard" id="dashboard" aria-label="Plotly Dashboard">
+        <div class="missing-dashboard" id="missing-dashboard">
+          <p><strong>Dashboard-Datei fehlt noch.</strong>Lege dein Plotly-HTML als <code>assets/plotly-dashboard.html</code> ab.</p>
+        </div>
+        <iframe id="dashboard-frame" title="Plotly Dashboard" src="about:blank"></iframe>
+      </section>
+    </main>
+
+    <script>
+      const passwordHash = 'c7f696b2751c1bbe935f635ff41a16093996544796b30089446717509807af12';
+      const dashboardPath = 'assets/plotly-dashboard.html';
+      const form = document.querySelector('#login-form');
+      const passwordInput = document.querySelector('#password');
+      const status = document.querySelector('#status');
+      const gate = document.querySelector('#gate');
+      const dashboard = document.querySelector('#dashboard');
+      const frame = document.querySelector('#dashboard-frame');
+      const missingDashboard = document.querySelector('#missing-dashboard');
+
+      async function sha256(value) {
+        const encoded = new TextEncoder().encode(value);
+        const buffer = await crypto.subtle.digest('SHA-256', encoded);
+        return Array.from(new Uint8Array(buffer), (byte) => byte.toString(16).padStart(2, '0')).join('');
+      }
+
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        status.textContent = '';
+
+        try {
+          if (await sha256(passwordInput.value) !== passwordHash) {
+            status.textContent = 'Passwort nicht erkannt.';
+            passwordInput.select();
+            return;
+          }
+
+          gate.classList.add('is-hidden');
+          gate.style.display = 'none';
+          gate.setAttribute('aria-hidden', 'true');
+          dashboard.style.display = 'block';
+          frame.src = dashboardPath;
+        } catch (error) {
+          status.textContent = 'Passwortprüfung konnte nicht ausgeführt werden.';
+        }
+      });
+
+      frame.addEventListener('load', () => {
+        missingDashboard.classList.remove('is-visible');
+        frame.hidden = false;
+      });
+
+      frame.addEventListener('error', () => {
+        frame.hidden = true;
+        missingDashboard.classList.add('is-visible');
+      });
+    </script>
+  </body>
+</html>
