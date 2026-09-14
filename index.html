@@ -12,10 +12,11 @@
     <style>
       :root {
         color-scheme: dark;
-        --brown: rgb(61, 27, 15);
-        --olive: rgb(99, 93, 35);
-        --rust: rgb(157, 47, 0);
-        --neon: rgb(216, 245, 0);
+        --brown: #292017;
+        --rust: #603834;
+        --neon: #E0F131;
+        --green: #937C66;
+        --light-grey: #A99886;
       }
 
       * {
@@ -36,14 +37,14 @@
         overflow: hidden;
         position: relative;
         background: var(--brown);
-        color: var(--rust);
+        color: var(--neon);
         font-family: Georgia, 'Times New Roman', serif;
       }
 
       body::before {
         position: fixed;
         inset: 0;
-        background: rgb(61 27 15 / 45%);
+        background: rgb(41 32 23 / 20%);
         content: '';
         pointer-events: none;
         z-index: 1;
@@ -89,44 +90,72 @@
 
       main {
         position: relative;
+        display: grid;
+        place-items: center;
+        width: 100%;
+        min-height: 100vh;
         padding: 2rem;
         text-align: center;
         z-index: 2;
+      }
+
+      .palette-note {
+        position: fixed;
+        left: 1rem;
+        bottom: 2.3rem;
+        z-index: 3;
+        max-width: min(92vw, 44rem);
+        padding: 0.45rem 0.7rem;
+        border: 1px solid rgb(147 124 102 / 70%);
+        background: rgb(41 32 23 / 82%);
+        color: var(--light-grey);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.58rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        line-height: 1.5;
+        text-transform: uppercase;
       }
       
       .credit {
         position: fixed;
         right: 1rem;
         bottom: 1rem;
-        color: var(--neon);
+        color: var(--light-grey);
         font-family: Arial, Helvetica, sans-serif;
         font-size: 0.65rem;
         font-weight: 700;
         letter-spacing: 0.12em;
+        text-shadow: 0 0 12px rgb(41 32 23 / 50%);
       }
 
       .dashboard-link {
         position: fixed;
         left: 1rem;
         bottom: 1rem;
-        color: rgb(216 245 0 / 72%);
+        color: var(--neon);
         font-family: Arial, Helvetica, sans-serif;
         font-size: 0.65rem;
         font-weight: 700;
         letter-spacing: 0.12em;
         text-decoration: none;
-        transition: color 180ms ease;
+        text-shadow: 0 0 12px rgb(224 241 49 / 40%);
+        transition: color 180ms ease, text-shadow 180ms ease;
         z-index: 3;
       }
 
       .dashboard-link:hover,
       .dashboard-link:focus-visible {
-        color: var(--neon);
+        color: #f4ff8d;
+        text-shadow: 0 0 14px rgb(224 241 49 / 70%);
       }
 
       .logo {
-        width: min(88vw, 31rem);
+        width: min(88vw, 40rem);
         height: auto;
+        display: block;
+        margin-top: -18vh;
+        transform: translateY(-0.5rem);
       }
 
       .logo-mark {
@@ -135,6 +164,7 @@
         stroke-linecap: square;
         stroke-linejoin: miter;
         stroke-width: 3;
+        filter: drop-shadow(0 0 8px rgb(96 56 52 / 45%));
       }
 
       .logo-type {
@@ -143,10 +173,11 @@
         font-size: 46px;
         font-weight: 800;
         letter-spacing: 1px;
+        filter: drop-shadow(0 0 10px rgb(224 241 49 / 35%));
       }
 
       .logo-subtitle {
-        fill: var(--rust);
+        fill: var(--light-grey);
         font-family: Arial, Helvetica, sans-serif;
         font-size: 13px;
         font-weight: 700;
@@ -228,33 +259,11 @@
       });
     </script>
     <main>
-      <svg
+      <img
         class="logo"
-        viewBox="0 0 500 190"
-        role="img"
-        aria-labelledby="logo-title logo-description"
-      >
-        <title id="logo-title">Super Verticale</title>
-        <desc id="logo-description">Logo for the Super Verticale trailrunning event</desc>
-        <polyline
-          class="logo-mark"
-          points="48,92 104,24 132,56 170,14 232,92"
-        />
-        <polyline
-          class="logo-mark"
-          points="222,92 264,43 283,65 317,25 367,92"
-          opacity=".72"
-        />
-        <text
-          class="logo-type"
-          x="250"
-          y="139"
-          text-anchor="middle"
-          textLength="440"
-          lengthAdjust="spacingAndGlyphs"
-        >SUPER VERTICALE</text>
-        <text class="logo-subtitle" x="250" y="165" text-anchor="middle">UP WE GO</text>
-      </svg>
+        src="assets/logos/SuperVerticale.svg"
+        alt="Super Verticale Logo"
+      />
     </main>
     <a class="dashboard-link" href="dashboard.html" aria-label="Privates Dashboard öffnen">DATA</a>
     <small class="credit">by CAPRA</small>

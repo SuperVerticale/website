@@ -8,16 +8,16 @@
     <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', 'Segoe UI', Arial, sans-serif; background: #f5f5f5; color: #333; }
-        .header { background: linear-gradient(135deg, #2c3e50, #3498db); color: white; padding: 2rem; text-align: center; }
-        .header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+        body { font-family: 'Inter', 'Segoe UI', Arial, sans-serif; background: #603834; color: #333; }
+        .header { background: #603834; color: white; padding: 2rem; text-align: center; }
+        .header h1 { font-size: 2rem; margin-bottom: 0.5rem; color: #E0F131; }
         .header p { font-size: 1rem; opacity: 0.85; }
         .stats { display: flex; justify-content: center; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap; }
-        .stat { background: rgba(255,255,255,0.15); border-radius: 8px; padding: 1rem 1.25rem; text-align: center; min-width: 170px; }
+        .stat { background: #342928; border-radius: 8px; padding: 1rem 1.25rem; text-align: center; min-width: 170px; }
         .stat .number { font-size: 1.6rem; font-weight: 700; }
         .stat .label { font-size: 0.85rem; opacity: 0.85; }
         .container { max-width: 1240px; margin: 0 auto; padding: 1.5rem; }
-        .filters { background: white; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); margin-bottom: 1.5rem; padding: 1.25rem 1.5rem; }
+        .filters { background: #FAF8F5; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); margin-bottom: 1.5rem; padding: 1.25rem 1.5rem; }
         .filters h2 { font-size: 1.1rem; margin-bottom: 1rem; color: #2c3e50; }
         .filter-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; align-items: end; }
         .filter-group label { display: block; font-size: 0.85rem; color: #555; margin-bottom: 0.4rem; font-weight: 600; }
@@ -29,14 +29,38 @@
         select[multiple] option:checked { background: #3498db; color: white; }
         .filter-hint { font-size: 0.75rem; color: #999; margin-top: 0.25rem; }
         .button-row { display: flex; gap: 0.75rem; flex-wrap: wrap; }
-        button { background: #3498db; color: white; border: none; border-radius: 8px; padding: 0.75rem 1rem; cursor: pointer; font-weight: 600; }
+        button { background: #342928; color: white; border: none; border-radius: 8px; padding: 0.75rem 1rem; cursor: pointer; font-weight: 600; }
         button.secondary { background: #ecf0f1; color: #2c3e50; }
-        .chart-card { background: white; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); margin-bottom: 1.5rem; padding: 1.5rem; }
+        .chart-card { background: #FAF8F5; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); margin-bottom: 1.5rem; padding: 1.5rem; }
         .chart-card h2 { font-size: 1.2rem; margin-bottom: 0.5rem; color: #2c3e50; }
         .chart-card p { font-size: 0.92rem; color: #666; margin-bottom: 1rem; }
         .note { font-size: 0.85rem; color: #777; margin-top: 0.5rem; }
         .empty { padding: 2rem; text-align: center; color: #999; }
         .footer { text-align: center; padding: 2rem; color: #999; font-size: 0.8rem; }
+        .my-race { background: #FAF8F5; border: 2px solid #E0F131; }
+        .my-race h2 { color: #2c3e50; }
+        .my-race-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; align-items: end; }
+        .my-race-input label { display: block; font-size: 0.85rem; color: #555; margin-bottom: 0.4rem; font-weight: 600; }
+        .my-race-input input[type=number] { width: 100%; padding: 0.7rem; border: 1px solid #d0d7de; border-radius: 8px; font-size: 1rem; background: white; }
+        .my-race-results { display: none; margin-top: 1.25rem; }
+        .my-race-results.active { display: block; }
+        .result-primary { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-bottom: 1rem; }
+        .rp-card { background: white; border-radius: 12px; padding: 1.25rem 1.5rem; box-shadow: 0 2px 10px rgba(0,0,0,0.07); border-left: 5px solid #ccc; }
+        .rp-card.good { border-left-color: #2ecc71; }
+        .rp-card.neutral { border-left-color: #3498db; }
+        .rp-card.warn { border-left-color: #e67e22; }
+        .rp-card.high { border-left-color: #e74c3c; }
+        .rp-title { font-size: 0.85rem; font-weight: 700; color: #555; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.6rem; }
+        .rp-deviation { font-size: 2rem; font-weight: 800; color: #2c3e50; }
+        .rp-row { display: flex; justify-content: space-between; margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid #eee; }
+        .rp-item { text-align: center; flex: 1; }
+        .rp-price { font-size: 1.2rem; font-weight: 700; color: #2c3e50; }
+        .rp-sub { font-size: 0.75rem; color: #999; margin-top: 0.15rem; }
+        .result-secondary { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 0.75rem; }
+        .rs-card { flex: 1; min-width: 140px; background: white; border-radius: 10px; padding: 0.85rem; text-align: center; box-shadow: 0 1px 6px rgba(0,0,0,0.05); }
+        .rs-value { font-size: 1.1rem; font-weight: 700; color: #2c3e50; }
+        .rs-label { font-size: 0.78rem; color: #777; margin-top: 0.2rem; }
+        .rs-detail { font-size: 0.7rem; color: #aaa; margin-top: 0.15rem; }
     </style>
 </head>
 <body>
@@ -50,7 +74,7 @@
             <div class="stat"><div id="kpi-prices" class="number">-</div><div class="label">Median Frühbucher / Normalpreis</div></div>
             <div class="stat"><div id="kpi-range" class="number">-</div><div class="label">Preisspanne (Min–Max)</div></div>
             <div class="stat"><div id="kpi-eurkm" class="number">-</div><div class="label">Median €/km</div></div>
-            <div class="stat"><div id="kpi-tier" class="number">-</div><div class="label">Median Aufschlag</div></div>
+            <div class="stat"><div id="kpi-tier" class="number">-</div><div class="label">Median Preisstaffelung</div></div>
         </div>
     </div>
     <div class="container">
@@ -85,6 +109,34 @@
                     <button id="applyFilters">Filter anwenden</button>
                     <button id="resetFilters" class="secondary">Zurücksetzen</button>
                 </div>
+            </div>
+        </div>
+
+        <div class="chart-card my-race">
+            <h2>⭐ Mein Rennen einordnen</h2>
+            <p>Gib deine geplanten Preise ein und sieh, wo dein Rennen im Markt steht. Das Marktmodell basiert immer auf dem gesamten Datensatz und bleibt bei Filterung konstant. Mediane und Perzentile passen sich der gefilterten Auswahl an.</p>
+            <div class="my-race-grid">
+                <div class="my-race-input">
+                    <label for="myDist">Distanz (km)</label>
+                    <input type="number" id="myDist" placeholder="z.B. 42" min="1" max="300" step="0.1">
+                </div>
+                <div class="my-race-input">
+                    <label for="myFB">Frühbucher-Preis (€)</label>
+                    <input type="number" id="myFB" placeholder="z.B. 89" min="0" step="1">
+                </div>
+                <div class="my-race-input">
+                    <label for="myNP">Normalpreis (€, optional)</label>
+                    <input type="number" id="myNP" placeholder="z.B. 109" min="0" step="1">
+                </div>
+                <div style="display:flex; gap:0.5rem; align-items:end;">
+                    <button id="analyzeBtn">Einordnen</button>
+                    <button id="clearMyRace" class="secondary">Löschen</button>
+                </div>
+            </div>
+            <div id="myRaceResults" class="my-race-results">
+                <div id="resultPrimary" class="result-primary"></div>
+                <div id="resultSecondary" class="result-secondary"></div>
+                <div id="resultSummary" class="note"></div>
             </div>
         </div>
 
@@ -171,6 +223,34 @@
             return arr.length % 2 ? arr[mid] : (arr[mid - 1] + arr[mid]) / 2;
         }
 
+        function interpolateModel(dist, yArr) {
+            if (dist <= model.x[0]) return yArr[0];
+            if (dist >= model.x[model.x.length - 1]) return yArr[yArr.length - 1];
+            for (let i = 0; i < model.x.length - 1; i++) {
+                if (dist >= model.x[i] && dist <= model.x[i + 1]) {
+                    const t = (dist - model.x[i]) / (model.x[i + 1] - model.x[i]);
+                    return yArr[i] + t * (yArr[i + 1] - yArr[i]);
+                }
+            }
+            return null;
+        }
+
+        function percentileRank(value, arr) {
+            if (!arr.length) return null;
+            const below = arr.filter(v => v <= value).length;
+            return Math.round(below / arr.length * 100);
+        }
+
+        function distKategorie(km) {
+            if (km <= 15) return categories[0];
+            if (km <= 30) return categories[1];
+            if (km <= 50) return categories[2];
+            if (km <= 80) return categories[3];
+            if (km <= 120) return categories[4];
+            if (km <= 170) return categories[5];
+            return categories[6];
+        }
+
         function updateKpis(data) {
             const events = new Set(data.map(r => r.Veranstaltung)).size;
             const countries = new Set(data.map(r => r.Land)).size;
@@ -223,7 +303,7 @@
                         name: region + ' Frühbucher',
                         marker: { color: color, size: 8, symbol: 'triangle-down', opacity: 0.75 },
                         customdata: sub.map(r => [r['Veranstaltung'], r['Wettkampf / Strecke'], r['Land'], r['Aufschlag_pct'], r.Tiered ? 'ja' : 'nein']),
-                        hovertemplate: '<b>%{customdata[0]}</b><br>%{customdata[1]}<br>%{customdata[2]}<br>Distanz: %{x} km<br>Frühbucher: €%{y:.0f}<br>Preisstaffelung: %{customdata[4]}<br>Aufschlag: %{customdata[3]}%<extra></extra>'
+                        hovertemplate: '<b>%{customdata[0]}</b><br>%{customdata[1]}<br>%{customdata[2]}<br>Distanz: %{x} km<br>Frühbucher: €%{y:.0f}<br>Gestaffelt: %{customdata[4]}<br>Preisstaffelung: %{customdata[3]}%<extra></extra>'
                     });
                     traces.push({
                         x: sub.map(r => r['Distanz km']),
@@ -232,7 +312,7 @@
                         name: region + ' Normalpreis',
                         marker: { color: color, size: 8, symbol: 'triangle-up', opacity: 0.75 },
                         customdata: sub.map(r => [r['Veranstaltung'], r['Wettkampf / Strecke'], r['Land'], r['Aufschlag_pct'], r.Tiered ? 'ja' : 'nein']),
-                        hovertemplate: '<b>%{customdata[0]}</b><br>%{customdata[1]}<br>%{customdata[2]}<br>Distanz: %{x} km<br>Normalpreis: €%{y:.0f}<br>Preisstaffelung: %{customdata[4]}<br>Aufschlag: %{customdata[3]}%<extra></extra>'
+                        hovertemplate: '<b>%{customdata[0]}</b><br>%{customdata[1]}<br>%{customdata[2]}<br>Distanz: %{x} km<br>Normalpreis: €%{y:.0f}<br>Gestaffelt: %{customdata[4]}<br>Preisstaffelung: %{customdata[3]}%<extra></extra>'
                     });
                 }
             });
@@ -245,6 +325,24 @@
                 line: { color: 'rgba(0,0,0,0)' },
                 name: 'Gesamtmarkt Preisstaffelung', hoverinfo: 'skip'
             });
+            if (window.myRaceData) {
+                const mrd = window.myRaceData;
+                if (mrd.fb && mrd.np && mrd.np !== mrd.fb) {
+                    traces.push({ x: [mrd.dist, mrd.dist], y: [mrd.fb, mrd.np], mode: 'lines', line: { color: '#E0F131', width: 3, dash: 'dot' }, showlegend: false, hoverinfo: 'skip' });
+                }
+                if (mrd.fb) {
+                    traces.push({ x: [mrd.dist], y: [mrd.fb], mode: 'markers+text', name: 'Mein Fr\u00fchbucher',
+                        marker: { color: '#E0F131', size: 18, symbol: 'star', line: { color: '#292017', width: 2 } },
+                        text: ['\u20ac' + Math.round(mrd.fb)], textposition: 'top center', textfont: { color: '#292017', size: 12, weight: 700 },
+                        hovertemplate: '<b>Mein Rennen</b><br>Distanz: %{x} km<br>Fr\u00fchbucher: \u20ac%{y:.0f}<extra></extra>' });
+                }
+                if (mrd.np) {
+                    traces.push({ x: [mrd.dist], y: [mrd.np], mode: 'markers+text', name: 'Mein Normalpreis',
+                        marker: { color: '#E0F131', size: 18, symbol: 'star', line: { color: '#292017', width: 2 } },
+                        text: ['\u20ac' + Math.round(mrd.np)], textposition: 'top center', textfont: { color: '#292017', size: 12, weight: 700 },
+                        hovertemplate: '<b>Mein Rennen</b><br>Distanz: %{x} km<br>Normalpreis: \u20ac%{y:.0f}<extra></extra>' });
+                }
+            }
             Plotly.newPlot('scatter', traces, {
                 xaxis: { title: 'Distanz (km)', gridcolor: colors.grid },
                 yaxis: { title: 'Preis (EUR)', gridcolor: colors.grid },
@@ -346,6 +444,7 @@
             renderScatter(data);
             renderBox(data);
             renderCountry(data);
+            if (window.myRaceData) analyzeMyRace(data);
         }
 
         document.getElementById('applyFilters').addEventListener('click', applyFilters);
@@ -358,6 +457,119 @@
             applyFilters();
         });
         [regionFilter, landFilter, distanceFilter, eventFilter, tieredOnly].forEach(el => el.addEventListener('change', applyFilters));
+
+        function analyzeMyRace(data) {
+            const mrd = window.myRaceData;
+            if (!mrd) { document.getElementById('myRaceResults').classList.remove('active'); return; }
+            const kat = distKategorie(mrd.dist);
+            const katData = data.filter(r => r.Distanz_Kat === kat);
+            const allFb = data.map(r => r['Preis min']).filter(v => v != null);
+            const katFb = katData.map(r => r['Preis min']).filter(v => v != null);
+            const katEurkm = katData.map(r => r.Preis_pro_km).filter(v => v != null);
+            const modelFb = interpolateModel(mrd.dist, model.early);
+            const modelNp = interpolateModel(mrd.dist, model.normal);
+            const myEurkm = mrd.fb / mrd.dist;
+            const medEurkm = median(katEurkm);
+            const pctKat = katFb.length ? percentileRank(mrd.fb, katFb) : null;
+            const modelDevFb = (modelFb && mrd.dist <= 170) ? Math.round((mrd.fb - modelFb) / modelFb * 100) : null;
+
+            // === PRIMARY: Modellvergleich-Karten (gross, prominent) ===
+            var primary = '';
+            var katNp = katData.map(r => r['Preis max']).filter(v => v != null);
+            var medFbKat = median(katFb);
+            var medNpKat = median(katNp);
+            function devClass(d) { return d === null ? 'neutral' : Math.abs(d) <= 10 ? 'neutral' : d > 25 ? 'high' : d > 10 ? 'warn' : 'good'; }
+            function devSign(d) { return d > 0 ? '+' + d + '%' : d + '%'; }
+            function devText(d) { return d === 0 ? 'exakt am Modell' : (d > 0 ? d + '% \u00fcber Modell' : Math.abs(d) + '% unter Modell'); }
+
+
+            // Fr\u00fchbucher-Karte
+            if (modelDevFb !== null) {
+                primary += '<div class="rp-card ' + devClass(modelDevFb) + '">';
+                primary += '<div class="rp-title">Fr\u00fchbucher-Preis</div>';
+                primary += '<div class="rp-deviation">' + devSign(modelDevFb) + ' vs. Marktmodell</div>';
+                primary += '<div class="rp-row">';
+                primary += '<div class="rp-item"><div class="rp-price">\u20ac' + Math.round(mrd.fb) + '</div><div class="rp-sub">Dein Preis</div></div>';
+                primary += '<div class="rp-item"><div class="rp-price" style="color:#2ecc71;">\u20ac' + Math.round(modelFb) + '</div><div class="rp-sub">Marktmodell</div></div>';
+                primary += '<div class="rp-item"><div class="rp-price" style="color:#3498db;">\u20ac' + (medFbKat ? Math.round(medFbKat) : '-') + '</div><div class="rp-sub">Median (gefiltert)</div></div>';
+                primary += '<div class="rp-item"><div class="rp-price">\u20ac' + (Math.round(mrd.fb) - Math.round(modelFb) >= 0 ? '+' : '') + (Math.round(mrd.fb) - Math.round(modelFb)) + '</div><div class="rp-sub">Diff. Modell</div></div>';
+                primary += '</div></div>';
+            } else {
+                primary += '<div class="rp-card neutral">';
+                primary += '<div class="rp-title">Fr\u00fchbucher-Preis</div>';
+                primary += '<div class="rp-deviation">\u20ac' + Math.round(mrd.fb) + '</div>';
+                primary += '<div class="rp-row">';
+                primary += '<div class="rp-item"><div class="rp-price" style="color:#3498db;">\u20ac' + (medFbKat ? Math.round(medFbKat) : '-') + '</div><div class="rp-sub">Median (gefiltert)</div></div>';
+                primary += '<div class="rp-item"><div class="rp-sub">Kein Modellwert (Distanz > 170 km)</div></div>';
+                primary += '</div></div>';
+            }
+
+            // Normalpreis-Karte
+            if (mrd.np && mrd.np > mrd.fb) {
+                var modelDevNp = (modelNp && mrd.dist <= 170) ? Math.round((mrd.np - modelNp) / modelNp * 100) : null;
+                if (modelDevNp !== null) {
+                    primary += '<div class="rp-card ' + devClass(modelDevNp) + '">';
+                    primary += '<div class="rp-title">Normalpreis</div>';
+                    primary += '<div class="rp-deviation">' + devSign(modelDevNp) + ' vs. Marktmodell</div>';
+                    primary += '<div class="rp-row">';
+                    primary += '<div class="rp-item"><div class="rp-price">\u20ac' + Math.round(mrd.np) + '</div><div class="rp-sub">Dein Preis</div></div>';
+                    primary += '<div class="rp-item"><div class="rp-price" style="color:#e74c3c;">\u20ac' + Math.round(modelNp) + '</div><div class="rp-sub">Marktmodell</div></div>';
+                    primary += '<div class="rp-item"><div class="rp-price" style="color:#3498db;">\u20ac' + (medNpKat ? Math.round(medNpKat) : '-') + '</div><div class="rp-sub">Median (gefiltert)</div></div>';
+                    primary += '<div class="rp-item"><div class="rp-price">\u20ac' + (Math.round(mrd.np) - Math.round(modelNp) >= 0 ? '+' : '') + (Math.round(mrd.np) - Math.round(modelNp)) + '</div><div class="rp-sub">Diff. Modell</div></div>';
+                    primary += '</div></div>';
+                }
+            }
+            document.getElementById('resultPrimary').innerHTML = primary;
+
+            // === SECONDARY: Kontext-Infos (kompakt) ===
+            var sec = '';
+            // Kategorie
+            sec += '<div class="rs-card"><div class="rs-value">' + kat.split('(')[0].trim() + '</div><div class="rs-label">' + katData.length + ' Vergleichsrennen</div></div>';
+            // Preisstaffelung
+            if (mrd.np && mrd.np > mrd.fb) {
+                var myAuf = Math.round((mrd.np - mrd.fb) / mrd.fb * 100);
+                var mktAuf = median(katData.filter(r => r.Tiered).map(r => r.Aufschlag_pct).filter(v => v != null));
+                sec += '<div class="rs-card"><div class="rs-value">' + myAuf + '% Preisstaffelung</div><div class="rs-label">Fr\u00fchbucher \u2192 Normalpreis<br>Markt-Median: ' + (mktAuf ? Math.round(mktAuf) + '%' : 'k.A.') + '</div></div>';
+            }
+            // EUR/km
+            sec += '<div class="rs-card"><div class="rs-value">\u20ac' + myEurkm.toFixed(2) + '/km</div><div class="rs-label">Median: \u20ac' + (medEurkm ? medEurkm.toFixed(2) : '-') + '/km</div></div>';
+            // Perzentil
+            if (pctKat !== null) {
+                sec += '<div class="rs-card"><div class="rs-value">' + pctKat + '. Perz.</div><div class="rs-label">in Kategorie</div></div>';
+            }
+            document.getElementById('resultSecondary').innerHTML = sec;
+
+            // Summary
+            var sum = mrd.dist + ' km \u2013 Fr\u00fchbucher \u20ac' + Math.round(mrd.fb);
+            if (mrd.np) sum += ' / Normalpreis \u20ac' + Math.round(mrd.np);
+            if (modelDevFb !== null) sum += ' \u2192 Fr\u00fchbucher ' + devText(modelDevFb);
+            if (mrd.np && mrd.np > mrd.fb) {
+                var modelDevNpSum = (modelNp && mrd.dist <= 170) ? Math.round((mrd.np - modelNp) / modelNp * 100) : null;
+                if (modelDevNpSum !== null) sum += ', Normalpreis ' + devText(modelDevNpSum);
+            }
+            sum += '. \u2b50 im Scatter-Chart markiert.';
+            document.getElementById('resultSummary').textContent = sum;
+            document.getElementById('myRaceResults').classList.add('active');
+        }
+
+        document.getElementById('analyzeBtn').addEventListener('click', function() {
+            var dist = parseFloat(document.getElementById('myDist').value);
+            var fb = parseFloat(document.getElementById('myFB').value);
+            var np = parseFloat(document.getElementById('myNP').value);
+            if (!dist || dist <= 0 || !fb || fb <= 0) { alert('Bitte Distanz und Fr\u00fchbucher-Preis eingeben.'); return; }
+            window.myRaceData = { dist: dist, fb: fb, np: (np && np > 0) ? np : null };
+            applyFilters();
+        });
+
+        document.getElementById('clearMyRace').addEventListener('click', function() {
+            window.myRaceData = null;
+            document.getElementById('myDist').value = '';
+            document.getElementById('myFB').value = '';
+            document.getElementById('myNP').value = '';
+            document.getElementById('myRaceResults').classList.remove('active');
+            applyFilters();
+        });
+
         applyFilters();
     </script>
 </body>
