@@ -12,3 +12,13 @@ Der Zugang ist clientseitig umgesetzt und deshalb nur für eine dezente Zugangsh
 ## Neue Events und Routen
 
 Der komplette Ablauf von der GPX-Datei bis zur interaktiven Route ist in [ROUTE_WORKFLOW.md](ROUTE_WORKFLOW.md) dokumentiert.
+
+## Geschützte Event-Seite
+
+Auch `events.html` ist passwortgeschützt. Sie verwendet dasselbe Passwort wie das Dashboard:
+
+```text
+ilovemoritz
+```
+
+Die Event-Inhalte werden erst nach erfolgreicher clientseitiger Passwortprüfung angezeigt. Für vertrauliche Inhalte ist zusätzlich ein echter Server- oder Hosting-Schutz erforderlich.
