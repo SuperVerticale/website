@@ -8,3 +8,7 @@ Die geschützte Dashboard-Seite liegt unter `dashboard.html`. Die Plotly-Datei m
 Das Passwort lautet `ilovemoritz`. Für ein anderes Passwort muss der SHA-256-Hash in `dashboard.html` ersetzt werden.
 
 Der Zugang ist clientseitig umgesetzt und deshalb nur für eine dezente Zugangshürde geeignet. Für vertrauliche Daten sollte zusätzlich ein echter Server- oder Hosting-Schutz verwendet werden.
+
+## Neue Events und Routen
+
+Der komplette Ablauf von der GPX-Datei bis zur interaktiven Route ist in [ROUTE_WORKFLOW.md](ROUTE_WORKFLOW.md) dokumentiert.

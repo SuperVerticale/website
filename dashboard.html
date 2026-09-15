@@ -3,12 +3,22 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#111615" />
+    <meta name="theme-color" content="#603834" />
     <title>Super Verticale | Data</title>
+    <link rel="icon" href="assets/logos/sv_mini.svg" type="image/svg+xml" />
     <style>
+      @font-face {
+        font-family: 'TT Chocolates';
+        src: url('assets/fonts/tt-chocolates-regular.woff2') format('woff2');
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+      }
+
       :root {
         color-scheme: dark;
         --background: #292017;
+        --rust: #603834;
         --panel: #937C66;
         --line: #A99886;
         --text: #E0F131;
@@ -27,20 +37,54 @@
         margin: 0;
       }
 
+      html {
+        background-color: #603834;
+        background-image: none;
+      }
+
       body {
         min-height: 100vh;
         padding: 1.25rem;
-        background: radial-gradient(circle at 85% 0%, #937C66 0, var(--background) 34rem);
+        background-color: #603834;
+        background-image: none;
         color: var(--text);
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: 'TT Chocolates', Arial, sans-serif;
+      }
+
+      main,
+      .gate,
+      .dashboard {
+        background-color: #603834;
+        background-image: none;
       }
 
       .topbar {
+        position: fixed;
+        top: 0;
+        left: 50%;
+        z-index: 10;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        width: min(calc(100% - 2.5rem), 1500px);
         max-width: 1500px;
-        margin: 0 auto 1.25rem;
+        margin: 0;
+        padding: 2rem 0 1.25rem;
+        background: #603834;
+        transform: translateX(-50%);
+      }
+
+      .page-logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: min(44vw, 14.3rem);
+        height: auto;
+        transform: translate(-50%, -50%);
+      }
+
+      main {
+        padding-top: 4.5rem;
       }
 
       .brand,
@@ -76,8 +120,7 @@
         width: min(100%, 24rem);
         padding: 2rem;
         border: 1px solid var(--line);
-        background: rgb(41 32 23 / 92%);
-        box-shadow: 0 1.5rem 4rem rgb(41 32 23 / 24%);
+        background: #603834;
       }
 
       h1 {
@@ -120,7 +163,7 @@
         min-width: 0;
         flex: 1;
         padding: 0 0.75rem;
-        background: #292017;
+        background: #603834;
         color: var(--text);
       }
 
@@ -147,17 +190,19 @@
 
       .dashboard {
         display: none;
-        max-width: 1500px;
+        width: 100vw;
+        max-width: none;
         min-height: calc(100vh - 5rem);
-        margin: 0 auto;
+        margin: 0 0 0 calc(50% - 50vw);
       }
 
       .dashboard iframe {
         display: block;
         width: 100%;
+        max-width: none;
         min-height: calc(100vh - 5rem);
-        border: 1px solid var(--line);
-        background: #fff;
+        border: 0;
+        background: var(--rust);
       }
 
       .missing-dashboard {
@@ -193,7 +238,9 @@
   </head>
   <body>
     <header class="topbar">
-      <a class="brand" href="index.html">Super Verticale</a>
+      <a href="index.html" aria-label="Zur Startseite">
+        <img class="page-logo" src="assets/logos/SuperVerticale.svg" alt="Super Verticale" />
+      </a>
       <a class="back-link" href="index.html">Zurück</a>
     </header>
 

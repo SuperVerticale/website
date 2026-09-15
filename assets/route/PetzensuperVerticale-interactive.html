@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Petzen route and elevation</title>
+  <style>
+    @font-face { font-family: 'TT Chocolates'; src: url('../../assets/fonts/tt-chocolates-regular.woff2') format('woff2'); font-display: swap; }
+    :root { --brown: #292017; --rust: #603834; --neon: #e0f131; --muted: #a99886; --moderate: #a99886; --steep: #e0f131; --very-steep: #e85d3f; --downhill: #5ba8a0; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-width: 320px; overflow: hidden; background: var(--rust); color: var(--muted); font-family: 'TT Chocolates', Arial, sans-serif; }
+    .interactive { width: 100%; padding: .625rem 0 .9375rem; }
+    svg { display: block; width: 100%; height: auto; overflow: visible; }
+    text { font-family: 'TT Chocolates', Arial, sans-serif; }
+    .section-label { fill: var(--muted); font-size: 12px; font-weight: 700; letter-spacing: 2px; }
+    .grid-line { stroke: var(--muted); stroke-dasharray: 2 12; opacity: .28; }
+    .route-base { fill: none; stroke: var(--brown); stroke-width: 14; stroke-linecap: round; stroke-linejoin: round; }
+    .route-segment, .profile-segment { fill: none; stroke-width: 7; stroke-linecap: round; stroke-linejoin: round; }
+    .profile-segment { stroke-width: 4; }
+    .hover-line { stroke: var(--neon); stroke-width: 2; stroke-dasharray: 5 5; opacity: 0; pointer-events: none; }
+    .hover-icon { opacity: 0; pointer-events: none; }
+    .tooltip { position: fixed; z-index: 3; min-width: 9rem; padding: .65rem .75rem; border: 1px solid var(--neon); background: var(--brown); color: var(--neon); font-size: .8rem; line-height: 1.35; pointer-events: none; opacity: 0; transform: translate(12px, 12px); }
+    .tooltip strong { display: block; margin-bottom: .2rem; color: var(--neon); font-size: .95rem; }
+    .legend { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: .25rem; padding-left: 0; font-size: .75rem; }
+    .legend span { display: inline-flex; align-items: center; gap: .4rem; }
+    .swatch { width: 1.6rem; height: .25rem; border-radius: 1rem; }
+    .moderate { background: var(--moderate); } .steep { background: var(--steep); } .very-steep { background: var(--very-steep); } .downhill { background: var(--downhill); }
+  </style>
+</head>
+<body>
+  <div class="interactive">
+    <svg id="chart" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+      <title id="title">Interactive Petzen route and elevation profile</title>
+      <desc id="desc">Hover over the route or elevation profile to see the matching distance, elevation and slope.</desc>
+      <g id="route-layer"></g>
+      <g id="profile-layer"></g>
+      <g id="interaction-layer"></g>
+    </svg>
+    <div class="legend" aria-label="Slope legend"><span><i class="swatch moderate"></i>MODERATE</span><span><i class="swatch steep"></i>STEEP</span><span><i class="swatch very-steep"></i>VERY STEEP</span><span><i class="swatch downhill"></i>DOWNHILL</span></div>
+  </div>
+  <div class="tooltip" id="tooltip" role="status"></div>
+  <script>
+    const colors = { flach: '#937c66', moderat: '#a99886', steil: '#e0f131', 'sehr steil': '#e85d3f', bergab: '#5ba8a0' };
+    const dataUrl = 'PetzensuperVerticale-detailed.json';
+    const chart = document.querySelector('#chart');
+    const routeLayer = document.querySelector('#route-layer');
+    const profileLayer = document.querySelector('#profile-layer');
+    const interactionLayer = document.querySelector('#interaction-layer');
+    const tooltip = document.querySelector('#tooltip');
+    const routeBox = { left: 90, top: 94, width: 1020, height: 437.5 };
+    const profileBox = { left: 75, top: 562.5, right: 1125, bottom: 781.25 };
+    const svgPoint = (x, y) => `${x.toFixed(1)},${y.toFixed(1)}`;
+    const el = (name, attrs = {}) => { const node = document.createElementNS('http://www.w3.org/2000/svg', name); Object.entries(attrs).forEach(([key, value]) => node.setAttribute(key, value)); return node; };
+    const routeCoords = (points) => { const lats = points.map((p) => p.lat); const lons = points.map((p) => p.lon); const minLat = Math.min(...lats); const maxLat = Math.max(...lats); const minLon = Math.min(...lons); const maxLon = Math.max(...lons); const rawScale = Math.min(routeBox.width / (maxLon - minLon), routeBox.height / (maxLat - minLat)); const rawWidth = (maxLon - minLon) * rawScale; const rawHeight = (maxLat - minLat) * rawScale; const angle = 513 * Math.PI / 180; const cos = Math.cos(angle); const sin = Math.sin(angle); const rawPoints = points.map((p) => ({ x: (p.lon - minLon) * rawScale, y: (maxLat - p.lat) * rawScale })); const rawCenterX = rawWidth / 2; const rawCenterY = rawHeight / 2; const rotated = rawPoints.map((p) => ({ x: cos * (p.x - rawCenterX) - sin * (p.y - rawCenterY), y: sin * (p.x - rawCenterX) + cos * (p.y - rawCenterY) })); const minX = Math.min(...rotated.map((p) => p.x)); const maxX = Math.max(...rotated.map((p) => p.x)); const minY = Math.min(...rotated.map((p) => p.y)); const maxY = Math.max(...rotated.map((p) => p.y)); const fitScale = Math.min((routeBox.width - 80) / (maxX - minX), (routeBox.height - 80) / (maxY - minY)); const centerX = routeBox.left + routeBox.width / 2; const centerY = routeBox.top + routeBox.height / 2; return rotated.map((p) => ({ x: centerX + p.x * fitScale, y: centerY + p.y * fitScale })); };
+    const profileX = (km, total) => profileBox.left + km / total * (profileBox.right - profileBox.left);
+    const profileY = (elevation) => profileBox.bottom - (elevation - 600) / 1200 * (profileBox.bottom - profileBox.top);
+    const pathFor = (points) => points.map((p) => svgPoint(p.x, p.y)).join(' ');
+    const slopeFor = (a, b) => (b.elevationM - a.elevationM) / ((b.distanceKm - a.distanceKm) * 10);
+    function addText(parent, text, x, y, attrs = {}) { const node = el('text', { x, y, ...attrs }); node.textContent = text; parent.appendChild(node); return node; }
+    function showHover(index, event, data, points, routePoints, profilePoints) {
+      const segment = data.segments[Math.min(index, data.segments.length - 1)]; const point = points[Math.min(index, points.length - 1)]; const next = points[Math.min(index + 1, points.length - 1)]; const slope = segment.slopePct; const routePoint = routePoints[Math.min(index, routePoints.length - 1)]; const profilePoint = profilePoints[Math.min(index, profilePoints.length - 1)];
+      const elevationGain = data.segments.slice(0, index).reduce((total, current) => total + Math.max(0, current.elevationChangeM), 0);
+      document.querySelectorAll('.hover-line, .hover-icon').forEach((node) => node.style.opacity = '1');
+      document.querySelector('#profile-hover-line').setAttribute('x1', profilePoint.x); document.querySelector('#profile-hover-line').setAttribute('y1', profileBox.top); document.querySelector('#profile-hover-line').setAttribute('x2', profilePoint.x); document.querySelector('#profile-hover-line').setAttribute('y2', profileBox.bottom);
+      document.querySelector('#route-hover-icon').setAttribute('x', routePoint.x - 15); document.querySelector('#route-hover-icon').setAttribute('y', routePoint.y - 15); document.querySelector('#profile-hover-icon').setAttribute('x', profilePoint.x - 12); document.querySelector('#profile-hover-icon').setAttribute('y', profilePoint.y - 12);
+      tooltip.innerHTML = `<strong>${point.distanceKm.toFixed(2)} km</strong>${elevationGain.toFixed(0)} m elevation gain<br />${slope.toFixed(1)}% slope`; tooltip.style.opacity = '1'; const left = Math.min(event.clientX + 12, window.innerWidth - tooltip.offsetWidth - 20); const top = Math.min(event.clientY + 12, window.innerHeight - tooltip.offsetHeight - 20); tooltip.style.left = `${Math.max(8, left)}px`; tooltip.style.top = `${Math.max(8, top)}px`;
+    }
+    fetch(dataUrl).then((response) => response.json()).then((data) => { const points = data.points; const routePoints = routeCoords(points); const profilePoints = points.map((p) => ({ x: profileX(p.distanceKm, data.stats.distanceKm), y: profileY(p.elevationM) }));
+      routeLayer.appendChild(el('polyline', { points: pathFor(routePoints), class: 'route-base' }));
+      data.segments.forEach((segment, index) => routeLayer.appendChild(el('line', { x1: routePoints[index].x, y1: routePoints[index].y, x2: routePoints[index + 1].x, y2: routePoints[index + 1].y, stroke: colors[segment.category], class: 'route-segment' })));
+      const labelAway = (point, neighbor) => { const dx = point.x - neighbor.x; const dy = point.y - neighbor.y; const length = Math.max(1, Math.hypot(dx, dy)); return { x: point.x + dx / length * 35, y: point.y + dy / length * 35 }; }; const startLabel = labelAway(routePoints[0], routePoints[1]); const finishPoint = routePoints.at(-1); const finishLabel = { x: Math.min(finishPoint.x + 42, 1115), y: finishPoint.y + 6 }; addText(routeLayer, 'ROUTE', 75, 69, { class: 'section-label' }); addText(routeLayer, 'START / 653 M', startLabel.x, startLabel.y, { fill: '#e0f131', 'font-weight': '700', 'text-anchor': 'middle' }); addText(routeLayer, 'FINISH / 1707 M', finishLabel.x, finishLabel.y, { fill: '#e85d3f', 'font-weight': '700', 'text-anchor': 'start' }); routeLayer.appendChild(el('circle', { cx: routePoints[0].x, cy: routePoints[0].y, r: 7, fill: '#603834', stroke: '#e0f131', 'stroke-width': 3 })); routeLayer.appendChild(el('circle', { cx: routePoints.at(-1).x, cy: routePoints.at(-1).y, r: 7, fill: '#603834', stroke: '#e85d3f', 'stroke-width': 3 })); const compass = el('g', { id: 'compass', transform: 'rotate(513 1060 125)' }); compass.appendChild(el('circle', { cx: 1060, cy: 125, r: 28, fill: '#603834', 'fill-opacity': '.9', stroke: '#e0f131', 'stroke-width': 2 })); compass.appendChild(el('path', { d: 'M1060 143V107M1060 107L1052 121H1068Z', fill: '#e0f131' })); addText(compass, 'N', 1060, 92, { fill: '#e0f131', 'text-anchor': 'middle', 'font-weight': '700' }); routeLayer.appendChild(compass); addText(profileLayer, 'ELEVATION PROFILE', 75, 525, { class: 'section-label' });
+      [800, 1100, 1400, 1700].forEach((elevation) => { const y = profileY(elevation); profileLayer.appendChild(el('line', { x1: profileBox.left, y1: y, x2: profileBox.right, y2: y, class: 'grid-line' })); addText(profileLayer, `${elevation} m`, 63, y + 4, { 'text-anchor': 'end' }); });
+      profileLayer.appendChild(el('polygon', { points: `${pathFor(profilePoints)} ${profileBox.right},${profileBox.bottom} ${profileBox.left},${profileBox.bottom}`, fill: '#e0f131', 'fill-opacity': '.08' }));
+      data.segments.forEach((segment, index) => profileLayer.appendChild(el('line', { x1: profilePoints[index].x, y1: profilePoints[index].y, x2: profilePoints[index + 1].x, y2: profilePoints[index + 1].y, stroke: colors[segment.category], class: 'profile-segment' })));
+      addText(profileLayer, '0 km', profileBox.left, 818.75); addText(profileLayer, '5 km', 600, 818.75, { 'text-anchor': 'middle' }); addText(profileLayer, `${data.stats.distanceKm} km`, profileBox.right, 818.75, { 'text-anchor': 'end' });
+      const routeInteraction = el('polyline', { points: pathFor(routePoints), fill: 'none', stroke: 'transparent', 'stroke-width': 32, 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }); const profileInteraction = el('rect', { x: profileBox.left, y: profileBox.top, width: profileBox.right - profileBox.left, height: profileBox.bottom - profileBox.top, fill: 'transparent' }); interactionLayer.append(routeInteraction, profileInteraction);
+      const profileHoverLine = el('line', { id: 'profile-hover-line', class: 'hover-line' }); const routeHoverIcon = el('image', { id: 'route-hover-icon', href: '../../assets/logos/sv_mini_ohne_text-neon.svg', x: routePoints[0].x - 15, y: routePoints[0].y - 15, width: 30, height: 30, class: 'hover-icon' }); const profileHoverIcon = el('image', { id: 'profile-hover-icon', href: '../../assets/logos/sv_mini_ohne_text-neon.svg', x: profilePoints[0].x - 12, y: profilePoints[0].y - 12, width: 24, height: 24, class: 'hover-icon' }); interactionLayer.append(profileHoverLine, routeHoverIcon, profileHoverIcon);
+      const nearestPoint = (event, source) => { const rect = chart.getBoundingClientRect(); const x = (event.clientX - rect.left) * 1200 / rect.width; if (source === 'profile') { let index = Math.round((x - profileBox.left) / (profileBox.right - profileBox.left) * (points.length - 1)); return Math.max(0, Math.min(points.length - 1, index)); } let best = 0; let distance = Infinity; routePoints.forEach((point, index) => { const current = Math.hypot(point.x - x, point.y - ((event.clientY - rect.top) * 900 / rect.height)); if (current < distance) { distance = current; best = index; } }); return best; };
+      const hover = (event, source) => showHover(nearestPoint(event, source), event, data, points, routePoints, profilePoints); const leave = () => { tooltip.style.opacity = '0'; document.querySelectorAll('.hover-line, .hover-icon').forEach((node) => node.style.opacity = '0'); }; routeInteraction.addEventListener('pointermove', (event) => hover(event, 'route')); profileInteraction.addEventListener('pointermove', (event) => hover(event, 'profile')); routeInteraction.addEventListener('pointerleave', leave); profileInteraction.addEventListener('pointerleave', leave);
+    }).catch(() => { addText(interactionLayer, 'Route data unavailable', 75, 100, { fill: '#e85d3f' }); });
+  </script>
+</body>
+</html>

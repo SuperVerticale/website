@@ -1,0 +1,6064 @@
+{
+  "name": "Petzen Super Verticale",
+  "source": "PetzensuperVerticale.gpx",
+  "type": "trail_running",
+  "resolution": "original GPX trackpoints",
+  "stats": {
+    "distanceKm": 10.1,
+    "elevationGainM": 1074,
+    "elevationLossM": 21,
+    "startElevationM": 653,
+    "finishElevationM": 1707,
+    "highestPointM": 1711,
+    "lowestPointM": 653
+  },
+  "classification": {
+    "flach": "-5 bis 5%",
+    "moderat": "5 bis unter 10%",
+    "steil": "10 bis unter 15%",
+    "sehr steil": "ab 15%",
+    "bergab": "unter -5%"
+  },
+  "points": [
+    {
+      "distanceKm": 0,
+      "elevationM": 653.2,
+      "lat": 46.54106,
+      "lon": 14.77499
+    },
+    {
+      "distanceKm": 0.06,
+      "elevationM": 657.6,
+      "lat": 46.540600000000005,
+      "lon": 14.774590000000002
+    },
+    {
+      "distanceKm": 0.065,
+      "elevationM": 657.1,
+      "lat": 46.54055,
+      "lon": 14.774580000000002
+    },
+    {
+      "distanceKm": 0.072,
+      "elevationM": 657.1,
+      "lat": 46.5405,
+      "lon": 14.774640000000002
+    },
+    {
+      "distanceKm": 0.081,
+      "elevationM": 658.1,
+      "lat": 46.54054000000001,
+      "lon": 14.774740000000001
+    },
+    {
+      "distanceKm": 0.101,
+      "elevationM": 659.9,
+      "lat": 46.54057,
+      "lon": 14.775
+    },
+    {
+      "distanceKm": 0.174,
+      "elevationM": 669.2,
+      "lat": 46.54046,
+      "lon": 14.77593
+    },
+    {
+      "distanceKm": 0.184,
+      "elevationM": 669.6,
+      "lat": 46.540420000000005,
+      "lon": 14.776050000000001
+    },
+    {
+      "distanceKm": 0.221,
+      "elevationM": 670.5,
+      "lat": 46.540200000000006,
+      "lon": 14.776420000000002
+    },
+    {
+      "distanceKm": 0.319,
+      "elevationM": 681.2,
+      "lat": 46.53954,
+      "lon": 14.777270000000001
+    },
+    {
+      "distanceKm": 0.381,
+      "elevationM": 685.9,
+      "lat": 46.53914,
+      "lon": 14.777830000000002
+    },
+    {
+      "distanceKm": 0.422,
+      "elevationM": 688.5,
+      "lat": 46.53896,
+      "lon": 14.778300000000002
+    },
+    {
+      "distanceKm": 0.44,
+      "elevationM": 689.7,
+      "lat": 46.53886000000001,
+      "lon": 14.778480000000002
+    },
+    {
+      "distanceKm": 0.459,
+      "elevationM": 690.8,
+      "lat": 46.538720000000005,
+      "lon": 14.778630000000001
+    },
+    {
+      "distanceKm": 0.48,
+      "elevationM": 693.1,
+      "lat": 46.53855,
+      "lon": 14.77874
+    },
+    {
+      "distanceKm": 0.493,
+      "elevationM": 693.6,
+      "lat": 46.538430000000005,
+      "lon": 14.778770000000002
+    },
+    {
+      "distanceKm": 0.523,
+      "elevationM": 694.5,
+      "lat": 46.53817,
+      "lon": 14.7787
+    },
+    {
+      "distanceKm": 0.564,
+      "elevationM": 695.5,
+      "lat": 46.53781,
+      "lon": 14.778550000000001
+    },
+    {
+      "distanceKm": 0.638,
+      "elevationM": 699.2,
+      "lat": 46.53717,
+      "lon": 14.77832
+    },
+    {
+      "distanceKm": 0.654,
+      "elevationM": 700.4,
+      "lat": 46.53703,
+      "lon": 14.77837
+    },
+    {
+      "distanceKm": 0.655,
+      "elevationM": 700.4,
+      "lat": 46.537020000000005,
+      "lon": 14.778380000000002
+    },
+    {
+      "distanceKm": 0.657,
+      "elevationM": 700.3,
+      "lat": 46.53703,
+      "lon": 14.778360000000001
+    },
+    {
+      "distanceKm": 0.72,
+      "elevationM": 707.3,
+      "lat": 46.536680000000004,
+      "lon": 14.779000000000002
+    },
+    {
+      "distanceKm": 0.749,
+      "elevationM": 710.5,
+      "lat": 46.536620000000006,
+      "lon": 14.779380000000002
+    },
+    {
+      "distanceKm": 0.799,
+      "elevationM": 715.1,
+      "lat": 46.53658,
+      "lon": 14.78002
+    },
+    {
+      "distanceKm": 0.811,
+      "elevationM": 716.3,
+      "lat": 46.536550000000005,
+      "lon": 14.780170000000002
+    },
+    {
+      "distanceKm": 0.849,
+      "elevationM": 717.3,
+      "lat": 46.53627,
+      "lon": 14.780460000000001
+    },
+    {
+      "distanceKm": 0.862,
+      "elevationM": 723.3,
+      "lat": 46.53624000000001,
+      "lon": 14.78063
+    },
+    {
+      "distanceKm": 0.878,
+      "elevationM": 723.3,
+      "lat": 46.53624000000001,
+      "lon": 14.780840000000001
+    },
+    {
+      "distanceKm": 0.923,
+      "elevationM": 727.8,
+      "lat": 46.53614,
+      "lon": 14.781410000000001
+    },
+    {
+      "distanceKm": 0.936,
+      "elevationM": 727.8,
+      "lat": 46.536190000000005,
+      "lon": 14.78156
+    },
+    {
+      "distanceKm": 0.961,
+      "elevationM": 731.6,
+      "lat": 46.536370000000005,
+      "lon": 14.781760000000002
+    },
+    {
+      "distanceKm": 1.004,
+      "elevationM": 736.2,
+      "lat": 46.536750000000005,
+      "lon": 14.78184
+    },
+    {
+      "distanceKm": 1.011,
+      "elevationM": 736.2,
+      "lat": 46.53681,
+      "lon": 14.781880000000001
+    },
+    {
+      "distanceKm": 1.021,
+      "elevationM": 736.5,
+      "lat": 46.53680000000001,
+      "lon": 14.782010000000001
+    },
+    {
+      "distanceKm": 1.041,
+      "elevationM": 737.9,
+      "lat": 46.536620000000006,
+      "lon": 14.782020000000001
+    },
+    {
+      "distanceKm": 1.059,
+      "elevationM": 739.5,
+      "lat": 46.53647,
+      "lon": 14.782090000000002
+    },
+    {
+      "distanceKm": 1.097,
+      "elevationM": 742.6,
+      "lat": 46.536190000000005,
+      "lon": 14.782370000000002
+    },
+    {
+      "distanceKm": 1.111,
+      "elevationM": 744,
+      "lat": 46.53607,
+      "lon": 14.78245
+    },
+    {
+      "distanceKm": 1.137,
+      "elevationM": 747.6,
+      "lat": 46.53584,
+      "lon": 14.78241
+    },
+    {
+      "distanceKm": 1.143,
+      "elevationM": 747.6,
+      "lat": 46.535790000000006,
+      "lon": 14.782430000000002
+    },
+    {
+      "distanceKm": 1.199,
+      "elevationM": 754,
+      "lat": 46.53539000000001,
+      "lon": 14.78287
+    },
+    {
+      "distanceKm": 1.204,
+      "elevationM": 755.2,
+      "lat": 46.53537,
+      "lon": 14.78293
+    },
+    {
+      "distanceKm": 1.248,
+      "elevationM": 758.3,
+      "lat": 46.53530000000001,
+      "lon": 14.783500000000002
+    },
+    {
+      "distanceKm": 1.278,
+      "elevationM": 762.6,
+      "lat": 46.53529,
+      "lon": 14.783890000000001
+    },
+    {
+      "distanceKm": 1.308,
+      "elevationM": 766.1,
+      "lat": 46.53519000000001,
+      "lon": 14.784260000000002
+    },
+    {
+      "distanceKm": 1.325,
+      "elevationM": 769.6,
+      "lat": 46.535160000000005,
+      "lon": 14.78447
+    },
+    {
+      "distanceKm": 1.359,
+      "elevationM": 773.1,
+      "lat": 46.535000000000004,
+      "lon": 14.78485
+    },
+    {
+      "distanceKm": 1.374,
+      "elevationM": 774.8,
+      "lat": 46.5349,
+      "lon": 14.78499
+    },
+    {
+      "distanceKm": 1.388,
+      "elevationM": 776.3,
+      "lat": 46.53479,
+      "lon": 14.78508
+    },
+    {
+      "distanceKm": 1.433,
+      "elevationM": 781.2,
+      "lat": 46.534420000000004,
+      "lon": 14.785300000000001
+    },
+    {
+      "distanceKm": 1.463,
+      "elevationM": 784.3,
+      "lat": 46.53416000000001,
+      "lon": 14.78541
+    },
+    {
+      "distanceKm": 1.496,
+      "elevationM": 788.5,
+      "lat": 46.533910000000006,
+      "lon": 14.78564
+    },
+    {
+      "distanceKm": 1.513,
+      "elevationM": 790.9,
+      "lat": 46.533840000000005,
+      "lon": 14.785840000000002
+    },
+    {
+      "distanceKm": 1.545,
+      "elevationM": 795.1,
+      "lat": 46.53383,
+      "lon": 14.78626
+    },
+    {
+      "distanceKm": 1.573,
+      "elevationM": 797.1,
+      "lat": 46.53387,
+      "lon": 14.786620000000001
+    },
+    {
+      "distanceKm": 1.591,
+      "elevationM": 798.2,
+      "lat": 46.53387,
+      "lon": 14.78686
+    },
+    {
+      "distanceKm": 1.606,
+      "elevationM": 800.5,
+      "lat": 46.53378000000001,
+      "lon": 14.78701
+    },
+    {
+      "distanceKm": 1.632,
+      "elevationM": 804.1,
+      "lat": 46.533590000000004,
+      "lon": 14.78719
+    },
+    {
+      "distanceKm": 1.674,
+      "elevationM": 807.8,
+      "lat": 46.53336,
+      "lon": 14.787630000000002
+    },
+    {
+      "distanceKm": 1.681,
+      "elevationM": 807.8,
+      "lat": 46.533300000000004,
+      "lon": 14.787670000000002
+    },
+    {
+      "distanceKm": 1.689,
+      "elevationM": 810.2,
+      "lat": 46.53323,
+      "lon": 14.787670000000002
+    },
+    {
+      "distanceKm": 1.716,
+      "elevationM": 814.7,
+      "lat": 46.533,
+      "lon": 14.78757
+    },
+    {
+      "distanceKm": 1.729,
+      "elevationM": 814.7,
+      "lat": 46.532880000000006,
+      "lon": 14.787550000000001
+    },
+    {
+      "distanceKm": 1.766,
+      "elevationM": 817.7,
+      "lat": 46.53255,
+      "lon": 14.787560000000001
+    },
+    {
+      "distanceKm": 1.797,
+      "elevationM": 822.3,
+      "lat": 46.532270000000004,
+      "lon": 14.78752
+    },
+    {
+      "distanceKm": 1.825,
+      "elevationM": 826.5,
+      "lat": 46.532030000000006,
+      "lon": 14.78743
+    },
+    {
+      "distanceKm": 1.838,
+      "elevationM": 826.5,
+      "lat": 46.53191,
+      "lon": 14.78743
+    },
+    {
+      "distanceKm": 1.849,
+      "elevationM": 827.6,
+      "lat": 46.53183000000001,
+      "lon": 14.787510000000001
+    },
+    {
+      "distanceKm": 1.875,
+      "elevationM": 832.5,
+      "lat": 46.531690000000005,
+      "lon": 14.787780000000001
+    },
+    {
+      "distanceKm": 1.899,
+      "elevationM": 833.7,
+      "lat": 46.531510000000004,
+      "lon": 14.787960000000002
+    },
+    {
+      "distanceKm": 1.91,
+      "elevationM": 836.4,
+      "lat": 46.53144,
+      "lon": 14.788070000000001
+    },
+    {
+      "distanceKm": 1.96,
+      "elevationM": 841.7,
+      "lat": 46.531270000000006,
+      "lon": 14.788670000000002
+    },
+    {
+      "distanceKm": 1.995,
+      "elevationM": 847.1,
+      "lat": 46.53105,
+      "lon": 14.788990000000002
+    },
+    {
+      "distanceKm": 2.009,
+      "elevationM": 847.1,
+      "lat": 46.53094,
+      "lon": 14.789090000000002
+    },
+    {
+      "distanceKm": 2.025,
+      "elevationM": 850.9,
+      "lat": 46.530800000000006,
+      "lon": 14.789130000000002
+    },
+    {
+      "distanceKm": 2.035,
+      "elevationM": 851.5,
+      "lat": 46.530710000000006,
+      "lon": 14.78911
+    },
+    {
+      "distanceKm": 2.044,
+      "elevationM": 852.9,
+      "lat": 46.53065,
+      "lon": 14.789040000000002
+    },
+    {
+      "distanceKm": 2.08,
+      "elevationM": 857.4,
+      "lat": 46.530820000000006,
+      "lon": 14.788640000000001
+    },
+    {
+      "distanceKm": 2.09,
+      "elevationM": 857.9,
+      "lat": 46.53083,
+      "lon": 14.78851
+    },
+    {
+      "distanceKm": 2.095,
+      "elevationM": 858.5,
+      "lat": 46.53081,
+      "lon": 14.788440000000001
+    },
+    {
+      "distanceKm": 2.104,
+      "elevationM": 859.7,
+      "lat": 46.530750000000005,
+      "lon": 14.788380000000002
+    },
+    {
+      "distanceKm": 2.114,
+      "elevationM": 859.7,
+      "lat": 46.53067,
+      "lon": 14.788440000000001
+    },
+    {
+      "distanceKm": 2.127,
+      "elevationM": 864.3,
+      "lat": 46.53061,
+      "lon": 14.7886
+    },
+    {
+      "distanceKm": 2.139,
+      "elevationM": 864.3,
+      "lat": 46.53054,
+      "lon": 14.788720000000001
+    },
+    {
+      "distanceKm": 2.149,
+      "elevationM": 864.3,
+      "lat": 46.53047,
+      "lon": 14.78879
+    },
+    {
+      "distanceKm": 2.176,
+      "elevationM": 866.8,
+      "lat": 46.530240000000006,
+      "lon": 14.788920000000001
+    },
+    {
+      "distanceKm": 2.22,
+      "elevationM": 872.4,
+      "lat": 46.52993000000001,
+      "lon": 14.789270000000002
+    },
+    {
+      "distanceKm": 2.227,
+      "elevationM": 872.4,
+      "lat": 46.52991,
+      "lon": 14.789360000000002
+    },
+    {
+      "distanceKm": 2.237,
+      "elevationM": 875.6,
+      "lat": 46.52993000000001,
+      "lon": 14.78949
+    },
+    {
+      "distanceKm": 2.253,
+      "elevationM": 875.6,
+      "lat": 46.53,
+      "lon": 14.789660000000001
+    },
+    {
+      "distanceKm": 2.258,
+      "elevationM": 878,
+      "lat": 46.53,
+      "lon": 14.78973
+    },
+    {
+      "distanceKm": 2.267,
+      "elevationM": 878,
+      "lat": 46.52996,
+      "lon": 14.789830000000002
+    },
+    {
+      "distanceKm": 2.285,
+      "elevationM": 880.3,
+      "lat": 46.52982,
+      "lon": 14.789940000000001
+    },
+    {
+      "distanceKm": 2.296,
+      "elevationM": 881.5,
+      "lat": 46.529740000000004,
+      "lon": 14.790040000000001
+    },
+    {
+      "distanceKm": 2.318,
+      "elevationM": 884.1,
+      "lat": 46.52962,
+      "lon": 14.790270000000001
+    },
+    {
+      "distanceKm": 2.339,
+      "elevationM": 887.1,
+      "lat": 46.52946,
+      "lon": 14.790420000000001
+    },
+    {
+      "distanceKm": 2.368,
+      "elevationM": 887.1,
+      "lat": 46.529210000000006,
+      "lon": 14.790500000000002
+    },
+    {
+      "distanceKm": 2.41,
+      "elevationM": 895.8,
+      "lat": 46.52884,
+      "lon": 14.790580000000002
+    },
+    {
+      "distanceKm": 2.464,
+      "elevationM": 903.1,
+      "lat": 46.52837,
+      "lon": 14.790780000000002
+    },
+    {
+      "distanceKm": 2.481,
+      "elevationM": 904.5,
+      "lat": 46.528220000000005,
+      "lon": 14.790790000000001
+    },
+    {
+      "distanceKm": 2.501,
+      "elevationM": 908.1,
+      "lat": 46.528040000000004,
+      "lon": 14.79076
+    },
+    {
+      "distanceKm": 2.51,
+      "elevationM": 909.4,
+      "lat": 46.52796000000001,
+      "lon": 14.790770000000002
+    },
+    {
+      "distanceKm": 2.524,
+      "elevationM": 912.1,
+      "lat": 46.527840000000005,
+      "lon": 14.790820000000002
+    },
+    {
+      "distanceKm": 2.554,
+      "elevationM": 914,
+      "lat": 46.52760000000001,
+      "lon": 14.791
+    },
+    {
+      "distanceKm": 2.589,
+      "elevationM": 923.1,
+      "lat": 46.52731000000001,
+      "lon": 14.79118
+    },
+    {
+      "distanceKm": 2.623,
+      "elevationM": 923.1,
+      "lat": 46.52707,
+      "lon": 14.791450000000001
+    },
+    {
+      "distanceKm": 2.66,
+      "elevationM": 927.7,
+      "lat": 46.52678,
+      "lon": 14.791690000000001
+    },
+    {
+      "distanceKm": 2.662,
+      "elevationM": 927.5,
+      "lat": 46.526790000000005,
+      "lon": 14.791670000000002
+    },
+    {
+      "distanceKm": 2.674,
+      "elevationM": 928.2,
+      "lat": 46.52676,
+      "lon": 14.791830000000001
+    },
+    {
+      "distanceKm": 2.683,
+      "elevationM": 931.2,
+      "lat": 46.5268,
+      "lon": 14.79193
+    },
+    {
+      "distanceKm": 2.766,
+      "elevationM": 940,
+      "lat": 46.527330000000006,
+      "lon": 14.792700000000002
+    },
+    {
+      "distanceKm": 2.794,
+      "elevationM": 943.4,
+      "lat": 46.52749000000001,
+      "lon": 14.792980000000002
+    },
+    {
+      "distanceKm": 2.849,
+      "elevationM": 951.8,
+      "lat": 46.52775500168913,
+      "lon": 14.793584997263762
+    },
+    {
+      "distanceKm": 2.904,
+      "elevationM": 957.8,
+      "lat": 46.528020000000005,
+      "lon": 14.79419
+    },
+    {
+      "distanceKm": 2.942,
+      "elevationM": 960.8,
+      "lat": 46.52808,
+      "lon": 14.794680000000001
+    },
+    {
+      "distanceKm": 2.959,
+      "elevationM": 962.4,
+      "lat": 46.52801,
+      "lon": 14.794880000000001
+    },
+    {
+      "distanceKm": 2.983,
+      "elevationM": 964.6,
+      "lat": 46.527860000000004,
+      "lon": 14.795110000000001
+    },
+    {
+      "distanceKm": 2.993,
+      "elevationM": 965.8,
+      "lat": 46.52778000000001,
+      "lon": 14.79517
+    },
+    {
+      "distanceKm": 3.013,
+      "elevationM": 968.8,
+      "lat": 46.52761,
+      "lon": 14.795250000000001
+    },
+    {
+      "distanceKm": 3.029,
+      "elevationM": 968.8,
+      "lat": 46.52747,
+      "lon": 14.795300000000001
+    },
+    {
+      "distanceKm": 3.046,
+      "elevationM": 973.3,
+      "lat": 46.52732,
+      "lon": 14.795330000000002
+    },
+    {
+      "distanceKm": 3.071,
+      "elevationM": 973.3,
+      "lat": 46.527100000000004,
+      "lon": 14.79541
+    },
+    {
+      "distanceKm": 3.094,
+      "elevationM": 978.5,
+      "lat": 46.526920000000004,
+      "lon": 14.795560000000002
+    },
+    {
+      "distanceKm": 3.121,
+      "elevationM": 980.2,
+      "lat": 46.52673,
+      "lon": 14.795770000000001
+    },
+    {
+      "distanceKm": 3.129,
+      "elevationM": 981.7,
+      "lat": 46.52666000000001,
+      "lon": 14.79578
+    },
+    {
+      "distanceKm": 3.132,
+      "elevationM": 982,
+      "lat": 46.526630000000004,
+      "lon": 14.795760000000001
+    },
+    {
+      "distanceKm": 3.142,
+      "elevationM": 984,
+      "lat": 46.52656,
+      "lon": 14.79568
+    },
+    {
+      "distanceKm": 3.155,
+      "elevationM": 985.4,
+      "lat": 46.52656,
+      "lon": 14.795510000000002
+    },
+    {
+      "distanceKm": 3.225,
+      "elevationM": 992.4,
+      "lat": 46.526740000000004,
+      "lon": 14.794640000000001
+    },
+    {
+      "distanceKm": 3.245,
+      "elevationM": 994,
+      "lat": 46.52687,
+      "lon": 14.794450000000001
+    },
+    {
+      "distanceKm": 3.261,
+      "elevationM": 994,
+      "lat": 46.52694,
+      "lon": 14.794270000000001
+    },
+    {
+      "distanceKm": 3.275,
+      "elevationM": 996.6,
+      "lat": 46.52694,
+      "lon": 14.79409
+    },
+    {
+      "distanceKm": 3.293,
+      "elevationM": 996.6,
+      "lat": 46.52689,
+      "lon": 14.793870000000002
+    },
+    {
+      "distanceKm": 3.314,
+      "elevationM": 999.6,
+      "lat": 46.52673,
+      "lon": 14.79371
+    },
+    {
+      "distanceKm": 3.356,
+      "elevationM": 1004.2,
+      "lat": 46.5264,
+      "lon": 14.79344
+    },
+    {
+      "distanceKm": 3.413,
+      "elevationM": 1007.5,
+      "lat": 46.525935000257185,
+      "lon": 14.793134997292029
+    },
+    {
+      "distanceKm": 3.47,
+      "elevationM": 1014,
+      "lat": 46.525470000000006,
+      "lon": 14.79283
+    },
+    {
+      "distanceKm": 3.487,
+      "elevationM": 1014.8,
+      "lat": 46.52534000000001,
+      "lon": 14.792710000000001
+    },
+    {
+      "distanceKm": 3.535,
+      "elevationM": 1019.6,
+      "lat": 46.52503,
+      "lon": 14.792280000000002
+    },
+    {
+      "distanceKm": 3.576,
+      "elevationM": 1023.2,
+      "lat": 46.52472,
+      "lon": 14.79198
+    },
+    {
+      "distanceKm": 3.584,
+      "elevationM": 1023.2,
+      "lat": 46.52467,
+      "lon": 14.791900000000002
+    },
+    {
+      "distanceKm": 3.63,
+      "elevationM": 1028.4,
+      "lat": 46.52459,
+      "lon": 14.791310000000001
+    },
+    {
+      "distanceKm": 3.646,
+      "elevationM": 1030.4,
+      "lat": 46.52459,
+      "lon": 14.791100000000002
+    },
+    {
+      "distanceKm": 3.649,
+      "elevationM": 1030.6,
+      "lat": 46.52459,
+      "lon": 14.791060000000002
+    },
+    {
+      "distanceKm": 3.722,
+      "elevationM": 1035.8,
+      "lat": 46.524770000000004,
+      "lon": 14.79015
+    },
+    {
+      "distanceKm": 3.735,
+      "elevationM": 1037.8,
+      "lat": 46.52483,
+      "lon": 14.79001
+    },
+    {
+      "distanceKm": 3.753,
+      "elevationM": 1039.4,
+      "lat": 46.52496000000001,
+      "lon": 14.789850000000001
+    },
+    {
+      "distanceKm": 3.819,
+      "elevationM": 1044.3,
+      "lat": 46.52539,
+      "lon": 14.78926
+    },
+    {
+      "distanceKm": 3.832,
+      "elevationM": 1044.3,
+      "lat": 46.52546,
+      "lon": 14.78912
+    },
+    {
+      "distanceKm": 3.857,
+      "elevationM": 1046.7,
+      "lat": 46.52553,
+      "lon": 14.788820000000001
+    },
+    {
+      "distanceKm": 3.877,
+      "elevationM": 1047.8,
+      "lat": 46.525510000000004,
+      "lon": 14.78856
+    },
+    {
+      "distanceKm": 3.903,
+      "elevationM": 1051.9,
+      "lat": 46.52546,
+      "lon": 14.78823
+    },
+    {
+      "distanceKm": 3.93,
+      "elevationM": 1053.1,
+      "lat": 46.525380000000006,
+      "lon": 14.78789
+    },
+    {
+      "distanceKm": 3.976,
+      "elevationM": 1058.9,
+      "lat": 46.52523,
+      "lon": 14.78733
+    },
+    {
+      "distanceKm": 4.006,
+      "elevationM": 1061.9,
+      "lat": 46.52506,
+      "lon": 14.787030000000001
+    },
+    {
+      "distanceKm": 4.012,
+      "elevationM": 1061.9,
+      "lat": 46.525040000000004,
+      "lon": 14.786950000000001
+    },
+    {
+      "distanceKm": 4.021,
+      "elevationM": 1063.8,
+      "lat": 46.525040000000004,
+      "lon": 14.786830000000002
+    },
+    {
+      "distanceKm": 4.038,
+      "elevationM": 1067.7,
+      "lat": 46.525110000000005,
+      "lon": 14.786640000000002
+    },
+    {
+      "distanceKm": 4.058,
+      "elevationM": 1067.7,
+      "lat": 46.525240000000004,
+      "lon": 14.786450000000002
+    },
+    {
+      "distanceKm": 4.103,
+      "elevationM": 1074.1,
+      "lat": 46.525490000000005,
+      "lon": 14.786000000000001
+    },
+    {
+      "distanceKm": 4.134,
+      "elevationM": 1076.9,
+      "lat": 46.525650000000006,
+      "lon": 14.785670000000001
+    },
+    {
+      "distanceKm": 4.161,
+      "elevationM": 1078.4,
+      "lat": 46.525740000000006,
+      "lon": 14.785340000000001
+    },
+    {
+      "distanceKm": 4.188,
+      "elevationM": 1081.1,
+      "lat": 46.52581000000001,
+      "lon": 14.785000000000002
+    },
+    {
+      "distanceKm": 4.199,
+      "elevationM": 1081.1,
+      "lat": 46.52586,
+      "lon": 14.784870000000002
+    },
+    {
+      "distanceKm": 4.216,
+      "elevationM": 1083.2,
+      "lat": 46.525960000000005,
+      "lon": 14.78471
+    },
+    {
+      "distanceKm": 4.272,
+      "elevationM": 1089.8,
+      "lat": 46.526390000572206,
+      "lon": 14.784335003003774
+    },
+    {
+      "distanceKm": 4.327,
+      "elevationM": 1094.9,
+      "lat": 46.52682,
+      "lon": 14.78396
+    },
+    {
+      "distanceKm": 4.338,
+      "elevationM": 1095.8,
+      "lat": 46.52691,
+      "lon": 14.783900000000001
+    },
+    {
+      "distanceKm": 4.353,
+      "elevationM": 1095.8,
+      "lat": 46.52704000000001,
+      "lon": 14.783850000000001
+    },
+    {
+      "distanceKm": 4.379,
+      "elevationM": 1099,
+      "lat": 46.52727,
+      "lon": 14.783840000000001
+    },
+    {
+      "distanceKm": 4.39,
+      "elevationM": 1099,
+      "lat": 46.527370000000005,
+      "lon": 14.78381
+    },
+    {
+      "distanceKm": 4.407,
+      "elevationM": 1101.4,
+      "lat": 46.5275,
+      "lon": 14.783710000000001
+    },
+    {
+      "distanceKm": 4.417,
+      "elevationM": 1102.2,
+      "lat": 46.52756,
+      "lon": 14.783600000000002
+    },
+    {
+      "distanceKm": 4.461,
+      "elevationM": 1106,
+      "lat": 46.527730000000005,
+      "lon": 14.783090000000001
+    },
+    {
+      "distanceKm": 4.472,
+      "elevationM": 1107.7,
+      "lat": 46.527800000000006,
+      "lon": 14.782990000000002
+    },
+    {
+      "distanceKm": 4.489,
+      "elevationM": 1109.4,
+      "lat": 46.527930000000005,
+      "lon": 14.78287
+    },
+    {
+      "distanceKm": 4.496,
+      "elevationM": 1110.7,
+      "lat": 46.527950000000004,
+      "lon": 14.78278
+    },
+    {
+      "distanceKm": 4.499,
+      "elevationM": 1110.9,
+      "lat": 46.52794,
+      "lon": 14.782750000000002
+    },
+    {
+      "distanceKm": 4.504,
+      "elevationM": 1111.6,
+      "lat": 46.527910000000006,
+      "lon": 14.782700000000002
+    },
+    {
+      "distanceKm": 4.507,
+      "elevationM": 1111.6,
+      "lat": 46.52788,
+      "lon": 14.78269
+    },
+    {
+      "distanceKm": 4.51,
+      "elevationM": 1112,
+      "lat": 46.52785,
+      "lon": 14.782700000000002
+    },
+    {
+      "distanceKm": 4.549,
+      "elevationM": 1114.6,
+      "lat": 46.52756,
+      "lon": 14.78297
+    },
+    {
+      "distanceKm": 4.588,
+      "elevationM": 1118.2,
+      "lat": 46.52725,
+      "lon": 14.78321
+    },
+    {
+      "distanceKm": 4.6,
+      "elevationM": 1118.2,
+      "lat": 46.52714,
+      "lon": 14.78325
+    },
+    {
+      "distanceKm": 4.658,
+      "elevationM": 1124.3,
+      "lat": 46.52662,
+      "lon": 14.783240000000001
+    },
+    {
+      "distanceKm": 4.722,
+      "elevationM": 1128.7,
+      "lat": 46.526050000000005,
+      "lon": 14.783310000000002
+    },
+    {
+      "distanceKm": 4.763,
+      "elevationM": 1133.4,
+      "lat": 46.5257,
+      "lon": 14.78348
+    },
+    {
+      "distanceKm": 4.797,
+      "elevationM": 1136.5,
+      "lat": 46.525400000000005,
+      "lon": 14.783560000000001
+    },
+    {
+      "distanceKm": 4.809,
+      "elevationM": 1139.6,
+      "lat": 46.5253,
+      "lon": 14.783610000000001
+    },
+    {
+      "distanceKm": 4.818,
+      "elevationM": 1139.6,
+      "lat": 46.52523,
+      "lon": 14.78368
+    },
+    {
+      "distanceKm": 4.858,
+      "elevationM": 1143.7,
+      "lat": 46.52499,
+      "lon": 14.784070000000002
+    },
+    {
+      "distanceKm": 4.865,
+      "elevationM": 1144.8,
+      "lat": 46.524930000000005,
+      "lon": 14.78409
+    },
+    {
+      "distanceKm": 4.873,
+      "elevationM": 1145.3,
+      "lat": 46.52488,
+      "lon": 14.784020000000002
+    },
+    {
+      "distanceKm": 4.879,
+      "elevationM": 1145.9,
+      "lat": 46.52488,
+      "lon": 14.783940000000001
+    },
+    {
+      "distanceKm": 4.879,
+      "elevationM": 1146,
+      "lat": 46.52488,
+      "lon": 14.783930000000002
+    },
+    {
+      "distanceKm": 4.911,
+      "elevationM": 1148.3,
+      "lat": 46.525090000000006,
+      "lon": 14.783650000000002
+    },
+    {
+      "distanceKm": 4.921,
+      "elevationM": 1149,
+      "lat": 46.52514,
+      "lon": 14.78354
+    },
+    {
+      "distanceKm": 4.937,
+      "elevationM": 1151.6,
+      "lat": 46.525200000000005,
+      "lon": 14.783360000000002
+    },
+    {
+      "distanceKm": 4.947,
+      "elevationM": 1151.6,
+      "lat": 46.52526,
+      "lon": 14.78325
+    },
+    {
+      "distanceKm": 4.985,
+      "elevationM": 1155.9,
+      "lat": 46.525560000000006,
+      "lon": 14.78302
+    },
+    {
+      "distanceKm": 4.999,
+      "elevationM": 1157.3,
+      "lat": 46.52566,
+      "lon": 14.782910000000001
+    },
+    {
+      "distanceKm": 5.026,
+      "elevationM": 1158.4,
+      "lat": 46.525830000000006,
+      "lon": 14.782660000000002
+    },
+    {
+      "distanceKm": 5.044,
+      "elevationM": 1161.6,
+      "lat": 46.52597,
+      "lon": 14.782530000000001
+    },
+    {
+      "distanceKm": 5.077,
+      "elevationM": 1165.5,
+      "lat": 46.52624,
+      "lon": 14.782370000000002
+    },
+    {
+      "distanceKm": 5.108,
+      "elevationM": 1167.5,
+      "lat": 46.52651,
+      "lon": 14.78227
+    },
+    {
+      "distanceKm": 5.128,
+      "elevationM": 1169.9,
+      "lat": 46.52667,
+      "lon": 14.78213
+    },
+    {
+      "distanceKm": 5.138,
+      "elevationM": 1170.9,
+      "lat": 46.52673,
+      "lon": 14.782050000000002
+    },
+    {
+      "distanceKm": 5.186,
+      "elevationM": 1175.5,
+      "lat": 46.527010000000004,
+      "lon": 14.78156
+    },
+    {
+      "distanceKm": 5.253,
+      "elevationM": 1185.3,
+      "lat": 46.527420000000006,
+      "lon": 14.780930000000001
+    },
+    {
+      "distanceKm": 5.304,
+      "elevationM": 1188.8,
+      "lat": 46.527640000000005,
+      "lon": 14.78034
+    },
+    {
+      "distanceKm": 5.355,
+      "elevationM": 1195.4,
+      "lat": 46.52796000000001,
+      "lon": 14.77987
+    },
+    {
+      "distanceKm": 5.362,
+      "elevationM": 1196.8,
+      "lat": 46.52799,
+      "lon": 14.779790000000002
+    },
+    {
+      "distanceKm": 5.379,
+      "elevationM": 1198.6,
+      "lat": 46.52798000000001,
+      "lon": 14.779560000000002
+    },
+    {
+      "distanceKm": 5.407,
+      "elevationM": 1199.5,
+      "lat": 46.527930000000005,
+      "lon": 14.779200000000001
+    },
+    {
+      "distanceKm": 5.425,
+      "elevationM": 1202.9,
+      "lat": 46.52794,
+      "lon": 14.778970000000001
+    },
+    {
+      "distanceKm": 5.455,
+      "elevationM": 1205.2,
+      "lat": 46.528000000000006,
+      "lon": 14.778580000000002
+    },
+    {
+      "distanceKm": 5.501,
+      "elevationM": 1209.1,
+      "lat": 46.528150000000004,
+      "lon": 14.778030000000001
+    },
+    {
+      "distanceKm": 5.506,
+      "elevationM": 1210.5,
+      "lat": 46.52816000000001,
+      "lon": 14.777960000000002
+    },
+    {
+      "distanceKm": 5.509,
+      "elevationM": 1210.5,
+      "lat": 46.52814,
+      "lon": 14.777930000000001
+    },
+    {
+      "distanceKm": 5.511,
+      "elevationM": 1210.6,
+      "lat": 46.528130000000004,
+      "lon": 14.777920000000002
+    },
+    {
+      "distanceKm": 5.511,
+      "elevationM": 1210.6,
+      "lat": 46.528130000000004,
+      "lon": 14.77791
+    },
+    {
+      "distanceKm": 5.52,
+      "elevationM": 1212.3,
+      "lat": 46.52805,
+      "lon": 14.7779
+    },
+    {
+      "distanceKm": 5.524,
+      "elevationM": 1212.3,
+      "lat": 46.528020000000005,
+      "lon": 14.777920000000002
+    },
+    {
+      "distanceKm": 5.555,
+      "elevationM": 1214.7,
+      "lat": 46.52794,
+      "lon": 14.778310000000001
+    },
+    {
+      "distanceKm": 5.601,
+      "elevationM": 1219.9,
+      "lat": 46.527710000000006,
+      "lon": 14.778810000000002
+    },
+    {
+      "distanceKm": 5.65,
+      "elevationM": 1224.8,
+      "lat": 46.527570000000004,
+      "lon": 14.77941
+    },
+    {
+      "distanceKm": 5.667,
+      "elevationM": 1225.7,
+      "lat": 46.527480000000004,
+      "lon": 14.77959
+    },
+    {
+      "distanceKm": 5.71,
+      "elevationM": 1228.1,
+      "lat": 46.527170000000005,
+      "lon": 14.779930000000002
+    },
+    {
+      "distanceKm": 5.758,
+      "elevationM": 1235.5,
+      "lat": 46.52685,
+      "lon": 14.78035
+    },
+    {
+      "distanceKm": 5.771,
+      "elevationM": 1237,
+      "lat": 46.52675000000001,
+      "lon": 14.78043
+    },
+    {
+      "distanceKm": 5.824,
+      "elevationM": 1241.3,
+      "lat": 46.526300000000006,
+      "lon": 14.78067
+    },
+    {
+      "distanceKm": 5.838,
+      "elevationM": 1242.8,
+      "lat": 46.52617,
+      "lon": 14.780680000000002
+    },
+    {
+      "distanceKm": 5.871,
+      "elevationM": 1247.9,
+      "lat": 46.52588,
+      "lon": 14.780650000000001
+    },
+    {
+      "distanceKm": 5.911,
+      "elevationM": 1250,
+      "lat": 46.52552000000001,
+      "lon": 14.78067
+    },
+    {
+      "distanceKm": 5.921,
+      "elevationM": 1252.1,
+      "lat": 46.52543000000001,
+      "lon": 14.780690000000002
+    },
+    {
+      "distanceKm": 5.969,
+      "elevationM": 1256.2,
+      "lat": 46.52501,
+      "lon": 14.78086
+    },
+    {
+      "distanceKm": 6.023,
+      "elevationM": 1261.6,
+      "lat": 46.52458,
+      "lon": 14.78118
+    },
+    {
+      "distanceKm": 6.041,
+      "elevationM": 1263.8,
+      "lat": 46.52443,
+      "lon": 14.781260000000001
+    },
+    {
+      "distanceKm": 6.057,
+      "elevationM": 1264.7,
+      "lat": 46.52429,
+      "lon": 14.781300000000002
+    },
+    {
+      "distanceKm": 6.07,
+      "elevationM": 1267,
+      "lat": 46.524170000000005,
+      "lon": 14.781310000000001
+    },
+    {
+      "distanceKm": 6.093,
+      "elevationM": 1272.3,
+      "lat": 46.523970000000006,
+      "lon": 14.78123
+    },
+    {
+      "distanceKm": 6.122,
+      "elevationM": 1274.2,
+      "lat": 46.52376,
+      "lon": 14.781
+    },
+    {
+      "distanceKm": 6.133,
+      "elevationM": 1274.2,
+      "lat": 46.52367,
+      "lon": 14.780960000000002
+    },
+    {
+      "distanceKm": 6.152,
+      "elevationM": 1276.4,
+      "lat": 46.523500000000006,
+      "lon": 14.780980000000001
+    },
+    {
+      "distanceKm": 6.168,
+      "elevationM": 1278.4,
+      "lat": 46.523360000000004,
+      "lon": 14.78104
+    },
+    {
+      "distanceKm": 6.181,
+      "elevationM": 1279.4,
+      "lat": 46.523250000000004,
+      "lon": 14.7811
+    },
+    {
+      "distanceKm": 6.2,
+      "elevationM": 1281.6,
+      "lat": 46.52310000000001,
+      "lon": 14.781220000000001
+    },
+    {
+      "distanceKm": 6.223,
+      "elevationM": 1284,
+      "lat": 46.522980000000004,
+      "lon": 14.78147
+    },
+    {
+      "distanceKm": 6.244,
+      "elevationM": 1284.9,
+      "lat": 46.522890000000004,
+      "lon": 14.78171
+    },
+    {
+      "distanceKm": 6.292,
+      "elevationM": 1292.2,
+      "lat": 46.52264,
+      "lon": 14.78222
+    },
+    {
+      "distanceKm": 6.322,
+      "elevationM": 1298.8,
+      "lat": 46.52244,
+      "lon": 14.782470000000002
+    },
+    {
+      "distanceKm": 6.329,
+      "elevationM": 1298.8,
+      "lat": 46.522380000000005,
+      "lon": 14.782510000000002
+    },
+    {
+      "distanceKm": 6.34,
+      "elevationM": 1299.3,
+      "lat": 46.52228,
+      "lon": 14.782520000000002
+    },
+    {
+      "distanceKm": 6.346,
+      "elevationM": 1299.3,
+      "lat": 46.522330000000004,
+      "lon": 14.782520000000002
+    },
+    {
+      "distanceKm": 6.355,
+      "elevationM": 1300,
+      "lat": 46.52225000000001,
+      "lon": 14.782510000000002
+    },
+    {
+      "distanceKm": 6.41,
+      "elevationM": 1315.8,
+      "lat": 46.52179,
+      "lon": 14.78222
+    },
+    {
+      "distanceKm": 6.427,
+      "elevationM": 1320.2,
+      "lat": 46.521640000000005,
+      "lon": 14.782180000000002
+    },
+    {
+      "distanceKm": 6.439,
+      "elevationM": 1320.2,
+      "lat": 46.52154,
+      "lon": 14.782210000000001
+    },
+    {
+      "distanceKm": 6.451,
+      "elevationM": 1323.7,
+      "lat": 46.52143,
+      "lon": 14.782200000000001
+    },
+    {
+      "distanceKm": 6.456,
+      "elevationM": 1324.3,
+      "lat": 46.52138,
+      "lon": 14.782190000000002
+    },
+    {
+      "distanceKm": 6.459,
+      "elevationM": 1324.8,
+      "lat": 46.52136,
+      "lon": 14.78217
+    },
+    {
+      "distanceKm": 6.465,
+      "elevationM": 1325.4,
+      "lat": 46.521350000000005,
+      "lon": 14.782090000000002
+    },
+    {
+      "distanceKm": 6.472,
+      "elevationM": 1324.8,
+      "lat": 46.52136,
+      "lon": 14.78217
+    },
+    {
+      "distanceKm": 6.485,
+      "elevationM": 1326.3,
+      "lat": 46.52140000000001,
+      "lon": 14.782010000000001
+    },
+    {
+      "distanceKm": 6.489,
+      "elevationM": 1326.6,
+      "lat": 46.521440000000005,
+      "lon": 14.78199
+    },
+    {
+      "distanceKm": 6.503,
+      "elevationM": 1327.4,
+      "lat": 46.52156,
+      "lon": 14.78199
+    },
+    {
+      "distanceKm": 6.518,
+      "elevationM": 1328.3,
+      "lat": 46.52169000000001,
+      "lon": 14.78194
+    },
+    {
+      "distanceKm": 6.533,
+      "elevationM": 1328.9,
+      "lat": 46.52181,
+      "lon": 14.781830000000001
+    },
+    {
+      "distanceKm": 6.556,
+      "elevationM": 1333,
+      "lat": 46.52197,
+      "lon": 14.78165
+    },
+    {
+      "distanceKm": 6.573,
+      "elevationM": 1334,
+      "lat": 46.52208,
+      "lon": 14.781490000000002
+    },
+    {
+      "distanceKm": 6.589,
+      "elevationM": 1335.6,
+      "lat": 46.52217,
+      "lon": 14.78133
+    },
+    {
+      "distanceKm": 6.619,
+      "elevationM": 1339.4,
+      "lat": 46.5223,
+      "lon": 14.780980000000001
+    },
+    {
+      "distanceKm": 6.649,
+      "elevationM": 1344.7,
+      "lat": 46.52244,
+      "lon": 14.780650000000001
+    },
+    {
+      "distanceKm": 6.662,
+      "elevationM": 1345.6,
+      "lat": 46.522470000000006,
+      "lon": 14.78049
+    },
+    {
+      "distanceKm": 6.679,
+      "elevationM": 1347.7,
+      "lat": 46.522490000000005,
+      "lon": 14.780270000000002
+    },
+    {
+      "distanceKm": 6.688,
+      "elevationM": 1348.5,
+      "lat": 46.52253,
+      "lon": 14.780170000000002
+    },
+    {
+      "distanceKm": 6.696,
+      "elevationM": 1348.8,
+      "lat": 46.52259,
+      "lon": 14.78011
+    },
+    {
+      "distanceKm": 6.706,
+      "elevationM": 1349.5,
+      "lat": 46.52268,
+      "lon": 14.780070000000002
+    },
+    {
+      "distanceKm": 6.728,
+      "elevationM": 1352.4,
+      "lat": 46.522870000000005,
+      "lon": 14.780030000000002
+    },
+    {
+      "distanceKm": 6.734,
+      "elevationM": 1352.7,
+      "lat": 46.522920000000006,
+      "lon": 14.780000000000001
+    },
+    {
+      "distanceKm": 6.739,
+      "elevationM": 1352.6,
+      "lat": 46.522960000000005,
+      "lon": 14.779950000000001
+    },
+    {
+      "distanceKm": 6.792,
+      "elevationM": 1359.7,
+      "lat": 46.523210000000006,
+      "lon": 14.77936
+    },
+    {
+      "distanceKm": 6.805,
+      "elevationM": 1361.1,
+      "lat": 46.523300000000006,
+      "lon": 14.77926
+    },
+    {
+      "distanceKm": 6.817,
+      "elevationM": 1362.1,
+      "lat": 46.5234,
+      "lon": 14.77921
+    },
+    {
+      "distanceKm": 6.823,
+      "elevationM": 1362.2,
+      "lat": 46.52346000000001,
+      "lon": 14.77921
+    },
+    {
+      "distanceKm": 6.833,
+      "elevationM": 1361.4,
+      "lat": 46.523540000000004,
+      "lon": 14.779240000000001
+    },
+    {
+      "distanceKm": 6.877,
+      "elevationM": 1367.2,
+      "lat": 46.523920000000004,
+      "lon": 14.77941
+    },
+    {
+      "distanceKm": 6.888,
+      "elevationM": 1370.4,
+      "lat": 46.52402000000001,
+      "lon": 14.77945
+    },
+    {
+      "distanceKm": 6.894,
+      "elevationM": 1370.7,
+      "lat": 46.52407,
+      "lon": 14.779440000000001
+    },
+    {
+      "distanceKm": 6.899,
+      "elevationM": 1371.1,
+      "lat": 46.52411,
+      "lon": 14.7794
+    },
+    {
+      "distanceKm": 6.92,
+      "elevationM": 1372.1,
+      "lat": 46.524210000000004,
+      "lon": 14.779180000000002
+    },
+    {
+      "distanceKm": 6.948,
+      "elevationM": 1375.3,
+      "lat": 46.52438,
+      "lon": 14.778910000000002
+    },
+    {
+      "distanceKm": 6.996,
+      "elevationM": 1382.2,
+      "lat": 46.52478000000001,
+      "lon": 14.77866
+    },
+    {
+      "distanceKm": 7.004,
+      "elevationM": 1382.6,
+      "lat": 46.524840000000005,
+      "lon": 14.7786
+    },
+    {
+      "distanceKm": 7.047,
+      "elevationM": 1387.1,
+      "lat": 46.52514,
+      "lon": 14.778250000000002
+    },
+    {
+      "distanceKm": 7.059,
+      "elevationM": 1388.9,
+      "lat": 46.525240000000004,
+      "lon": 14.77818
+    },
+    {
+      "distanceKm": 7.07,
+      "elevationM": 1388.9,
+      "lat": 46.525330000000004,
+      "lon": 14.778120000000001
+    },
+    {
+      "distanceKm": 7.081,
+      "elevationM": 1390.2,
+      "lat": 46.52543000000001,
+      "lon": 14.778110000000002
+    },
+    {
+      "distanceKm": 7.097,
+      "elevationM": 1391.5,
+      "lat": 46.525560000000006,
+      "lon": 14.77805
+    },
+    {
+      "distanceKm": 7.104,
+      "elevationM": 1391.8,
+      "lat": 46.52561,
+      "lon": 14.77799
+    },
+    {
+      "distanceKm": 7.118,
+      "elevationM": 1392.5,
+      "lat": 46.52568,
+      "lon": 14.777830000000002
+    },
+    {
+      "distanceKm": 7.149,
+      "elevationM": 1396.5,
+      "lat": 46.52577,
+      "lon": 14.777450000000002
+    },
+    {
+      "distanceKm": 7.17,
+      "elevationM": 1399.8,
+      "lat": 46.52582,
+      "lon": 14.777180000000001
+    },
+    {
+      "distanceKm": 7.213,
+      "elevationM": 1406.4,
+      "lat": 46.526050000000005,
+      "lon": 14.77673
+    },
+    {
+      "distanceKm": 7.22,
+      "elevationM": 1407.1,
+      "lat": 46.52606,
+      "lon": 14.776650000000002
+    },
+    {
+      "distanceKm": 7.226,
+      "elevationM": 1407.1,
+      "lat": 46.52606,
+      "lon": 14.776570000000001
+    },
+    {
+      "distanceKm": 7.231,
+      "elevationM": 1407.7,
+      "lat": 46.52602,
+      "lon": 14.776530000000001
+    },
+    {
+      "distanceKm": 7.242,
+      "elevationM": 1408.2,
+      "lat": 46.525920000000006,
+      "lon": 14.77654
+    },
+    {
+      "distanceKm": 7.251,
+      "elevationM": 1408.2,
+      "lat": 46.52584,
+      "lon": 14.776570000000001
+    },
+    {
+      "distanceKm": 7.264,
+      "elevationM": 1409.2,
+      "lat": 46.525740000000006,
+      "lon": 14.776660000000001
+    },
+    {
+      "distanceKm": 7.275,
+      "elevationM": 1410.2,
+      "lat": 46.525650000000006,
+      "lon": 14.776710000000001
+    },
+    {
+      "distanceKm": 7.294,
+      "elevationM": 1411.4,
+      "lat": 46.52548,
+      "lon": 14.776760000000001
+    },
+    {
+      "distanceKm": 7.321,
+      "elevationM": 1415,
+      "lat": 46.525240000000004,
+      "lon": 14.77673
+    },
+    {
+      "distanceKm": 7.363,
+      "elevationM": 1421.7,
+      "lat": 46.52488,
+      "lon": 14.776560000000002
+    },
+    {
+      "distanceKm": 7.383,
+      "elevationM": 1424.5,
+      "lat": 46.524750000000004,
+      "lon": 14.776380000000001
+    },
+    {
+      "distanceKm": 7.394,
+      "elevationM": 1424.5,
+      "lat": 46.52472,
+      "lon": 14.776250000000001
+    },
+    {
+      "distanceKm": 7.401,
+      "elevationM": 1426.9,
+      "lat": 46.52467,
+      "lon": 14.776200000000001
+    },
+    {
+      "distanceKm": 7.406,
+      "elevationM": 1426.9,
+      "lat": 46.524620000000006,
+      "lon": 14.776200000000001
+    },
+    {
+      "distanceKm": 7.411,
+      "elevationM": 1426.9,
+      "lat": 46.52458,
+      "lon": 14.776230000000002
+    },
+    {
+      "distanceKm": 7.416,
+      "elevationM": 1426.4,
+      "lat": 46.524570000000004,
+      "lon": 14.776290000000001
+    },
+    {
+      "distanceKm": 7.422,
+      "elevationM": 1426.1,
+      "lat": 46.52458,
+      "lon": 14.776370000000002
+    },
+    {
+      "distanceKm": 7.488,
+      "elevationM": 1431.5,
+      "lat": 46.52496000000001,
+      "lon": 14.777040000000001
+    },
+    {
+      "distanceKm": 7.501,
+      "elevationM": 1433.1,
+      "lat": 46.52501,
+      "lon": 14.777180000000001
+    },
+    {
+      "distanceKm": 7.513,
+      "elevationM": 1434.8,
+      "lat": 46.52499,
+      "lon": 14.77734
+    },
+    {
+      "distanceKm": 7.542,
+      "elevationM": 1437.5,
+      "lat": 46.52476,
+      "lon": 14.77752
+    },
+    {
+      "distanceKm": 7.563,
+      "elevationM": 1440.4,
+      "lat": 46.52458,
+      "lon": 14.77762
+    },
+    {
+      "distanceKm": 7.578,
+      "elevationM": 1441.9,
+      "lat": 46.52445,
+      "lon": 14.777660000000001
+    },
+    {
+      "distanceKm": 7.627,
+      "elevationM": 1444.6,
+      "lat": 46.524010000000004,
+      "lon": 14.77767
+    },
+    {
+      "distanceKm": 7.671,
+      "elevationM": 1449.5,
+      "lat": 46.52364,
+      "lon": 14.777490000000002
+    },
+    {
+      "distanceKm": 7.692,
+      "elevationM": 1452.2,
+      "lat": 46.523450000000004,
+      "lon": 14.777460000000001
+    },
+    {
+      "distanceKm": 7.695,
+      "elevationM": 1452.5,
+      "lat": 46.523450000000004,
+      "lon": 14.777420000000001
+    },
+    {
+      "distanceKm": 7.703,
+      "elevationM": 1453.5,
+      "lat": 46.52347,
+      "lon": 14.777320000000001
+    },
+    {
+      "distanceKm": 7.707,
+      "elevationM": 1454,
+      "lat": 46.523500000000006,
+      "lon": 14.77729
+    },
+    {
+      "distanceKm": 7.716,
+      "elevationM": 1454.8,
+      "lat": 46.52358,
+      "lon": 14.777280000000001
+    },
+    {
+      "distanceKm": 7.732,
+      "elevationM": 1455.7,
+      "lat": 46.523720000000004,
+      "lon": 14.777230000000001
+    },
+    {
+      "distanceKm": 7.741,
+      "elevationM": 1458.1,
+      "lat": 46.52378,
+      "lon": 14.77715
+    },
+    {
+      "distanceKm": 7.748,
+      "elevationM": 1459.1,
+      "lat": 46.5238,
+      "lon": 14.77706
+    },
+    {
+      "distanceKm": 7.76,
+      "elevationM": 1460.1,
+      "lat": 46.523790000000005,
+      "lon": 14.77691
+    },
+    {
+      "distanceKm": 7.772,
+      "elevationM": 1460.9,
+      "lat": 46.523740000000004,
+      "lon": 14.77677
+    },
+    {
+      "distanceKm": 7.806,
+      "elevationM": 1463.7,
+      "lat": 46.52356,
+      "lon": 14.7764
+    },
+    {
+      "distanceKm": 7.838,
+      "elevationM": 1468.7,
+      "lat": 46.52342,
+      "lon": 14.776040000000002
+    },
+    {
+      "distanceKm": 7.864,
+      "elevationM": 1471.1,
+      "lat": 46.523320000000005,
+      "lon": 14.775730000000001
+    },
+    {
+      "distanceKm": 7.882,
+      "elevationM": 1472.3,
+      "lat": 46.52335,
+      "lon": 14.775500000000001
+    },
+    {
+      "distanceKm": 7.89,
+      "elevationM": 1473.8,
+      "lat": 46.5234,
+      "lon": 14.77542
+    },
+    {
+      "distanceKm": 7.913,
+      "elevationM": 1475.1,
+      "lat": 46.52357000000001,
+      "lon": 14.775250000000002
+    },
+    {
+      "distanceKm": 7.927,
+      "elevationM": 1477.1,
+      "lat": 46.52365,
+      "lon": 14.775110000000002
+    },
+    {
+      "distanceKm": 7.961,
+      "elevationM": 1481.1,
+      "lat": 46.523770000000006,
+      "lon": 14.774700000000001
+    },
+    {
+      "distanceKm": 7.967,
+      "elevationM": 1481.7,
+      "lat": 46.523770000000006,
+      "lon": 14.77462
+    },
+    {
+      "distanceKm": 7.973,
+      "elevationM": 1481.7,
+      "lat": 46.52375000000001,
+      "lon": 14.774550000000001
+    },
+    {
+      "distanceKm": 7.977,
+      "elevationM": 1483,
+      "lat": 46.523720000000004,
+      "lon": 14.77453
+    },
+    {
+      "distanceKm": 7.983,
+      "elevationM": 1484,
+      "lat": 46.52367,
+      "lon": 14.774540000000002
+    },
+    {
+      "distanceKm": 7.988,
+      "elevationM": 1484,
+      "lat": 46.523630000000004,
+      "lon": 14.774590000000002
+    },
+    {
+      "distanceKm": 8.011,
+      "elevationM": 1485.7,
+      "lat": 46.52353,
+      "lon": 14.77485
+    },
+    {
+      "distanceKm": 8.027,
+      "elevationM": 1487.4,
+      "lat": 46.52342,
+      "lon": 14.77499
+    },
+    {
+      "distanceKm": 8.051,
+      "elevationM": 1489.5,
+      "lat": 46.523210000000006,
+      "lon": 14.774980000000001
+    },
+    {
+      "distanceKm": 8.067,
+      "elevationM": 1489.5,
+      "lat": 46.523070000000004,
+      "lon": 14.77495
+    },
+    {
+      "distanceKm": 8.08,
+      "elevationM": 1491.8,
+      "lat": 46.52295,
+      "lon": 14.774960000000002
+    },
+    {
+      "distanceKm": 8.088,
+      "elevationM": 1492.3,
+      "lat": 46.522890000000004,
+      "lon": 14.775010000000002
+    },
+    {
+      "distanceKm": 8.103,
+      "elevationM": 1495.2,
+      "lat": 46.522830000000006,
+      "lon": 14.775190000000002
+    },
+    {
+      "distanceKm": 8.149,
+      "elevationM": 1498,
+      "lat": 46.522760000000005,
+      "lon": 14.775780000000001
+    },
+    {
+      "distanceKm": 8.164,
+      "elevationM": 1500.3,
+      "lat": 46.52268,
+      "lon": 14.775940000000002
+    },
+    {
+      "distanceKm": 8.182,
+      "elevationM": 1501.6,
+      "lat": 46.522560000000006,
+      "lon": 14.776100000000001
+    },
+    {
+      "distanceKm": 8.205,
+      "elevationM": 1503.3,
+      "lat": 46.52239,
+      "lon": 14.776270000000002
+    },
+    {
+      "distanceKm": 8.259,
+      "elevationM": 1508.3,
+      "lat": 46.52195500040711,
+      "lon": 14.776575002440767
+    },
+    {
+      "distanceKm": 8.312,
+      "elevationM": 1514.6,
+      "lat": 46.52152,
+      "lon": 14.776880000000002
+    },
+    {
+      "distanceKm": 8.323,
+      "elevationM": 1515.2,
+      "lat": 46.52143,
+      "lon": 14.77691
+    },
+    {
+      "distanceKm": 8.352,
+      "elevationM": 1520.6,
+      "lat": 46.521170000000005,
+      "lon": 14.776940000000002
+    },
+    {
+      "distanceKm": 8.356,
+      "elevationM": 1520.6,
+      "lat": 46.52113000000001,
+      "lon": 14.77696
+    },
+    {
+      "distanceKm": 8.367,
+      "elevationM": 1520.6,
+      "lat": 46.52105,
+      "lon": 14.777030000000002
+    },
+    {
+      "distanceKm": 8.391,
+      "elevationM": 1523.5,
+      "lat": 46.52089,
+      "lon": 14.77725
+    },
+    {
+      "distanceKm": 8.399,
+      "elevationM": 1523.5,
+      "lat": 46.52082,
+      "lon": 14.777280000000001
+    },
+    {
+      "distanceKm": 8.426,
+      "elevationM": 1525.1,
+      "lat": 46.52058,
+      "lon": 14.77734
+    },
+    {
+      "distanceKm": 8.464,
+      "elevationM": 1529.7,
+      "lat": 46.52024,
+      "lon": 14.777370000000001
+    },
+    {
+      "distanceKm": 8.502,
+      "elevationM": 1535.4,
+      "lat": 46.51990000000001,
+      "lon": 14.7773
+    },
+    {
+      "distanceKm": 8.511,
+      "elevationM": 1536.6,
+      "lat": 46.519940000000005,
+      "lon": 14.777210000000002
+    },
+    {
+      "distanceKm": 8.518,
+      "elevationM": 1537,
+      "lat": 46.52,
+      "lon": 14.777160000000002
+    },
+    {
+      "distanceKm": 8.522,
+      "elevationM": 1537.4,
+      "lat": 46.520010000000006,
+      "lon": 14.777120000000002
+    },
+    {
+      "distanceKm": 8.526,
+      "elevationM": 1537.7,
+      "lat": 46.52,
+      "lon": 14.777070000000002
+    },
+    {
+      "distanceKm": 8.566,
+      "elevationM": 1541.2,
+      "lat": 46.51964,
+      "lon": 14.777080000000002
+    },
+    {
+      "distanceKm": 8.567,
+      "elevationM": 1541.2,
+      "lat": 46.51963000000001,
+      "lon": 14.777080000000002
+    },
+    {
+      "distanceKm": 8.583,
+      "elevationM": 1542,
+      "lat": 46.51975,
+      "lon": 14.77696
+    },
+    {
+      "distanceKm": 8.599,
+      "elevationM": 1543.3,
+      "lat": 46.51988,
+      "lon": 14.77687
+    },
+    {
+      "distanceKm": 8.628,
+      "elevationM": 1544.6,
+      "lat": 46.52013,
+      "lon": 14.77677
+    },
+    {
+      "distanceKm": 8.637,
+      "elevationM": 1547.5,
+      "lat": 46.520210000000006,
+      "lon": 14.776720000000001
+    },
+    {
+      "distanceKm": 8.648,
+      "elevationM": 1547.5,
+      "lat": 46.52029,
+      "lon": 14.77664
+    },
+    {
+      "distanceKm": 8.68,
+      "elevationM": 1550.7,
+      "lat": 46.52046000000001,
+      "lon": 14.77631
+    },
+    {
+      "distanceKm": 8.716,
+      "elevationM": 1556.3,
+      "lat": 46.52074,
+      "lon": 14.776060000000001
+    },
+    {
+      "distanceKm": 8.734,
+      "elevationM": 1556.3,
+      "lat": 46.520860000000006,
+      "lon": 14.775900000000002
+    },
+    {
+      "distanceKm": 8.761,
+      "elevationM": 1560.8,
+      "lat": 46.520970000000005,
+      "lon": 14.775590000000001
+    },
+    {
+      "distanceKm": 8.794,
+      "elevationM": 1561.9,
+      "lat": 46.52105,
+      "lon": 14.775170000000001
+    },
+    {
+      "distanceKm": 8.815,
+      "elevationM": 1566.2,
+      "lat": 46.521040000000006,
+      "lon": 14.7749
+    },
+    {
+      "distanceKm": 8.821,
+      "elevationM": 1566.2,
+      "lat": 46.520990000000005,
+      "lon": 14.774870000000002
+    },
+    {
+      "distanceKm": 8.827,
+      "elevationM": 1566.7,
+      "lat": 46.52094,
+      "lon": 14.774870000000002
+    },
+    {
+      "distanceKm": 8.831,
+      "elevationM": 1566.7,
+      "lat": 46.52091,
+      "lon": 14.7749
+    },
+    {
+      "distanceKm": 8.854,
+      "elevationM": 1569.6,
+      "lat": 46.52082,
+      "lon": 14.77518
+    },
+    {
+      "distanceKm": 8.873,
+      "elevationM": 1570,
+      "lat": 46.520720000000004,
+      "lon": 14.77537
+    },
+    {
+      "distanceKm": 8.905,
+      "elevationM": 1573.6,
+      "lat": 46.52049,
+      "lon": 14.775620000000002
+    },
+    {
+      "distanceKm": 8.921,
+      "elevationM": 1574.9,
+      "lat": 46.52035,
+      "lon": 14.775670000000002
+    },
+    {
+      "distanceKm": 8.952,
+      "elevationM": 1578,
+      "lat": 46.520070000000004,
+      "lon": 14.775620000000002
+    },
+    {
+      "distanceKm": 8.957,
+      "elevationM": 1578,
+      "lat": 46.520030000000006,
+      "lon": 14.775630000000001
+    },
+    {
+      "distanceKm": 8.963,
+      "elevationM": 1578,
+      "lat": 46.51997,
+      "lon": 14.77565
+    },
+    {
+      "distanceKm": 8.996,
+      "elevationM": 1584.7,
+      "lat": 46.51972000000001,
+      "lon": 14.77588
+    },
+    {
+      "distanceKm": 9.018,
+      "elevationM": 1584.7,
+      "lat": 46.519540000000006,
+      "lon": 14.775990000000002
+    },
+    {
+      "distanceKm": 9.04,
+      "elevationM": 1587.6,
+      "lat": 46.51935,
+      "lon": 14.776050000000001
+    },
+    {
+      "distanceKm": 9.076,
+      "elevationM": 1593.7,
+      "lat": 46.519020000000005,
+      "lon": 14.77607
+    },
+    {
+      "distanceKm": 9.096,
+      "elevationM": 1593.7,
+      "lat": 46.51885,
+      "lon": 14.776110000000001
+    },
+    {
+      "distanceKm": 9.11,
+      "elevationM": 1596.4,
+      "lat": 46.51874,
+      "lon": 14.776200000000001
+    },
+    {
+      "distanceKm": 9.135,
+      "elevationM": 1599.2,
+      "lat": 46.518570000000004,
+      "lon": 14.776420000000002
+    },
+    {
+      "distanceKm": 9.164,
+      "elevationM": 1602.4,
+      "lat": 46.51836,
+      "lon": 14.776650000000002
+    },
+    {
+      "distanceKm": 9.199,
+      "elevationM": 1606.2,
+      "lat": 46.518060000000006,
+      "lon": 14.77677
+    },
+    {
+      "distanceKm": 9.217,
+      "elevationM": 1607.4,
+      "lat": 46.51791,
+      "lon": 14.776880000000002
+    },
+    {
+      "distanceKm": 9.225,
+      "elevationM": 1608.7,
+      "lat": 46.51785,
+      "lon": 14.776840000000002
+    },
+    {
+      "distanceKm": 9.228,
+      "elevationM": 1608.9,
+      "lat": 46.51785,
+      "lon": 14.776800000000001
+    },
+    {
+      "distanceKm": 9.232,
+      "elevationM": 1609.7,
+      "lat": 46.51785,
+      "lon": 14.776740000000002
+    },
+    {
+      "distanceKm": 9.237,
+      "elevationM": 1609.7,
+      "lat": 46.517880000000005,
+      "lon": 14.77669
+    },
+    {
+      "distanceKm": 9.276,
+      "elevationM": 1612.6,
+      "lat": 46.518170000000005,
+      "lon": 14.776420000000002
+    },
+    {
+      "distanceKm": 9.295,
+      "elevationM": 1614,
+      "lat": 46.51829,
+      "lon": 14.776240000000001
+    },
+    {
+      "distanceKm": 9.346,
+      "elevationM": 1619.8,
+      "lat": 46.51849000000001,
+      "lon": 14.775640000000001
+    },
+    {
+      "distanceKm": 9.405,
+      "elevationM": 1624.8,
+      "lat": 46.51885,
+      "lon": 14.77508
+    },
+    {
+      "distanceKm": 9.433,
+      "elevationM": 1626,
+      "lat": 46.51894,
+      "lon": 14.774730000000002
+    },
+    {
+      "distanceKm": 9.441,
+      "elevationM": 1626.9,
+      "lat": 46.51894,
+      "lon": 14.774630000000002
+    },
+    {
+      "distanceKm": 9.442,
+      "elevationM": 1626.9,
+      "lat": 46.51894,
+      "lon": 14.774610000000001
+    },
+    {
+      "distanceKm": 9.447,
+      "elevationM": 1626.9,
+      "lat": 46.5189,
+      "lon": 14.774580000000002
+    },
+    {
+      "distanceKm": 9.452,
+      "elevationM": 1628.5,
+      "lat": 46.518860000000004,
+      "lon": 14.774580000000002
+    },
+    {
+      "distanceKm": 9.457,
+      "elevationM": 1628.5,
+      "lat": 46.518820000000005,
+      "lon": 14.77462
+    },
+    {
+      "distanceKm": 9.481,
+      "elevationM": 1630.7,
+      "lat": 46.51872,
+      "lon": 14.774890000000001
+    },
+    {
+      "distanceKm": 9.494,
+      "elevationM": 1630.7,
+      "lat": 46.51863,
+      "lon": 14.775
+    },
+    {
+      "distanceKm": 9.506,
+      "elevationM": 1632.6,
+      "lat": 46.518530000000005,
+      "lon": 14.77508
+    },
+    {
+      "distanceKm": 9.522,
+      "elevationM": 1634.2,
+      "lat": 46.51840000000001,
+      "lon": 14.77514
+    },
+    {
+      "distanceKm": 9.537,
+      "elevationM": 1634.2,
+      "lat": 46.518260000000005,
+      "lon": 14.775170000000001
+    },
+    {
+      "distanceKm": 9.551,
+      "elevationM": 1635.8,
+      "lat": 46.51814,
+      "lon": 14.775150000000002
+    },
+    {
+      "distanceKm": 9.575,
+      "elevationM": 1647.9,
+      "lat": 46.518190000000004,
+      "lon": 14.774840000000001
+    },
+    {
+      "distanceKm": 9.578,
+      "elevationM": 1647.9,
+      "lat": 46.51816,
+      "lon": 14.774840000000001
+    },
+    {
+      "distanceKm": 9.603,
+      "elevationM": 1652.4,
+      "lat": 46.517970000000005,
+      "lon": 14.77467
+    },
+    {
+      "distanceKm": 9.619,
+      "elevationM": 1655.1,
+      "lat": 46.51805,
+      "lon": 14.774500000000002
+    },
+    {
+      "distanceKm": 9.63,
+      "elevationM": 1656.3,
+      "lat": 46.51805,
+      "lon": 14.774350000000002
+    },
+    {
+      "distanceKm": 9.641,
+      "elevationM": 1657.9,
+      "lat": 46.518100000000004,
+      "lon": 14.774230000000001
+    },
+    {
+      "distanceKm": 9.652,
+      "elevationM": 1658.9,
+      "lat": 46.518170000000005,
+      "lon": 14.774140000000001
+    },
+    {
+      "distanceKm": 9.662,
+      "elevationM": 1661.4,
+      "lat": 46.51821,
+      "lon": 14.774020000000002
+    },
+    {
+      "distanceKm": 9.672,
+      "elevationM": 1661.4,
+      "lat": 46.518190000000004,
+      "lon": 14.773890000000002
+    },
+    {
+      "distanceKm": 9.693,
+      "elevationM": 1667.6,
+      "lat": 46.518280000000004,
+      "lon": 14.773650000000002
+    },
+    {
+      "distanceKm": 9.706,
+      "elevationM": 1667.3,
+      "lat": 46.51838,
+      "lon": 14.773570000000001
+    },
+    {
+      "distanceKm": 9.739,
+      "elevationM": 1673.8,
+      "lat": 46.518510000000006,
+      "lon": 14.773180000000002
+    },
+    {
+      "distanceKm": 9.75,
+      "elevationM": 1673.8,
+      "lat": 46.51859,
+      "lon": 14.773100000000001
+    },
+    {
+      "distanceKm": 9.76,
+      "elevationM": 1673.1,
+      "lat": 46.518640000000005,
+      "lon": 14.772990000000002
+    },
+    {
+      "distanceKm": 9.77,
+      "elevationM": 1673.5,
+      "lat": 46.51863,
+      "lon": 14.772850000000002
+    },
+    {
+      "distanceKm": 9.792,
+      "elevationM": 1677.5,
+      "lat": 46.518550000000005,
+      "lon": 14.772590000000001
+    },
+    {
+      "distanceKm": 9.81,
+      "elevationM": 1683.9,
+      "lat": 46.518620000000006,
+      "lon": 14.772380000000002
+    },
+    {
+      "distanceKm": 9.847,
+      "elevationM": 1695.7,
+      "lat": 46.518330000000006,
+      "lon": 14.772150000000002
+    },
+    {
+      "distanceKm": 9.852,
+      "elevationM": 1684.2,
+      "lat": 46.518330000000006,
+      "lon": 14.77222
+    },
+    {
+      "distanceKm": 9.895,
+      "elevationM": 1688.9,
+      "lat": 46.518460000000005,
+      "lon": 14.771700000000001
+    },
+    {
+      "distanceKm": 9.916,
+      "elevationM": 1690.8,
+      "lat": 46.5185,
+      "lon": 14.77142
+    },
+    {
+      "distanceKm": 9.934,
+      "elevationM": 1692.4,
+      "lat": 46.51861,
+      "lon": 14.771250000000002
+    },
+    {
+      "distanceKm": 9.943,
+      "elevationM": 1693.2,
+      "lat": 46.51861,
+      "lon": 14.77114
+    },
+    {
+      "distanceKm": 9.947,
+      "elevationM": 1692.9,
+      "lat": 46.51858000000001,
+      "lon": 14.7711
+    },
+    {
+      "distanceKm": 9.953,
+      "elevationM": 1693.4,
+      "lat": 46.518530000000005,
+      "lon": 14.771070000000002
+    },
+    {
+      "distanceKm": 9.959,
+      "elevationM": 1694.2,
+      "lat": 46.518480000000004,
+      "lon": 14.771070000000002
+    },
+    {
+      "distanceKm": 9.964,
+      "elevationM": 1693.7,
+      "lat": 46.518530000000005,
+      "lon": 14.771070000000002
+    },
+    {
+      "distanceKm": 9.973,
+      "elevationM": 1694.6,
+      "lat": 46.51845,
+      "lon": 14.771070000000002
+    },
+    {
+      "distanceKm": 10.026,
+      "elevationM": 1706.5,
+      "lat": 46.51802000000001,
+      "lon": 14.771350000000002
+    },
+    {
+      "distanceKm": 10.053,
+      "elevationM": 1710,
+      "lat": 46.51782,
+      "lon": 14.771560000000001
+    },
+    {
+      "distanceKm": 10.061,
+      "elevationM": 1710.7,
+      "lat": 46.517770000000006,
+      "lon": 14.771640000000001
+    },
+    {
+      "distanceKm": 10.07,
+      "elevationM": 1710,
+      "lat": 46.51782,
+      "lon": 14.771560000000001
+    },
+    {
+      "distanceKm": 10.097,
+      "elevationM": 1706.5,
+      "lat": 46.51802000000001,
+      "lon": 14.771350000000002
+    }
+  ],
+  "segments": [
+    {
+      "fromKm": 0,
+      "toKm": 0.06,
+      "elevationChangeM": 4.4,
+      "slopePct": 7.3,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 0.06,
+      "toKm": 0.065,
+      "elevationChangeM": -0.5,
+      "slopePct": -10,
+      "category": "bergab"
+    },
+    {
+      "fromKm": 0.065,
+      "toKm": 0.072,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 0.072,
+      "toKm": 0.081,
+      "elevationChangeM": 1,
+      "slopePct": 11.1,
+      "category": "steil"
+    },
+    {
+      "fromKm": 0.081,
+      "toKm": 0.101,
+      "elevationChangeM": 1.8,
+      "slopePct": 9,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 0.101,
+      "toKm": 0.174,
+      "elevationChangeM": 9.3,
+      "slopePct": 12.7,
+      "category": "steil"
+    },
+    {
+      "fromKm": 0.174,
+      "toKm": 0.184,
+      "elevationChangeM": 0.4,
+      "slopePct": 4,
+      "category": "flach"
+    },
+    {
+      "fromKm": 0.184,
+      "toKm": 0.221,
+      "elevationChangeM": 0.9,
+      "slopePct": 2.4,
+      "category": "flach"
+    },
+    {
+      "fromKm": 0.221,
+      "toKm": 0.319,
+      "elevationChangeM": 10.7,
+      "slopePct": 10.9,
+      "category": "steil"
+    },
+    {
+      "fromKm": 0.319,
+      "toKm": 0.381,
+      "elevationChangeM": 4.7,
+      "slopePct": 7.6,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 0.381,
+      "toKm": 0.422,
+      "elevationChangeM": 2.6,
+      "slopePct": 6.3,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 0.422,
+      "toKm": 0.44,
+      "elevationChangeM": 1.2,
+      "slopePct": 6.7,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 0.44,
+      "toKm": 0.459,
+      "elevationChangeM": 1.1,
+      "slopePct": 5.8,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 0.459,
+      "toKm": 0.48,
+      "elevationChangeM": 2.3,
+      "slopePct": 11,
+      "category": "steil"
+    },
+    {
+      "fromKm": 0.48,
+      "toKm": 0.493,
+      "elevationChangeM": 0.5,
+      "slopePct": 3.8,
+      "category": "flach"
+    },
+    {
+      "fromKm": 0.493,
+      "toKm": 0.523,
+      "elevationChangeM": 0.9,
+      "slopePct": 3,
+      "category": "flach"
+    },
+    {
+      "fromKm": 0.523,
+      "toKm": 0.564,
+      "elevationChangeM": 1,
+      "slopePct": 2.4,
+      "category": "flach"
+    },
+    {
+      "fromKm": 0.564,
+      "toKm": 0.638,
+      "elevationChangeM": 3.7,
+      "slopePct": 5,
+      "category": "flach"
+    },
+    {
+      "fromKm": 0.638,
+      "toKm": 0.654,
+      "elevationChangeM": 1.2,
+      "slopePct": 7.5,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 0.654,
+      "toKm": 0.655,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 0.655,
+      "toKm": 0.657,
+      "elevationChangeM": -0.1,
+      "slopePct": -5,
+      "category": "flach"
+    },
+    {
+      "fromKm": 0.657,
+      "toKm": 0.72,
+      "elevationChangeM": 7,
+      "slopePct": 11.1,
+      "category": "steil"
+    },
+    {
+      "fromKm": 0.72,
+      "toKm": 0.749,
+      "elevationChangeM": 3.2,
+      "slopePct": 11,
+      "category": "steil"
+    },
+    {
+      "fromKm": 0.749,
+      "toKm": 0.799,
+      "elevationChangeM": 4.6,
+      "slopePct": 9.2,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 0.799,
+      "toKm": 0.811,
+      "elevationChangeM": 1.2,
+      "slopePct": 10,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 0.811,
+      "toKm": 0.849,
+      "elevationChangeM": 1,
+      "slopePct": 2.6,
+      "category": "flach"
+    },
+    {
+      "fromKm": 0.849,
+      "toKm": 0.862,
+      "elevationChangeM": 6,
+      "slopePct": 46.2,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 0.862,
+      "toKm": 0.878,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 0.878,
+      "toKm": 0.923,
+      "elevationChangeM": 4.5,
+      "slopePct": 10,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 0.923,
+      "toKm": 0.936,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 0.936,
+      "toKm": 0.961,
+      "elevationChangeM": 3.8,
+      "slopePct": 15.2,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 0.961,
+      "toKm": 1.004,
+      "elevationChangeM": 4.6,
+      "slopePct": 10.7,
+      "category": "steil"
+    },
+    {
+      "fromKm": 1.004,
+      "toKm": 1.011,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 1.011,
+      "toKm": 1.021,
+      "elevationChangeM": 0.3,
+      "slopePct": 3,
+      "category": "flach"
+    },
+    {
+      "fromKm": 1.021,
+      "toKm": 1.041,
+      "elevationChangeM": 1.4,
+      "slopePct": 7,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 1.041,
+      "toKm": 1.059,
+      "elevationChangeM": 1.6,
+      "slopePct": 8.9,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 1.059,
+      "toKm": 1.097,
+      "elevationChangeM": 3.1,
+      "slopePct": 8.2,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 1.097,
+      "toKm": 1.111,
+      "elevationChangeM": 1.4,
+      "slopePct": 10,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 1.111,
+      "toKm": 1.137,
+      "elevationChangeM": 3.6,
+      "slopePct": 13.8,
+      "category": "steil"
+    },
+    {
+      "fromKm": 1.137,
+      "toKm": 1.143,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 1.143,
+      "toKm": 1.199,
+      "elevationChangeM": 6.4,
+      "slopePct": 11.4,
+      "category": "steil"
+    },
+    {
+      "fromKm": 1.199,
+      "toKm": 1.204,
+      "elevationChangeM": 1.2,
+      "slopePct": 24,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 1.204,
+      "toKm": 1.248,
+      "elevationChangeM": 3.1,
+      "slopePct": 7,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 1.248,
+      "toKm": 1.278,
+      "elevationChangeM": 4.3,
+      "slopePct": 14.3,
+      "category": "steil"
+    },
+    {
+      "fromKm": 1.278,
+      "toKm": 1.308,
+      "elevationChangeM": 3.5,
+      "slopePct": 11.7,
+      "category": "steil"
+    },
+    {
+      "fromKm": 1.308,
+      "toKm": 1.325,
+      "elevationChangeM": 3.5,
+      "slopePct": 20.6,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 1.325,
+      "toKm": 1.359,
+      "elevationChangeM": 3.5,
+      "slopePct": 10.3,
+      "category": "steil"
+    },
+    {
+      "fromKm": 1.359,
+      "toKm": 1.374,
+      "elevationChangeM": 1.7,
+      "slopePct": 11.3,
+      "category": "steil"
+    },
+    {
+      "fromKm": 1.374,
+      "toKm": 1.388,
+      "elevationChangeM": 1.5,
+      "slopePct": 10.7,
+      "category": "steil"
+    },
+    {
+      "fromKm": 1.388,
+      "toKm": 1.433,
+      "elevationChangeM": 4.9,
+      "slopePct": 10.9,
+      "category": "steil"
+    },
+    {
+      "fromKm": 1.433,
+      "toKm": 1.463,
+      "elevationChangeM": 3.1,
+      "slopePct": 10.3,
+      "category": "steil"
+    },
+    {
+      "fromKm": 1.463,
+      "toKm": 1.496,
+      "elevationChangeM": 4.2,
+      "slopePct": 12.7,
+      "category": "steil"
+    },
+    {
+      "fromKm": 1.496,
+      "toKm": 1.513,
+      "elevationChangeM": 2.4,
+      "slopePct": 14.1,
+      "category": "steil"
+    },
+    {
+      "fromKm": 1.513,
+      "toKm": 1.545,
+      "elevationChangeM": 4.2,
+      "slopePct": 13.1,
+      "category": "steil"
+    },
+    {
+      "fromKm": 1.545,
+      "toKm": 1.573,
+      "elevationChangeM": 2,
+      "slopePct": 7.1,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 1.573,
+      "toKm": 1.591,
+      "elevationChangeM": 1.1,
+      "slopePct": 6.1,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 1.591,
+      "toKm": 1.606,
+      "elevationChangeM": 2.3,
+      "slopePct": 15.3,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 1.606,
+      "toKm": 1.632,
+      "elevationChangeM": 3.6,
+      "slopePct": 13.8,
+      "category": "steil"
+    },
+    {
+      "fromKm": 1.632,
+      "toKm": 1.674,
+      "elevationChangeM": 3.7,
+      "slopePct": 8.8,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 1.674,
+      "toKm": 1.681,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 1.681,
+      "toKm": 1.689,
+      "elevationChangeM": 2.4,
+      "slopePct": 30,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 1.689,
+      "toKm": 1.716,
+      "elevationChangeM": 4.5,
+      "slopePct": 16.7,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 1.716,
+      "toKm": 1.729,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 1.729,
+      "toKm": 1.766,
+      "elevationChangeM": 3,
+      "slopePct": 8.1,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 1.766,
+      "toKm": 1.797,
+      "elevationChangeM": 4.6,
+      "slopePct": 14.8,
+      "category": "steil"
+    },
+    {
+      "fromKm": 1.797,
+      "toKm": 1.825,
+      "elevationChangeM": 4.2,
+      "slopePct": 15,
+      "category": "steil"
+    },
+    {
+      "fromKm": 1.825,
+      "toKm": 1.838,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 1.838,
+      "toKm": 1.849,
+      "elevationChangeM": 1.1,
+      "slopePct": 10,
+      "category": "steil"
+    },
+    {
+      "fromKm": 1.849,
+      "toKm": 1.875,
+      "elevationChangeM": 4.9,
+      "slopePct": 18.8,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 1.875,
+      "toKm": 1.899,
+      "elevationChangeM": 1.2,
+      "slopePct": 5,
+      "category": "flach"
+    },
+    {
+      "fromKm": 1.899,
+      "toKm": 1.91,
+      "elevationChangeM": 2.7,
+      "slopePct": 24.5,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 1.91,
+      "toKm": 1.96,
+      "elevationChangeM": 5.3,
+      "slopePct": 10.6,
+      "category": "steil"
+    },
+    {
+      "fromKm": 1.96,
+      "toKm": 1.995,
+      "elevationChangeM": 5.4,
+      "slopePct": 15.4,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 1.995,
+      "toKm": 2.009,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 2.009,
+      "toKm": 2.025,
+      "elevationChangeM": 3.8,
+      "slopePct": 23.7,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 2.025,
+      "toKm": 2.035,
+      "elevationChangeM": 0.6,
+      "slopePct": 6,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 2.035,
+      "toKm": 2.044,
+      "elevationChangeM": 1.4,
+      "slopePct": 15.6,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 2.044,
+      "toKm": 2.08,
+      "elevationChangeM": 4.5,
+      "slopePct": 12.5,
+      "category": "steil"
+    },
+    {
+      "fromKm": 2.08,
+      "toKm": 2.09,
+      "elevationChangeM": 0.5,
+      "slopePct": 5,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 2.09,
+      "toKm": 2.095,
+      "elevationChangeM": 0.6,
+      "slopePct": 12,
+      "category": "steil"
+    },
+    {
+      "fromKm": 2.095,
+      "toKm": 2.104,
+      "elevationChangeM": 1.2,
+      "slopePct": 13.3,
+      "category": "steil"
+    },
+    {
+      "fromKm": 2.104,
+      "toKm": 2.114,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 2.114,
+      "toKm": 2.127,
+      "elevationChangeM": 4.6,
+      "slopePct": 35.4,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 2.127,
+      "toKm": 2.139,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 2.139,
+      "toKm": 2.149,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 2.149,
+      "toKm": 2.176,
+      "elevationChangeM": 2.5,
+      "slopePct": 9.3,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 2.176,
+      "toKm": 2.22,
+      "elevationChangeM": 5.6,
+      "slopePct": 12.7,
+      "category": "steil"
+    },
+    {
+      "fromKm": 2.22,
+      "toKm": 2.227,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 2.227,
+      "toKm": 2.237,
+      "elevationChangeM": 3.2,
+      "slopePct": 32,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 2.237,
+      "toKm": 2.253,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 2.253,
+      "toKm": 2.258,
+      "elevationChangeM": 2.4,
+      "slopePct": 48,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 2.258,
+      "toKm": 2.267,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 2.267,
+      "toKm": 2.285,
+      "elevationChangeM": 2.3,
+      "slopePct": 12.8,
+      "category": "steil"
+    },
+    {
+      "fromKm": 2.285,
+      "toKm": 2.296,
+      "elevationChangeM": 1.2,
+      "slopePct": 10.9,
+      "category": "steil"
+    },
+    {
+      "fromKm": 2.296,
+      "toKm": 2.318,
+      "elevationChangeM": 2.6,
+      "slopePct": 11.8,
+      "category": "steil"
+    },
+    {
+      "fromKm": 2.318,
+      "toKm": 2.339,
+      "elevationChangeM": 3,
+      "slopePct": 14.3,
+      "category": "steil"
+    },
+    {
+      "fromKm": 2.339,
+      "toKm": 2.368,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 2.368,
+      "toKm": 2.41,
+      "elevationChangeM": 8.7,
+      "slopePct": 20.7,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 2.41,
+      "toKm": 2.464,
+      "elevationChangeM": 7.3,
+      "slopePct": 13.5,
+      "category": "steil"
+    },
+    {
+      "fromKm": 2.464,
+      "toKm": 2.481,
+      "elevationChangeM": 1.4,
+      "slopePct": 8.2,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 2.481,
+      "toKm": 2.501,
+      "elevationChangeM": 3.6,
+      "slopePct": 18,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 2.501,
+      "toKm": 2.51,
+      "elevationChangeM": 1.3,
+      "slopePct": 14.4,
+      "category": "steil"
+    },
+    {
+      "fromKm": 2.51,
+      "toKm": 2.524,
+      "elevationChangeM": 2.7,
+      "slopePct": 19.3,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 2.524,
+      "toKm": 2.554,
+      "elevationChangeM": 1.9,
+      "slopePct": 6.3,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 2.554,
+      "toKm": 2.589,
+      "elevationChangeM": 9.1,
+      "slopePct": 26,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 2.589,
+      "toKm": 2.623,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 2.623,
+      "toKm": 2.66,
+      "elevationChangeM": 4.6,
+      "slopePct": 12.4,
+      "category": "steil"
+    },
+    {
+      "fromKm": 2.66,
+      "toKm": 2.662,
+      "elevationChangeM": -0.2,
+      "slopePct": -10,
+      "category": "bergab"
+    },
+    {
+      "fromKm": 2.662,
+      "toKm": 2.674,
+      "elevationChangeM": 0.7,
+      "slopePct": 5.8,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 2.674,
+      "toKm": 2.683,
+      "elevationChangeM": 3,
+      "slopePct": 33.3,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 2.683,
+      "toKm": 2.766,
+      "elevationChangeM": 8.8,
+      "slopePct": 10.6,
+      "category": "steil"
+    },
+    {
+      "fromKm": 2.766,
+      "toKm": 2.794,
+      "elevationChangeM": 3.4,
+      "slopePct": 12.1,
+      "category": "steil"
+    },
+    {
+      "fromKm": 2.794,
+      "toKm": 2.849,
+      "elevationChangeM": 8.4,
+      "slopePct": 15.3,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 2.849,
+      "toKm": 2.904,
+      "elevationChangeM": 6,
+      "slopePct": 10.9,
+      "category": "steil"
+    },
+    {
+      "fromKm": 2.904,
+      "toKm": 2.942,
+      "elevationChangeM": 3,
+      "slopePct": 7.9,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 2.942,
+      "toKm": 2.959,
+      "elevationChangeM": 1.6,
+      "slopePct": 9.4,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 2.959,
+      "toKm": 2.983,
+      "elevationChangeM": 2.2,
+      "slopePct": 9.2,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 2.983,
+      "toKm": 2.993,
+      "elevationChangeM": 1.2,
+      "slopePct": 12,
+      "category": "steil"
+    },
+    {
+      "fromKm": 2.993,
+      "toKm": 3.013,
+      "elevationChangeM": 3,
+      "slopePct": 15,
+      "category": "steil"
+    },
+    {
+      "fromKm": 3.013,
+      "toKm": 3.029,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 3.029,
+      "toKm": 3.046,
+      "elevationChangeM": 4.5,
+      "slopePct": 26.5,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 3.046,
+      "toKm": 3.071,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 3.071,
+      "toKm": 3.094,
+      "elevationChangeM": 5.2,
+      "slopePct": 22.6,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 3.094,
+      "toKm": 3.121,
+      "elevationChangeM": 1.7,
+      "slopePct": 6.3,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 3.121,
+      "toKm": 3.129,
+      "elevationChangeM": 1.5,
+      "slopePct": 18.7,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 3.129,
+      "toKm": 3.132,
+      "elevationChangeM": 0.3,
+      "slopePct": 10,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 3.132,
+      "toKm": 3.142,
+      "elevationChangeM": 2,
+      "slopePct": 20,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 3.142,
+      "toKm": 3.155,
+      "elevationChangeM": 1.4,
+      "slopePct": 10.8,
+      "category": "steil"
+    },
+    {
+      "fromKm": 3.155,
+      "toKm": 3.225,
+      "elevationChangeM": 7,
+      "slopePct": 10,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 3.225,
+      "toKm": 3.245,
+      "elevationChangeM": 1.6,
+      "slopePct": 8,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 3.245,
+      "toKm": 3.261,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 3.261,
+      "toKm": 3.275,
+      "elevationChangeM": 2.6,
+      "slopePct": 18.6,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 3.275,
+      "toKm": 3.293,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 3.293,
+      "toKm": 3.314,
+      "elevationChangeM": 3,
+      "slopePct": 14.3,
+      "category": "steil"
+    },
+    {
+      "fromKm": 3.314,
+      "toKm": 3.356,
+      "elevationChangeM": 4.6,
+      "slopePct": 11,
+      "category": "steil"
+    },
+    {
+      "fromKm": 3.356,
+      "toKm": 3.413,
+      "elevationChangeM": 3.3,
+      "slopePct": 5.8,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 3.413,
+      "toKm": 3.47,
+      "elevationChangeM": 6.5,
+      "slopePct": 11.4,
+      "category": "steil"
+    },
+    {
+      "fromKm": 3.47,
+      "toKm": 3.487,
+      "elevationChangeM": 0.8,
+      "slopePct": 4.7,
+      "category": "flach"
+    },
+    {
+      "fromKm": 3.487,
+      "toKm": 3.535,
+      "elevationChangeM": 4.8,
+      "slopePct": 10,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 3.535,
+      "toKm": 3.576,
+      "elevationChangeM": 3.6,
+      "slopePct": 8.8,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 3.576,
+      "toKm": 3.584,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 3.584,
+      "toKm": 3.63,
+      "elevationChangeM": 5.2,
+      "slopePct": 11.3,
+      "category": "steil"
+    },
+    {
+      "fromKm": 3.63,
+      "toKm": 3.646,
+      "elevationChangeM": 2,
+      "slopePct": 12.5,
+      "category": "steil"
+    },
+    {
+      "fromKm": 3.646,
+      "toKm": 3.649,
+      "elevationChangeM": 0.2,
+      "slopePct": 6.7,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 3.649,
+      "toKm": 3.722,
+      "elevationChangeM": 5.2,
+      "slopePct": 7.1,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 3.722,
+      "toKm": 3.735,
+      "elevationChangeM": 2,
+      "slopePct": 15.4,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 3.735,
+      "toKm": 3.753,
+      "elevationChangeM": 1.6,
+      "slopePct": 8.9,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 3.753,
+      "toKm": 3.819,
+      "elevationChangeM": 4.9,
+      "slopePct": 7.4,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 3.819,
+      "toKm": 3.832,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 3.832,
+      "toKm": 3.857,
+      "elevationChangeM": 2.4,
+      "slopePct": 9.6,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 3.857,
+      "toKm": 3.877,
+      "elevationChangeM": 1.1,
+      "slopePct": 5.5,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 3.877,
+      "toKm": 3.903,
+      "elevationChangeM": 4.1,
+      "slopePct": 15.8,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 3.903,
+      "toKm": 3.93,
+      "elevationChangeM": 1.2,
+      "slopePct": 4.4,
+      "category": "flach"
+    },
+    {
+      "fromKm": 3.93,
+      "toKm": 3.976,
+      "elevationChangeM": 5.8,
+      "slopePct": 12.6,
+      "category": "steil"
+    },
+    {
+      "fromKm": 3.976,
+      "toKm": 4.006,
+      "elevationChangeM": 3,
+      "slopePct": 10,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 4.006,
+      "toKm": 4.012,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 4.012,
+      "toKm": 4.021,
+      "elevationChangeM": 1.9,
+      "slopePct": 21.1,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 4.021,
+      "toKm": 4.038,
+      "elevationChangeM": 3.9,
+      "slopePct": 22.9,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 4.038,
+      "toKm": 4.058,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 4.058,
+      "toKm": 4.103,
+      "elevationChangeM": 6.4,
+      "slopePct": 14.2,
+      "category": "steil"
+    },
+    {
+      "fromKm": 4.103,
+      "toKm": 4.134,
+      "elevationChangeM": 2.8,
+      "slopePct": 9,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 4.134,
+      "toKm": 4.161,
+      "elevationChangeM": 1.5,
+      "slopePct": 5.6,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 4.161,
+      "toKm": 4.188,
+      "elevationChangeM": 2.7,
+      "slopePct": 10,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 4.188,
+      "toKm": 4.199,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 4.199,
+      "toKm": 4.216,
+      "elevationChangeM": 2.1,
+      "slopePct": 12.4,
+      "category": "steil"
+    },
+    {
+      "fromKm": 4.216,
+      "toKm": 4.272,
+      "elevationChangeM": 6.6,
+      "slopePct": 11.8,
+      "category": "steil"
+    },
+    {
+      "fromKm": 4.272,
+      "toKm": 4.327,
+      "elevationChangeM": 5.1,
+      "slopePct": 9.3,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 4.327,
+      "toKm": 4.338,
+      "elevationChangeM": 0.9,
+      "slopePct": 8.2,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 4.338,
+      "toKm": 4.353,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 4.353,
+      "toKm": 4.379,
+      "elevationChangeM": 3.2,
+      "slopePct": 12.3,
+      "category": "steil"
+    },
+    {
+      "fromKm": 4.379,
+      "toKm": 4.39,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 4.39,
+      "toKm": 4.407,
+      "elevationChangeM": 2.4,
+      "slopePct": 14.1,
+      "category": "steil"
+    },
+    {
+      "fromKm": 4.407,
+      "toKm": 4.417,
+      "elevationChangeM": 0.8,
+      "slopePct": 8,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 4.417,
+      "toKm": 4.461,
+      "elevationChangeM": 3.8,
+      "slopePct": 8.6,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 4.461,
+      "toKm": 4.472,
+      "elevationChangeM": 1.7,
+      "slopePct": 15.5,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 4.472,
+      "toKm": 4.489,
+      "elevationChangeM": 1.7,
+      "slopePct": 10,
+      "category": "steil"
+    },
+    {
+      "fromKm": 4.489,
+      "toKm": 4.496,
+      "elevationChangeM": 1.3,
+      "slopePct": 18.6,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 4.496,
+      "toKm": 4.499,
+      "elevationChangeM": 0.2,
+      "slopePct": 6.7,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 4.499,
+      "toKm": 4.504,
+      "elevationChangeM": 0.7,
+      "slopePct": 14,
+      "category": "steil"
+    },
+    {
+      "fromKm": 4.504,
+      "toKm": 4.507,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 4.507,
+      "toKm": 4.51,
+      "elevationChangeM": 0.4,
+      "slopePct": 13.3,
+      "category": "steil"
+    },
+    {
+      "fromKm": 4.51,
+      "toKm": 4.549,
+      "elevationChangeM": 2.6,
+      "slopePct": 6.7,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 4.549,
+      "toKm": 4.588,
+      "elevationChangeM": 3.6,
+      "slopePct": 9.2,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 4.588,
+      "toKm": 4.6,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 4.6,
+      "toKm": 4.658,
+      "elevationChangeM": 6.1,
+      "slopePct": 10.5,
+      "category": "steil"
+    },
+    {
+      "fromKm": 4.658,
+      "toKm": 4.722,
+      "elevationChangeM": 4.4,
+      "slopePct": 6.9,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 4.722,
+      "toKm": 4.763,
+      "elevationChangeM": 4.7,
+      "slopePct": 11.5,
+      "category": "steil"
+    },
+    {
+      "fromKm": 4.763,
+      "toKm": 4.797,
+      "elevationChangeM": 3.1,
+      "slopePct": 9.1,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 4.797,
+      "toKm": 4.809,
+      "elevationChangeM": 3.1,
+      "slopePct": 25.8,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 4.809,
+      "toKm": 4.818,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 4.818,
+      "toKm": 4.858,
+      "elevationChangeM": 4.1,
+      "slopePct": 10.2,
+      "category": "steil"
+    },
+    {
+      "fromKm": 4.858,
+      "toKm": 4.865,
+      "elevationChangeM": 1.1,
+      "slopePct": 15.7,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 4.865,
+      "toKm": 4.873,
+      "elevationChangeM": 0.5,
+      "slopePct": 6.2,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 4.873,
+      "toKm": 4.879,
+      "elevationChangeM": 0.6,
+      "slopePct": 10,
+      "category": "steil"
+    },
+    {
+      "fromKm": 4.879,
+      "toKm": 4.879,
+      "elevationChangeM": 0.1,
+      "slopePct": null,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 4.879,
+      "toKm": 4.911,
+      "elevationChangeM": 2.3,
+      "slopePct": 7.2,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 4.911,
+      "toKm": 4.921,
+      "elevationChangeM": 0.7,
+      "slopePct": 7,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 4.921,
+      "toKm": 4.937,
+      "elevationChangeM": 2.6,
+      "slopePct": 16.2,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 4.937,
+      "toKm": 4.947,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 4.947,
+      "toKm": 4.985,
+      "elevationChangeM": 4.3,
+      "slopePct": 11.3,
+      "category": "steil"
+    },
+    {
+      "fromKm": 4.985,
+      "toKm": 4.999,
+      "elevationChangeM": 1.4,
+      "slopePct": 10,
+      "category": "steil"
+    },
+    {
+      "fromKm": 4.999,
+      "toKm": 5.026,
+      "elevationChangeM": 1.1,
+      "slopePct": 4.1,
+      "category": "flach"
+    },
+    {
+      "fromKm": 5.026,
+      "toKm": 5.044,
+      "elevationChangeM": 3.2,
+      "slopePct": 17.8,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 5.044,
+      "toKm": 5.077,
+      "elevationChangeM": 3.9,
+      "slopePct": 11.8,
+      "category": "steil"
+    },
+    {
+      "fromKm": 5.077,
+      "toKm": 5.108,
+      "elevationChangeM": 2,
+      "slopePct": 6.5,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 5.108,
+      "toKm": 5.128,
+      "elevationChangeM": 2.4,
+      "slopePct": 12,
+      "category": "steil"
+    },
+    {
+      "fromKm": 5.128,
+      "toKm": 5.138,
+      "elevationChangeM": 1,
+      "slopePct": 10,
+      "category": "steil"
+    },
+    {
+      "fromKm": 5.138,
+      "toKm": 5.186,
+      "elevationChangeM": 4.6,
+      "slopePct": 9.6,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 5.186,
+      "toKm": 5.253,
+      "elevationChangeM": 9.8,
+      "slopePct": 14.6,
+      "category": "steil"
+    },
+    {
+      "fromKm": 5.253,
+      "toKm": 5.304,
+      "elevationChangeM": 3.5,
+      "slopePct": 6.9,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 5.304,
+      "toKm": 5.355,
+      "elevationChangeM": 6.6,
+      "slopePct": 12.9,
+      "category": "steil"
+    },
+    {
+      "fromKm": 5.355,
+      "toKm": 5.362,
+      "elevationChangeM": 1.4,
+      "slopePct": 20,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 5.362,
+      "toKm": 5.379,
+      "elevationChangeM": 1.8,
+      "slopePct": 10.6,
+      "category": "steil"
+    },
+    {
+      "fromKm": 5.379,
+      "toKm": 5.407,
+      "elevationChangeM": 0.9,
+      "slopePct": 3.2,
+      "category": "flach"
+    },
+    {
+      "fromKm": 5.407,
+      "toKm": 5.425,
+      "elevationChangeM": 3.4,
+      "slopePct": 18.9,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 5.425,
+      "toKm": 5.455,
+      "elevationChangeM": 2.3,
+      "slopePct": 7.7,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 5.455,
+      "toKm": 5.501,
+      "elevationChangeM": 3.9,
+      "slopePct": 8.5,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 5.501,
+      "toKm": 5.506,
+      "elevationChangeM": 1.4,
+      "slopePct": 28,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 5.506,
+      "toKm": 5.509,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 5.509,
+      "toKm": 5.511,
+      "elevationChangeM": 0.1,
+      "slopePct": 5,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 5.511,
+      "toKm": 5.511,
+      "elevationChangeM": 0,
+      "slopePct": null,
+      "category": "flach"
+    },
+    {
+      "fromKm": 5.511,
+      "toKm": 5.52,
+      "elevationChangeM": 1.7,
+      "slopePct": 18.9,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 5.52,
+      "toKm": 5.524,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 5.524,
+      "toKm": 5.555,
+      "elevationChangeM": 2.4,
+      "slopePct": 7.7,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 5.555,
+      "toKm": 5.601,
+      "elevationChangeM": 5.2,
+      "slopePct": 11.3,
+      "category": "steil"
+    },
+    {
+      "fromKm": 5.601,
+      "toKm": 5.65,
+      "elevationChangeM": 4.9,
+      "slopePct": 10,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 5.65,
+      "toKm": 5.667,
+      "elevationChangeM": 0.9,
+      "slopePct": 5.3,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 5.667,
+      "toKm": 5.71,
+      "elevationChangeM": 2.4,
+      "slopePct": 5.6,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 5.71,
+      "toKm": 5.758,
+      "elevationChangeM": 7.4,
+      "slopePct": 15.4,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 5.758,
+      "toKm": 5.771,
+      "elevationChangeM": 1.5,
+      "slopePct": 11.5,
+      "category": "steil"
+    },
+    {
+      "fromKm": 5.771,
+      "toKm": 5.824,
+      "elevationChangeM": 4.3,
+      "slopePct": 8.1,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 5.824,
+      "toKm": 5.838,
+      "elevationChangeM": 1.5,
+      "slopePct": 10.7,
+      "category": "steil"
+    },
+    {
+      "fromKm": 5.838,
+      "toKm": 5.871,
+      "elevationChangeM": 5.1,
+      "slopePct": 15.5,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 5.871,
+      "toKm": 5.911,
+      "elevationChangeM": 2.1,
+      "slopePct": 5.3,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 5.911,
+      "toKm": 5.921,
+      "elevationChangeM": 2.1,
+      "slopePct": 21,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 5.921,
+      "toKm": 5.969,
+      "elevationChangeM": 4.1,
+      "slopePct": 8.5,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 5.969,
+      "toKm": 6.023,
+      "elevationChangeM": 5.4,
+      "slopePct": 10,
+      "category": "steil"
+    },
+    {
+      "fromKm": 6.023,
+      "toKm": 6.041,
+      "elevationChangeM": 2.2,
+      "slopePct": 12.2,
+      "category": "steil"
+    },
+    {
+      "fromKm": 6.041,
+      "toKm": 6.057,
+      "elevationChangeM": 0.9,
+      "slopePct": 5.6,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 6.057,
+      "toKm": 6.07,
+      "elevationChangeM": 2.3,
+      "slopePct": 17.7,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 6.07,
+      "toKm": 6.093,
+      "elevationChangeM": 5.3,
+      "slopePct": 23,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 6.093,
+      "toKm": 6.122,
+      "elevationChangeM": 1.9,
+      "slopePct": 6.6,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 6.122,
+      "toKm": 6.133,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 6.133,
+      "toKm": 6.152,
+      "elevationChangeM": 2.2,
+      "slopePct": 11.6,
+      "category": "steil"
+    },
+    {
+      "fromKm": 6.152,
+      "toKm": 6.168,
+      "elevationChangeM": 2,
+      "slopePct": 12.5,
+      "category": "steil"
+    },
+    {
+      "fromKm": 6.168,
+      "toKm": 6.181,
+      "elevationChangeM": 1,
+      "slopePct": 7.7,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 6.181,
+      "toKm": 6.2,
+      "elevationChangeM": 2.2,
+      "slopePct": 11.6,
+      "category": "steil"
+    },
+    {
+      "fromKm": 6.2,
+      "toKm": 6.223,
+      "elevationChangeM": 2.4,
+      "slopePct": 10.4,
+      "category": "steil"
+    },
+    {
+      "fromKm": 6.223,
+      "toKm": 6.244,
+      "elevationChangeM": 0.9,
+      "slopePct": 4.3,
+      "category": "flach"
+    },
+    {
+      "fromKm": 6.244,
+      "toKm": 6.292,
+      "elevationChangeM": 7.3,
+      "slopePct": 15.2,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 6.292,
+      "toKm": 6.322,
+      "elevationChangeM": 6.6,
+      "slopePct": 22,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 6.322,
+      "toKm": 6.329,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 6.329,
+      "toKm": 6.34,
+      "elevationChangeM": 0.5,
+      "slopePct": 4.5,
+      "category": "flach"
+    },
+    {
+      "fromKm": 6.34,
+      "toKm": 6.346,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 6.346,
+      "toKm": 6.355,
+      "elevationChangeM": 0.7,
+      "slopePct": 7.8,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 6.355,
+      "toKm": 6.41,
+      "elevationChangeM": 15.8,
+      "slopePct": 28.7,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 6.41,
+      "toKm": 6.427,
+      "elevationChangeM": 4.4,
+      "slopePct": 25.9,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 6.427,
+      "toKm": 6.439,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 6.439,
+      "toKm": 6.451,
+      "elevationChangeM": 3.5,
+      "slopePct": 29.2,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 6.451,
+      "toKm": 6.456,
+      "elevationChangeM": 0.6,
+      "slopePct": 12,
+      "category": "steil"
+    },
+    {
+      "fromKm": 6.456,
+      "toKm": 6.459,
+      "elevationChangeM": 0.5,
+      "slopePct": 16.7,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 6.459,
+      "toKm": 6.465,
+      "elevationChangeM": 0.6,
+      "slopePct": 10,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 6.465,
+      "toKm": 6.472,
+      "elevationChangeM": -0.6,
+      "slopePct": -8.6,
+      "category": "bergab"
+    },
+    {
+      "fromKm": 6.472,
+      "toKm": 6.485,
+      "elevationChangeM": 1.5,
+      "slopePct": 11.5,
+      "category": "steil"
+    },
+    {
+      "fromKm": 6.485,
+      "toKm": 6.489,
+      "elevationChangeM": 0.3,
+      "slopePct": 7.5,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 6.489,
+      "toKm": 6.503,
+      "elevationChangeM": 0.8,
+      "slopePct": 5.7,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 6.503,
+      "toKm": 6.518,
+      "elevationChangeM": 0.9,
+      "slopePct": 6,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 6.518,
+      "toKm": 6.533,
+      "elevationChangeM": 0.6,
+      "slopePct": 4,
+      "category": "flach"
+    },
+    {
+      "fromKm": 6.533,
+      "toKm": 6.556,
+      "elevationChangeM": 4.1,
+      "slopePct": 17.8,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 6.556,
+      "toKm": 6.573,
+      "elevationChangeM": 1,
+      "slopePct": 5.9,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 6.573,
+      "toKm": 6.589,
+      "elevationChangeM": 1.6,
+      "slopePct": 10,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 6.589,
+      "toKm": 6.619,
+      "elevationChangeM": 3.8,
+      "slopePct": 12.7,
+      "category": "steil"
+    },
+    {
+      "fromKm": 6.619,
+      "toKm": 6.649,
+      "elevationChangeM": 5.3,
+      "slopePct": 17.7,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 6.649,
+      "toKm": 6.662,
+      "elevationChangeM": 0.9,
+      "slopePct": 6.9,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 6.662,
+      "toKm": 6.679,
+      "elevationChangeM": 2.1,
+      "slopePct": 12.4,
+      "category": "steil"
+    },
+    {
+      "fromKm": 6.679,
+      "toKm": 6.688,
+      "elevationChangeM": 0.8,
+      "slopePct": 8.9,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 6.688,
+      "toKm": 6.696,
+      "elevationChangeM": 0.3,
+      "slopePct": 3.7,
+      "category": "flach"
+    },
+    {
+      "fromKm": 6.696,
+      "toKm": 6.706,
+      "elevationChangeM": 0.7,
+      "slopePct": 7,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 6.706,
+      "toKm": 6.728,
+      "elevationChangeM": 2.9,
+      "slopePct": 13.2,
+      "category": "steil"
+    },
+    {
+      "fromKm": 6.728,
+      "toKm": 6.734,
+      "elevationChangeM": 0.3,
+      "slopePct": 5,
+      "category": "flach"
+    },
+    {
+      "fromKm": 6.734,
+      "toKm": 6.739,
+      "elevationChangeM": -0.1,
+      "slopePct": -2,
+      "category": "flach"
+    },
+    {
+      "fromKm": 6.739,
+      "toKm": 6.792,
+      "elevationChangeM": 7.1,
+      "slopePct": 13.4,
+      "category": "steil"
+    },
+    {
+      "fromKm": 6.792,
+      "toKm": 6.805,
+      "elevationChangeM": 1.4,
+      "slopePct": 10.8,
+      "category": "steil"
+    },
+    {
+      "fromKm": 6.805,
+      "toKm": 6.817,
+      "elevationChangeM": 1,
+      "slopePct": 8.3,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 6.817,
+      "toKm": 6.823,
+      "elevationChangeM": 0.1,
+      "slopePct": 1.7,
+      "category": "flach"
+    },
+    {
+      "fromKm": 6.823,
+      "toKm": 6.833,
+      "elevationChangeM": -0.8,
+      "slopePct": -8,
+      "category": "bergab"
+    },
+    {
+      "fromKm": 6.833,
+      "toKm": 6.877,
+      "elevationChangeM": 5.8,
+      "slopePct": 13.2,
+      "category": "steil"
+    },
+    {
+      "fromKm": 6.877,
+      "toKm": 6.888,
+      "elevationChangeM": 3.2,
+      "slopePct": 29.1,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 6.888,
+      "toKm": 6.894,
+      "elevationChangeM": 0.3,
+      "slopePct": 5,
+      "category": "flach"
+    },
+    {
+      "fromKm": 6.894,
+      "toKm": 6.899,
+      "elevationChangeM": 0.4,
+      "slopePct": 8,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 6.899,
+      "toKm": 6.92,
+      "elevationChangeM": 1,
+      "slopePct": 4.8,
+      "category": "flach"
+    },
+    {
+      "fromKm": 6.92,
+      "toKm": 6.948,
+      "elevationChangeM": 3.2,
+      "slopePct": 11.4,
+      "category": "steil"
+    },
+    {
+      "fromKm": 6.948,
+      "toKm": 6.996,
+      "elevationChangeM": 6.9,
+      "slopePct": 14.4,
+      "category": "steil"
+    },
+    {
+      "fromKm": 6.996,
+      "toKm": 7.004,
+      "elevationChangeM": 0.4,
+      "slopePct": 5,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 7.004,
+      "toKm": 7.047,
+      "elevationChangeM": 4.5,
+      "slopePct": 10.5,
+      "category": "steil"
+    },
+    {
+      "fromKm": 7.047,
+      "toKm": 7.059,
+      "elevationChangeM": 1.8,
+      "slopePct": 15,
+      "category": "steil"
+    },
+    {
+      "fromKm": 7.059,
+      "toKm": 7.07,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 7.07,
+      "toKm": 7.081,
+      "elevationChangeM": 1.3,
+      "slopePct": 11.8,
+      "category": "steil"
+    },
+    {
+      "fromKm": 7.081,
+      "toKm": 7.097,
+      "elevationChangeM": 1.3,
+      "slopePct": 8.1,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 7.097,
+      "toKm": 7.104,
+      "elevationChangeM": 0.3,
+      "slopePct": 4.3,
+      "category": "flach"
+    },
+    {
+      "fromKm": 7.104,
+      "toKm": 7.118,
+      "elevationChangeM": 0.7,
+      "slopePct": 5,
+      "category": "flach"
+    },
+    {
+      "fromKm": 7.118,
+      "toKm": 7.149,
+      "elevationChangeM": 4,
+      "slopePct": 12.9,
+      "category": "steil"
+    },
+    {
+      "fromKm": 7.149,
+      "toKm": 7.17,
+      "elevationChangeM": 3.3,
+      "slopePct": 15.7,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 7.17,
+      "toKm": 7.213,
+      "elevationChangeM": 6.6,
+      "slopePct": 15.3,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 7.213,
+      "toKm": 7.22,
+      "elevationChangeM": 0.7,
+      "slopePct": 10,
+      "category": "steil"
+    },
+    {
+      "fromKm": 7.22,
+      "toKm": 7.226,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 7.226,
+      "toKm": 7.231,
+      "elevationChangeM": 0.6,
+      "slopePct": 12,
+      "category": "steil"
+    },
+    {
+      "fromKm": 7.231,
+      "toKm": 7.242,
+      "elevationChangeM": 0.5,
+      "slopePct": 4.5,
+      "category": "flach"
+    },
+    {
+      "fromKm": 7.242,
+      "toKm": 7.251,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 7.251,
+      "toKm": 7.264,
+      "elevationChangeM": 1,
+      "slopePct": 7.7,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 7.264,
+      "toKm": 7.275,
+      "elevationChangeM": 1,
+      "slopePct": 9.1,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 7.275,
+      "toKm": 7.294,
+      "elevationChangeM": 1.2,
+      "slopePct": 6.3,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 7.294,
+      "toKm": 7.321,
+      "elevationChangeM": 3.6,
+      "slopePct": 13.3,
+      "category": "steil"
+    },
+    {
+      "fromKm": 7.321,
+      "toKm": 7.363,
+      "elevationChangeM": 6.7,
+      "slopePct": 16,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 7.363,
+      "toKm": 7.383,
+      "elevationChangeM": 2.8,
+      "slopePct": 14,
+      "category": "steil"
+    },
+    {
+      "fromKm": 7.383,
+      "toKm": 7.394,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 7.394,
+      "toKm": 7.401,
+      "elevationChangeM": 2.4,
+      "slopePct": 34.3,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 7.401,
+      "toKm": 7.406,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 7.406,
+      "toKm": 7.411,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 7.411,
+      "toKm": 7.416,
+      "elevationChangeM": -0.5,
+      "slopePct": -10,
+      "category": "bergab"
+    },
+    {
+      "fromKm": 7.416,
+      "toKm": 7.422,
+      "elevationChangeM": -0.3,
+      "slopePct": -5,
+      "category": "bergab"
+    },
+    {
+      "fromKm": 7.422,
+      "toKm": 7.488,
+      "elevationChangeM": 5.4,
+      "slopePct": 8.2,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 7.488,
+      "toKm": 7.501,
+      "elevationChangeM": 1.6,
+      "slopePct": 12.3,
+      "category": "steil"
+    },
+    {
+      "fromKm": 7.501,
+      "toKm": 7.513,
+      "elevationChangeM": 1.7,
+      "slopePct": 14.2,
+      "category": "steil"
+    },
+    {
+      "fromKm": 7.513,
+      "toKm": 7.542,
+      "elevationChangeM": 2.7,
+      "slopePct": 9.3,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 7.542,
+      "toKm": 7.563,
+      "elevationChangeM": 2.9,
+      "slopePct": 13.8,
+      "category": "steil"
+    },
+    {
+      "fromKm": 7.563,
+      "toKm": 7.578,
+      "elevationChangeM": 1.5,
+      "slopePct": 10,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 7.578,
+      "toKm": 7.627,
+      "elevationChangeM": 2.7,
+      "slopePct": 5.5,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 7.627,
+      "toKm": 7.671,
+      "elevationChangeM": 4.9,
+      "slopePct": 11.1,
+      "category": "steil"
+    },
+    {
+      "fromKm": 7.671,
+      "toKm": 7.692,
+      "elevationChangeM": 2.7,
+      "slopePct": 12.9,
+      "category": "steil"
+    },
+    {
+      "fromKm": 7.692,
+      "toKm": 7.695,
+      "elevationChangeM": 0.3,
+      "slopePct": 10,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 7.695,
+      "toKm": 7.703,
+      "elevationChangeM": 1,
+      "slopePct": 12.5,
+      "category": "steil"
+    },
+    {
+      "fromKm": 7.703,
+      "toKm": 7.707,
+      "elevationChangeM": 0.5,
+      "slopePct": 12.5,
+      "category": "steil"
+    },
+    {
+      "fromKm": 7.707,
+      "toKm": 7.716,
+      "elevationChangeM": 0.8,
+      "slopePct": 8.9,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 7.716,
+      "toKm": 7.732,
+      "elevationChangeM": 0.9,
+      "slopePct": 5.6,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 7.732,
+      "toKm": 7.741,
+      "elevationChangeM": 2.4,
+      "slopePct": 26.7,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 7.741,
+      "toKm": 7.748,
+      "elevationChangeM": 1,
+      "slopePct": 14.3,
+      "category": "steil"
+    },
+    {
+      "fromKm": 7.748,
+      "toKm": 7.76,
+      "elevationChangeM": 1,
+      "slopePct": 8.3,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 7.76,
+      "toKm": 7.772,
+      "elevationChangeM": 0.8,
+      "slopePct": 6.7,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 7.772,
+      "toKm": 7.806,
+      "elevationChangeM": 2.8,
+      "slopePct": 8.2,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 7.806,
+      "toKm": 7.838,
+      "elevationChangeM": 5,
+      "slopePct": 15.6,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 7.838,
+      "toKm": 7.864,
+      "elevationChangeM": 2.4,
+      "slopePct": 9.2,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 7.864,
+      "toKm": 7.882,
+      "elevationChangeM": 1.2,
+      "slopePct": 6.7,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 7.882,
+      "toKm": 7.89,
+      "elevationChangeM": 1.5,
+      "slopePct": 18.7,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 7.89,
+      "toKm": 7.913,
+      "elevationChangeM": 1.3,
+      "slopePct": 5.7,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 7.913,
+      "toKm": 7.927,
+      "elevationChangeM": 2,
+      "slopePct": 14.3,
+      "category": "steil"
+    },
+    {
+      "fromKm": 7.927,
+      "toKm": 7.961,
+      "elevationChangeM": 4,
+      "slopePct": 11.8,
+      "category": "steil"
+    },
+    {
+      "fromKm": 7.961,
+      "toKm": 7.967,
+      "elevationChangeM": 0.6,
+      "slopePct": 10,
+      "category": "steil"
+    },
+    {
+      "fromKm": 7.967,
+      "toKm": 7.973,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 7.973,
+      "toKm": 7.977,
+      "elevationChangeM": 1.3,
+      "slopePct": 32.5,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 7.977,
+      "toKm": 7.983,
+      "elevationChangeM": 1,
+      "slopePct": 16.7,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 7.983,
+      "toKm": 7.988,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 7.988,
+      "toKm": 8.011,
+      "elevationChangeM": 1.7,
+      "slopePct": 7.4,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 8.011,
+      "toKm": 8.027,
+      "elevationChangeM": 1.7,
+      "slopePct": 10.6,
+      "category": "steil"
+    },
+    {
+      "fromKm": 8.027,
+      "toKm": 8.051,
+      "elevationChangeM": 2.1,
+      "slopePct": 8.7,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 8.051,
+      "toKm": 8.067,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 8.067,
+      "toKm": 8.08,
+      "elevationChangeM": 2.3,
+      "slopePct": 17.7,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 8.08,
+      "toKm": 8.088,
+      "elevationChangeM": 0.5,
+      "slopePct": 6.3,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 8.088,
+      "toKm": 8.103,
+      "elevationChangeM": 2.9,
+      "slopePct": 19.3,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 8.103,
+      "toKm": 8.149,
+      "elevationChangeM": 2.8,
+      "slopePct": 6.1,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 8.149,
+      "toKm": 8.164,
+      "elevationChangeM": 2.3,
+      "slopePct": 15.3,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 8.164,
+      "toKm": 8.182,
+      "elevationChangeM": 1.3,
+      "slopePct": 7.2,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 8.182,
+      "toKm": 8.205,
+      "elevationChangeM": 1.7,
+      "slopePct": 7.4,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 8.205,
+      "toKm": 8.259,
+      "elevationChangeM": 5,
+      "slopePct": 9.3,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 8.259,
+      "toKm": 8.312,
+      "elevationChangeM": 6.3,
+      "slopePct": 11.9,
+      "category": "steil"
+    },
+    {
+      "fromKm": 8.312,
+      "toKm": 8.323,
+      "elevationChangeM": 0.6,
+      "slopePct": 5.5,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 8.323,
+      "toKm": 8.352,
+      "elevationChangeM": 5.4,
+      "slopePct": 18.6,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 8.352,
+      "toKm": 8.356,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 8.356,
+      "toKm": 8.367,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 8.367,
+      "toKm": 8.391,
+      "elevationChangeM": 2.9,
+      "slopePct": 12.1,
+      "category": "steil"
+    },
+    {
+      "fromKm": 8.391,
+      "toKm": 8.399,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 8.399,
+      "toKm": 8.426,
+      "elevationChangeM": 1.6,
+      "slopePct": 5.9,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 8.426,
+      "toKm": 8.464,
+      "elevationChangeM": 4.6,
+      "slopePct": 12.1,
+      "category": "steil"
+    },
+    {
+      "fromKm": 8.464,
+      "toKm": 8.502,
+      "elevationChangeM": 5.7,
+      "slopePct": 15,
+      "category": "steil"
+    },
+    {
+      "fromKm": 8.502,
+      "toKm": 8.511,
+      "elevationChangeM": 1.2,
+      "slopePct": 13.3,
+      "category": "steil"
+    },
+    {
+      "fromKm": 8.511,
+      "toKm": 8.518,
+      "elevationChangeM": 0.4,
+      "slopePct": 5.7,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 8.518,
+      "toKm": 8.522,
+      "elevationChangeM": 0.4,
+      "slopePct": 10,
+      "category": "steil"
+    },
+    {
+      "fromKm": 8.522,
+      "toKm": 8.526,
+      "elevationChangeM": 0.3,
+      "slopePct": 7.5,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 8.526,
+      "toKm": 8.566,
+      "elevationChangeM": 3.5,
+      "slopePct": 8.7,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 8.566,
+      "toKm": 8.567,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 8.567,
+      "toKm": 8.583,
+      "elevationChangeM": 0.8,
+      "slopePct": 5,
+      "category": "flach"
+    },
+    {
+      "fromKm": 8.583,
+      "toKm": 8.599,
+      "elevationChangeM": 1.3,
+      "slopePct": 8.1,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 8.599,
+      "toKm": 8.628,
+      "elevationChangeM": 1.3,
+      "slopePct": 4.5,
+      "category": "flach"
+    },
+    {
+      "fromKm": 8.628,
+      "toKm": 8.637,
+      "elevationChangeM": 2.9,
+      "slopePct": 32.2,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 8.637,
+      "toKm": 8.648,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 8.648,
+      "toKm": 8.68,
+      "elevationChangeM": 3.2,
+      "slopePct": 10,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 8.68,
+      "toKm": 8.716,
+      "elevationChangeM": 5.6,
+      "slopePct": 15.6,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 8.716,
+      "toKm": 8.734,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 8.734,
+      "toKm": 8.761,
+      "elevationChangeM": 4.5,
+      "slopePct": 16.7,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 8.761,
+      "toKm": 8.794,
+      "elevationChangeM": 1.1,
+      "slopePct": 3.3,
+      "category": "flach"
+    },
+    {
+      "fromKm": 8.794,
+      "toKm": 8.815,
+      "elevationChangeM": 4.3,
+      "slopePct": 20.5,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 8.815,
+      "toKm": 8.821,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 8.821,
+      "toKm": 8.827,
+      "elevationChangeM": 0.5,
+      "slopePct": 8.3,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 8.827,
+      "toKm": 8.831,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 8.831,
+      "toKm": 8.854,
+      "elevationChangeM": 2.9,
+      "slopePct": 12.6,
+      "category": "steil"
+    },
+    {
+      "fromKm": 8.854,
+      "toKm": 8.873,
+      "elevationChangeM": 0.4,
+      "slopePct": 2.1,
+      "category": "flach"
+    },
+    {
+      "fromKm": 8.873,
+      "toKm": 8.905,
+      "elevationChangeM": 3.6,
+      "slopePct": 11.2,
+      "category": "steil"
+    },
+    {
+      "fromKm": 8.905,
+      "toKm": 8.921,
+      "elevationChangeM": 1.3,
+      "slopePct": 8.1,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 8.921,
+      "toKm": 8.952,
+      "elevationChangeM": 3.1,
+      "slopePct": 10,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 8.952,
+      "toKm": 8.957,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 8.957,
+      "toKm": 8.963,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 8.963,
+      "toKm": 8.996,
+      "elevationChangeM": 6.7,
+      "slopePct": 20.3,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 8.996,
+      "toKm": 9.018,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 9.018,
+      "toKm": 9.04,
+      "elevationChangeM": 2.9,
+      "slopePct": 13.2,
+      "category": "steil"
+    },
+    {
+      "fromKm": 9.04,
+      "toKm": 9.076,
+      "elevationChangeM": 6.1,
+      "slopePct": 16.9,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 9.076,
+      "toKm": 9.096,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 9.096,
+      "toKm": 9.11,
+      "elevationChangeM": 2.7,
+      "slopePct": 19.3,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 9.11,
+      "toKm": 9.135,
+      "elevationChangeM": 2.8,
+      "slopePct": 11.2,
+      "category": "steil"
+    },
+    {
+      "fromKm": 9.135,
+      "toKm": 9.164,
+      "elevationChangeM": 3.2,
+      "slopePct": 11,
+      "category": "steil"
+    },
+    {
+      "fromKm": 9.164,
+      "toKm": 9.199,
+      "elevationChangeM": 3.8,
+      "slopePct": 10.9,
+      "category": "steil"
+    },
+    {
+      "fromKm": 9.199,
+      "toKm": 9.217,
+      "elevationChangeM": 1.2,
+      "slopePct": 6.7,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 9.217,
+      "toKm": 9.225,
+      "elevationChangeM": 1.3,
+      "slopePct": 16.3,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 9.225,
+      "toKm": 9.228,
+      "elevationChangeM": 0.2,
+      "slopePct": 6.7,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 9.228,
+      "toKm": 9.232,
+      "elevationChangeM": 0.8,
+      "slopePct": 20,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 9.232,
+      "toKm": 9.237,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 9.237,
+      "toKm": 9.276,
+      "elevationChangeM": 2.9,
+      "slopePct": 7.4,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 9.276,
+      "toKm": 9.295,
+      "elevationChangeM": 1.4,
+      "slopePct": 7.4,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 9.295,
+      "toKm": 9.346,
+      "elevationChangeM": 5.8,
+      "slopePct": 11.4,
+      "category": "steil"
+    },
+    {
+      "fromKm": 9.346,
+      "toKm": 9.405,
+      "elevationChangeM": 5,
+      "slopePct": 8.5,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 9.405,
+      "toKm": 9.433,
+      "elevationChangeM": 1.2,
+      "slopePct": 4.3,
+      "category": "flach"
+    },
+    {
+      "fromKm": 9.433,
+      "toKm": 9.441,
+      "elevationChangeM": 0.9,
+      "slopePct": 11.2,
+      "category": "steil"
+    },
+    {
+      "fromKm": 9.441,
+      "toKm": 9.442,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 9.442,
+      "toKm": 9.447,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 9.447,
+      "toKm": 9.452,
+      "elevationChangeM": 1.6,
+      "slopePct": 32,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 9.452,
+      "toKm": 9.457,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 9.457,
+      "toKm": 9.481,
+      "elevationChangeM": 2.2,
+      "slopePct": 9.2,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 9.481,
+      "toKm": 9.494,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 9.494,
+      "toKm": 9.506,
+      "elevationChangeM": 1.9,
+      "slopePct": 15.8,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 9.506,
+      "toKm": 9.522,
+      "elevationChangeM": 1.6,
+      "slopePct": 10,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 9.522,
+      "toKm": 9.537,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 9.537,
+      "toKm": 9.551,
+      "elevationChangeM": 1.6,
+      "slopePct": 11.4,
+      "category": "steil"
+    },
+    {
+      "fromKm": 9.551,
+      "toKm": 9.575,
+      "elevationChangeM": 12.1,
+      "slopePct": 50.4,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 9.575,
+      "toKm": 9.578,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 9.578,
+      "toKm": 9.603,
+      "elevationChangeM": 4.5,
+      "slopePct": 18,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 9.603,
+      "toKm": 9.619,
+      "elevationChangeM": 2.7,
+      "slopePct": 16.9,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 9.619,
+      "toKm": 9.63,
+      "elevationChangeM": 1.2,
+      "slopePct": 10.9,
+      "category": "steil"
+    },
+    {
+      "fromKm": 9.63,
+      "toKm": 9.641,
+      "elevationChangeM": 1.6,
+      "slopePct": 14.5,
+      "category": "steil"
+    },
+    {
+      "fromKm": 9.641,
+      "toKm": 9.652,
+      "elevationChangeM": 1,
+      "slopePct": 9.1,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 9.652,
+      "toKm": 9.662,
+      "elevationChangeM": 2.5,
+      "slopePct": 25,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 9.662,
+      "toKm": 9.672,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 9.672,
+      "toKm": 9.693,
+      "elevationChangeM": 6.2,
+      "slopePct": 29.5,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 9.693,
+      "toKm": 9.706,
+      "elevationChangeM": -0.3,
+      "slopePct": -2.3,
+      "category": "flach"
+    },
+    {
+      "fromKm": 9.706,
+      "toKm": 9.739,
+      "elevationChangeM": 6.5,
+      "slopePct": 19.7,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 9.739,
+      "toKm": 9.75,
+      "elevationChangeM": 0,
+      "slopePct": 0,
+      "category": "flach"
+    },
+    {
+      "fromKm": 9.75,
+      "toKm": 9.76,
+      "elevationChangeM": -0.7,
+      "slopePct": -7,
+      "category": "bergab"
+    },
+    {
+      "fromKm": 9.76,
+      "toKm": 9.77,
+      "elevationChangeM": 0.4,
+      "slopePct": 4,
+      "category": "flach"
+    },
+    {
+      "fromKm": 9.77,
+      "toKm": 9.792,
+      "elevationChangeM": 4,
+      "slopePct": 18.2,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 9.792,
+      "toKm": 9.81,
+      "elevationChangeM": 6.4,
+      "slopePct": 35.6,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 9.81,
+      "toKm": 9.847,
+      "elevationChangeM": 11.8,
+      "slopePct": 31.9,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 9.847,
+      "toKm": 9.852,
+      "elevationChangeM": -11.5,
+      "slopePct": -230,
+      "category": "bergab"
+    },
+    {
+      "fromKm": 9.852,
+      "toKm": 9.895,
+      "elevationChangeM": 4.7,
+      "slopePct": 10.9,
+      "category": "steil"
+    },
+    {
+      "fromKm": 9.895,
+      "toKm": 9.916,
+      "elevationChangeM": 1.9,
+      "slopePct": 9,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 9.916,
+      "toKm": 9.934,
+      "elevationChangeM": 1.6,
+      "slopePct": 8.9,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 9.934,
+      "toKm": 9.943,
+      "elevationChangeM": 0.8,
+      "slopePct": 8.9,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 9.943,
+      "toKm": 9.947,
+      "elevationChangeM": -0.3,
+      "slopePct": -7.5,
+      "category": "bergab"
+    },
+    {
+      "fromKm": 9.947,
+      "toKm": 9.953,
+      "elevationChangeM": 0.5,
+      "slopePct": 8.3,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 9.953,
+      "toKm": 9.959,
+      "elevationChangeM": 0.8,
+      "slopePct": 13.3,
+      "category": "steil"
+    },
+    {
+      "fromKm": 9.959,
+      "toKm": 9.964,
+      "elevationChangeM": -0.5,
+      "slopePct": -10,
+      "category": "bergab"
+    },
+    {
+      "fromKm": 9.964,
+      "toKm": 9.973,
+      "elevationChangeM": 0.9,
+      "slopePct": 10,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 9.973,
+      "toKm": 10.026,
+      "elevationChangeM": 11.9,
+      "slopePct": 22.5,
+      "category": "sehr steil"
+    },
+    {
+      "fromKm": 10.026,
+      "toKm": 10.053,
+      "elevationChangeM": 3.5,
+      "slopePct": 13,
+      "category": "steil"
+    },
+    {
+      "fromKm": 10.053,
+      "toKm": 10.061,
+      "elevationChangeM": 0.7,
+      "slopePct": 8.8,
+      "category": "moderat"
+    },
+    {
+      "fromKm": 10.061,
+      "toKm": 10.07,
+      "elevationChangeM": -0.7,
+      "slopePct": -7.8,
+      "category": "bergab"
+    },
+    {
+      "fromKm": 10.07,
+      "toKm": 10.097,
+      "elevationChangeM": -3.5,
+      "slopePct": -13,
+      "category": "bergab"
+    }
+  ]
+}

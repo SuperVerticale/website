@@ -9,7 +9,16 @@
       content="Up We Go - Ascent As The Event"
     />
     <title>Super Verticale</title>
+    <link rel="icon" href="assets/logos/sv_mini.svg" type="image/svg+xml" />
     <style>
+      @font-face {
+        font-family: 'TT Chocolates';
+        src: url('assets/fonts/tt-chocolates-regular.woff2') format('woff2');
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+      }
+
       :root {
         color-scheme: dark;
         --brown: #292017;
@@ -36,15 +45,15 @@
         place-items: center;
         overflow: hidden;
         position: relative;
-        background: var(--brown);
+        background: var(--rust);
         color: var(--neon);
-        font-family: Georgia, 'Times New Roman', serif;
+        font-family: 'TT Chocolates', Arial, sans-serif;
       }
 
       body::before {
         position: fixed;
         inset: 0;
-        background: rgb(41 32 23 / 20%);
+        background: rgb(96 56 52 / 20%);
         content: '';
         pointer-events: none;
         z-index: 1;
@@ -69,7 +78,7 @@
         grid-template-rows: repeat(4, minmax(0, 1fr));
         gap: 0.35rem;
         padding: 0.35rem;
-        background: var(--brown);
+        background: var(--rust);
         pointer-events: none;
         z-index: 0;
         height: 100dvh;
@@ -107,9 +116,9 @@
         max-width: min(92vw, 44rem);
         padding: 0.45rem 0.7rem;
         border: 1px solid rgb(147 124 102 / 70%);
-        background: rgb(41 32 23 / 82%);
+        background: rgb(96 56 52 / 82%);
         color: var(--light-grey);
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: 'TT Chocolates', Arial, sans-serif;
         font-size: 0.58rem;
         font-weight: 700;
         letter-spacing: 0.12em;
@@ -121,9 +130,9 @@
         position: fixed;
         right: 1rem;
         bottom: 1rem;
-        color: var(--light-grey);
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 0.65rem;
+        color: var(--neon);
+        font-family: 'TT Chocolates', Arial, sans-serif;
+        font-size: 0.83rem;
         font-weight: 700;
         letter-spacing: 0.12em;
         text-shadow: 0 0 12px rgb(41 32 23 / 50%);
@@ -134,14 +143,56 @@
         left: 1rem;
         bottom: 1rem;
         color: var(--neon);
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 0.65rem;
+        font-family: 'TT Chocolates', Arial, sans-serif;
+        font-size: 0.83rem;
         font-weight: 700;
         letter-spacing: 0.12em;
         text-decoration: none;
         text-shadow: 0 0 12px rgb(224 241 49 / 40%);
         transition: color 180ms ease, text-shadow 180ms ease;
         z-index: 3;
+      }
+
+      .events-link {
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        z-index: 3;
+        color: var(--neon);
+        font-family: 'TT Chocolates', Arial, sans-serif;
+        font-size: 0.83rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-decoration: none;
+        text-shadow: 0 0 12px rgb(224 241 49 / 40%);
+        transition: color 180ms ease, text-shadow 180ms ease;
+      }
+
+      .events-link:hover,
+      .events-link:focus-visible {
+        color: #f4ff8d;
+        text-shadow: 0 0 14px rgb(224 241 49 / 70%);
+      }
+
+      .instagram-link {
+        position: fixed;
+        top: 1rem;
+        left: 1rem;
+        z-index: 3;
+        color: var(--neon);
+        font-family: 'TT Chocolates', Arial, sans-serif;
+        font-size: 0.83rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-decoration: none;
+        text-shadow: 0 0 12px rgb(224 241 49 / 40%);
+        transition: color 180ms ease, text-shadow 180ms ease;
+      }
+
+      .instagram-link:hover,
+      .instagram-link:focus-visible {
+        color: #f4ff8d;
+        text-shadow: 0 0 14px rgb(224 241 49 / 70%);
       }
 
       .dashboard-link:hover,
@@ -169,7 +220,7 @@
 
       .logo-type {
         fill: var(--neon);
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: 'TT Chocolates', Arial, sans-serif;
         font-size: 46px;
         font-weight: 800;
         letter-spacing: 1px;
@@ -178,7 +229,7 @@
 
       .logo-subtitle {
         fill: var(--light-grey);
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: 'TT Chocolates', Arial, sans-serif;
         font-size: 13px;
         font-weight: 700;
         letter-spacing: 5px;
@@ -266,6 +317,8 @@
       />
     </main>
     <a class="dashboard-link" href="dashboard.html" aria-label="Privates Dashboard öffnen">DATA</a>
+    <a class="events-link" href="events.html">EVENTS</a>
+    <a class="instagram-link" href="https://www.instagram.com/superverticale/" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
     <small class="credit">by CAPRA</small>
   </body>
 </html>

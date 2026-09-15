@@ -1,0 +1,82 @@
+{
+  "name": "Petzen Super Verticale",
+  "source": "PetzensuperVerticale.gpx",
+  "detailedSource": "PetzensuperVerticale-detailed.json",
+  "type": "trail_running",
+  "stats": {
+    "distanceKm": 10.1,
+    "elevationGainM": 1074,
+    "elevationLossM": 21,
+    "startElevationM": 653,
+    "finishElevationM": 1707,
+    "highestPointM": 1711,
+    "lowestPointM": 653
+  },
+  "slopeClassification": {
+    "method": "average elevation change per segment",
+    "note": "The segments below are smoothed profile sections. Short steep ramps detected in the original GPX are listed separately.",
+    "thresholds": {
+      "moderat": "5-10%",
+      "steil": "10-15%",
+      "sehr steil": ">=15%"
+    }
+  },
+  "notableSteepSections": [
+    {
+      "fromKm": 6.355,
+      "toKm": 6.459,
+      "maxSlopePct": 28.8,
+      "category": "sehr steil",
+      "label": "Kurze steile Rampe"
+    },
+    {
+      "fromKm": 6.244,
+      "toKm": 6.322,
+      "maxSlopePct": 22.4,
+      "category": "sehr steil",
+      "label": "Kurze steile Rampe"
+    },
+    {
+      "fromKm": 6.877,
+      "toKm": 6.888,
+      "maxSlopePct": 28.1,
+      "category": "sehr steil",
+      "label": "Kurze steile Rampe"
+    }
+  ],
+  "segments": [
+    { "fromKm": 0, "toKm": 0.65, "elevationChangeM": 47, "slopePct": 7.2, "category": "moderat" },
+    { "fromKm": 0.65, "toKm": 1.43, "elevationChangeM": 81, "slopePct": 10.4, "category": "steil" },
+    { "fromKm": 1.43, "toKm": 2.25, "elevationChangeM": 95, "slopePct": 11.6, "category": "steil" },
+    { "fromKm": 2.25, "toKm": 3.13, "elevationChangeM": 106, "slopePct": 12, "category": "steil" },
+    { "fromKm": 3.13, "toKm": 3.86, "elevationChangeM": 65, "slopePct": 8.9, "category": "moderat" },
+    { "fromKm": 3.86, "toKm": 4.66, "elevationChangeM": 77, "slopePct": 9.6, "category": "moderat" },
+    { "fromKm": 4.66, "toKm": 5.42, "elevationChangeM": 79, "slopePct": 10.4, "category": "steil" },
+    { "fromKm": 5.42, "toKm": 6.17, "elevationChangeM": 75, "slopePct": 10, "category": "steil" },
+    { "fromKm": 6.17, "toKm": 6.9, "elevationChangeM": 93, "slopePct": 12.7, "category": "steil" },
+    { "fromKm": 6.9, "toKm": 7.54, "elevationChangeM": 67, "slopePct": 10.5, "category": "steil" },
+    { "fromKm": 7.54, "toKm": 8.15, "elevationChangeM": 60, "slopePct": 9.8, "category": "moderat" },
+    { "fromKm": 8.15, "toKm": 8.79, "elevationChangeM": 64, "slopePct": 10, "category": "steil" },
+    { "fromKm": 8.79, "toKm": 9.24, "elevationChangeM": 48, "slopePct": 10.7, "category": "steil" },
+    { "fromKm": 9.24, "toKm": 9.62, "elevationChangeM": 45, "slopePct": 11.8, "category": "steil" },
+    { "fromKm": 9.62, "toKm": 10.1, "elevationChangeM": 52, "slopePct": 10.8, "category": "steil" }
+  ],
+  "points": [
+    { "distanceKm": 0, "elevationM": 653 },
+    { "distanceKm": 0.65, "elevationM": 700 },
+    { "distanceKm": 1.43, "elevationM": 781 },
+    { "distanceKm": 2.25, "elevationM": 876 },
+    { "distanceKm": 3.13, "elevationM": 982 },
+    { "distanceKm": 3.86, "elevationM": 1047 },
+    { "distanceKm": 4.66, "elevationM": 1124 },
+    { "distanceKm": 5.42, "elevationM": 1203 },
+    { "distanceKm": 6.17, "elevationM": 1278 },
+    { "distanceKm": 6.9, "elevationM": 1371 },
+    { "distanceKm": 7.54, "elevationM": 1438 },
+    { "distanceKm": 8.15, "elevationM": 1498 },
+    { "distanceKm": 8.79, "elevationM": 1562 },
+    { "distanceKm": 9.24, "elevationM": 1610 },
+    { "distanceKm": 9.62, "elevationM": 1655 },
+    { "distanceKm": 10.1, "elevationM": 1707 }
+  ]
+}
