@@ -61,7 +61,7 @@
       }
 
       main {
-        padding-top: 3.5rem;
+        padding-top: 2rem;
       }
 
       .gate {
@@ -167,7 +167,7 @@
         align-items: end;
         justify-content: space-between;
         gap: 2rem;
-        padding: 2rem 0;
+        padding: 0.75rem 0 0;
       }
 
       .eyebrow {
@@ -191,17 +191,27 @@
       }
 
       .stats {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
       }
 
-      .stat {
-        padding: 1rem 1.25rem 1rem 0;
-      }
+    .stat {
+        position: relative;
+      padding: 1rem 1.25rem;
+      text-align: center;
+    }
 
-      .stat + .stat {
-        padding-left: 1.25rem;
-      }
+    .stat:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1px;
+      height: 2.75rem;
+      background: var(--muted);
+      opacity: 0.55;
+    }
 
       .stat-value {
         color: var(--neon);
@@ -219,7 +229,7 @@
 
       .visuals {
         display: block;
-        padding: 2rem 0 3rem;
+        padding: 0rem 0 3rem;
       }
 
       figure {
@@ -249,11 +259,13 @@
         }
 
         .stats {
-          grid-template-columns: repeat(2, 1fr);
+          grid-template-columns: repeat(3, 1fr);
         }
 
-        .stat:nth-child(3) {
-          padding-left: 0;
+        .stat,
+        .stat + .stat {
+          padding-right: 0.5rem;
+          padding-left: 0.5rem;
         }
 
       }
@@ -310,8 +322,7 @@
       <section class="stats" aria-label="Event statistics">
         <div class="stat"><div class="stat-value">10,1 km</div><div class="stat-label">Distance</div></div>
         <div class="stat"><div class="stat-value">+1.074 m</div><div class="stat-label">Elevation gain</div></div>
-        <div class="stat"><div class="stat-value">653 m</div><div class="stat-label">Start elevation</div></div>
-        <div class="stat"><div class="stat-value">1.707 m</div><div class="stat-label">Finish elevation</div></div>
+        <div class="stat"><div class="stat-value">10,6 %</div><div class="stat-label">Average slope</div></div>
       </section>
       <section class="visuals" aria-label="Event route and elevation profile">
         <figure>

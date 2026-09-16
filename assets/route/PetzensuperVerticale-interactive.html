@@ -6,35 +6,36 @@
   <title>Petzen route and elevation</title>
   <style>
     @font-face { font-family: 'TT Chocolates'; src: url('../../assets/fonts/tt-chocolates-regular.woff2') format('woff2'); font-display: swap; }
-    :root { --brown: #292017; --rust: #603834; --neon: #e0f131; --muted: #a99886; --moderate: #a99886; --steep: #e0f131; --very-steep: #e85d3f; --downhill: #5ba8a0; }
+    :root { --brown: #292017; --rust: #603834; --neon: #e0f131; --muted: #a99886; --flach: #937c66; --moderate: #a99886; --steep: #e0f131; --very-steep: #e85d3f; --downhill: #5ba8a0; }
     * { box-sizing: border-box; }
     html, body { margin: 0; min-width: 320px; overflow: hidden; background: var(--rust); color: var(--muted); font-family: 'TT Chocolates', Arial, sans-serif; }
-    .interactive { width: 100%; padding: .625rem 0 .9375rem; }
+    .interactive { width: 100%; padding: 0 0 .9375rem; }
     svg { display: block; width: 100%; height: auto; overflow: visible; }
-    text { font-family: 'TT Chocolates', Arial, sans-serif; }
+    text { fill: var(--muted); font-family: 'TT Chocolates', Arial, sans-serif; }
     .section-label { fill: var(--muted); font-size: 12px; font-weight: 700; letter-spacing: 2px; }
     .grid-line { stroke: var(--muted); stroke-dasharray: 2 12; opacity: .28; }
     .route-base { fill: none; stroke: var(--brown); stroke-width: 14; stroke-linecap: round; stroke-linejoin: round; }
     .route-segment, .profile-segment { fill: none; stroke-width: 7; stroke-linecap: round; stroke-linejoin: round; }
     .profile-segment { stroke-width: 4; }
+    .profile-fill { opacity: .82; }
     .hover-line { stroke: var(--neon); stroke-width: 2; stroke-dasharray: 5 5; opacity: 0; pointer-events: none; }
     .hover-icon { opacity: 0; pointer-events: none; }
-    .tooltip { position: fixed; z-index: 3; min-width: 9rem; padding: .65rem .75rem; border: 1px solid var(--neon); background: var(--brown); color: var(--neon); font-size: .8rem; line-height: 1.35; pointer-events: none; opacity: 0; transform: translate(12px, 12px); }
-    .tooltip strong { display: block; margin-bottom: .2rem; color: var(--neon); font-size: .95rem; }
-    .legend { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: .25rem; padding-left: 0; font-size: .75rem; }
+    .tooltip { position: fixed; z-index: 3; min-width: 9rem; padding: .65rem .75rem; border: 1px solid var(--neon); background: var(--brown); color: var(--muted); font-size: .8rem; line-height: 1.35; pointer-events: none; opacity: 0; transform: translate(12px, 12px); }
+    .tooltip strong { display: block; margin-bottom: .2rem; color: var(--muted); font-size: .95rem; }
+    .legend { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 0rem; padding-left: 0; font-size: .75rem; }
     .legend span { display: inline-flex; align-items: center; gap: .4rem; }
     .swatch { width: 1.6rem; height: .25rem; border-radius: 1rem; }
-    .moderate { background: var(--moderate); } .steep { background: var(--steep); } .very-steep { background: var(--very-steep); } .downhill { background: var(--downhill); }
+    .flat { background: var(--flach); } .moderate { background: var(--moderate); } .steep { background: var(--steep); } .very-steep { background: var(--very-steep); } .downhill { background: var(--downhill); }
   </style>
 </head>
 <body>
   <div class="interactive">
-    <svg id="chart" viewBox="0 0 1200 900" role="img" aria-label="Petzen route and elevation profile">
+    <svg id="chart" viewBox="0 0 1200 750" role="img" aria-label="Petzen route and elevation profile">
       <g id="route-layer"></g>
       <g id="profile-layer"></g>
       <g id="interaction-layer"></g>
     </svg>
-    <div class="legend" aria-label="Slope legend"><span><i class="swatch moderate"></i>MODERATE</span><span><i class="swatch steep"></i>STEEP</span><span><i class="swatch very-steep"></i>VERY STEEP</span><span><i class="swatch downhill"></i>DOWNHILL</span></div>
+    <div class="legend" aria-label="Slope legend"><span><i class="swatch flat"></i><b>0&ndash;5%</b> FLAT</span><span><i class="swatch moderate"></i><b>5&ndash;10%</b> MODERATE</span><span><i class="swatch steep"></i><b>10&ndash;15%</b> STEEP</span><span><i class="swatch very-steep"></i><b>&gt;15%</b> VERY STEEP</span></div>
   </div>
   <div class="tooltip" id="tooltip" role="status"></div>
   <script>
@@ -45,8 +46,8 @@
     const profileLayer = document.querySelector('#profile-layer');
     const interactionLayer = document.querySelector('#interaction-layer');
     const tooltip = document.querySelector('#tooltip');
-    const routeBox = { left: 90, top: 94, width: 1020, height: 437.5 };
-    const profileBox = { left: 75, top: 562.5, right: 1125, bottom: 781.25 };
+    const routeBox = { left: 90, top: 60, width: 1020, height: 437.5 };
+    const profileBox = { left: 75, top: 450, right: 1125, bottom: 700 };
     const svgPoint = (x, y) => `${x.toFixed(1)},${y.toFixed(1)}`;
     const formatDecimal = (value, digits) => value.toFixed(digits).replace('.', ',');
     const formatInteger = (value) => Math.round(value).toLocaleString('de-DE');
@@ -68,11 +69,11 @@
     fetch(dataUrl).then((response) => response.json()).then((data) => { const points = data.points; const routePoints = routeCoords(points); const profilePoints = points.map((p) => ({ x: profileX(p.distanceKm, data.stats.distanceKm), y: profileY(p.elevationM) }));
       routeLayer.appendChild(el('polyline', { points: pathFor(routePoints), class: 'route-base' }));
       data.segments.forEach((segment, index) => routeLayer.appendChild(el('line', { x1: routePoints[index].x, y1: routePoints[index].y, x2: routePoints[index + 1].x, y2: routePoints[index + 1].y, stroke: colors[segment.category], class: 'route-segment' })));
-      const labelAway = (point, neighbor) => { const dx = point.x - neighbor.x; const dy = point.y - neighbor.y; const length = Math.max(1, Math.hypot(dx, dy)); return { x: point.x + dx / length * 35, y: point.y + dy / length * 35 }; }; const startLabel = labelAway(routePoints[0], routePoints[1]); const finishPoint = routePoints.at(-1); const finishLabel = { x: Math.min(finishPoint.x + 42, 1115), y: finishPoint.y + 6 }; addText(routeLayer, 'ROUTE', 75, 69, { class: 'section-label' }); addText(routeLayer, 'START / 653 M', startLabel.x, startLabel.y, { fill: '#e0f131', 'font-weight': '700', 'text-anchor': 'middle' }); addText(routeLayer, 'FINISH / 1707 M', finishLabel.x, finishLabel.y, { fill: '#e85d3f', 'font-weight': '700', 'text-anchor': 'start' }); routeLayer.appendChild(el('circle', { cx: routePoints[0].x, cy: routePoints[0].y, r: 7, fill: '#603834', stroke: '#e0f131', 'stroke-width': 3 })); routeLayer.appendChild(el('circle', { cx: routePoints.at(-1).x, cy: routePoints.at(-1).y, r: 7, fill: '#603834', stroke: '#e85d3f', 'stroke-width': 3 })); const compass = el('g', { id: 'compass', transform: 'rotate(513 1060 125)' }); compass.appendChild(el('circle', { cx: 1060, cy: 125, r: 28, fill: '#603834', 'fill-opacity': '.9', stroke: '#e0f131', 'stroke-width': 2 })); compass.appendChild(el('path', { d: 'M1060 143V107M1060 107L1052 121H1068Z', fill: '#e0f131' })); addText(compass, 'N', 1060, 92, { fill: '#e0f131', 'text-anchor': 'middle', 'font-weight': '700' }); routeLayer.appendChild(compass); addText(profileLayer, 'ELEVATION PROFILE', 75, 525, { class: 'section-label' });
+      const labelAway = (point, neighbor) => { const dx = point.x - neighbor.x; const dy = point.y - neighbor.y; const length = Math.max(1, Math.hypot(dx, dy)); return { x: point.x + dx / length * 35, y: point.y + dy / length * 35 }; }; const startLabel = labelAway(routePoints[0], routePoints[1]); const finishPoint = routePoints.at(-1); const finishLabel = { x: Math.min(finishPoint.x + 42, 1115), y: finishPoint.y + 6 }; addText(routeLayer, 'ROUTE', 75, 15, { class: 'section-label' }); addText(routeLayer, 'START / 653 M', startLabel.x, startLabel.y, { fill: '#e0f131', 'font-weight': '700', 'text-anchor': 'middle' }); addText(routeLayer, 'FINISH / 1707 M', finishLabel.x, finishLabel.y, { fill: '#e85d3f', 'font-weight': '700', 'text-anchor': 'start' }); routeLayer.appendChild(el('circle', { cx: routePoints[0].x, cy: routePoints[0].y, r: 7, fill: '#603834', stroke: '#e0f131', 'stroke-width': 3 })); routeLayer.appendChild(el('circle', { cx: routePoints.at(-1).x, cy: routePoints.at(-1).y, r: 7, fill: '#603834', stroke: '#e85d3f', 'stroke-width': 3 })); const compass = el('g', { id: 'compass', transform: 'rotate(513 1060 125)' }); compass.appendChild(el('circle', { cx: 1060, cy: 125, r: 28, fill: '#603834', 'fill-opacity': '.9', stroke: '#e0f131', 'stroke-width': 2 })); compass.appendChild(el('path', { d: 'M1060 143V107M1060 107L1052 121H1068Z', fill: '#e0f131' })); addText(compass, 'N', 1060, 92, { fill: '#a99886', 'text-anchor': 'middle', 'font-weight': '700' }); routeLayer.appendChild(compass); addText(profileLayer, 'ELEVATION PROFILE & GRADIENT', 75, 430, { class: 'section-label' });
       [800, 1100, 1400, 1700].forEach((elevation) => { const y = profileY(elevation); profileLayer.appendChild(el('line', { x1: profileBox.left, y1: y, x2: profileBox.right, y2: y, class: 'grid-line' })); addText(profileLayer, `${elevation} m`, 63, y + 4, { 'text-anchor': 'end' }); });
-      profileLayer.appendChild(el('polygon', { points: `${pathFor(profilePoints)} ${profileBox.right},${profileBox.bottom} ${profileBox.left},${profileBox.bottom}`, fill: '#e0f131', 'fill-opacity': '.08' }));
-      data.segments.forEach((segment, index) => profileLayer.appendChild(el('line', { x1: profilePoints[index].x, y1: profilePoints[index].y, x2: profilePoints[index + 1].x, y2: profilePoints[index + 1].y, stroke: colors[segment.category], class: 'profile-segment' })));
-      addText(profileLayer, '0 km', profileBox.left, 818.75); addText(profileLayer, '5 km', 600, 818.75, { 'text-anchor': 'middle' }); addText(profileLayer, `${formatDecimal(data.stats.distanceKm, 1)} km`, profileBox.right, 818.75, { 'text-anchor': 'end' });
+      data.segments.forEach((segment, index) => profileLayer.appendChild(el('polygon', { points: `${profilePoints[index].x},${profilePoints[index].y} ${profilePoints[index + 1].x},${profilePoints[index + 1].y} ${profilePoints[index + 1].x},${profileBox.bottom} ${profilePoints[index].x},${profileBox.bottom}`, fill: colors[segment.category], class: 'profile-fill' })));
+      data.segments.forEach((segment, index) => profileLayer.appendChild(el('line', { x1: profilePoints[index].x, y1: profilePoints[index].y, x2: profilePoints[index + 1].x, y2: profilePoints[index + 1].y, stroke: '#f4efe7', class: 'profile-segment' })));
+      addText(profileLayer, '0 km', profileBox.left, 730); addText(profileLayer, '5 km', 600, 730, { 'text-anchor': 'middle' }); addText(profileLayer, `${formatDecimal(data.stats.distanceKm, 1)} km`, profileBox.right, 730, { 'text-anchor': 'end' });
       const routeInteraction = el('polyline', { points: pathFor(routePoints), fill: 'none', stroke: 'transparent', 'stroke-width': 32, 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }); const profileInteraction = el('rect', { x: profileBox.left, y: profileBox.top, width: profileBox.right - profileBox.left, height: profileBox.bottom - profileBox.top, fill: 'transparent' }); interactionLayer.append(routeInteraction, profileInteraction);
       const profileHoverLine = el('line', { id: 'profile-hover-line', class: 'hover-line' }); const routeHoverIcon = el('image', { id: 'route-hover-icon', href: '../../assets/logos/sv_mini_ohne_text-neon.svg', x: routePoints[0].x - 15, y: routePoints[0].y - 15, width: 30, height: 30, class: 'hover-icon' }); const profileHoverIcon = el('image', { id: 'profile-hover-icon', href: '../../assets/logos/sv_mini_ohne_text-neon.svg', x: profilePoints[0].x - 12, y: profilePoints[0].y - 12, width: 24, height: 24, class: 'hover-icon' }); interactionLayer.append(profileHoverLine, routeHoverIcon, profileHoverIcon);
       const nearestPoint = (event, source) => { const rect = chart.getBoundingClientRect(); const x = (event.clientX - rect.left) * 1200 / rect.width; if (source === 'profile') { let index = Math.round((x - profileBox.left) / (profileBox.right - profileBox.left) * (points.length - 1)); return Math.max(0, Math.min(points.length - 1, index)); } let best = 0; let distance = Infinity; routePoints.forEach((point, index) => { const current = Math.hypot(point.x - x, point.y - ((event.clientY - rect.top) * 900 / rect.height)); if (current < distance) { distance = current; best = index; } }); return best; };
