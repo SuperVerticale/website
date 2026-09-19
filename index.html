@@ -39,12 +39,8 @@
       }
 
       body {
-        display: grid;
-        min-height: 100vh;
-        height: 100dvh;
-        place-items: center;
-        overflow: hidden;
         position: relative;
+        min-height: 100vh;
         background: var(--rust);
         color: var(--neon);
         font-family: 'TT Chocolates', Arial, sans-serif;
@@ -99,13 +95,17 @@
 
       main {
         position: relative;
-        display: grid;
-        place-items: center;
-        width: 100%;
-        min-height: 100vh;
-        padding: 2rem;
-        text-align: center;
         z-index: 2;
+        width: min(100% - 2.5rem, 72rem);
+        margin: 0 auto;
+        padding: 3.5rem 0 6rem;
+      }
+
+      .hero {
+        display: grid;
+        justify-items: center;
+        padding-top: 3rem;
+        text-align: center;
       }
 
       .palette-note {
@@ -202,11 +202,81 @@
       }
 
       .logo {
-        width: min(88vw, 40rem);
+        width: min(70vw, 20rem);
         height: auto;
         display: block;
-        margin-top: -18vh;
-        transform: translateY(-0.5rem);
+      }
+
+      .page-intro {
+        max-width: 44rem;
+        margin: 2rem 0 0;
+        color: var(--light-grey);
+        font-size: clamp(1.1rem, 2.8vw, 1.6rem);
+        font-weight: 800;
+        letter-spacing: 0.04em;
+        line-height: 1.5;
+        text-transform: uppercase;
+      }
+
+      .key-points {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+        gap: 3rem 2.5rem;
+        margin-top: 5rem;
+      }
+
+      .key-point {
+        padding-top: 1.5rem;
+        border-top: 1px solid rgb(169 152 134 / 45%);
+        text-align: left;
+      }
+
+      .key-point-icon {
+        display: block;
+        width: 2rem;
+        height: 2rem;
+        margin-bottom: 1.25rem;
+        fill: none;
+        stroke: var(--neon);
+        stroke-width: 1.4;
+        stroke-linecap: square;
+        stroke-linejoin: miter;
+      }
+
+      .key-point h2 {
+        margin: 0 0 0.6rem;
+        color: var(--neon);
+        font-family: 'TT Chocolates', Arial, sans-serif;
+        font-size: 1.4rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .key-point p {
+        margin: 0;
+        color: var(--light-grey);
+        font-size: 1.15rem;
+        font-weight: 800;
+        letter-spacing: 0.02em;
+        line-height: 1.55;
+        text-transform: uppercase;
+      }
+
+      @media (max-width: 700px) {
+        main {
+          padding: 2.5rem 0 4rem;
+        }
+
+        .hero {
+          padding-top: 1.5rem;
+        }
+
+        .key-points {
+          grid-template-columns: 1fr;
+          gap: 2.75rem;
+          margin-top: 3.5rem;
+        }
       }
 
       .logo-mark {
@@ -235,22 +305,6 @@
         letter-spacing: 5px;
       }
 
-      @media (prefers-reduced-motion: no-preference) {
-        .logo {
-          animation: arrive 900ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
-        }
-      }
-
-      @keyframes arrive {
-        from {
-          opacity: 0;
-          transform: translateY(1rem);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
     </style>
   </head>
   <body>
@@ -310,11 +364,62 @@
       });
     </script>
     <main>
-      <img
-        class="logo"
-        src="assets/logos/SuperVerticale.svg"
-        alt="Super Verticale Logo"
-      />
+      <div class="hero">
+        <img
+          class="logo"
+          src="assets/logos/SuperVerticale.svg"
+          alt="Super Verticale Logo"
+        />
+        <p class="page-intro">A RACE STRAIGHT UP. AND MORE BEYOND THE FINISH LINE.</p>
+      </div>
+
+      <section class="key-points" aria-label="Was die Super Verticale ausmacht">
+        <article class="key-point">
+          <svg class="key-point-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 20 L11 6 L14 11 L17 6 L21 20 Z" />
+          </svg>
+          <h2>Vertical</h2>
+          <p>Start from the bottom. Finish at the top.<br />No shortcuts.</p>
+        </article>
+
+        <article class="key-point">
+          <svg class="key-point-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="9" />
+            <circle cx="12" cy="12" r="5" />
+            <circle cx="12" cy="12" r="1" />
+          </svg>
+          <h2>Race Modes</h2>
+          <p>One race. More ways to win.</p>
+        </article>
+
+        <article class="key-point">
+          <svg class="key-point-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 15 L3 9 L7 9 L13 4 L13 20 L7 15 Z" />
+            <path d="M17 9 A5 5 0 0 1 17 15" />
+          </svg>
+          <h2>Spectacle</h2>
+          <p>Run through the crowd. The mountain<br />becomes the stage.</p>
+        </article>
+
+        <article class="key-point">
+          <svg class="key-point-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 3 L14.5 9.5 L21 12 L14.5 14.5 L12 21 L9.5 14.5 L3 12 L9.5 9.5 Z" />
+          </svg>
+          <h2>Curated</h2>
+          <p>Brands, food &amp; culture &ndash; handpicked.</p>
+        </article>
+
+        <article class="key-point">
+          <svg class="key-point-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="8" cy="8" r="3" />
+            <circle cx="17" cy="9" r="2.5" />
+            <path d="M3 20 C3 15.5 5.5 13 8.5 13 C11 13 13 15 13.5 18" />
+            <path d="M13.5 13.5 C15.5 13.5 17.5 15 18 18" />
+          </svg>
+          <h2>Together</h2>
+          <p>The race is the excuse to get together.</p>
+        </article>
+      </section>
     </main>
     <a class="dashboard-link" href="dashboard.html" aria-label="Privates Dashboard öffnen">DATA</a>
     <a class="events-link" href="events.html">EVENTS</a>
