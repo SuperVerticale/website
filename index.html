@@ -26,6 +26,8 @@
         --neon: #E0F131;
         --green: #937C66;
         --light-grey: #A99886;
+        --mono: 'SF Mono', 'Fira Code', ui-monospace, monospace;
+        --header-height: 4.75rem;
       }
 
       * {
@@ -49,48 +51,13 @@
       body::before {
         position: fixed;
         inset: 0;
-        background: rgb(96 56 52 / 20%);
-        content: '';
-        pointer-events: none;
         z-index: 1;
-      }
-
-      .background-video {
-        min-width: 0;
-        min-height: 0;
-        width: 100%;
-        height: 100%;
-        aspect-ratio: 1 / 6;
-        object-fit: cover;
-        object-position: center;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+        background-repeat: repeat;
+        background-size: 256px;
+        content: '';
+        opacity: 0.05;
         pointer-events: none;
-      }
-
-      .background-videos {
-        position: fixed;
-        inset: 0;
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        grid-template-rows: repeat(4, minmax(0, 1fr));
-        gap: 0.35rem;
-        padding: 0.35rem;
-        background: var(--rust);
-        pointer-events: none;
-        z-index: 0;
-        height: 100dvh;
-      }
-
-      @media (max-width: 600px) {
-        .background-videos {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-          grid-template-rows: repeat(8, minmax(0, 1fr));
-          gap: 0.2rem;
-          padding: 0.2rem;
-        }
-
-        .background-video {
-          object-fit: cover;
-        }
       }
 
       main {
@@ -98,7 +65,8 @@
         z-index: 2;
         width: min(100% - 2.5rem, 72rem);
         margin: 0 auto;
-        padding: 3.5rem 0 6rem;
+        padding: calc(var(--header-height) + 3.5rem) 0 6rem;
+        scroll-margin-top: var(--header-height);
       }
 
       .hero {
@@ -106,6 +74,53 @@
         justify-items: center;
         padding-top: 3rem;
         text-align: center;
+      }
+
+      .hero-video-wrap {
+        width: min(100%, 60rem);
+        aspect-ratio: 16 / 9;
+        margin: 2.5rem 0 0;
+        overflow: hidden;
+        border: 1px solid rgb(169 152 134 / 35%);
+        border-radius: 0.75rem;
+        background: var(--brown);
+      }
+
+      .hero-video {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .hero-cta {
+        display: inline-block;
+        margin-top: 2.25rem;
+        padding: 0.85rem 2.25rem;
+        background: var(--neon);
+        color: var(--brown);
+        font-family: 'TT Chocolates', Arial, sans-serif;
+        font-size: 0.9rem;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: opacity 180ms ease;
+      }
+
+      .hero-cta:hover,
+      .hero-cta:focus-visible {
+        opacity: 0.82;
+      }
+
+      .hero-meta {
+        margin: 1.75rem 0 0;
+        color: var(--light-grey);
+        font-family: var(--mono);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
       }
 
       .palette-note {
@@ -125,80 +140,71 @@
         line-height: 1.5;
         text-transform: uppercase;
       }
-      
-      .credit {
+
+      .site-header {
         position: fixed;
-        right: 1rem;
-        bottom: 1rem;
-        color: var(--neon);
-        font-family: 'TT Chocolates', Arial, sans-serif;
-        font-size: 0.83rem;
-        font-weight: 700;
-        letter-spacing: 0.12em;
-        text-shadow: 0 0 12px rgb(41 32 23 / 50%);
+        inset: 0 0 auto 0;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 1rem min(1.25rem, calc((100% - 72rem) / 2 + 1.25rem));
+        background: rgb(41 32 23 / 78%);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid rgb(169 152 134 / 30%);
       }
 
-      .dashboard-link {
-        position: fixed;
-        left: 1rem;
-        bottom: 1rem;
-        color: var(--neon);
+      .site-header-logo {
+        width: 9.5rem;
+        height: auto;
+        display: block;
+        flex-shrink: 0;
+      }
+
+      .site-nav {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+      }
+
+      .site-nav a {
+        color: var(--light-grey);
         font-family: 'TT Chocolates', Arial, sans-serif;
-        font-size: 0.83rem;
+        font-size: 0.78rem;
         font-weight: 700;
-        letter-spacing: 0.12em;
+        letter-spacing: 0.1em;
         text-decoration: none;
-        text-shadow: 0 0 12px rgb(224 241 49 / 40%);
-        transition: color 180ms ease, text-shadow 180ms ease;
-        z-index: 3;
+        text-transform: uppercase;
+        transition: color 180ms ease;
       }
 
-      .events-link {
-        position: fixed;
-        top: 1rem;
-        right: 1rem;
-        z-index: 3;
+      .site-nav a:hover,
+      .site-nav a:focus-visible {
         color: var(--neon);
-        font-family: 'TT Chocolates', Arial, sans-serif;
-        font-size: 0.83rem;
-        font-weight: 700;
-        letter-spacing: 0.12em;
-        text-decoration: none;
-        text-shadow: 0 0 12px rgb(224 241 49 / 40%);
-        transition: color 180ms ease, text-shadow 180ms ease;
       }
 
-      .events-link:hover,
-      .events-link:focus-visible {
-        color: #f4ff8d;
-        text-shadow: 0 0 14px rgb(224 241 49 / 70%);
-      }
-
-      .instagram-link {
-        position: fixed;
-        top: 1rem;
-        left: 1rem;
-        z-index: 3;
+      .site-nav .btn {
+        padding: 0.55rem 1.15rem;
+        border: 1px solid var(--neon);
         color: var(--neon);
-        font-family: 'TT Chocolates', Arial, sans-serif;
-        font-size: 0.83rem;
-        font-weight: 700;
-        letter-spacing: 0.12em;
-        text-decoration: none;
-        text-shadow: 0 0 12px rgb(224 241 49 / 40%);
-        transition: color 180ms ease, text-shadow 180ms ease;
       }
 
-      .instagram-link:hover,
-      .instagram-link:focus-visible {
-        color: #f4ff8d;
-        text-shadow: 0 0 14px rgb(224 241 49 / 70%);
+      .site-nav .btn:hover,
+      .site-nav .btn:focus-visible {
+        background: var(--neon);
+        color: var(--brown);
       }
 
-      .dashboard-link:hover,
-      .dashboard-link:focus-visible {
-        color: #f4ff8d;
-        text-shadow: 0 0 14px rgb(224 241 49 / 70%);
+      @media (max-width: 700px) {
+        .site-header {
+          padding: 0.85rem 1.25rem;
+        }
+
+        .site-nav a:not(.btn) {
+          display: none;
+        }
       }
 
       .logo {
@@ -220,15 +226,36 @@
 
       .key-points {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
-        gap: 3rem 2.5rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1px;
+        margin-top: 2rem;
+        border: 1px solid rgb(169 152 134 / 35%);
+        background: rgb(169 152 134 / 35%);
+      }
+
+      .manifest-label {
         margin-top: 5rem;
+        color: var(--light-grey);
+        font-family: var(--mono);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
       }
 
       .key-point {
-        padding-top: 1.5rem;
-        border-top: 1px solid rgb(169 152 134 / 45%);
+        padding: 2.5rem;
+        background: var(--rust);
         text-align: left;
+      }
+
+      .key-point-num {
+        display: block;
+        margin-bottom: 1rem;
+        color: var(--neon);
+        font-family: var(--mono);
+        font-size: 0.72rem;
+        letter-spacing: 0.15em;
       }
 
       .key-point-icon {
@@ -265,7 +292,7 @@
 
       @media (max-width: 700px) {
         main {
-          padding: 2.5rem 0 4rem;
+          padding: calc(var(--header-height) + 2.5rem) 0 4rem;
         }
 
         .hero {
@@ -274,8 +301,281 @@
 
         .key-points {
           grid-template-columns: 1fr;
-          gap: 2.75rem;
+          margin-top: 1.5rem;
+        }
+
+        .manifest-label {
           margin-top: 3.5rem;
+        }
+      }
+
+      .event-section {
+        margin-top: 6rem;
+      }
+
+      .event-label {
+        color: var(--light-grey);
+        font-family: var(--mono);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+      }
+
+      .event-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3rem 4rem;
+        margin-top: 2.5rem;
+      }
+
+      .event-block h3 {
+        margin: 0 0 0.6rem;
+        color: var(--light-grey);
+        font-family: var(--mono);
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+      }
+
+      .event-block p {
+        margin: 0;
+        color: var(--neon);
+        font-size: clamp(1.2rem, 3vw, 1.75rem);
+        font-weight: 800;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+      }
+
+      .event-coords {
+        margin-top: 2.5rem;
+        color: var(--light-grey);
+        font-family: var(--mono);
+        font-size: 0.72rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .culture-section {
+        position: relative;
+        z-index: 2;
+        width: 100vw;
+        margin: 6rem 0 0 50%;
+        transform: translateX(-50%);
+      }
+
+      .culture-label {
+        margin: 0 0 2rem;
+        padding: 0 min(1.25rem, calc((100vw - 72rem) / 2 + 1.25rem));
+        color: var(--light-grey);
+        font-family: var(--mono);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+      }
+
+      .marquee-wrap {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .marquee-track {
+        display: flex;
+        width: max-content;
+        gap: 1rem;
+        animation: marquee 40s linear infinite;
+      }
+
+      .culture-media {
+        width: 21.5rem;
+        height: 15rem;
+        object-fit: cover;
+        filter: grayscale(0.25) contrast(1.05);
+        flex-shrink: 0;
+      }
+
+      @keyframes marquee {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      .marquee-text {
+        padding: 2rem min(1.25rem, calc((100vw - 72rem) / 2 + 1.25rem)) 0;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+
+      .marquee-text-track {
+        display: inline-flex;
+        gap: 4rem;
+        font-size: clamp(1.75rem, 5vw, 3.5rem);
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        color: rgb(169 152 134 / 35%);
+        text-transform: uppercase;
+        animation: marquee-text 20s linear infinite;
+      }
+
+      @keyframes marquee-text {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .marquee-track,
+        .marquee-text-track {
+          animation: none;
+        }
+
+        .marquee-wrap,
+        .marquee-text {
+          overflow-x: auto;
+        }
+      }
+
+      @media (max-width: 700px) {
+        .culture-media {
+          width: 16rem;
+          height: 11rem;
+        }
+      }
+
+      .site-footer {
+        position: relative;
+        z-index: 2;
+        width: min(100% - 2.5rem, 72rem);
+        margin: 6rem auto 0;
+        padding: 3rem 0 4rem;
+        border-top: 1px solid rgb(169 152 134 / 35%);
+      }
+
+      .footer-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 2.5rem;
+      }
+
+      .footer-brand {
+        color: var(--neon);
+        font-family: 'TT Chocolates', Arial, sans-serif;
+        font-size: 1.4rem;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .footer-newsletter {
+        max-width: 24rem;
+      }
+
+      .footer-newsletter h3 {
+        margin: 0 0 1rem;
+        color: var(--light-grey);
+        font-size: 0.85rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .newsletter-form {
+        display: flex;
+        gap: 0;
+      }
+
+      .newsletter-input {
+        flex: 1;
+        min-width: 0;
+        padding: 0.75rem 1rem;
+        border: 1px solid rgb(169 152 134 / 45%);
+        background: transparent;
+        color: var(--neon);
+        font-family: 'TT Chocolates', Arial, sans-serif;
+        font-size: 0.85rem;
+        outline: none;
+      }
+
+      .newsletter-input:focus-visible {
+        border-color: var(--neon);
+      }
+
+      .newsletter-submit {
+        padding: 0.75rem 1.25rem;
+        border: none;
+        background: var(--neon);
+        color: var(--brown);
+        font-family: 'TT Chocolates', Arial, sans-serif;
+        font-size: 0.9rem;
+        font-weight: 800;
+        cursor: pointer;
+        transition: opacity 180ms ease;
+      }
+
+      .newsletter-submit:hover,
+      .newsletter-submit:focus-visible {
+        opacity: 0.82;
+      }
+
+      .newsletter-msg {
+        margin-top: 0.6rem;
+        min-height: 1.2em;
+        font-size: 0.78rem;
+      }
+
+      .newsletter-msg.success {
+        color: var(--neon);
+      }
+
+      .newsletter-msg.error {
+        color: #ff9a8d;
+      }
+
+      .footer-links {
+        display: flex;
+        gap: 1.75rem;
+        flex-wrap: wrap;
+      }
+
+      .footer-links a {
+        color: var(--light-grey);
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: color 180ms ease;
+      }
+
+      .footer-links a:hover,
+      .footer-links a:focus-visible {
+        color: var(--neon);
+      }
+
+      .footer-copy {
+        margin-top: 2.5rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid rgb(169 152 134 / 25%);
+        color: var(--light-grey);
+        font-family: var(--mono);
+        font-size: 0.68rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      @media (max-width: 700px) {
+        .footer-grid {
+          flex-direction: column;
         }
       }
 
@@ -308,73 +608,38 @@
     </style>
   </head>
   <body>
-    <div class="background-videos" aria-hidden="true">
-      <video class="background-video" autoplay muted loop playsinline preload="auto">
-        <source src="assets/wine_jump_down_up.mp4" type="video/mp4" />
-      </video>
-      <video class="background-video" autoplay muted loop playsinline preload="auto">
-        <source src="assets/wine_steep_left_right.mp4" type="video/mp4" />
-      </video>
-      <video class="background-video" autoplay muted loop playsinline preload="auto">
-        <source src="assets/wine_straight.mp4" type="video/mp4" />
-      </video>
-      <video class="background-video" autoplay muted loop playsinline preload="auto">
-        <source src="assets/wine_uphill_left_right.mp4" type="video/mp4" />
-      </video>
-      <video class="background-video" autoplay muted loop playsinline preload="auto">
-        <source src="assets/wine_uphill_right_left.mp4" type="video/mp4" />
-      </video>
-      <video class="background-video" autoplay muted loop playsinline preload="auto">
-        <source src="assets/wine_uphill_straight_front.mp4" type="video/mp4" />
-      </video>
-      <video class="background-video" autoplay muted loop playsinline preload="auto">
-        <source src="assets/wine_foot.mp4" type="video/mp4" />
-      </video>
-      <video class="background-video" autoplay muted loop playsinline preload="auto">
-        <source src="assets/wine_portrait.mp4" type="video/mp4" />
-      </video>
-      <video class="background-video" autoplay muted loop playsinline preload="auto">
-        <source src="assets/wine_wqalking_on_woods.mp4" type="video/mp4" />
-      </video>
-      <video class="background-video" autoplay muted loop playsinline preload="auto">
-        <source src="assets/wine_jump_down_up.mp4" type="video/mp4" />
-      </video>
-      <video class="background-video" autoplay muted loop playsinline preload="auto">
-        <source src="assets/wine_straight.mp4" type="video/mp4" />
-      </video>
-      <video class="background-video" autoplay muted loop playsinline preload="auto">
-        <source src="assets/wine_uphill_right_left.mp4" type="video/mp4" />
-      </video>
-      <video class="background-video" autoplay muted loop playsinline preload="auto">
-        <source src="assets/wine_uphill_straight_front.mp4" type="video/mp4" />
-      </video>
-      <video class="background-video" autoplay muted loop playsinline preload="auto">
-        <source src="assets/wine_steep_left_right.mp4" type="video/mp4" />
-      </video>
-      <video class="background-video" autoplay muted loop playsinline preload="auto">
-        <source src="assets/wine_portrait.mp4" type="video/mp4" />
-      </video>
-      <video class="background-video" autoplay muted loop playsinline preload="auto">
-        <source src="assets/wine_uphill_left_right.mp4" type="video/mp4" />
-      </video>
-    </div>
-    <script>
-      document.querySelectorAll('.background-video').forEach((video) => {
-        video.play().catch(() => {});
-      });
-    </script>
+    <header class="site-header">
+      <a href="#hero" aria-label="Super Verticale Startseite">
+        <img class="site-header-logo" src="assets/logos/sv_mini.svg" alt="Super Verticale Logo" />
+      </a>
+      <nav class="site-nav" aria-label="Hauptnavigation">
+        <a href="#manifest">Manifest</a>
+        <a href="https://www.instagram.com/superverticale/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="events.html">Events</a>
+        <a class="btn" href="dashboard.html">Data</a>
+      </nav>
+    </header>
     <main>
-      <div class="hero">
+      <div class="hero" id="hero">
         <img
           class="logo"
           src="assets/logos/SuperVerticale.svg"
           alt="Super Verticale Logo"
         />
+        <div class="hero-video-wrap">
+          <video class="hero-video" autoplay muted loop playsinline preload="auto">
+            <source src="assets/wine_straight.mp4" type="video/mp4" />
+          </video>
+        </div>
         <p class="page-intro">A RACE STRAIGHT UP. AND MORE BEYOND THE FINISH LINE.</p>
+        <a class="hero-cta" href="#event">Zum Event</a>
+        <p class="hero-meta">46°32′12″N 14°48′36″E — 1.508 Höhenmeter — Petzen, Österreich</p>
       </div>
 
-      <section class="key-points" aria-label="Was die Super Verticale ausmacht">
+      <p class="manifest-label">// Manifest</p>
+      <section class="key-points" id="manifest" aria-label="What is Super Verticale?">
         <article class="key-point">
+          <span class="key-point-num">01</span>
           <svg class="key-point-icon" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M3 20 L11 6 L14 11 L17 6 L21 20 Z" />
           </svg>
@@ -383,16 +648,7 @@
         </article>
 
         <article class="key-point">
-          <svg class="key-point-icon" viewBox="0 0 24 24" aria-hidden="true">
-            <circle cx="12" cy="12" r="9" />
-            <circle cx="12" cy="12" r="5" />
-            <circle cx="12" cy="12" r="1" />
-          </svg>
-          <h2>Race Modes</h2>
-          <p>One race. More ways to win.</p>
-        </article>
-
-        <article class="key-point">
+          <span class="key-point-num">02</span>
           <svg class="key-point-icon" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M3 15 L3 9 L7 9 L13 4 L13 20 L7 15 Z" />
             <path d="M17 9 A5 5 0 0 1 17 15" />
@@ -402,6 +658,7 @@
         </article>
 
         <article class="key-point">
+          <span class="key-point-num">03</span>
           <svg class="key-point-icon" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M12 3 L14.5 9.5 L21 12 L14.5 14.5 L12 21 L9.5 14.5 L3 12 L9.5 9.5 Z" />
           </svg>
@@ -410,6 +667,7 @@
         </article>
 
         <article class="key-point">
+          <span class="key-point-num">04</span>
           <svg class="key-point-icon" viewBox="0 0 24 24" aria-hidden="true">
             <circle cx="8" cy="8" r="3" />
             <circle cx="17" cy="9" r="2.5" />
@@ -420,10 +678,109 @@
           <p>The race is the excuse to get together.</p>
         </article>
       </section>
+
+      <section class="event-section" id="event" aria-label="Event Information">
+        <p class="event-label">// Event</p>
+        <div class="event-grid">
+          <div class="event-block">
+            <h3>Datum</h3>
+            <p>Samstag, 21. August 2027</p>
+          </div>
+          <div class="event-block">
+            <h3>Location</h3>
+            <p>Petzen-Bergbahnen, Österreich</p>
+          </div>
+          <div class="event-block">
+            <h3>Scale</h3>
+            <p>~1.000 Teilnehmer &amp; Community</p>
+          </div>
+        </div>
+        <p class="event-coords">46°32′12″N 14°48′36″E — Höhenmeter: 1.508m — Distanz: 4,2km</p>
+      </section>
     </main>
-    <a class="dashboard-link" href="dashboard.html" aria-label="Privates Dashboard öffnen">DATA</a>
-    <a class="events-link" href="events.html">EVENTS</a>
-    <a class="instagram-link" href="https://www.instagram.com/superverticale/" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
-    <small class="credit">by CAPRA</small>
+
+    <section class="culture-section" id="culture" aria-label="Culture &amp; Aftermath">
+      <p class="culture-label">// Culture &amp; Aftermath</p>
+      <div class="marquee-wrap">
+        <div class="marquee-track">
+          <img class="culture-media" src="assets/route/pictures/petzen.jpg" alt="Blick auf die Petzen, Austragungsort der Super Verticale" />
+          <video class="culture-media" autoplay muted loop playsinline preload="none" aria-hidden="true">
+            <source src="assets/wine_straight.mp4" type="video/mp4" />
+          </video>
+          <video class="culture-media" autoplay muted loop playsinline preload="none" aria-hidden="true">
+            <source src="assets/wine_uphill_straight_front.mp4" type="video/mp4" />
+          </video>
+          <video class="culture-media" autoplay muted loop playsinline preload="none" aria-hidden="true">
+            <source src="assets/wine_steep_left_right.mp4" type="video/mp4" />
+          </video>
+          <video class="culture-media" autoplay muted loop playsinline preload="none" aria-hidden="true">
+            <source src="assets/wine_foot.mp4" type="video/mp4" />
+          </video>
+          <video class="culture-media" autoplay muted loop playsinline preload="none" aria-hidden="true">
+            <source src="assets/wine_wqalking_on_woods.mp4" type="video/mp4" />
+          </video>
+          <!-- duplicate set for seamless loop -->
+          <img class="culture-media" src="assets/route/pictures/petzen.jpg" alt="" aria-hidden="true" />
+          <video class="culture-media" autoplay muted loop playsinline preload="none" aria-hidden="true">
+            <source src="assets/wine_straight.mp4" type="video/mp4" />
+          </video>
+          <video class="culture-media" autoplay muted loop playsinline preload="none" aria-hidden="true">
+            <source src="assets/wine_uphill_straight_front.mp4" type="video/mp4" />
+          </video>
+          <video class="culture-media" autoplay muted loop playsinline preload="none" aria-hidden="true">
+            <source src="assets/wine_steep_left_right.mp4" type="video/mp4" />
+          </video>
+          <video class="culture-media" autoplay muted loop playsinline preload="none" aria-hidden="true">
+            <source src="assets/wine_foot.mp4" type="video/mp4" />
+          </video>
+          <video class="culture-media" autoplay muted loop playsinline preload="none" aria-hidden="true">
+            <source src="assets/wine_wqalking_on_woods.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+      <div class="marquee-text" aria-hidden="true">
+        <div class="marquee-text-track">
+          <span>Super Verticale &mdash; Join the Herd &mdash; Super Verticale &mdash; Join the Herd &mdash; </span>
+          <span>Super Verticale &mdash; Join the Herd &mdash; Super Verticale &mdash; Join the Herd &mdash; </span>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div class="footer-brand">Super Verticale</div>
+        <div class="footer-newsletter">
+          <h3>Get on the list</h3>
+          <form class="newsletter-form" id="newsletter-form" aria-label="Newsletter Anmeldung">
+            <input type="email" class="newsletter-input" id="newsletter-input" required aria-label="E-Mail Adresse" placeholder="deine@email.com" />
+            <button type="submit" class="newsletter-submit" aria-label="Newsletter abonnieren">&rarr;</button>
+          </form>
+          <p class="newsletter-msg" id="newsletter-msg" role="status" aria-live="polite"></p>
+        </div>
+        <div class="footer-links">
+          <a href="https://www.instagram.com/superverticale/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="events.html">Events</a>
+          <a href="dashboard.html">Data</a>
+        </div>
+      </div>
+      <p class="footer-copy">by CAPRA &mdash; &copy; 2027 Super Verticale. All rights reserved.</p>
+    </footer>
+    <script>
+      // Kein Backend angebunden: bestätigt clientseitig, ohne Daten zu speichern.
+      document.getElementById('newsletter-form').addEventListener('submit', (event) => {
+        event.preventDefault();
+        const input = document.getElementById('newsletter-input');
+        const msg = document.getElementById('newsletter-msg');
+        const email = input.value.trim();
+        if (!email) {
+          msg.textContent = 'Bitte gib eine E-Mail ein.';
+          msg.className = 'newsletter-msg error';
+          return;
+        }
+        msg.textContent = 'Danke! Wir melden uns vor dem Start.';
+        msg.className = 'newsletter-msg success';
+        input.value = '';
+      });
+    </script>
   </body>
 </html>

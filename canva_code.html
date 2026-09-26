@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="de"><head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260925-05-46ec85d","C":{"Abril Fatface":"YACgEZbkUVE,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A,0","Archivo":"YACgEZulLoA,0","Arial Narrow":"YAGyDvJ_4Ts,0","Arial Rounded MT Bold":"YAFcfoaHu-s,0","Arial":"YAGyDvJ_4Ts,0","Avenir Next":"YAFcfmNq6UY,0","Baloo 2":"YADK30bC6HQ,0","Bebas Neue":"YACgESME5ew,0","Bricolage Grotesque":"YAFyMcdwzpc,0","Broken Glyph":"YADZ-exUkv0,0","Canva Sans":"YAFdJjTk5UU,1","Caveat":"YALBs2ploWQ,0","Comic Sans MS":"YAFcfvtOAUY,1","Cormorant Garamond":"YAFdJhX-538,0","Courier New":"YAGzXiGs0_8,0","Courier Prime":"YAD1aFjegN8,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Forum":"YACgEcnnqB4,0","Fraunces":"YAFdJpU7Kkk,0","Georgia":"YAGzXkO0pEM,0","Ghost Mono":"YAHQutsX00Q,0","Hanken Grotesk":"YAFcfhwp99E,0","Helvetica Neue":"YAFcf6CtJfI,0","Helvetica":"YAFcf6CtJfI,0","IBM Plex Mono":"YAFdJkmvhGI,0","Impact":"YAFcfnjI7Vk,0","Instrument Serif":"YAHFeOnZNEk,0","Inter":"YAFdJvSyp_k,3","Iowan Old Style":"YAGNIFa8j9o,0","Jacques Francois":"YADK3zbC6RM,0","JetBrains Mono":"YAFdJksXcAk,0","Josefin Sans":"YAFdJjvw9Ps,0","Lato":"YAFdJuFCnaw,0","Libre Baskerville":"YACgEUFdPdA,0","Lobster":"YAD8SnSjSFI,0","Lora":"YACgEXvxf8Q,0","Merriweather":"YACgEXvHxxs,0","Montserrat":"YAFdtQi73Xs,0","Nunito":"YAFdJoNRMmU,1","Oleo Script":"YACgEQQ14jI,0","Oswald":"YACgEQY10lw,0","Pacifico":"YADLjORQ1u4,0","Phantom Sans":"YAFdJvgJ5TU,0","Playfair Display":"YAFdJhem5V8,1","Plus Jakarta Sans":"YAGvf3_u0_Q,0","Poppins":"YAFdJjbTu24,1","Press Start 2P":"YAFyGr-8pmQ,0","Quicksand":"YAFdJpYtCxE,1","Raleway":"YAFdJhmxbVQ,1","Roboto Slab":"YAFdJswIKAg,0","Rockwell":"YAFcfyVZnN0,0","Rye":"YACgEdQP21k,0","Segoe UI":"YAHNdRD1Klw,0","Source Sans 3":"YAG4lO1Mj10,0","Source Serif 4":"YACgEfdj394,0","Space Grotesk":"YADZ-dYEmhg,0","Space Mono":"YADW1-vpsoc,0","Times New Roman":"YAGzXW3gftg,0","Times":"YAGzXW3gftg,0","Trebuchet MS":"YAFcfrglpVA,0","UV Display":"YAEdVfSSpYo,0","UV Sans":"YAFdJvgJ5TU,0","Ubuntu":"YACgERDU--Q,0","Verdana":"YAGzXTctYtQ,0","Work Sans":"YAGXhLOKv44,0","Yellowtail":"YACgEYG4kG4,0","ui-monospace":"YAD1aFjegN8,0","ui-sans-serif":"YACkoD1yZN0,0"}}');</script><script src="/_sdk/6542d56fbfe7a3eb.telemetry_sdk.js" integrity="sha512-ECdM0nK7EkwDuOqho2qxgyRQXyBHk9hZqRKMBr+Xsu6zjeHlt+qkO2N2YRiHN7Kg4e1fEHDhjIp4bGJYVypv1g=="></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Super Verticale by Capra</title>
+  <style>
+        :root {
+            --bg-black: #0a0a0a;
+            --text-white: #f5f5f5;
+            --accent-lime: #ccff00;
+            --gray: #888888;
+            --border: #222;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background-color: var(--bg-black);
+            color: var(--text-white);
+            font-family: "TT Chocolates", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.5;
+            overflow-x: hidden;
+        }
+        /* NAV */
+        header {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+            padding: 1.25rem 2rem;
+            display: flex; justify-content: space-between; align-items: center;
+            border-bottom: 1px solid var(--border);
+            background: #342828ff;
+            backdrop-filter: blur(8px);
+        }
+        .logo { width: 180px; height: 36px; padding: 2px 6px; object-fit: contain; display: block; flex-shrink: 0; }
+        .nav-links { display: flex; gap: 2rem; align-items: center; }
+        .nav-links a {
+            color: var(--gray); text-decoration: none; text-transform: uppercase;
+            font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; transition: color 0.2s;
+        }
+        .nav-links a:hover, .nav-links a:focus { color: var(--text-white); }
+        .btn {
+            display: inline-block; background-color: var(--accent-lime); color: var(--bg-black);
+            padding: 0.75rem 2rem; font-weight: 800; text-decoration: none;
+            text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px;
+            border: none; cursor: pointer; transition: opacity 0.2s;
+        }
+        .btn:hover, .btn:focus { opacity: 0.8; }
+        .btn:focus-visible { outline: 2px solid var(--accent-lime); outline-offset: 2px; }
+        .btn-sm { padding: 0.6rem 1.5rem; font-size: 0.75rem; }
+
+        /* HERO */
+        .hero {
+            display: flex; flex-direction: column; gap: 2rem;
+            padding: 7rem 2rem 3rem; position: relative; overflow: hidden;
+        }
+        .hero-video-wrap {
+            width: min(100%, 960px); aspect-ratio: 16 / 9;
+            margin: 0 auto; overflow: hidden; border-radius: 12px;
+            background: #121212; border: 1px solid var(--border);
+        }
+        .hero-video {
+            display: block; width: 100%; height: 100%; object-fit: cover;
+        }
+        .hero-content { max-width: 1200px; margin: 0 auto; width: 100%; }
+        .hero h1 {
+            font-size: clamp(3.5rem, 12vw, 9rem); font-weight: 900; line-height: 0.88;
+            text-transform: uppercase; letter-spacing: -3px; margin-bottom: 1.5rem;
+        }
+        .hero-sub {
+            font-size: clamp(1rem, 2.5vw, 1.5rem); color: var(--accent-lime);
+            text-transform: uppercase; font-weight: 700; margin-bottom: 2.5rem; max-width: 700px;
+        }
+        .hero-meta {
+            font-family: "SF Mono", "Fira Code", monospace; font-size: 0.7rem;
+            color: var(--gray); text-transform: uppercase; letter-spacing: 2px;
+            margin-top: 3rem;
+        }
+
+        /* MANIFEST */
+        #manifest { max-width: 1200px; margin: 0 auto; padding: 6rem 2rem; }
+        .manifest-label {
+            font-family: "SF Mono", "Fira Code", monospace; font-size: 0.7rem;
+            color: var(--gray); text-transform: uppercase; letter-spacing: 3px; margin-bottom: 3rem;
+        }
+        .manifest-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
+            border: 1px solid var(--border);
+        }
+        .manifest-card {
+            padding: 3rem; border: 1px solid var(--border); position: relative;
+        }
+        .manifest-num {
+            font-family: "SF Mono", "Fira Code", monospace; font-size: 0.7rem;
+            color: var(--accent-lime); margin-bottom: 1rem; letter-spacing: 2px;
+        }
+        .manifest-card h3 {
+            font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 900;
+            text-transform: uppercase; margin-bottom: 1rem; letter-spacing: -1px;
+        }
+        .manifest-card p {
+            color: var(--gray); font-size: 1rem; text-transform: uppercase;
+            font-weight: 500; line-height: 1.6;
+        }
+
+        /* EVENT */
+        #event {
+            max-width: 1200px; margin: 0 auto; padding: 6rem 2rem;
+            border-top: 1px solid var(--border);
+        }
+        .event-label {
+            font-family: "SF Mono", "Fira Code", monospace; font-size: 0.7rem;
+            color: var(--gray); text-transform: uppercase; letter-spacing: 3px; margin-bottom: 4rem;
+        }
+        .event-grid {
+            display: flex; flex-wrap: wrap; gap: 4rem;
+        }
+        .event-block h4 {
+            font-family: "SF Mono", "Fira Code", monospace; font-size: 0.65rem;
+            color: var(--gray); text-transform: uppercase; letter-spacing: 3px; margin-bottom: 0.75rem;
+        }
+        .event-block p {
+            font-size: clamp(1.5rem, 4vw, 2.5rem); font-weight: 900;
+            text-transform: uppercase; letter-spacing: -1px;
+        }
+        .event-coords {
+            margin-top: 4rem; font-family: "SF Mono", "Fira Code", monospace;
+            font-size: 0.7rem; color: var(--gray); letter-spacing: 2px;
+        }
+
+        /* CULTURE */
+        #culture { padding: 6rem 0; border-top: 1px solid var(--border); }
+        .culture-label {
+            font-family: "SF Mono", "Fira Code", monospace; font-size: 0.7rem;
+            color: var(--gray); text-transform: uppercase; letter-spacing: 3px;
+            margin-bottom: 2rem; padding: 0 2rem;
+        }
+        .marquee-wrap { overflow: hidden; position: relative; }
+        .marquee-track {
+            display: flex; gap: 1rem; animation: marquee 40s linear infinite;
+            width: max-content;
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .marquee-track { animation: none; }
+            .marquee-wrap { overflow-x: auto; }
+        }
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .culture-img {
+            width: 350px; height: 250px; object-fit: cover;
+            filter: grayscale(0.3) contrast(1.05);
+            flex-shrink: 0;
+        }
+        .marquee-text {
+            padding: 2rem; overflow: hidden; white-space: nowrap;
+            font-size: clamp(2rem, 5vw, 4rem); font-weight: 900;
+            text-transform: uppercase; color: var(--border); letter-spacing: -2px;
+        }
+        .marquee-text-track {
+            display: inline-flex; gap: 4rem;
+            animation: marquee-text 20s linear infinite;
+        }
+        @media (prefers-reduced-motion: reduce) { .marquee-text-track { animation: none; } }
+        @keyframes marquee-text { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+        /* FOOTER */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 4rem 2rem; max-width: 1200px; margin: 0 auto;
+        }
+        .footer-grid {
+            display: flex; flex-wrap: wrap; justify-content: space-between;
+            gap: 3rem; align-items: flex-start;
+        }
+        .footer-brand { font-weight: 900; font-size: 1.5rem; text-transform: uppercase; letter-spacing: -1px; }
+        .footer-newsletter { max-width: 400px; }
+        .footer-newsletter h4 {
+            font-size: 0.85rem; text-transform: uppercase; font-weight: 700; margin-bottom: 1rem;
+        }
+        .newsletter-form { display: flex; gap: 0; }
+        .newsletter-input {
+            flex: 1; background: transparent; border: 1px solid var(--border);
+            color: var(--text-white); padding: 0.75rem 1rem; font-size: 0.85rem;
+            font-family: inherit; outline: none;
+        }
+        .newsletter-input:focus { border-color: var(--accent-lime); }
+        .newsletter-msg {
+            margin-top: 0.5rem; font-size: 0.75rem; min-height: 1.2em;
+        }
+        .newsletter-msg.success { color: var(--accent-lime); }
+        .newsletter-msg.error { color: #ff4444; }
+        .footer-links { display: flex; gap: 2rem; }
+        .footer-links a {
+            color: var(--gray); text-decoration: none; font-size: 0.75rem;
+            text-transform: uppercase; letter-spacing: 1px; font-weight: 600;
+        }
+        .footer-links a:hover { color: var(--text-white); }
+        .footer-copy {
+            margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border);
+            font-size: 0.7rem; color: var(--gray); text-transform: uppercase; letter-spacing: 1px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            header { padding: 1rem 1.25rem; }
+            .nav-links a:not(.btn) { display: none; }
+            .manifest-grid { grid-template-columns: 1fr; }
+            .hero { padding: 6rem 1.25rem 2rem; }
+            .hero-video-wrap { width: 100%; border-radius: 8px; }
+            #manifest, #event { padding: 4rem 1.25rem; }
+            .culture-img { width: 280px; height: 200px; }
+            .footer-grid { flex-direction: column; }
+        }
+
+        /* Focus */
+        a:focus-visible, button:focus-visible, input:focus-visible {
+            outline: 2px solid var(--accent-lime); outline-offset: 2px;
+        }
+
+        /* Grain overlay */
+        body::after {
+            content: ""; position: fixed; inset: 0; z-index: 9999;
+            pointer-events: none; opacity: 0.04;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+            background-repeat: repeat; background-size: 256px;
+        }
+    </style>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com/3.4.17" type="text/javascript"></script>
+  <script src="/_sdk/6c2ecc939521f244.data_sdk.js" type="text/javascript" integrity="sha512-gRx8s+XsZDN6mSIQu2sivLZysbV0WHhb5kXNUWlgVb5lCMU1foJYukyMEDPv8Tnoocb8iwqB4XdRrWc7oEGzIQ=="></script>
+  <script src="/_sdk/ef0304cb8c7ed696.editing_sdk.js" type="text/javascript" integrity="sha512-kmL9L5Yuj57MQaequKbMA3aGpT/5lBUp10iGA3e3qnmMLs2ZZQ0poCcIfdd5rTgrhEvNPe4HK0ohePW7ZpgAFg=="></script>
+  <script src="/_sdk/ddcab3e45959c817.resizing_sdk.js" type="text/javascript" integrity="sha512-VAviUKfZVzugWBSeULYjSljTX+nb84wc6Zzbx5GQaQgh6X2ISSjXi8eIiCDGdwDh10esJMY0+QFQgUy9NcrTlQ=="></script>
+ </head>
+ <body data-template-id="__page-root" style="background: rgb(52, 40, 40);">
+  <header data-template-id="site-header" class="canva-header" style="background: rgb(52, 40, 40);"><img data-template-id="header-logo" class="logo canva-image" loading="lazy" src="canva://MAHWG5x0ME8/1" alt="Super Verticale logo">
+   <nav class="nav-links" aria-label="Hauptnavigation"><a href="#manifest">Manifest</a> <a href="#event">Event</a> <a href="#culture">Culture</a> <a href="https://superverticale.com/" target="_blank" rel="noopener noreferrer" data-template-id="header-cta" class="btn btn-sm canva-button" style="background: rgb(204, 255, 0); color: rgb(10, 10, 10); font-weight: 800; font-style: normal; font-size: 16px;">Anmelden</a>
+   </nav>
+  </header>
+  <main>
+   <section class="hero" id="hero">
+    <div class="hero-video-wrap">
+     <video class="hero-video" controls="" playsinline="" preload="metadata" aria-label="Screen Recording vom Super Verticale Event">
+      <p>Dein Browser unterstützt dieses Video nicht. Screen Recording vom Super Verticale Event.</p>
+     </video>
+    </div>
+    <div class="hero-content">
+     <h1 data-template-id="hero-title" class="canva-text" style="color: rgb(245, 245, 245); font-weight: 900; font-style: normal; font-size: 32px;">Super Verticale</h1>
+     <p class="hero-sub" data-template-id="hero-subtitle" style="color: rgb(204, 255, 0); font-weight: 700; font-style: normal; font-size: 16px;">A race straight up. And more beyond the finish line.</p><a href="https://superverticale.com/" target="_blank" rel="noopener noreferrer" data-template-id="hero-cta" class="btn canva-button" style="background: rgb(204, 255, 0); color: rgb(10, 10, 10); font-weight: 800; font-style: normal; font-size: 16px;">Join the Herd</a>
+     <div class="hero-meta" data-template-id="hero-meta" style="color: rgb(136, 136, 136); font-weight: 400; font-style: normal; font-size: 16px;">46°32′N 14°48′E — 1.508m ↑ — Petzen, Österreich</div>
+    </div>
+   </section>
+   <section id="manifest" aria-label="Manifest">
+    <div class="manifest-label" data-template-id="manifest-label" style="color: rgb(136, 136, 136); font-weight: 400; font-style: normal; font-size: 16px;">// Manifest</div>
+    <div class="manifest-grid">
+     <div class="manifest-card" data-template-id="card-1" style="background: rgb(52, 40, 40);">
+      <div class="manifest-num" data-template-id="card-1-num" style="color: rgb(204, 255, 0); font-weight: 400; font-style: normal; font-size: 16px;">01</div>
+      <h3 data-template-id="card-1-title" class="canva-text" style="color: rgb(245, 245, 245); font-weight: 900; font-style: normal; font-size: 19px;">Vertical</h3>
+      <p data-template-id="card-1-desc" class="canva-text" style="color: rgb(136, 136, 136); font-weight: 500; font-style: normal; font-size: 16px;">Start from the bottom. Finish at the top. No shortcuts.</p>
+     </div>
+     <div class="manifest-card" data-template-id="card-2" style="background: rgb(52, 40, 40);">
+      <div class="manifest-num" data-template-id="card-2-num" style="color: rgb(204, 255, 0); font-weight: 400; font-style: normal; font-size: 16px;">02</div>
+      <h3 data-template-id="card-2-title" class="canva-text" style="color: rgb(245, 245, 245); font-weight: 900; font-style: normal; font-size: 19px;">Spectacle</h3>
+      <p data-template-id="card-2-desc" class="canva-text" style="color: rgb(136, 136, 136); font-weight: 500; font-style: normal; font-size: 16px;">Run through the crowd, the mountain becomes the stage.</p>
+     </div>
+     <div class="manifest-card" data-template-id="card-3" style="background: rgb(52, 40, 40);">
+      <div class="manifest-num" data-template-id="card-3-num" style="color: rgb(204, 255, 0); font-weight: 400; font-style: normal; font-size: 16px;">03</div>
+      <h3 data-template-id="card-3-title" class="canva-text" style="color: rgb(245, 245, 245); font-weight: 900; font-style: normal; font-size: 19px;">Curated</h3>
+      <p data-template-id="card-3-desc" class="canva-text" style="color: rgb(136, 136, 136); font-weight: 500; font-style: normal; font-size: 16px;">Brands, food &amp; culture — handpicked.</p>
+     </div>
+     <div class="manifest-card" data-template-id="card-4" style="background: rgb(52, 40, 40);">
+      <div class="manifest-num" data-template-id="card-4-num" style="color: rgb(204, 255, 0); font-weight: 400; font-style: normal; font-size: 16px;">04</div>
+      <h3 data-template-id="card-4-title" class="canva-text" style="color: rgb(245, 245, 245); font-weight: 900; font-style: normal; font-size: 19px;">Together</h3>
+      <p data-template-id="card-4-desc" class="canva-text" style="color: rgb(136, 136, 136); font-weight: 500; font-style: normal; font-size: 16px;">The race is the excuse to get together.</p>
+     </div>
+    </div>
+   </section>
+   <section id="event" aria-label="Event Info">
+    <div class="event-label" data-template-id="event-label" style="color: rgb(136, 136, 136); font-weight: 400; font-style: normal; font-size: 16px;">// Event</div>
+    <div class="event-grid">
+     <div class="event-block">
+      <h4 data-template-id="event-date-label" class="canva-text" style="color: rgb(136, 136, 136); font-weight: 400; font-style: normal; font-size: 16px;">Datum</h4>
+      <p data-template-id="event-date-value" class="canva-text" style="color: rgb(245, 245, 245); font-weight: 900; font-style: normal; font-size: 16px;">Samstag, 21. August 2027</p>
+     </div>
+     <div class="event-block">
+      <h4 data-template-id="event-loc-label" class="canva-text" style="color: rgb(136, 136, 136); font-weight: 400; font-style: normal; font-size: 16px;">Location</h4>
+      <p data-template-id="event-loc-value" class="canva-text" style="color: rgb(245, 245, 245); font-weight: 900; font-style: normal; font-size: 16px;">Petzen-Bergbahnen, Österreich</p>
+     </div>
+     <div class="event-block">
+      <h4 data-template-id="event-scale-label" class="canva-text" style="color: rgb(136, 136, 136); font-weight: 400; font-style: normal; font-size: 16px;">Scale</h4>
+      <p data-template-id="event-scale-value" class="canva-text" style="color: rgb(245, 245, 245); font-weight: 900; font-style: normal; font-size: 16px;">~1.000 Teilnehmer &amp; Community</p>
+     </div>
+    </div>
+    <div class="event-coords" data-template-id="event-coords" style="color: rgb(136, 136, 136); font-weight: 400; font-style: normal; font-size: 16px;">46°32′12″N 14°48′36″E — Höhenmeter: 1.508m — Distanz: 4,2km</div>
+   </section>
+   <section id="culture" aria-label="Culture &amp; Aftermath">
+    <div class="culture-label" data-template-id="culture-label" style="color: rgb(136, 136, 136); font-weight: 400; font-style: normal; font-size: 16px;">// Culture &amp; Aftermath</div>
+    <div class="marquee-wrap" aria-label="Event Bildergalerie">
+     <div class="marquee-track"><img data-template-id="culture-img-1" class="culture-img canva-image" alt="ales-krivec-uOOe9bZHzWU-unsplash.jpg" src="canva://MAHVK0n64eM/1"> <img data-template-id="culture-img-2" class="culture-img canva-image" alt="A lone hiker on a misty mountain trail" src="https://images.pexels.com/photos/10984237/pexels-photo-10984237.jpeg"> <img data-template-id="culture-img-3" class="culture-img canva-image" alt="jakub-kriz-3FFEdm8TOek-unsplash.jpg" src="canva://MAHVK4zDwjE/1"> <img data-template-id="culture-img-4" class="culture-img canva-image" alt="Element 16.png" src="canva://MAHVK68rsUY/1"> <img data-template-id="culture-img-5" class="culture-img canva-image" alt="racim-amr-ivg8AXwQFX4-unsplash.jpg" src="canva://MAHVK-8hQds/1"> <img data-template-id="culture-img-6" class="culture-img canva-image" alt="venti-views--UYedjT31zY-unsplash.jpg" src="canva://MAHVK31ANlM/1"> <img data-template-id="culture-img-7" class="culture-img canva-image" alt="Element 19.png" src="canva://MAHVK3Mhqj4/1"> <img data-template-id="culture-img-8" class="culture-img canva-image" alt="jeremy-lapak-CVvFVQ_-oUg-unsplash.jpg" src="canva://MAHVKzSZAvE/1"> <!-- Duplicate set for seamless loop --> <img class="culture-img" alt="Vertical mountain race crowd" aria-hidden="true"> <img class="culture-img" alt="" aria-hidden="true"> <img class="culture-img" alt="" aria-hidden="true"> <img class="culture-img" alt="" aria-hidden="true"> <img class="culture-img" alt="" aria-hidden="true"> <img class="culture-img" alt="" aria-hidden="true"> <img class="culture-img" alt="" aria-hidden="true"> <img class="culture-img" alt="" aria-hidden="true">
+     </div>
+    </div>
+    <div class="marquee-text" aria-hidden="true">
+     <div class="marquee-text-track"><span>Super Verticale — Join the Herd — Super Verticale — Join the Herd — </span> <span>Super Verticale — Join the Herd — Super Verticale — Join the Herd — </span>
+     </div>
+    </div>
+   </section>
+  </main>
+  <footer>
+   <div class="footer-grid">
+    <div>
+     <div class="footer-brand" data-template-id="footer-brand" style="color: rgb(245, 245, 245); font-weight: 900; font-style: normal; font-size: 16px;">Capra</div>
+    </div>
+    <div class="footer-newsletter">
+     <h4 data-template-id="footer-newsletter-title" class="canva-text" style="color: rgb(245, 245, 245); font-weight: 700; font-style: normal; font-size: 16px;">Get on the list</h4>
+     <form class="newsletter-form" id="newsletter-form" aria-label="Newsletter Anmeldung"><input type="email" class="newsletter-input" data-template-id="footer-newsletter-input" required="" aria-label="E-Mail Adresse" placeholder="deine@email.com" style="color: rgb(245, 245, 245); font-weight: 400; font-style: normal; font-size: 16px;"> <button type="submit" data-template-id="footer-newsletter-btn" class="btn btn-sm canva-button" style="background: rgb(204, 255, 0); color: rgb(10, 10, 10); font-weight: 800; font-style: normal; font-size: 16px;">→</button>
+     </form>
+     <div class="newsletter-msg" id="newsletter-msg" role="status" aria-live="polite"></div>
+    </div>
+    <div class="footer-links"><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" data-template-id="footer-ig-link" class="canva-link" style="color: rgb(136, 136, 136); font-weight: 400; font-style: normal; font-size: 16px;">Instagram</a> <a href="#" data-template-id="footer-impressum" class="canva-link" style="color: rgb(136, 136, 136); font-weight: 400; font-style: normal; font-size: 16px;">Impressum</a>
+    </div>
+   </div>
+   <div class="footer-copy" data-template-id="footer-copy" style="color: rgb(136, 136, 136); font-weight: 400; font-style: normal; font-size: 16px;">© 2027 Super Verticale by Capra. All rights reserved.</div>
+  </footer>
+  <script>
+        // Smooth scroll for nav
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', e => {
+                const target = document.querySelector(a.getAttribute('href'));
+                if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+            });
+        });
+
+        // VH fix for mobile
+        function setVH() { document.documentElement.style.setProperty('--vh', window.innerHeight * 0.01 + 'px'); }
+        setVH(); window.addEventListener('resize', setVH);
+
+        // Newsletter
+        document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const input = this.querySelector('input[type="email"]');
+            const msg = document.getElementById('newsletter-msg');
+            const email = input.value.trim();
+            if (!email) { msg.textContent = 'Bitte gib eine E-Mail ein.'; msg.className = 'newsletter-msg error'; return; }
+            // Persist using Canva data store
+            if (window.__canva_data_store__) {
+                window.__canva_data_store__.write({ email: email }).then(() => {
+                    msg.textContent = 'Du bist auf der Liste! 🐐';
+                    msg.className = 'newsletter-msg success';
+                    input.value = '';
+                }).catch(() => {
+                    msg.textContent = 'Fehler. Bitte versuche es erneut.';
+                    msg.className = 'newsletter-msg error';
+                });
+            } else {
+                msg.textContent = 'Du bist auf der Liste! 🐐';
+                msg.className = 'newsletter-msg success';
+                input.value = '';
+            }
+        });
+
+        // Clone images for seamless marquee
+        document.addEventListener('DOMContentLoaded', () => {
+            const track = document.querySelector('.marquee-track');
+            const origImages = track.querySelectorAll('img[data-template-id]');
+            const dupes = track.querySelectorAll('img[aria-hidden="true"]');
+            origImages.forEach((img, i) => {
+                if (dupes[i]) {
+                    const observer = new MutationObserver(() => { dupes[i].src = img.src; });
+                    observer.observe(img, { attributes: true, attributeFilter: ['src'] });
+                    if (img.src) dupes[i].src = img.src;
+                }
+            });
+        });
+    </script>
+ 
+</body></html>
