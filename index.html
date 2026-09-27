@@ -126,6 +126,12 @@
             font-size: clamp(1rem, 2.5vw, 1.5rem); color: var(--accent-lime);
             text-transform: uppercase; font-weight: 700; letter-spacing: -2px; margin-bottom: 1.5rem;
         }
+        .event-description {
+            max-width: 800px; margin: 0 0 3rem;
+            color: var(--text-white); font-size: clamp(1rem, 1.8vw, 1.2rem);
+            font-weight: 400; line-height: 1.55;
+        }
+        .event-description p + p { margin-top: 1.25rem; }
         .event-grid {
             display: flex; flex-wrap: wrap; gap: 4rem;
         }
@@ -341,10 +347,14 @@
    </section>
    <section id="event" aria-label="Event Info">
     <div class="event-label" data-template-id="event-label">// Event</div>
+    <div class="event-description">
+     <p>Get ready to sweat, climb and celebrate your way up the mountain at the first &amp; limited SUPER VERTICALE by CAPRA. A 10 km trail run with 1,000 m of elevation gain, starting at the Petzenbahn Talstation and finishing at a spectacular viewpoint over Kärnten.</p>
+     <p>Chase your PB, hunt a segment win or simply chase the view. At the top, expect handpicked food, drinks, good people and more to come. The race gets you there. The day doesn’t end at the finish line.</p>
+    </div>
     <div class="event-grid">
      <div class="event-block">
-      <h4 data-template-id="event-date-label" class="canva-text" style="color: rgb(136, 136, 136); font-weight: 400; font-style: normal; font-size: 16px;">Datum</h4>
-      <p data-template-id="event-date-value" class="canva-text" style="color: rgb(245, 245, 245); font-weight: 900; font-style: normal; font-size: 16px;">Samstag, 21. August 2027</p>
+      <h4 data-template-id="event-date-label" class="canva-text" style="color: rgb(136, 136, 136); font-weight: 400; font-style: normal; font-size: 16px;">Date</h4>
+      <p data-template-id="event-date-value" class="canva-text" style="color: rgb(245, 245, 245); font-weight: 900; font-style: normal; font-size: 16px;">Saturday, 21. August 2027</p>
      </div>
      <div class="event-block">
       <h4 data-template-id="event-loc-label" class="canva-text" style="color: rgb(136, 136, 136); font-weight: 400; font-style: normal; font-size: 16px;">Location</h4>
@@ -355,7 +365,7 @@
       <p data-template-id="event-scale-value" class="canva-text" style="color: rgb(245, 245, 245); font-weight: 900; font-style: normal; font-size: 16px;">~1.000 Teilnehmer &amp; Community</p>
      </div>
     </div>
-    <div class="event-coords" data-template-id="event-coords" style="color: rgb(136, 136, 136); font-weight: 400; font-style: normal; font-size: 16px;">46°32′12″N 14°48′36″E — Höhenmeter: 1.074m — Distanz: 10,1km</div>
+    <div class="event-coords" data-template-id="event-coords" style="color: rgb(136, 136, 136); font-weight: 400; font-style: normal; font-size: 16px;">46°32′12″N 14°48′36″E — Höhenmeter: 1.074m — Distance: 10,1km</div>
    </section>
    <section id="culture" aria-label="Culture">
     <div class="culture-label" data-template-id="culture-label">// Culture</div>
