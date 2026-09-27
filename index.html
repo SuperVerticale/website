@@ -127,11 +127,24 @@
             text-transform: uppercase; font-weight: 700; letter-spacing: -2px; margin-bottom: 1.5rem;
         }
         .event-description {
-            max-width: 800px; margin: 0 0 3rem;
-            color: var(--text-white); font-size: clamp(1rem, 1.8vw, 1.2rem);
+            max-width: 950px; margin: 2rem 0 3.75rem;
+            color: var(--gray); font-size: clamp(0.95rem, 1.5vw, 1.1rem);
             font-weight: 400; line-height: 1.55;
         }
-        .event-description p + p { margin-top: 1.25rem; }
+        .event-description strong {
+            color: var(--text-white);
+            font-weight: 800;
+        }
+        .event-description p + p { margin-top: 1.5rem; }
+        .event-description-highlight {
+            max-width: 600px; margin-top: 2rem;
+            color: var(--accent-lime); font-size: clamp(1.1rem, 2vw, 1.35rem);
+            font-weight: 900; line-height: 1.2; text-transform: uppercase;
+        }
+        @media (max-width: 768px) {
+            .event-description { font-size: 0.95rem; }
+            .event-description-highlight { font-size: 1.1rem; }
+        }
         .event-grid {
             display: flex; flex-wrap: wrap; gap: 4rem;
         }
@@ -348,8 +361,15 @@
    <section id="event" aria-label="Event Info">
     <div class="event-label" data-template-id="event-label">// Event</div>
     <div class="event-description">
-     <p>Get ready to sweat, climb and celebrate your way up the mountain at the first &amp; limited SUPER VERTICALE by CAPRA. A 10 km trail run with 1,000 m of elevation gain, starting at the Petzenbahn Talstation and finishing at a spectacular viewpoint over Kärnten.</p>
-     <p>Chase your PB, hunt a segment win or simply chase the view. At the top, expect handpicked food, drinks, good people and more to come. The race gets you there. The day doesn’t end at the finish line.</p>
+    <p>
+    Get ready to <strong>sweat, climb and celebrate</strong> your way up the mountain at the first &amp; limited <strong>SUPER VERTICALE</strong> by CAPRA.
+    A <strong>10 km trail run</strong> with <strong>1,000 m of elevation gain</strong>, starting at the Petzenbahn Talstation and finishing at a spectacular viewpoint over Kärnten.
+    </p>
+    <p>
+    <strong>Chase your PB. Hunt a segment win. Or simply chase the view.</strong>
+    At the top, expect <strong>handpicked food, drinks, good people</strong> and more to come.
+    </p>
+    <div class="event-description-highlight">THE RACE GETS YOU THERE.<br>THE DAY DOESN’T END AT THE FINISH LINE.</div>
     </div>
     <div class="event-grid">
      <div class="event-block">
@@ -365,7 +385,7 @@
       <p data-template-id="event-scale-value" class="canva-text" style="color: rgb(245, 245, 245); font-weight: 900; font-style: normal; font-size: 16px;">~1.000 Teilnehmer &amp; Community</p>
      </div>
     </div>
-    <div class="event-coords" data-template-id="event-coords" style="color: rgb(136, 136, 136); font-weight: 400; font-style: normal; font-size: 16px;">46°32′12″N 14°48′36″E — Höhenmeter: 1.074m — Distance: 10,1km</div>
+    <div class="event-coords" data-template-id="event-coords" style="color: rgb(136, 136, 136); font-weight: 400; font-style: normal; font-size: 16px;">46°32′12″N 14°48′36″E — Elevation Gain: 1.074m — Distance: 10,1km</div>
    </section>
    <section id="culture" aria-label="Culture">
     <div class="culture-label" data-template-id="culture-label">// Culture</div>
