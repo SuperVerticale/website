@@ -28,15 +28,6 @@
             background: rgba(52, 40, 40, 0.5);
             backdrop-filter: blur(8px);
         }
-        /* Solid backdrop for the iOS status-bar / Dynamic Island safe area, kept separate from the translucent header */
-        header::before {
-            content: "";
-            position: absolute; top: 0; left: 0; right: 0;
-            height: env(safe-area-inset-top, 0px);
-            background: #342828;
-            z-index: 1;
-            pointer-events: none;
-        }
         .logo { width: 216px; height: 43.2px; padding: 2px 6px; object-fit: contain; display: block; flex-shrink: 0; }
         .nav-links { display: flex; gap: 2rem; align-items: center; }
         .nav-links a {
@@ -231,10 +222,26 @@
             font-size: 0.7rem; color: var(--gray); text-transform: uppercase; letter-spacing: 1px;
         }
 
+        /* Independent solid layer over the iOS status-bar / Dynamic Island area, detached from the header */
+        .ios-safe-area {
+            display: none;
+        }
+
         /* RESPONSIVE */
         @media (max-width: 768px) {
+            .ios-safe-area {
+                display: block;
+                position: fixed;
+                top: 0; left: 0; right: 0;
+                width: 100vw;
+                height: env(safe-area-inset-top, 0px);
+                background: #342828;
+                z-index: 9999;
+                pointer-events: none;
+            }
             header {
                 top: 0;
+                z-index: 10000;
                 padding: calc(1rem + env(safe-area-inset-top, 0px)) 1.25rem 1rem;
             }
             .nav-links a:not(.btn) { display: none; }
@@ -276,6 +283,7 @@
      <p class="password-error" id="password-error" role="alert" hidden>Passwort ist nicht korrekt.</p>
     </div>
   </div>
+  <div class="ios-safe-area"></div>
      <header data-template-id="site-header" class="canva-header" inert data-protected-content><img data-template-id="header-logo" class="logo canva-image" loading="lazy" src="assets/logos/SuperVerticale.svg" alt="Super Verticale logo">
    <nav class="nav-links" aria-label="Hauptnavigation"><a href="#manifest">Manifest</a> <a href="#event">Event</a> <a href="#culture">Culture</a> <a href="https://luma.com/i/ApF9Z4wEPd" target="_blank" rel="noopener noreferrer" data-template-id="header-cta" class="btn btn-sm canva-button" style="background: rgb(204, 255, 0); color: rgb(10, 10, 10); font-weight: 800; font-style: normal; font-size: 16px;">Register</a>
    </nav>
