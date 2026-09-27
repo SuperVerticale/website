@@ -44,6 +44,18 @@
         .btn:hover, .btn:focus { opacity: 0.8; }
         .btn:focus-visible { outline: 2px solid var(--accent-lime); outline-offset: 2px; }
         .btn-sm { padding: 0.6rem 1.5rem; font-size: 0.75rem; }
+        .nav-links .btn {
+            background-color: transparent;
+            color: var(--accent-lime);
+            border: 1px solid var(--accent-lime);
+            transition: background-color 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+        }
+        .nav-links .btn:hover,
+        .nav-links .btn:focus {
+            background-color: var(--accent-lime);
+            color: var(--bg-black);
+            opacity: 1;
+        }
 
         /* HERO */
         .hero {
@@ -285,7 +297,7 @@
   </div>
   <div class="ios-safe-area"></div>
      <header data-template-id="site-header" class="canva-header" inert data-protected-content><img data-template-id="header-logo" class="logo canva-image" loading="lazy" src="assets/logos/SuperVerticale.svg" alt="Super Verticale logo">
-   <nav class="nav-links" aria-label="Hauptnavigation"><a href="#manifest">Manifest</a> <a href="#event">Event</a> <a href="#culture">Culture</a> <a href="https://luma.com/i/ApF9Z4wEPd" target="_blank" rel="noopener noreferrer" data-template-id="header-cta" class="btn btn-sm canva-button" style="background: rgb(204, 255, 0); color: rgb(10, 10, 10); font-weight: 800; font-style: normal; font-size: 16px;">Register</a>
+   <nav class="nav-links" aria-label="Hauptnavigation"><a href="#manifest">Manifest</a> <a href="#event">Event</a> <a href="#culture">Culture</a> <a href="https://luma.com/i/ApF9Z4wEPd" target="_blank" rel="noopener noreferrer" data-template-id="header-cta" class="btn btn-sm canva-button" style="font-weight: 800; font-style: normal; font-size: 16px;">Register</a>
    </nav>
   </header>
     <main inert data-protected-content>
