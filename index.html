@@ -28,6 +28,15 @@
             background: rgba(52, 40, 40, 0.5);
             backdrop-filter: blur(8px);
         }
+        /* Solid backdrop for the iOS status-bar / Dynamic Island safe area, kept separate from the translucent header */
+        header::before {
+            content: "";
+            position: absolute; top: 0; left: 0; right: 0;
+            height: env(safe-area-inset-top, 0px);
+            background: #342828;
+            z-index: 1;
+            pointer-events: none;
+        }
         .logo { width: 216px; height: 43.2px; padding: 2px 6px; object-fit: contain; display: block; flex-shrink: 0; }
         .nav-links { display: flex; gap: 2rem; align-items: center; }
         .nav-links a {
