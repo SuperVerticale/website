@@ -99,108 +99,23 @@
       padding: 0;
     }
 
-    /*
-      Header shape follows the outer silhouette of the
-      Super Verticale logo:
-      peaked top + sloping sides + rounded lower edge.
-      The shape is 10% larger around the centered logo.
-    */
-
     .site-header > a {
       position: relative;
       flex: 1;
-      height: 64px;
+      height: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: rgba(52,40,40,.78);
-      border: 0;
+      border-radius: 999px;
+      background: transparent;
+      border: 1px solid rgba(245, 245, 245, .22);
       box-shadow:
         0 4px 18px rgba(0,0,0,.18),
-        inset 0 1px 0 rgba(255,255,255,.08);
+        inset 0 1px 0 rgba(255,255,255,.10);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
       pointer-events: auto;
       overflow: hidden;
-
-      clip-path: polygon(
-        1.8% 76%,
-        49.2% 5%,
-        50% 4%,
-        50.8% 5%,
-        98.2% 76%,
-        99.1% 79%,
-        99.3% 84%,
-        98.4% 90%,
-        96.5% 94%,
-        93.8% 96%,
-        6.2% 96%,
-        3.5% 94%,
-        1.6% 90%,
-        .7% 84%,
-        .9% 79%
-      );
-    }
-
-    .site-header > a::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-
-      background:
-        linear-gradient(
-          135deg,
-          rgba(245,245,245,.13),
-          transparent 22%,
-          transparent 78%,
-          rgba(245,245,245,.04)
-        );
-
-      clip-path: polygon(
-        1.8% 76%,
-        49.2% 5%,
-        50% 4%,
-        50.8% 5%,
-        98.2% 76%,
-        99.1% 79%,
-        99.3% 84%,
-        98.4% 90%,
-        96.5% 94%,
-        93.8% 96%,
-        6.2% 96%,
-        3.5% 94%,
-        1.6% 90%,
-        .7% 84%,
-        .9% 79%
-      );
-    }
-
-    .site-header > a::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      background: transparent;
-      border: 1px solid rgba(245,245,245,.22);
-
-      clip-path: polygon(
-        1.8% 76%,
-        49.2% 5%,
-        50% 4%,
-        50.8% 5%,
-        98.2% 76%,
-        99.1% 79%,
-        99.3% 84%,
-        98.4% 90%,
-        96.5% 94%,
-        93.8% 96%,
-        6.2% 96%,
-        3.5% 94%,
-        1.6% 90%,
-        .7% 84%,
-        .9% 79%
-      );
     }
 
     .logo {
@@ -210,7 +125,6 @@
       width: 150px;
       height: auto;
       transform: none;
-      z-index: 2;
     }
 
     .nav {
@@ -226,7 +140,7 @@
       justify-content: center;
       border: 1px solid rgba(245,245,245,.22);
       border-radius: 999px;
-      background: rgba(52,40,40,.78);
+      background: transparent;
       color: var(--white);
       font-family: var(--display);
       font-size: 30px;
@@ -247,7 +161,7 @@
 
     .header-menu:hover,
     .header-menu:focus-visible {
-      background: rgba(52,40,40,.9);
+      background: transparent;
     }
 
     .header-menu:active {
@@ -928,7 +842,6 @@
 
       .site-header > a {
         flex: 0 1 520px;
-        height: 71px;
       }
 
       .logo {
