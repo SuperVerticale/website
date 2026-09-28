@@ -99,42 +99,108 @@
       padding: 0;
     }
 
+    /*
+      Header shape follows the outer silhouette of the
+      Super Verticale logo:
+      peaked top + sloping sides + rounded lower edge.
+      The shape is 10% larger around the centered logo.
+    */
+
     .site-header > a {
       position: relative;
       flex: 1;
-      height: 100%;
+      height: 64px;
       display: flex;
       align-items: center;
       justify-content: center;
-
-      /* Logo-inspired organic capsule */
-      border-radius:
-        48% 52% 46% 54% /
-        56% 44% 56% 44%;
-
-      background: rgba(52,40,40,.88);
-      border: 1px solid rgba(204,255,0,.42);
-
+      background: rgba(52,40,40,.78);
+      border: 0;
       box-shadow:
-        0 5px 20px rgba(0,0,0,.22),
-        inset 0 1px 0 rgba(245,245,245,.08);
-
-      backdrop-filter: blur(6px);
-      -webkit-backdrop-filter: blur(6px);
-
+        0 4px 18px rgba(0,0,0,.18),
+        inset 0 1px 0 rgba(255,255,255,.08);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
       pointer-events: auto;
       overflow: hidden;
+
+      clip-path: polygon(
+        1.8% 76%,
+        49.2% 5%,
+        50% 4%,
+        50.8% 5%,
+        98.2% 76%,
+        99.1% 79%,
+        99.3% 84%,
+        98.4% 90%,
+        96.5% 94%,
+        93.8% 96%,
+        6.2% 96%,
+        3.5% 94%,
+        1.6% 90%,
+        .7% 84%,
+        .9% 79%
+      );
     }
 
     .site-header > a::before {
       content: "";
       position: absolute;
-      inset: 2px;
-      border-radius:
-        48% 52% 46% 54% /
-        56% 44% 56% 44%;
-      border: 1px solid rgba(245,245,245,.07);
+      inset: 0;
       pointer-events: none;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(245,245,245,.13),
+          transparent 22%,
+          transparent 78%,
+          rgba(245,245,245,.04)
+        );
+
+      clip-path: polygon(
+        1.8% 76%,
+        49.2% 5%,
+        50% 4%,
+        50.8% 5%,
+        98.2% 76%,
+        99.1% 79%,
+        99.3% 84%,
+        98.4% 90%,
+        96.5% 94%,
+        93.8% 96%,
+        6.2% 96%,
+        3.5% 94%,
+        1.6% 90%,
+        .7% 84%,
+        .9% 79%
+      );
+    }
+
+    .site-header > a::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: transparent;
+      border: 1px solid rgba(245,245,245,.22);
+
+      clip-path: polygon(
+        1.8% 76%,
+        49.2% 5%,
+        50% 4%,
+        50.8% 5%,
+        98.2% 76%,
+        99.1% 79%,
+        99.3% 84%,
+        98.4% 90%,
+        96.5% 94%,
+        93.8% 96%,
+        6.2% 96%,
+        3.5% 94%,
+        1.6% 90%,
+        .7% 84%,
+        .9% 79%
+      );
     }
 
     .logo {
@@ -144,15 +210,7 @@
       width: 150px;
       height: auto;
       transform: none;
-      filter:
-        brightness(0)
-        saturate(100%)
-        invert(86%)
-        sepia(98%)
-        saturate(1700%)
-        hue-rotate(25deg)
-        brightness(108%)
-        contrast(105%);
+      z-index: 2;
     }
 
     .nav {
@@ -166,28 +224,21 @@
       display: flex;
       align-items: center;
       justify-content: center;
-
-      border: 1px solid rgba(204,255,0,.42);
-      border-radius:
-        47% 53% 50% 50% /
-        52% 48% 54% 46%;
-
-      background: rgba(52,40,40,.88);
-      color: var(--lime);
+      border: 1px solid rgba(245,245,245,.22);
+      border-radius: 999px;
+      background: rgba(52,40,40,.78);
+      color: var(--white);
       font-family: var(--display);
       font-size: 30px;
       font-weight: 300;
       line-height: 1;
       cursor: pointer;
       padding: 0;
-
       box-shadow:
-        0 5px 20px rgba(0,0,0,.22),
-        inset 0 1px 0 rgba(245,245,245,.08);
-
-      backdrop-filter: blur(6px);
-      -webkit-backdrop-filter: blur(6px);
-
+        0 4px 18px rgba(0,0,0,.18),
+        inset 0 1px 0 rgba(255,255,255,.10);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
       pointer-events: auto;
       transition:
         background .2s ease,
@@ -196,7 +247,7 @@
 
     .header-menu:hover,
     .header-menu:focus-visible {
-      background: rgba(52,40,40,.96);
+      background: rgba(52,40,40,.9);
     }
 
     .header-menu:active {
@@ -877,6 +928,7 @@
 
       .site-header > a {
         flex: 0 1 520px;
+        height: 71px;
       }
 
       .logo {
