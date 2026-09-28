@@ -106,16 +106,35 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      border-radius: 999px;
-      background: transparent;
-      border: 1px solid rgba(245, 245, 245, .22);
+
+      /* Logo-inspired organic capsule */
+      border-radius:
+        48% 52% 46% 54% /
+        56% 44% 56% 44%;
+
+      background: rgba(52,40,40,.88);
+      border: 1px solid rgba(204,255,0,.42);
+
       box-shadow:
-        0 4px 18px rgba(0,0,0,.18),
-        inset 0 1px 0 rgba(255,255,255,.10);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
+        0 5px 20px rgba(0,0,0,.22),
+        inset 0 1px 0 rgba(245,245,245,.08);
+
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+
       pointer-events: auto;
       overflow: hidden;
+    }
+
+    .site-header > a::before {
+      content: "";
+      position: absolute;
+      inset: 2px;
+      border-radius:
+        48% 52% 46% 54% /
+        56% 44% 56% 44%;
+      border: 1px solid rgba(245,245,245,.07);
+      pointer-events: none;
     }
 
     .logo {
@@ -125,6 +144,15 @@
       width: 150px;
       height: auto;
       transform: none;
+      filter:
+        brightness(0)
+        saturate(100%)
+        invert(86%)
+        sepia(98%)
+        saturate(1700%)
+        hue-rotate(25deg)
+        brightness(108%)
+        contrast(105%);
     }
 
     .nav {
@@ -138,21 +166,28 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      border: 1px solid rgba(245,245,245,.22);
-      border-radius: 999px;
-      background: transparent;
-      color: var(--white);
+
+      border: 1px solid rgba(204,255,0,.42);
+      border-radius:
+        47% 53% 50% 50% /
+        52% 48% 54% 46%;
+
+      background: rgba(52,40,40,.88);
+      color: var(--lime);
       font-family: var(--display);
       font-size: 30px;
       font-weight: 300;
       line-height: 1;
       cursor: pointer;
       padding: 0;
+
       box-shadow:
-        0 4px 18px rgba(0,0,0,.18),
-        inset 0 1px 0 rgba(255,255,255,.10);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
+        0 5px 20px rgba(0,0,0,.22),
+        inset 0 1px 0 rgba(245,245,245,.08);
+
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+
       pointer-events: auto;
       transition:
         background .2s ease,
@@ -161,7 +196,7 @@
 
     .header-menu:hover,
     .header-menu:focus-visible {
-      background: transparent;
+      background: rgba(52,40,40,.96);
     }
 
     .header-menu:active {
