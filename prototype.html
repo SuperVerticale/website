@@ -122,9 +122,55 @@
 
     .header-menu {
       display: none;
+      border: 0;
+      background: transparent;
+      color: var(--white);
       font-family: var(--mono);
       font-size: 18px;
       line-height: 1;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    /* MOBILE MENU */
+
+    .mobile-menu {
+      position: fixed;
+      z-index: 9998;
+      top: 64px;
+      left: 12px;
+      right: 12px;
+      display: none;
+      padding: 24px;
+      background: rgba(52,40,40,.97);
+      border: 1px solid rgba(245,245,245,.15);
+      border-top: 0;
+      border-radius: 0 0 8px 8px;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .mobile-menu.is-open {
+      display: block;
+    }
+
+    .mobile-menu nav {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .mobile-menu a {
+      color: var(--white);
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .mobile-menu a:hover,
+    .mobile-menu a:focus-visible {
+      color: var(--lime);
     }
 
     /* GENERIC VIDEO PANEL */
@@ -467,11 +513,12 @@
 
     .facts-big {
       color: var(--lime);
-      font-size: clamp(5rem, 24vw, 14rem);
+      font-size: clamp(4rem, 18vw, 11rem);
       line-height: .72;
       letter-spacing: -.075em;
       font-weight: 900;
       text-transform: uppercase;
+      white-space: nowrap;
     }
 
     .facts-sub {
@@ -855,7 +902,7 @@
       }
 
       .facts-big {
-        font-size: clamp(8rem, 15vw, 18rem);
+        font-size: clamp(6rem, 12vw, 15rem);
       }
 
       .facts-sub {
@@ -954,10 +1001,16 @@
       .nav { display: none; }
       .header-menu { display: block; }
 
-      .hero-logo { width: 267px; }
+      .hero-logo {
+        width: 267px;
+      }
 
       .concept-grid {
         grid-template-columns: 1fr;
+      }
+
+      .mobile-menu {
+        top: 64px;
       }
     }
 
@@ -985,8 +1038,19 @@
         <a href="#culture">Culture</a>
       </nav>
 
-      <a class="header-menu" href="#concept" aria-label="Go to concept">☰</a>
+      <button class="header-menu" type="button" aria-label="Open menu" aria-expanded="false">
+        ☰
+      </button>
     </header>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobile-menu">
+      <nav aria-label="Mobile navigation">
+        <a href="#concept">Concept</a>
+        <a href="#event">Event</a>
+        <a href="#culture">Culture</a>
+      </nav>
+    </div>
 
     <main id="top">
 
@@ -996,7 +1060,7 @@
           <source src="assets/videos/Mountain_Capra_Hero.mp4" type="video/mp4">
         </video>
 
-        <img class="hero-logo" src="assets/logos/SuperVerticale.svg" alt="Super Verticale">
+        <img class="hero-logo" src="assets/logos/icons.svg" alt="Super Verticale">
 
         <div class="hero-content">
           <h1 class="hero-title">Super<br>Verticale</h1>
@@ -1126,8 +1190,8 @@
       <section class="facts">
         <div class="eyebrow">// The Run</div>
 
-        <div class="facts-big" style="margin-top:42px;">10 KM</div>
-        <div class="facts-big" style="margin-top:26px;">↑ 1.000 M</div>
+        <div class="facts-big" style="margin-top:42px;">10.1 KM</div>
+        <div class="facts-big" style="margin-top:26px;">↑ 1.074 M</div>
         <div class="facts-sub">Straight up.</div>
 
         <div class="facts-location">
@@ -1251,6 +1315,27 @@
   </div>
 
   <script>
+    const menuButton = document.querySelector('.header-menu');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
+
+    menuButton.addEventListener('click', function () {
+      const isOpen = mobileMenu.classList.toggle('is-open');
+
+      menuButton.setAttribute('aria-expanded', isOpen);
+      menuButton.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+      menuButton.textContent = isOpen ? '×' : '☰';
+    });
+
+    mobileMenuLinks.forEach(function (link) {
+      link.addEventListener('click', function () {
+        mobileMenu.classList.remove('is-open');
+        menuButton.setAttribute('aria-expanded', 'false');
+        menuButton.setAttribute('aria-label', 'Open menu');
+        menuButton.textContent = '☰';
+      });
+    });
+
     document.querySelector('.newsletter-form').addEventListener('submit', function (event) {
       event.preventDefault();
     });
