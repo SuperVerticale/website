@@ -320,12 +320,22 @@
       right: 20px;
       bottom: 28px;
       z-index: 4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
       color: var(--lime);
       font-family: var(--mono);
       font-size: 9px;
       letter-spacing: 2px;
       text-transform: uppercase;
-      writing-mode: vertical-rl;
+    }
+
+    .scroll-cue::after {
+      content: "↓";
+      font-size: 18px;
+      line-height: 1;
+      letter-spacing: 0;
     }
 
     /* BIG STATEMENT */
@@ -1136,7 +1146,7 @@
           </div>
         </div>
 
-        <div class="scroll-cue">Scroll ↓</div>
+        <div class="scroll-cue">Scroll</div>
       </section>
 
       <!-- BIG STATEMENT -->
