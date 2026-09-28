@@ -91,28 +91,28 @@
             margin-top: 3rem;
         }
 
-        /* MANIFEST */
-        #manifest { max-width: 1200px; margin: 0 auto; padding: 6rem 2rem; }
-        .manifest-label {
+        /* concept */
+        #concept { max-width: 1200px; margin: 0 auto; padding: 2rem 2rem 6rem; }
+        .concept-label {
             font-size: clamp(1rem, 2.5vw, 1.5rem); color: var(--accent-lime);
             text-transform: uppercase; font-weight: 700; letter-spacing: -2px; margin-bottom: 1.5rem;
         }
-        .manifest-grid {
+        .concept-grid {
             display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
             border: 1px solid var(--border);
         }
-        .manifest-card {
+        .concept-card {
             padding: 3rem; border: 1px solid var(--border); position: relative;
         }
-        .manifest-num {
-            font-family: "SF Mono", "Fira Code", monospace; font-size: 0.7rem;
-            color: var(--accent-lime); margin-bottom: 1rem; letter-spacing: 2px;
+        .concept-icon {
+            position: absolute; top: 2.75rem; right: 3rem;
+            width: 64px; height: 64px; object-fit: contain;
         }
-        .manifest-card h3 {
+        .concept-card h3 {
             font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 900;
             text-transform: uppercase; margin-bottom: 1rem; letter-spacing: -1px;
         }
-        .manifest-card p {
+        .concept-card p {
             color: var(--gray); font-size: 1rem; text-transform: uppercase;
             font-weight: 500; line-height: 1.6;
         }
@@ -127,7 +127,7 @@
             text-transform: uppercase; font-weight: 700; letter-spacing: -2px; margin-bottom: 1.5rem;
         }
         .event-description {
-            max-width: 950px; margin: 2rem 0 3.75rem;
+            max-width: 1350px; margin: 2rem 0 3.75rem;
             color: var(--gray); font-size: clamp(0.95rem, 1.5vw, 1.1rem);
             font-weight: 400; line-height: 1.55;
         }
@@ -137,7 +137,7 @@
         }
         .event-description p + p { margin-top: 1.5rem; }
         .event-description-highlight {
-            max-width: 600px; margin-top: 2rem;
+            max-width: 900px; margin-top: 2rem;
             color: var(--accent-lime); font-size: clamp(1.1rem, 2vw, 1.35rem);
             font-weight: 900; line-height: 1.2; text-transform: uppercase;
         }
@@ -276,10 +276,11 @@
                 padding: calc(1rem + env(safe-area-inset-top, 0px)) 1.25rem 1rem;
             }
             .nav-links a:not(.btn) { display: none; }
-            .manifest-grid { grid-template-columns: 1fr; }
+            .concept-grid { grid-template-columns: 1fr; }
+            .concept-icon { top: 2rem; right: 2rem; width: 52px; height: 52px; }
             .hero { padding: 0 1.25rem 2rem; }
             .hero-video-wrap { height: auto; aspect-ratio: 1.62 / 1; }
-            #manifest, #event { padding: 4rem 1.25rem; }
+            #concept, #event { padding: 4rem 1.25rem; }
             .culture-video { width: 280px; height: 200px; }
             .footer-grid { flex-direction: column; }
         }
@@ -316,45 +317,45 @@
   </div>
   <div class="ios-safe-area"></div>
      <header data-template-id="site-header" class="canva-header" inert data-protected-content><img data-template-id="header-logo" class="logo canva-image" loading="lazy" src="assets/logos/SuperVerticale.svg" alt="Super Verticale logo">
-    <nav class="nav-links" aria-label="Hauptnavigation"><a href="#manifest">Manifest</a> <a href="#event">Event</a> <a href="#culture">Culture</a>
+    <nav class="nav-links" aria-label="Hauptnavigation"><a href="#concept">concept</a> <a href="#event">Event</a> <a href="#culture">Culture</a>
    </nav>
   </header>
     <main inert data-protected-content>
    <section class="hero" id="hero">
     <div class="hero-video-wrap">
-    <video class="hero-video" src="assets/wine_uphill_left_right.mp4" autoplay="" muted="" loop="" playsinline="" preload="auto" aria-label="Super Verticale Eventvideo">
-      <p>Dein Browser unterstützt dieses Video nicht. Screen Recording vom Super Verticale Event.</p>
+    <video class="hero-video" src="assets/videos/Mountain_Capra_Hero.mp4" autoplay="" muted="" loop="" playsinline="" preload="auto" aria-label="Super Verticale Eventvideo">
+      <p>Dein Browser unterstützt dieses Video nicht.</p>
      </video>
          <img class="hero-overlay-icon" src="assets/logos/Icons.svg" alt="" aria-hidden="true">
     </div>
     <div class="hero-content">
      <h1 data-template-id="hero-title" class="canva-text" style="color: rgb(245, 245, 245); font-weight: 900; font-style: normal; font-size: 32px;">Super Verticale</h1>
      <p class="hero-sub" data-template-id="hero-subtitle" style="color: rgb(204, 255, 0); font-weight: 700; font-style: normal; font-size: 16px;">A race straight up. And more beyond the finish line.</p><a href="https://luma.com/i/ApF9Z4wEPd" target="_blank" rel="noopener noreferrer" data-template-id="hero-cta" class="btn canva-button" style="background: rgb(204, 255, 0); color: rgb(10, 10, 10); font-weight: 800; font-style: normal; font-size: 16px;">Enter the Run</a>
-     <div class="hero-meta" data-template-id="hero-meta" style="color: rgb(136, 136, 136); font-weight: 400; font-style: normal; font-size: 16px;">46°32′N 14°48′E — 1.508m ↑ — Petzen, Österreich</div>
+     <div class="hero-meta" data-template-id="hero-meta" style="color: rgb(136, 136, 136); font-weight: 400; font-style: normal; font-size: 16px;">46°32′N 14°48′E — 1.508m ↑ — Petzen, Austria</div>
     </div>
    </section>
-   <section id="manifest" aria-label="Manifest">
-    <div class="manifest-label" data-template-id="manifest-label">// Manifest</div>
-    <div class="manifest-grid">
-     <div class="manifest-card" data-template-id="card-1" style="background: rgb(52, 40, 40);">
-      <div class="manifest-num" data-template-id="card-1-num" style="color: rgb(204, 255, 0); font-weight: 400; font-style: normal; font-size: 16px;">01</div>
+   <section id="concept" aria-label="concept">
+    <div class="concept-label" data-template-id="concept-label">// concept</div>
+    <div class="concept-grid">
+     <div class="concept-card" data-template-id="card-1" style="background: rgb(52, 40, 40);">
+            <img class="concept-icon" src="assets/logos/icons/Vertical.png" alt="" aria-hidden="true">
       <h3 data-template-id="card-1-title" class="canva-text" style="color: rgb(245, 245, 245); font-weight: 900; font-style: normal; font-size: 19px;">Vertical</h3>
       <p data-template-id="card-1-desc" class="canva-text" style="color: rgb(136, 136, 136); font-weight: 500; font-style: normal; font-size: 16px;">Start from the bottom. Finish at the top. No shortcuts.</p>
      </div>
-     <div class="manifest-card" data-template-id="card-2" style="background: rgb(52, 40, 40);">
-      <div class="manifest-num" data-template-id="card-2-num" style="color: rgb(204, 255, 0); font-weight: 400; font-style: normal; font-size: 16px;">02</div>
-      <h3 data-template-id="card-2-title" class="canva-text" style="color: rgb(245, 245, 245); font-weight: 900; font-style: normal; font-size: 19px;">Spectacle</h3>
-      <p data-template-id="card-2-desc" class="canva-text" style="color: rgb(136, 136, 136); font-weight: 500; font-style: normal; font-size: 16px;">Run through the crowd, the mountain becomes the stage.</p>
+     <div class="concept-card" data-template-id="card-2" style="background: rgb(52, 40, 40);">
+        <img class="concept-icon" src="assets/logos/icons/Experience.png" alt="" aria-hidden="true">
+      <h3 data-template-id="card-2-title" class="canva-text" style="color: rgb(245, 245, 245); font-weight: 900; font-style: normal; font-size: 19px;">Experience</h3>
+      <p data-template-id="card-2-desc" class="canva-text" style="color: rgb(136, 136, 136); font-weight: 500; font-style: normal; font-size: 16px;">The mountain becomes the stage. A seamless blend of intense alpine sport and festival culture where the day doesn’t end at the finish line</p>
      </div>
-     <div class="manifest-card" data-template-id="card-3" style="background: rgb(52, 40, 40);">
-      <div class="manifest-num" data-template-id="card-3-num" style="color: rgb(204, 255, 0); font-weight: 400; font-style: normal; font-size: 16px;">03</div>
+     <div class="concept-card" data-template-id="card-3" style="background: rgb(52, 40, 40);">
+        <img class="concept-icon" src="assets/logos/icons/Curated.png" alt="" aria-hidden="true">
       <h3 data-template-id="card-3-title" class="canva-text" style="color: rgb(245, 245, 245); font-weight: 900; font-style: normal; font-size: 19px;">Curated</h3>
-      <p data-template-id="card-3-desc" class="canva-text" style="color: rgb(136, 136, 136); font-weight: 500; font-style: normal; font-size: 16px;">Brands, food &amp; culture — handpicked.</p>
+      <p data-template-id="card-3-desc" class="canva-text" style="color: rgb(136, 136, 136); font-weight: 500; font-style: normal; font-size: 16px;">Handpicked food & beverages, live music acts, panel talks, and exclusive brand activations throughout the day.</p>
      </div>
-     <div class="manifest-card" data-template-id="card-4" style="background: rgb(52, 40, 40);">
-      <div class="manifest-num" data-template-id="card-4-num" style="color: rgb(204, 255, 0); font-weight: 400; font-style: normal; font-size: 16px;">04</div>
-      <h3 data-template-id="card-4-title" class="canva-text" style="color: rgb(245, 245, 245); font-weight: 900; font-style: normal; font-size: 19px;">Together</h3>
-      <p data-template-id="card-4-desc" class="canva-text" style="color: rgb(136, 136, 136); font-weight: 500; font-style: normal; font-size: 16px;">The race is the excuse to get together.</p>
+     <div class="concept-card" data-template-id="card-4" style="background: rgb(52, 40, 40);">
+        <img class="concept-icon" src="assets/logos/icons/Community.png" alt="" aria-hidden="true">
+      <h3 data-template-id="card-4-title" class="canva-text" style="color: rgb(245, 245, 245); font-weight: 900; font-style: normal; font-size: 19px;">Community</h3>
+      <p data-template-id="card-4-desc" class="canva-text" style="color: rgb(136, 136, 136); font-weight: 500; font-style: normal; font-size: 16px;">Come for the race. Stay for the people. The ultimate excuse to get together, sweat, and celebrate as one herd.</p>
      </div>
     </div>
    </section>
@@ -362,12 +363,23 @@
     <div class="event-label" data-template-id="event-label">// Event</div>
     <div class="event-description">
     <p>
-    Get ready to <strong>sweat, climb and celebrate</strong> your way up the mountain at the first &amp; limited <strong>SUPER VERTICALE</strong> by CAPRA.
-    A <strong>10 km trail run</strong> with <strong>1,000 m of elevation gain</strong>, starting at the Petzenbahn Talstation and finishing at a spectacular viewpoint over Kärnten.
+    Ending the summer off-season in the Alps: We’re reactivating underused lift
+    and hut infrastructure, turning the mountain into our stage.
+    <strong>Super Verticale is much more than a trail run.</strong>
+    It’s a gathering for those who live for uncompromising mountain sports,
+    good food vibes, and the culture of nature.
     </p>
     <p>
-    <strong>Chase your PB. Hunt a segment win. Or simply chase the view.</strong>
-    At the top, expect <strong>handpicked food, drinks, good people</strong> and more to come.
+    Get ready to <strong>sweat, climb, and celebrate</strong> your way up the
+    mountain at the first and limited <strong>SUPER VERTICALE</strong>.
+    Starting from the <strong>Petzenbahn Talstation</strong>, this intense
+    <strong>10 km trail run</strong> tackles
+    <strong>1,000 m of elevation gain</strong> straight up to a breathtaking
+    viewpoint over Kärnten.
+    Whether you're chasing a personal best, hunting a segment win, or simply
+    out for the view, expect a <strong>pure vertical grind.</strong>
+    At the summit, <strong>handpicked brands, drinks, and good food</strong>
+    await, because <strong>the race gets you there, but the people will let you stay.</strong>
     </p>
     <div class="event-description-highlight">THE RACE GETS YOU THERE.<br>THE DAY DOESN’T END AT THE FINISH LINE.</div>
     </div>
@@ -378,7 +390,7 @@
      </div>
      <div class="event-block">
       <h4 data-template-id="event-loc-label" class="canva-text" style="color: rgb(136, 136, 136); font-weight: 400; font-style: normal; font-size: 16px;">Location</h4>
-      <p data-template-id="event-loc-value" class="canva-text" style="color: rgb(245, 245, 245); font-weight: 900; font-style: normal; font-size: 16px;">Petzen-Bergbahnen, Österreich</p>
+      <p data-template-id="event-loc-value" class="canva-text" style="color: rgb(245, 245, 245); font-weight: 900; font-style: normal; font-size: 16px;">Petzen-Bergbahnen, Austria</p>
      </div>
      <div class="event-block">
       <h4 data-template-id="event-scale-label" class="canva-text" style="color: rgb(136, 136, 136); font-weight: 400; font-style: normal; font-size: 16px;">Scale</h4>
