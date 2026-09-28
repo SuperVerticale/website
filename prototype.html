@@ -37,7 +37,7 @@
       content: "";
       position: fixed;
       inset: 0;
-      z-index: 100;
+      z-index: 9999;
       pointer-events: none;
       opacity: .035;
       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
@@ -47,6 +47,20 @@
     a { color: inherit; text-decoration: none; }
 
     .page { overflow: clip; }
+
+    /* iOS SAFE AREA / DYNAMIC ISLAND */
+
+    .ios-safe-area {
+      position: fixed;
+      z-index: 10001;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: env(safe-area-inset-top, 0px);
+      background: #342828;
+      pointer-events: none;
+    }
 
     .eyebrow {
       color: var(--lime);
@@ -70,8 +84,8 @@
 
     .site-header {
       position: fixed;
-      z-index: 80;
-      top: env(safe-area-inset-top, 0px);
+      z-index: 10000;
+      top: 0;
       left: 12px;
       right: 12px;
       height: 64px;
@@ -310,23 +324,32 @@
       display: flex;
       align-items: flex-end;
       overflow: hidden;
-      background: var(--bg);
+      background: var(--lime);
+      color: var(--black);
     }
 
     .concept-card:nth-child(even) {
       background: #302525;
+      color: var(--white);
     }
 
     .concept-icon {
       position: absolute;
-      top: 28px;
-      right: 24px;
-      width: 76px;
-      height: 76px;
+      top: 39%;
+      left: 50%;
+      width: 145px;
+      height: 145px;
       object-fit: contain;
+      transform: translate(-50%, -50%);
+    }
+
+    .concept-card:nth-child(odd) .concept-icon {
+      filter: brightness(0);
     }
 
     .concept-card h3 {
+      position: relative;
+      z-index: 2;
       font-size: clamp(3.1rem, 13vw, 7rem);
       line-height: .82;
       letter-spacing: -.06em;
@@ -335,13 +358,19 @@
     }
 
     .concept-card p {
+      position: relative;
+      z-index: 2;
       max-width: 480px;
       margin-top: 22px;
-      color: var(--gray);
+      color: rgba(10,10,10,.68);
       font-size: 14px;
       line-height: 1.2;
       font-weight: 600;
       text-transform: uppercase;
+    }
+
+    .concept-card:nth-child(even) p {
+      color: var(--gray);
     }
 
     /* SECOND STATEMENT */
@@ -733,7 +762,7 @@
 
       .hero-logo {
         top: 135px;
-        width: 310px;
+        width: 403px;
       }
 
       .hero-title {
@@ -778,10 +807,12 @@
       }
 
       .concept-icon {
-        top: 34px;
-        right: 40px;
-        width: 84px;
-        height: 84px;
+        top: 40%;
+        left: 50%;
+        right: auto;
+        width: 190px;
+        height: 190px;
+        transform: translate(-50%, -50%);
       }
 
       .concept-card h3 {
@@ -923,7 +954,7 @@
       .nav { display: none; }
       .header-menu { display: block; }
 
-      .hero-logo { width: 205px; }
+      .hero-logo { width: 267px; }
 
       .concept-grid {
         grid-template-columns: 1fr;
@@ -937,6 +968,10 @@
 </head>
 
 <body>
+
+  <!-- iOS SAFE AREA / DYNAMIC ISLAND -->
+  <div class="ios-safe-area" aria-hidden="true"></div>
+
   <div class="page">
 
     <header class="site-header">
