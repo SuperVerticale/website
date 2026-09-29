@@ -1,0 +1,10 @@
+:root {
+  --bg: #342828;
+  --black: #0a0a0a;
+  --white: #f5f5f5;
+  --lime: #e0f131;
+  --gray: #9a9290;
+  --line: rgba(245,245,245,.16);
+  --display: "TT Chocolates", "Arial Narrow", Arial, sans-serif;
+  --mono: "SF Mono", "Fira Code", ui-monospace, monospace;
+}

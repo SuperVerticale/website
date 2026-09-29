@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#603834" />
+    <title>Petzen Super Verticale | Events</title>
+    <link rel="icon" href="assets/logos/sv_mini.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/event.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a href="index.html" aria-label="Zur Startseite">
+        <img class="page-logo" src="assets/logos/SuperVerticale.svg" alt="Super Verticale" />
+      </a>
+      <a class="back-link" href="index.html">Back</a>
+    </header>
+
+    <main>
+      <section class="gate" id="gate">
+        <form class="login-panel" id="login-form">
+          <h2>Private Event</h2>
+          <p class="login-intro">Geschützter Bereich für die Event-Route.</p>
+          <label for="password">Passwort</label>
+          <div class="password-row">
+            <input id="password" name="password" type="password" autocomplete="current-password" required />
+            <button type="submit">Öffnen</button>
+          </div>
+          <p class="login-status" id="status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+    </main>
+
+    <main id="event-content" hidden>
+      <section class="hero" aria-labelledby="event-title">
+        <div>
+          <p class="eyebrow">SUPER VERTICALE / Bleiburg, Carinthia, Austria</p>
+          <h1 id="event-title">PETZEN 2027</h1>
+        </div>
+      </section>
+      <section class="stats" aria-label="Event statistics">
+        <div class="stat"><div class="stat-value">10,1 km</div><div class="stat-label">Distance</div></div>
+        <div class="stat"><div class="stat-value">+1.074 m</div><div class="stat-label">Elevation gain</div></div>
+        <div class="stat"><div class="stat-value">10,6 %</div><div class="stat-label">Average slope</div></div>
+      </section>
+      <section class="visuals" aria-label="Event route and elevation profile">
+        <figure>
+          <iframe class="interactive-route" src="assets/route/PetzensuperVerticale-interactive.html" title="Interactive GPS route and elevation profile of the Petzen Super Verticale"></iframe>
+        </figure>
+      </section>
+    </main>
+
+    <script src="js/event.js"></script>
+  </body>
+</html>

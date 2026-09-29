@@ -1,520 +1,347 @@
 <!doctype html>
-<html lang="de"><head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260925-05-46ec85d","C":{"Abril Fatface":"YACgEZbkUVE,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A,0","Archivo":"YACgEZulLoA,0","Arial Narrow":"YAGyDvJ_4Ts,0","Arial Rounded MT Bold":"YAFcfoaHu-s,0","Arial":"YAGyDvJ_4Ts,0","Avenir Next":"YAFcfmNq6UY,0","Baloo 2":"YADK30bC6HQ,0","Bebas Neue":"YACgESME5ew,0","Bricolage Grotesque":"YAFyMcdwzpc,0","Broken Glyph":"YADZ-exUkv0,0","Canva Sans":"YAFdJjTk5UU,1","Caveat":"YALBs2ploWQ,0","Comic Sans MS":"YAFcfvtOAUY,1","Cormorant Garamond":"YAFdJhX-538,0","Courier New":"YAGzXiGs0_8,0","Courier Prime":"YAD1aFjegN8,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Forum":"YACgEcnnqB4,0","Fraunces":"YAFdJpU7Kkk,0","Georgia":"YAGzXkO0pEM,0","Ghost Mono":"YAHQutsX00Q,0","Hanken Grotesk":"YAFcfhwp99E,0","Helvetica Neue":"YAFcf6CtJfI,0","Helvetica":"YAFcf6CtJfI,0","IBM Plex Mono":"YAFdJkmvhGI,0","Impact":"YAFcfnjI7Vk,0","Instrument Serif":"YAHFeOnZNEk,0","Inter":"YAFdJvSyp_k,3","Iowan Old Style":"YAGNIFa8j9o,0","Jacques Francois":"YADK3zbC6RM,0","JetBrains Mono":"YAFdJksXcAk,0","Josefin Sans":"YAFdJjvw9Ps,0","Lato":"YAFdJuFCnaw,0","Libre Baskerville":"YACgEUFdPdA,0","Lobster":"YAD8SnSjSFI,0","Lora":"YACgEXvxf8Q,0","Merriweather":"YACgEXvHxxs,0","Montserrat":"YAFdtQi73Xs,0","Nunito":"YAFdJoNRMmU,1","Oleo Script":"YACgEQQ14jI,0","Oswald":"YACgEQY10lw,0","Pacifico":"YADLjORQ1u4,0","Phantom Sans":"YAFdJvgJ5TU,0","Playfair Display":"YAFdJhem5V8,1","Plus Jakarta Sans":"YAGvf3_u0_Q,0","Poppins":"YAFdJjbTu24,1","Press Start 2P":"YAFyGr-8pmQ,0","Quicksand":"YAFdJpYtCxE,1","Raleway":"YAFdJhmxbVQ,1","Roboto Slab":"YAFdJswIKAg,0","Rockwell":"YAFcfyVZnN0,0","Rye":"YACgEdQP21k,0","Segoe UI":"YAHNdRD1Klw,0","Source Sans 3":"YAG4lO1Mj10,0","Source Serif 4":"YACgEfdj394,0","Space Grotesk":"YADZ-dYEmhg,0","Space Mono":"YADW1-vpsoc,0","Times New Roman":"YAGzXW3gftg,0","Times":"YAGzXW3gftg,0","Trebuchet MS":"YAFcfrglpVA,0","UV Display":"YAEdVfSSpYo,0","UV Sans":"YAFdJvgJ5TU,0","Ubuntu":"YACgERDU--Q,0","Verdana":"YAGzXTctYtQ,0","Work Sans":"YAGXhLOKv44,0","Yellowtail":"YACgEYG4kG4,0","ui-monospace":"YAD1aFjegN8,0","ui-sans-serif":"YACkoD1yZN0,0"}}');</script><script src="/_sdk/6542d56fbfe7a3eb.telemetry_sdk.js" integrity="sha512-ECdM0nK7EkwDuOqho2qxgyRQXyBHk9hZqRKMBr+Xsu6zjeHlt+qkO2N2YRiHN7Kg4e1fEHDhjIp4bGJYVypv1g=="></script>
+<html lang="en">
+<head>
   <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#342828">
   <title>Super Verticale</title>
-  <style>
-        :root {
-            --bg-black: #0a0a0a;
-            --text-white: #f5f5f5;
-            --accent-lime: #ccff00;
-            --gray: #888888;
-            --border: #222;
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            background-color: var(--bg-black);
-            color: var(--text-white);
-            font-family: "TT Chocolates", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.5;
-            overflow-x: hidden;
-        }
-        /* NAV */
-        header {
-            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-            padding: 1.25rem 2rem;
-            display: flex; justify-content: space-between; align-items: center;
-            border-bottom: 1px solid var(--border);
-            background: rgba(52, 40, 40, 0.5);
-            backdrop-filter: blur(8px);
-        }
-        .logo { width: 216px; height: 43.2px; padding: 2px 6px; object-fit: contain; display: block; flex-shrink: 0; }
-        .nav-links { display: flex; gap: 2rem; align-items: center; }
-        .nav-links a {
-            color: var(--gray); text-decoration: none; text-transform: uppercase;
-            font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; transition: color 0.2s;
-        }
-        .nav-links a:hover, .nav-links a:focus { color: var(--text-white); }
-        .btn {
-            display: inline-block; background-color: var(--accent-lime); color: var(--bg-black);
-            padding: 0.75rem 2rem; font-weight: 800; text-decoration: none;
-            text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px;
-            border: none; cursor: pointer; transition: opacity 0.2s;
-        }
-        .btn:hover, .btn:focus { opacity: 0.8; }
-        .btn:focus-visible { outline: 2px solid var(--accent-lime); outline-offset: 2px; }
-        .btn-sm { padding: 0.6rem 1.5rem; font-size: 0.75rem; }
-        .nav-links .btn {
-            background-color: transparent;
-            color: var(--accent-lime);
-            border: 1px solid var(--accent-lime);
-            transition: background-color 0.2s ease, color 0.2s ease, opacity 0.2s ease;
-        }
-        .nav-links .btn:hover,
-        .nav-links .btn:focus {
-            background-color: var(--accent-lime);
-            color: var(--bg-black);
-            opacity: 1;
-        }
 
-        /* HERO */
-        .hero {
-            display: flex; flex-direction: column; gap: 2rem;
-            padding: 0 2rem 3rem; position: relative; overflow: hidden;
-        }
-        .hero-video-wrap {
-            position: relative; left: 50%; transform: translateX(-50%);
-            width: 100vw; height: 70vh;
-            margin: 0; overflow: hidden; border-radius: 0;
-            background: #121212;
-        }
-        .hero-video {
-            display: block; width: 100%; height: 100%; object-fit: cover;
-        }
-        .hero-overlay-icon {
-            position: absolute; top: 50%; left: 50%; z-index: 1;
-            width: min(50vw, 578.55px); height: auto;
-            transform: translate(-50%, -50%); pointer-events: none;
-        }
-        .hero-content { max-width: 1200px; margin: 0 auto; width: 100%; }
-        .hero h1 {
-            font-size: clamp(3.5rem, 12vw, 9rem); font-weight: 900; line-height: 0.88;
-            text-transform: uppercase; letter-spacing: -3px; margin-bottom: 1.5rem;
-        }
-        .hero-sub {
-            font-size: clamp(1rem, 2.5vw, 1.5rem); color: var(--accent-lime);
-            text-transform: uppercase; font-weight: 700; margin-bottom: 2.5rem; max-width: 700px;
-        }
-        .hero-meta {
-            font-family: "SF Mono", "Fira Code", monospace; font-size: 0.7rem;
-            color: var(--gray); text-transform: uppercase; letter-spacing: 2px;
-            margin-top: 3rem;
-        }
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
 
-        /* concept */
-        #concept { max-width: 1200px; margin: 0 auto; padding: 2rem 2rem 6rem; }
-        .concept-label {
-            font-size: clamp(1rem, 2.5vw, 1.5rem); color: var(--accent-lime);
-            text-transform: uppercase; font-weight: 700; letter-spacing: -2px; margin-bottom: 1.5rem;
-        }
-        .concept-grid {
-            display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
-            border: 1px solid var(--border);
-        }
-        .concept-card {
-            padding: 3rem; border: 1px solid var(--border); position: relative;
-        }
-        .concept-icon {
-            position: absolute; top: 2.75rem; right: 3rem;
-            width: 64px; height: 64px; object-fit: contain;
-        }
-        .concept-card h3 {
-            font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 900;
-            text-transform: uppercase; margin-bottom: 1rem; letter-spacing: -1px;
-        }
-        .concept-card p {
-            color: var(--gray); font-size: 1rem; text-transform: uppercase;
-            font-weight: 500; line-height: 1.6;
-        }
+<body>
 
-        /* EVENT */
-        #event {
-            max-width: 1200px; margin: 0 auto; padding: 6rem 2rem;
-            border-top: 1px solid var(--border);
-        }
-        .event-label {
-            font-size: clamp(1rem, 2.5vw, 1.5rem); color: var(--accent-lime);
-            text-transform: uppercase; font-weight: 700; letter-spacing: -2px; margin-bottom: 1.5rem;
-        }
-        .event-description {
-            max-width: 1350px; margin: 2rem 0 3.75rem;
-            color: var(--gray); font-size: clamp(0.95rem, 1.5vw, 1.1rem);
-            font-weight: 400; line-height: 1.55;
-        }
-        .event-description strong {
-            color: var(--text-white);
-            font-weight: 800;
-        }
-        .event-description p + p { margin-top: 1.5rem; }
-        .event-description-highlight {
-            max-width: 900px; margin-top: 2rem;
-            color: var(--accent-lime); font-size: clamp(1.1rem, 2vw, 1.35rem);
-            font-weight: 900; line-height: 1.2; text-transform: uppercase;
-        }
-        @media (max-width: 768px) {
-            .event-description { font-size: 0.95rem; }
-            .event-description-highlight { font-size: 1.1rem; }
-        }
-        .event-grid {
-            display: flex; flex-wrap: wrap; gap: 4rem;
-        }
-        .event-block h4 {
-            font-family: "SF Mono", "Fira Code", monospace; font-size: 0.65rem;
-            color: var(--gray); text-transform: uppercase; letter-spacing: 3px; margin-bottom: 0.75rem;
-        }
-        .event-block p {
-            font-size: clamp(1.5rem, 4vw, 2.5rem); font-weight: 900;
-            text-transform: uppercase; letter-spacing: -1px;
-        }
-        .event-coords {
-            margin-top: 4rem; font-family: "SF Mono", "Fira Code", monospace;
-            font-size: 0.7rem; color: var(--gray); letter-spacing: 2px;
-        }
+  <!-- iOS SAFE AREA / DYNAMIC ISLAND -->
+  <div class="ios-safe-area" aria-hidden="true"></div>
 
-        /* CULTURE */
-        #culture { padding: 6rem 0; border-top: 1px solid var(--border); }
-        .culture-label {
-            font-size: clamp(1rem, 2.5vw, 1.5rem); color: var(--accent-lime);
-            text-transform: uppercase; font-weight: 700; letter-spacing: -1.5px;
-            margin-bottom: 2rem; padding: 0 2rem;
-        }
-        .marquee-wrap { overflow: hidden; position: relative; }
-        .marquee-track {
-            display: flex; gap: 1rem; animation: marquee 40s linear infinite;
-            width: max-content;
-        }
-        @media (prefers-reduced-motion: reduce) {
-            .marquee-track { animation: none; }
-            .marquee-wrap { overflow-x: auto; }
-        }
-        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-        .culture-video {
-            width: 350px; height: 250px; object-fit: cover;
-            filter: grayscale(0.3) contrast(1.05);
-            flex-shrink: 0;
-        }
-        .marquee-text {
-            padding: 2rem; overflow: hidden; white-space: nowrap;
-            font-size: clamp(2rem, 5vw, 4rem); font-weight: 900;
-            text-transform: uppercase; color: var(--border); letter-spacing: -2px;
-        }
-        .marquee-text-track {
-            display: inline-flex; gap: 4rem;
-            animation: marquee-text 20s linear infinite;
-        }
-        @media (prefers-reduced-motion: reduce) { .marquee-text-track { animation: none; } }
-        @keyframes marquee-text { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+  <div class="page">
 
-        #password-gate {
-            position: fixed; inset: 0; z-index: 10000;
-            display: grid; place-items: center; padding: 1.5rem;
-            background: rgb(52, 40, 40);
-        }
-        #password-gate[hidden] { display: none; }
-        .password-gate-content {
-            display: flex; flex-direction: column; align-items: center;
-            gap: 2rem; width: min(100%, 360px);
-        }
-        .password-gate-logo { display: block; width: min(80vw, 216px); height: auto; }
-        .password-form { display: flex; gap: 0.5rem; width: 100%; }
-        .password-input {
-            flex: 1; min-width: 0; padding: 0.75rem 1rem;
-            border: 1px solid var(--gray); background: transparent;
-            color: var(--text-white); font: inherit;
-        }
-        .password-input::placeholder { color: #c4bbbb; }
-        .password-error { min-height: 1.2em; color: #ff7777; font-size: 0.85rem; }
-        .password-error[hidden] { display: none; }
+    <header class="site-header">
+      <a href="#top" aria-label="Super Verticale home">
+        <img class="logo" src="assets/logos/SuperVerticale.svg" alt="Super Verticale">
+      </a>
 
-        /* FOOTER */
-        footer {
-            border-top: 1px solid var(--border);
-            padding: 4rem 2rem; max-width: 1200px; margin: 0 auto;
-        }
-        .footer-grid {
-            display: flex; flex-wrap: wrap; justify-content: space-between;
-            gap: 3rem; align-items: flex-start;
-        }
-        .footer-brand { font-weight: 900; font-size: 1.5rem; text-transform: uppercase; letter-spacing: -1px; }
-        .footer-newsletter { max-width: 400px; }
-        .footer-newsletter h4 {
-            font-size: 0.85rem; text-transform: uppercase; font-weight: 700; margin-bottom: 1rem;
-        }
-        .newsletter-form { display: flex; gap: 0; }
-        .newsletter-input {
-            flex: 1; background: transparent; border: 1px solid var(--border);
-            color: var(--text-white); padding: 0.75rem 1rem; font-size: 0.85rem;
-            font-family: inherit; outline: none;
-        }
-        .newsletter-input:focus { border-color: var(--accent-lime); }
-        .newsletter-msg {
-            margin-top: 0.5rem; font-size: 0.75rem; min-height: 1.2em;
-        }
-        .newsletter-msg.success { color: var(--accent-lime); }
-        .newsletter-msg.error { color: #ff4444; }
-        .footer-links { display: flex; gap: 2rem; }
-        .footer-links a {
-            color: var(--gray); text-decoration: none; font-size: 0.75rem;
-            text-transform: uppercase; letter-spacing: 1px; font-weight: 600;
-        }
-        .footer-links a:hover { color: var(--text-white); }
-        .footer-copy {
-            margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border);
-            font-size: 0.7rem; color: var(--gray); text-transform: uppercase; letter-spacing: 1px;
-        }
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#concept">Concept</a>
+        <a href="#event">Event</a>
+        <a href="#culture">Culture</a>
+      </nav>
 
-        /* Independent solid layer over the iOS status-bar / Dynamic Island area, detached from the header */
-        .ios-safe-area {
-            display: none;
-        }
+      <button class="header-menu" type="button" aria-label="Open menu" aria-expanded="false">
+        +
+      </button>
+    </header>
 
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
-            .ios-safe-area {
-                display: block;
-                position: fixed;
-                top: 0; left: 0; right: 0;
-                width: 100vw;
-                height: env(safe-area-inset-top, 0px);
-                background: #342828;
-                z-index: 9999;
-                pointer-events: none;
-            }
-            header {
-                top: 0;
-                z-index: 10000;
-                padding: calc(1rem + env(safe-area-inset-top, 0px)) 1.25rem 1rem;
-            }
-            .nav-links a:not(.btn) { display: none; }
-            .concept-grid { grid-template-columns: 1fr; }
-            .concept-icon { top: 2rem; right: 2rem; width: 52px; height: 52px; }
-            .hero { padding: 0 1.25rem 2rem; }
-            .hero-video-wrap { height: auto; aspect-ratio: 1.62 / 1; }
-            #concept, #event { padding: 4rem 1.25rem; }
-            .culture-video { width: 280px; height: 200px; }
-            .footer-grid { flex-direction: column; }
-        }
-
-        /* Focus */
-        a:focus-visible, button:focus-visible, input:focus-visible {
-            outline: 2px solid var(--accent-lime); outline-offset: 2px;
-        }
-
-        /* Grain overlay */
-        body::after {
-            content: ""; position: fixed; inset: 0; z-index: 9999;
-            pointer-events: none; opacity: 0.04;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-            background-repeat: repeat; background-size: 256px;
-        }
-    </style>
-  <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js" type="text/javascript"></script>
-  <script src="https://cdn.tailwindcss.com/3.4.17" type="text/javascript"></script>
-  <script src="/_sdk/6c2ecc939521f244.data_sdk.js" type="text/javascript" integrity="sha512-gRx8s+XsZDN6mSIQu2sivLZysbV0WHhb5kXNUWlgVb5lCMU1foJYukyMEDPv8Tnoocb8iwqB4XdRrWc7oEGzIQ=="></script>
-  <script src="/_sdk/ef0304cb8c7ed696.editing_sdk.js" type="text/javascript" integrity="sha512-kmL9L5Yuj57MQaequKbMA3aGpT/5lBUp10iGA3e3qnmMLs2ZZQ0poCcIfdd5rTgrhEvNPe4HK0ohePW7ZpgAFg=="></script>
-  <script src="/_sdk/ddcab3e45959c817.resizing_sdk.js" type="text/javascript" integrity="sha512-VAviUKfZVzugWBSeULYjSljTX+nb84wc6Zzbx5GQaQgh6X2ISSjXi8eIiCDGdwDh10esJMY0+QFQgUy9NcrTlQ=="></script>
- </head>
- <body data-template-id="__page-root" style="background: rgb(52, 40, 40);">
-  <div id="password-gate" role="dialog" aria-modal="true" aria-labelledby="password-gate-logo">
-    <div class="password-gate-content">
-     <img id="password-gate-logo" class="password-gate-logo" src="assets/logos/SuperVerticale.svg" alt="Super Verticale">
-     <form class="password-form" id="password-form">
-      <input class="password-input" id="site-password" type="password" placeholder="Passwort" aria-label="Passwort" autocomplete="current-password" required autofocus>
-      <button class="btn btn-sm" type="submit">Öffnen</button>
-     </form>
-     <p class="password-error" id="password-error" role="alert" hidden>Passwort ist nicht korrekt.</p>
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobile-menu">
+      <nav aria-label="Mobile navigation">
+        <a href="#concept">Concept</a>
+        <a href="#event">Event</a>
+        <a href="#culture">Culture</a>
+        <a class="menu-cta" href="https://luma.com/i/ApF9Z4wEPd" target="_blank" rel="noopener noreferrer">Enter the Run</a>
+      </nav>
     </div>
-  </div>
-  <div class="ios-safe-area"></div>
-     <header data-template-id="site-header" class="canva-header" inert data-protected-content><img data-template-id="header-logo" class="logo canva-image" loading="lazy" src="assets/logos/SuperVerticale.svg" alt="Super Verticale logo">
-    <nav class="nav-links" aria-label="Hauptnavigation"><a href="#concept">concept</a> <a href="#event">Event</a> <a href="#culture">Culture</a>
-   </nav>
-  </header>
-    <main inert data-protected-content>
-   <section class="hero" id="hero">
-    <div class="hero-video-wrap">
-    <video class="hero-video" src="assets/videos/Mountain_Capra_Hero.mp4" autoplay="" muted="" loop="" playsinline="" preload="auto" aria-label="Super Verticale Eventvideo">
-      <p>Dein Browser unterstützt dieses Video nicht.</p>
-     </video>
-         <img class="hero-overlay-icon" src="assets/logos/Icons.svg" alt="" aria-hidden="true">
-    </div>
-    <div class="hero-content">
-     <h1 data-template-id="hero-title" class="canva-text" style="color: rgb(245, 245, 245); font-weight: 900; font-style: normal; font-size: 32px;">Super Verticale</h1>
-     <p class="hero-sub" data-template-id="hero-subtitle" style="color: rgb(204, 255, 0); font-weight: 700; font-style: normal; font-size: 16px;">A race straight up. And more beyond the finish line.</p><a href="https://luma.com/i/ApF9Z4wEPd" target="_blank" rel="noopener noreferrer" data-template-id="hero-cta" class="btn canva-button" style="background: rgb(204, 255, 0); color: rgb(10, 10, 10); font-weight: 800; font-style: normal; font-size: 16px;">Enter the Run</a>
-     <div class="hero-meta" data-template-id="hero-meta" style="color: rgb(136, 136, 136); font-weight: 400; font-style: normal; font-size: 16px;">46°32′N 14°48′E — 1.508m ↑ — Petzen, Austria</div>
-    </div>
-   </section>
-   <section id="concept" aria-label="concept">
-    <div class="concept-label" data-template-id="concept-label">// concept</div>
-    <div class="concept-grid">
-     <div class="concept-card" data-template-id="card-1" style="background: rgb(52, 40, 40);">
+
+    <main id="top">
+
+      <!-- HERO -->
+      <section class="hero">
+        <video autoplay muted loop playsinline preload="metadata" aria-label="Super Verticale hero video">
+          <source src="assets/videos/Mountain_Capra_Hero.mp4" type="video/mp4">
+        </video>
+
+        <img class="hero-logo" src="assets/logos/Icons.svg" alt="Super Verticale Icons">
+
+        <div class="hero-content">
+          <h1 class="hero-title">Super<br>Verticale</h1>
+
+          <p class="hero-sub">
+            A race straight up.<br>
+            And more beyond the finish line.
+          </p>
+
+          <a class="cta" href="https://luma.com/i/ApF9Z4wEPd" target="_blank" rel="noopener noreferrer">
+            Enter the Run <span>→</span>
+          </a>
+
+          <div class="hero-meta micro">
+            46°32′N 14°48′E — 2.126m ↑ — Petzen, Austria
+          </div>
+        </div>
+
+        <div class="scroll-cue">Scroll</div>
+      </section>
+
+      <!-- BIG STATEMENT -->
+      <section class="statement">
+        <div>
+          <div class="eyebrow">// Motivation</div>
+          <h2>
+            The <span>Race</span> gets you there. <br>
+            The day <span> doesn't end </span> at the <span>finish line</span>.
+          </h2>
+        </div>
+      </section>
+
+      <!-- MOVEMENT -->
+      <section class="movement">
+        <div class="movement-frame">
+          <video autoplay muted loop playsinline preload="metadata">
+            <source src="assets/wine_uphill_straight_front.mp4" type="video/mp4">
+          </video>
+
+          <div class="movement-meta micro">
+            46°32′12″N<br>
+            14°48′36″E<br>
+            Petzen / Austria
+          </div>
+        </div>
+      </section>
+
+      <!-- CONCEPT -->
+      <section class="concept" id="concept">
+        <div class="concept-head">
+          <div class="eyebrow">// Concept</div>
+        </div>
+
+        <div class="concept-grid">
+          <article class="concept-card">
             <img class="concept-icon" src="assets/logos/icons/Vertical.png" alt="" aria-hidden="true">
-      <h3 data-template-id="card-1-title" class="canva-text" style="color: rgb(245, 245, 245); font-weight: 900; font-style: normal; font-size: 19px;">Vertical</h3>
-      <p data-template-id="card-1-desc" class="canva-text" style="color: rgb(136, 136, 136); font-weight: 500; font-style: normal; font-size: 16px;">Start from the bottom. Finish at the top. No shortcuts.</p>
-     </div>
-     <div class="concept-card" data-template-id="card-2" style="background: rgb(52, 40, 40);">
-        <img class="concept-icon" src="assets/logos/icons/Experience.png" alt="" aria-hidden="true">
-      <h3 data-template-id="card-2-title" class="canva-text" style="color: rgb(245, 245, 245); font-weight: 900; font-style: normal; font-size: 19px;">Experience</h3>
-      <p data-template-id="card-2-desc" class="canva-text" style="color: rgb(136, 136, 136); font-weight: 500; font-style: normal; font-size: 16px;">The mountain becomes the stage. A seamless blend of intense alpine sport and festival culture where the day doesn’t end at the finish line</p>
-     </div>
-     <div class="concept-card" data-template-id="card-3" style="background: rgb(52, 40, 40);">
-        <img class="concept-icon" src="assets/logos/icons/Curated.png" alt="" aria-hidden="true">
-      <h3 data-template-id="card-3-title" class="canva-text" style="color: rgb(245, 245, 245); font-weight: 900; font-style: normal; font-size: 19px;">Curated</h3>
-      <p data-template-id="card-3-desc" class="canva-text" style="color: rgb(136, 136, 136); font-weight: 500; font-style: normal; font-size: 16px;">Handpicked food & beverages, live music acts, panel talks, and exclusive brand activations throughout the day.</p>
-     </div>
-     <div class="concept-card" data-template-id="card-4" style="background: rgb(52, 40, 40);">
-        <img class="concept-icon" src="assets/logos/icons/Community.png" alt="" aria-hidden="true">
-      <h3 data-template-id="card-4-title" class="canva-text" style="color: rgb(245, 245, 245); font-weight: 900; font-style: normal; font-size: 19px;">Community</h3>
-      <p data-template-id="card-4-desc" class="canva-text" style="color: rgb(136, 136, 136); font-weight: 500; font-style: normal; font-size: 16px;">Come for the race. Stay for the people. The ultimate excuse to get together, sweat, and celebrate as one herd.</p>
-     </div>
-    </div>
-   </section>
-   <section id="event" aria-label="Event Info">
-    <div class="event-label" data-template-id="event-label">// Event</div>
-    <div class="event-description">
-    <p>
-    Ending the summer off-season in the Alps: We’re reactivating underused lift
-    and hut infrastructure, turning the mountain into our stage.
-    <strong>Super Verticale is much more than a trail run.</strong>
-    It’s a gathering for those who live for uncompromising mountain sports,
-    good food vibes, and the culture of nature.
-    </p>
-    <p>
-    Get ready to <strong>sweat, climb, and celebrate</strong> your way up the
-    mountain at the first and limited <strong>SUPER VERTICALE</strong>.
-    Starting from the <strong>Petzenbahn Talstation</strong>, this intense
-    <strong>10 km trail run</strong> tackles
-    <strong>1,000 m of elevation gain</strong> straight up to a breathtaking
-    viewpoint over Kärnten.
-    Whether you're chasing a personal best, hunting a segment win, or simply
-    out for the view, expect a <strong>pure vertical grind.</strong>
-    At the summit, <strong>handpicked brands, drinks, and good food</strong>
-    await, because <strong>the race gets you there, but the people will let you stay.</strong>
-    </p>
-    <div class="event-description-highlight">THE RACE GETS YOU THERE.<br>THE DAY DOESN’T END AT THE FINISH LINE.</div>
-    </div>
-    <div class="event-grid">
-     <div class="event-block">
-      <h4 data-template-id="event-date-label" class="canva-text" style="color: rgb(136, 136, 136); font-weight: 400; font-style: normal; font-size: 16px;">Date</h4>
-      <p data-template-id="event-date-value" class="canva-text" style="color: rgb(245, 245, 245); font-weight: 900; font-style: normal; font-size: 16px;">Saturday, 21. August 2027</p>
-     </div>
-     <div class="event-block">
-      <h4 data-template-id="event-loc-label" class="canva-text" style="color: rgb(136, 136, 136); font-weight: 400; font-style: normal; font-size: 16px;">Location</h4>
-      <p data-template-id="event-loc-value" class="canva-text" style="color: rgb(245, 245, 245); font-weight: 900; font-style: normal; font-size: 16px;">Petzen-Bergbahnen, Austria</p>
-     </div>
-     <div class="event-block">
-      <h4 data-template-id="event-scale-label" class="canva-text" style="color: rgb(136, 136, 136); font-weight: 400; font-style: normal; font-size: 16px;">Scale</h4>
-      <p data-template-id="event-scale-value" class="canva-text" style="color: rgb(245, 245, 245); font-weight: 900; font-style: normal; font-size: 16px;">~1.000 Teilnehmer &amp; Community</p>
-     </div>
-    </div>
-    <div class="event-coords" data-template-id="event-coords" style="color: rgb(136, 136, 136); font-weight: 400; font-style: normal; font-size: 16px;">46°32′12″N 14°48′36″E — Elevation Gain: 1.074m — Distance: 10,1km</div>
-   </section>
-   <section id="culture" aria-label="Culture">
-    <div class="culture-label" data-template-id="culture-label">// Culture</div>
-    <div class="marquee-wrap" aria-label="Event Bildergalerie">
-    <div class="marquee-track">
-     <video class="culture-video" src="assets/wine_foot.mp4" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
-     <video class="culture-video" src="assets/wine_jump_down_up.mp4" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
-     <video class="culture-video" src="assets/wine_portrait.mp4" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
-     <video class="culture-video" src="assets/wine_steep_left_right.mp4" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
-     <video class="culture-video" src="assets/wine_straight.mp4" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
-     <video class="culture-video" src="assets/wine_uphill_left_right.mp4" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
-     <video class="culture-video" src="assets/wine_uphill_right_left.mp4" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
-     <video class="culture-video" src="assets/wine_uphill_straight_front.mp4" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
-     <video class="culture-video" src="assets/wine_wqalking_on_woods.mp4" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
-     <!-- Duplicate set for seamless loop -->
-     <video class="culture-video" src="assets/wine_foot.mp4" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
-     <video class="culture-video" src="assets/wine_jump_down_up.mp4" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
-     <video class="culture-video" src="assets/wine_portrait.mp4" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
-     <video class="culture-video" src="assets/wine_steep_left_right.mp4" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
-     <video class="culture-video" src="assets/wine_straight.mp4" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
-     <video class="culture-video" src="assets/wine_uphill_left_right.mp4" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
-     <video class="culture-video" src="assets/wine_uphill_right_left.mp4" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
-     <video class="culture-video" src="assets/wine_uphill_straight_front.mp4" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
-     <video class="culture-video" src="assets/wine_wqalking_on_woods.mp4" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
-     </div>
-    </div>
-    <div class="marquee-text" aria-hidden="true">
-     <div class="marquee-text-track"><span>Super Verticale — Enter the Run — Super Verticale — Enter the Run — </span> <span>Super Verticale — Enter the Run — Super Verticale — Enter the Run — </span>
-     </div>
-    </div>
-   </section>
-  </main>
-    <footer inert data-protected-content>
-   <div class="footer-grid">
-    <div>
-     <div class="footer-brand" data-template-id="footer-brand" style="color: rgb(245, 245, 245); font-weight: 900; font-style: normal; font-size: 16px;">Capra</div>
-    </div>
-    <div class="footer-newsletter">
-     <h4 data-template-id="footer-newsletter-title" class="canva-text" style="color: rgb(245, 245, 245); font-weight: 700; font-style: normal; font-size: 16px;">Get on the list</h4>
-     <form class="newsletter-form" id="newsletter-form" aria-label="Newsletter Anmeldung"><input type="email" class="newsletter-input" data-template-id="footer-newsletter-input" required="" aria-label="E-Mail Adresse" placeholder="deine@email.com" style="color: rgb(245, 245, 245); font-weight: 400; font-style: normal; font-size: 16px;"> <button type="submit" data-template-id="footer-newsletter-btn" class="btn btn-sm canva-button" style="background: rgb(204, 255, 0); color: rgb(10, 10, 10); font-weight: 800; font-style: normal; font-size: 16px;">→</button>
-     </form>
-     <div class="newsletter-msg" id="newsletter-msg" role="status" aria-live="polite"></div>
-    </div>
-    <div class="footer-links"><a href="https://www.instagram.com/superverticale" target="_blank" rel="noopener noreferrer" data-template-id="footer-ig-link" class="canva-link" style="color: rgb(136, 136, 136); font-weight: 400; font-style: normal; font-size: 16px;">Instagram</a> <a href="#" data-template-id="footer-impressum" class="canva-link" style="color: rgb(136, 136, 136); font-weight: 400; font-style: normal; font-size: 16px;">Impressum</a>
-    </div>
-   </div>
-   <div class="footer-copy" data-template-id="footer-copy" style="color: rgb(136, 136, 136); font-weight: 400; font-style: normal; font-size: 16px;">© 2027 Super Verticale by Capra. All rights reserved.</div>
-  </footer>
-  <script>
-        const passwordGate = document.getElementById('password-gate');
-        const passwordForm = document.getElementById('password-form');
-        const passwordInput = document.getElementById('site-password');
-        const passwordError = document.getElementById('password-error');
-        const protectedContent = document.querySelectorAll('[data-protected-content]');
-        const unlockSite = () => {
-            passwordGate.hidden = true;
-            protectedContent.forEach(element => { element.inert = false; });
-            document.querySelectorAll('video[autoplay]').forEach(video => {
-                video.muted = true;
-                video.play().catch(() => {});
-            });
-        };
-        let hasAccess = false;
-        try { hasAccess = sessionStorage.getItem('super-verticale-access') === 'granted'; } catch {}
-        if (hasAccess) {
-            unlockSite();
-        } else {
-            document.querySelectorAll('video[autoplay]').forEach(video => { video.pause(); });
-        }
-        passwordForm.addEventListener('submit', event => {
-            event.preventDefault();
-            if (passwordInput.value === 'Capra') {
-                try { sessionStorage.setItem('super-verticale-access', 'granted'); } catch {}
-                unlockSite();
-            } else {
-                passwordError.hidden = false;
-                passwordInput.value = '';
-                passwordInput.focus();
-            }
-        });
+            <div>
+              <h3>Vertical</h3>
+              <p>Start from the bottom. Finish at the top. No shortcuts.</p>
+            </div>
+          </article>
 
-        // Smooth scroll for nav
-        document.querySelectorAll('a[href^="#"]').forEach(a => {
-            a.addEventListener('click', e => {
-                const target = document.querySelector(a.getAttribute('href'));
-                if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
-            });
-        });
+          <article class="concept-card">
+            <img class="concept-icon" src="assets/logos/icons/Experience.png" alt="" aria-hidden="true">
+            <div>
+              <h3>Experience</h3>
+              <p>The mountain becomes the stage. A seamless blend of intense alpine sport and festival culture where the day doesn’t end at the finish line.</p>
+            </div>
+          </article>
 
-        // VH fix for mobile
-        function setVH() { document.documentElement.style.setProperty('--vh', window.innerHeight * 0.01 + 'px'); }
-        setVH(); window.addEventListener('resize', setVH);
+          <article class="concept-card">
+            <img class="concept-icon" src="assets/logos/icons/Curated.png" alt="" aria-hidden="true">
+            <div>
+              <h3>Curated</h3>
+              <p>Handpicked food & beverages, live music acts, panel talks, and exclusive brand activations throughout the day.</p>
+            </div>
+          </article>
 
-        // Newsletter
-        document.getElementById('newsletter-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const input = this.querySelector('input[type="email"]');
-            const msg = document.getElementById('newsletter-msg');
-            const email = input.value.trim();
-            if (!email) { msg.textContent = 'Bitte gib eine E-Mail ein.'; msg.className = 'newsletter-msg error'; return; }
-            // Persist using Canva data store
-            if (window.__canva_data_store__) {
-                window.__canva_data_store__.write({ email: email }).then(() => {
-                    msg.textContent = 'Du bist auf der Liste! 🐐';
-                    msg.className = 'newsletter-msg success';
-                    input.value = '';
-                }).catch(() => {
-                    msg.textContent = 'Fehler. Bitte versuche es erneut.';
-                    msg.className = 'newsletter-msg error';
-                });
-            } else {
-                msg.textContent = 'Du bist auf der Liste! 🐐';
-                msg.className = 'newsletter-msg success';
-                input.value = '';
-            }
-        });
+          <article class="concept-card">
+            <img class="concept-icon" src="assets/logos/icons/Community.png" alt="" aria-hidden="true">
+            <div>
+              <h3>Community</h3>
+              <p>Come for the race. Stay for the people. The ultimate excuse to get together, sweat, and celebrate as one herd.</p>
+            </div>
+          </article>
+        </div>
+      </section>
 
-    </script>
- 
-</body></html>
+      <!-- STAGE STATEMENT -->
+      <section class="stage-statement">
+        <video autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+          <source src="assets/wine_steep_left_right.mp4" type="video/mp4">
+        </video>
+
+        <h2>
+          The mountain<br>
+          becomes the<br>
+          <span>stage.</span>
+        </h2>
+      </section>
+
+      <!-- EVENT -->
+      <section class="event-intro" id="event">
+        <div class="eyebrow">// Event</div>
+        <div class="event-intro-grid">
+          <h2>Reopening the <span>mountain</span> for something <span>new</span>.</h2>
+
+          <p class="event-intro-copy">
+            We’re <strong style="color:var(--white)">reactivating underused</strong> lift and hut infrastructure,
+            turning the mountain into our stage.
+            <strong style="color:var(--white)">Super Verticale is much more than a trail run.</strong>
+            It’s a gathering for those who live for uncompromising mountain
+            sports, good food and music vibes, and the culture of nature.
+          </p>
+        </div>
+
+        <div class="event-video">
+          <video autoplay muted loop playsinline preload="metadata">
+            <source src="assets/wine_jump_down_up.mp4" type="video/mp4">
+          </video>
+        </div>
+      </section>
+
+      <!-- FACTS -->
+      <section class="facts">
+        <div class="eyebrow">// The Run</div>
+
+        <div class="facts-big" style="margin-top:42px;">10.1 KM</div>
+        <div class="facts-big" style="margin-top:26px;">↑ 1.074 M</div>
+        <div class="facts-sub">Straight up.</div>
+
+        <div class="facts-location">
+          Petzen / Austria
+          <div class="facts-date">21.08.2027</div>
+        </div>
+      </section>
+
+      <!-- ROUTE -->
+      <section class="route-section" id="route">
+
+        <div class="eyebrow">// The Route</div>
+
+        <div class="route-head">
+          <h2>
+            Start at the <span>bottom.</span><br>
+            Finish at the <span>top.</span>
+          </h2>
+
+          <p class="route-copy">
+            10.1 kilometres straight up the Petzen.
+            Explore the route and elevation profile by moving across the course.
+          </p>
+        </div>
+
+        <div class="route-interactive">
+          <svg id="route-chart" viewBox="0 0 1200 750" role="img" aria-label="Petzen route and elevation profile">
+            <g id="route-layer"></g>
+            <g id="profile-layer"></g>
+            <g id="interaction-layer"></g>
+          </svg>
+
+          <div class="route-legend" aria-label="Slope legend">
+            <span><i class="route-swatch route-flat"></i><b>0–5%</b> FLAT</span>
+            <span><i class="route-swatch route-moderate"></i><b>5–10%</b> MODERATE</span>
+            <span><i class="route-swatch route-steep"></i><b>10–15%</b> STEEP</span>
+            <span><i class="route-swatch route-very-steep"></i><b>&gt;15%</b> VERY STEEP</span>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- GRIND -->
+      <section class="grind">
+        <video autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+          <source src="assets/wine_foot.mp4" type="video/mp4">
+        </video>
+
+        <div>
+          <div class="eyebrow">// The Grind</div>
+          <h2>Pure<br>Vertical<br>Grind.</h2>
+        </div>
+      </section>
+
+      <!-- EVENT DATA -->
+      <section class="data">
+        <div class="eyebrow">// Event Data</div>
+
+        <div class="data-grid">
+          <div class="data-row"><span>Date</span><strong>21.08.2027</strong></div>
+          <div class="data-row"><span>Location</span><strong>Petzen-Bergbahnen / Austria</strong></div>
+          <div class="data-row"><span>Distance</span><strong>10.1 km</strong></div>
+          <div class="data-row"><span>Elevation Gain</span><strong>1,074 m</strong></div>
+          <div class="data-row"><span>Start</span><strong>Petzenbahn Talstation</strong></div>
+          <div class="data-row"><span>Coordinates</span><strong>46°32′12″N 14°48′36″E</strong></div>
+        </div>
+      </section>
+
+      <!-- CULTURE -->
+      <section class="culture" id="culture">
+        <div class="culture-head">
+          <div class="eyebrow">// Culture</div>
+          <h2>
+            The race is<br>
+            <span>only part</span><br>
+            of it.
+          </h2>
+        </div>
+
+        <div class="culture-gallery">
+          <video class="tall" autoplay muted loop playsinline preload="metadata">
+            <source src="assets/wine_portrait.mp4" type="video/mp4">
+          </video>
+
+          <video autoplay muted loop playsinline preload="metadata">
+            <source src="assets/wine_jump_down_up.mp4" type="video/mp4">
+          </video>
+
+          <video autoplay muted loop playsinline preload="metadata">
+            <source src="assets/wine_wqalking_on_woods.mp4" type="video/mp4">
+          </video>
+
+          <video class="tall" autoplay muted loop playsinline preload="metadata">
+            <source src="assets/wine_uphill_right_left.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="culture-note">
+          Food / Music / People<br>
+          Brands / Nature / More
+        </div>
+      </section>
+
+      <!-- SUMMIT -->
+      <section class="summit">
+        <video autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+          <source src="assets/wine_uphill_left_right.mp4" type="video/mp4">
+        </video>
+
+        <div>
+          <div class="eyebrow">// Summit</div>
+
+          <h2>You made<br>it up.<br>Now stay.</h2>
+
+          <p class="summit-copy">
+            Handpicked brands, drinks, good food, music and people.
+          </p>
+
+          <p class="summit-payoff">
+            The race gets you there.<br>
+            The people let you stay.
+          </p>
+        </div>
+      </section>
+
+      <!-- FINAL CTA -->
+      <section class="final">
+        <div class="eyebrow">// Enter the Run</div>
+
+        <h2>Super<br>Verticale</h2>
+
+        <div class="final-meta micro">
+          <span>21.08.2027</span>
+          <span>Petzen / Austria</span>
+        </div>
+
+        <a class="cta" href="https://luma.com/i/ApF9Z4wEPd" target="_blank" rel="noopener noreferrer">
+          Enter the Run <span>→</span>
+        </a>
+
+        <div class="newsletter">
+          <div class="eyebrow">Get on the list</div>
+          <form class="newsletter-form">
+            <input type="email" placeholder="deine@email.com" aria-label="Email">
+            <button type="submit">→</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>© 2027 Super Verticale by Capra</span>
+      <span>Instagram · Impressum</span>
+    </footer>
+  </div>
+
+  <div class="route-tooltip" id="route-tooltip" role="status"></div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

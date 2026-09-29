@@ -15,7 +15,7 @@ Der komplette Ablauf von der GPX-Datei bis zur interaktiven Route ist in [ROUTE_
 
 ## Geschützte Event-Seite
 
-Auch `events.html` ist passwortgeschützt. Sie verwendet dasselbe Passwort wie das Dashboard:
+Auch `event.html` ist passwortgeschützt. Sie verwendet dasselbe Passwort wie das Dashboard:
 
 ```text
 ilovemoritz

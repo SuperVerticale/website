@@ -124,7 +124,7 @@ Die vorhandenen Hover-Funktionen können unverändert bleiben. Route und Höhenp
 
 ## 5. Event-Seite anpassen
 
-In `events.html` die Bildquelle der interaktiven Darstellung ersetzen:
+In `event.html` die Bildquelle der interaktiven Darstellung ersetzen:
 
 ```html
 <iframe
@@ -143,7 +143,7 @@ Start elevation
 Finish elevation
 ```
 
-Auch Eventname, Ort und Browser-Titel in `events.html` anpassen.
+Auch Eventname, Ort und Browser-Titel in `event.html` anpassen.
 
 ## 6. Lokalen Test starten
 
@@ -154,7 +154,7 @@ python3 -m http.server 8000
 Dann öffnen:
 
 ```text
-http://localhost:8000/events.html
+http://localhost:8000/event.html
 ```
 
 Nicht per Doppelklick öffnen: `fetch()` der JSON-Datei funktioniert zuverlässig nur über HTTP.
