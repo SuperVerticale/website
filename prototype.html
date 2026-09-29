@@ -402,63 +402,57 @@
     /* CONCEPT */
 
     .concept {
-      padding: 20px 22px 80px;
+      padding: 20px 12px 110px;
+      background: var(--bg);
     }
 
     .concept-head {
-      padding: 0 0 28px;
+      padding: 0 10px 36px;
     }
 
     .concept-grid {
-      display: block;
-      background: transparent;
-      border: 0;
+      display: grid;
+      gap: 1px;
+      background: rgba(10,10,10,.65);
+      border: 1px solid rgba(10,10,10,.65);
     }
 
     .concept-card {
       position: relative;
-      min-height: 0;
-      height: auto;
-      padding: 22px 0 24px;
-      display: block;
-      overflow: visible;
-      background: transparent;
-      color: var(--white);
-      border-top: 1px solid var(--line);
-    }
-
-    .concept-card:last-child {
-      border-bottom: 1px solid var(--line);
+      min-height: 66svh;
+      padding: 30px 22px;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      background: var(--lime);
+      color: var(--black);
     }
 
     .concept-card:nth-child(even) {
-      background: transparent;
+      background: #302525;
       color: var(--white);
     }
 
-    .concept-card .concept-icon {
+    .concept-icon {
       position: absolute;
-      top: 22px;
-      left: 0;
-      width: 32px;
-      height: 32px;
+      top: 39%;
+      left: 50%;
+      width: 145px;
+      height: 145px;
       object-fit: contain;
-      transform: none;
-      opacity: .95;
+      transform: translate(-50%, -50%);
     }
 
     .concept-card:nth-child(odd) .concept-icon {
-      filter: none;
+      filter: brightness(0);
     }
 
     .concept-card h3 {
       position: relative;
       z-index: 2;
-      margin: 0;
-      padding-left: 44px;
-      font-size: 26px;
-      line-height: .9;
-      letter-spacing: -.045em;
+      font-size: clamp(3.1rem, 13vw, 7rem);
+      line-height: .82;
+      letter-spacing: -.06em;
       font-weight: 900;
       text-transform: uppercase;
     }
@@ -466,19 +460,18 @@
     .concept-card p {
       position: relative;
       z-index: 2;
-      max-width: 430px;
-      margin-top: 10px;
-      padding-left: 44px;
-      color: var(--gray);
-      font-size: 12px;
-      line-height: 1.3;
-      font-weight: 500;
+      max-width: 480px;
+      margin-top: 22px;
+      color: rgba(10,10,10,.68);
+      font-size: 14px;
+      line-height: 1.2;
+      font-weight: 600;
       text-transform: uppercase;
     }
 
-.concept-card:nth-child(even) p {
-  color: var(--gray);
-}
+    .concept-card:nth-child(even) p {
+      color: var(--gray);
+    }
 
     /* SECOND STATEMENT */
 
