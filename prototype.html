@@ -1286,7 +1286,6 @@
         display: block;
         background: transparent;
         border: 0;
-        counter-reset: concept;
       }
 
       .concept-card {
@@ -1294,10 +1293,7 @@
         min-height: 0;
         height: auto;
         padding: 22px 0 24px;
-        display: grid;
-        grid-template-columns: 48px 1fr;
-        column-gap: 16px;
-        align-items: start;
+        display: block;
         overflow: visible;
         background: transparent;
         color: var(--white);
@@ -1313,23 +1309,10 @@
         color: var(--white);
       }
 
-      .concept-card::before {
-        content: counter(concept);
-        counter-increment: concept;
-        grid-column: 1;
-        grid-row: 1 / span 2;
-        padding-top: 3px;
-        color: var(--lime);
-        font-family: var(--mono);
-        font-size: 10px;
-        line-height: 1;
-        letter-spacing: 1px;
-      }
-
       .concept-card .concept-icon {
         position: absolute;
         top: 22px;
-        left: 48px;
+        left: 0;
         width: 32px;
         height: 32px;
         object-fit: contain;
@@ -1342,7 +1325,6 @@
       }
 
       .concept-card h3 {
-        grid-column: 2;
         position: relative;
         z-index: 2;
         margin: 0;
@@ -1355,7 +1337,6 @@
       }
 
       .concept-card p {
-        grid-column: 2;
         position: relative;
         z-index: 2;
         max-width: 430px;
