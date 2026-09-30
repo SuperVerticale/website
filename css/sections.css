@@ -61,7 +61,24 @@
   text-transform: uppercase;
 }
 
-.hero-meta { margin-top: 26px; }
+.hero-facts {
+  margin-top: 14px;
+  color: var(--lime);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.5;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .hero-facts { font-size: 11px; }
+}
+
+@media (max-width: 390px) {
+  .hero-facts { font-size: 10px; }
+}
 
 .scroll-cue {
   position: absolute;
