@@ -574,15 +574,99 @@
   background: var(--bg);
 }
 
-.data-grid {
-  max-width: 950px;
+.data-primary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.25rem;
+  max-width: 1100px;
   margin-top: 30px;
+  padding: 18px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.data-fact {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: .5rem;
+  font-family: var(--mono);
+  text-transform: uppercase;
+}
+
+.data-fact-value {
+  color: var(--white);
+  font-size: 14px;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.data-fact-label {
+  color: var(--gray);
+  font-size: 9px;
+  line-height: 1.3;
+}
+
+.data-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: .6rem;
+  width: 100%;
+  max-width: 1100px;
+  margin-top: 14px;
+  border: 0;
+  padding: 4px 0;
+  background: transparent;
+  color: var(--gray);
+  font-family: var(--mono);
+  font-size: 10px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.data-toggle:focus-visible {
+  outline: 1px solid var(--lime);
+  outline-offset: 4px;
+}
+
+.data-toggle-indicator {
+  color: var(--lime);
+  font-family: var(--display);
+  font-size: 15px;
+  line-height: 1;
+}
+
+.data-details {
+  display: grid;
+  grid-template-rows: 0fr;
+  max-width: 950px;
+  margin-top: 0;
+  opacity: 0;
+  transition: grid-template-rows .3s ease, opacity .2s ease, margin-top .3s ease;
+}
+
+.data-details-inner {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.data.is-expanded .data-details {
+  grid-template-rows: 1fr;
+  margin-top: 18px;
+  opacity: 1;
+}
+
+.data-grid {
+  width: 100%;
   border-top: 1px solid var(--line);
 }
 
 .data-row {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
+  align-items: baseline;
   gap: 20px;
   padding: 16px 0;
   border-bottom: 1px solid var(--line);
@@ -592,8 +676,8 @@
   text-transform: uppercase;
 }
 
-.data-row span { color: var(--gray); }
-.data-row strong { font-weight: 500; }
+.data-row dt { color: var(--gray); }
+.data-row dd { font-weight: 500; }
 
 /* CULTURE */
 
