@@ -81,6 +81,10 @@
     height: max(110svh, 65vw, 780px);
   }
 
+  .event-visual.event-note-is-expanded {
+    height: max(110svh, 65vw, 780px);
+  }
+
   .event-visual::after {
     content: "";
     position: absolute;
@@ -105,8 +109,7 @@
     letter-spacing: -.07em;
   }
 
-  .event-intro-copy {
-    margin: 0 0 0 15%;
+  .event-note-toggle {
     font-size: 12px;
   }
 
@@ -250,6 +253,10 @@
     min-height: 430px;
   }
 
+  .event-visual.event-note-is-expanded {
+    height: max(88svh, 620px);
+  }
+
   .event-visual video {
     position: absolute;
     inset: 0;
@@ -274,14 +281,14 @@
     margin-top: 20px;
   }
 
+  .event-note-toggle {
+    margin-left: 22%;
+  }
+
   .event-intro h2 {
     font-size: clamp(4rem, 17vw, 11rem);
     line-height: .75;
     letter-spacing: -.07em;
-  }
-
-  .event-intro-copy {
-    margin: 0 0 0 15%;
   }
 
   .concept-head {
@@ -450,4 +457,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  .event-visual,
+  .event-note-teaser,
+  .event-note-expanded { transition: none; }
 }
