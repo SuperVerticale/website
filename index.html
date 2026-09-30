@@ -173,18 +173,6 @@
         </div>
       </section>
 
-      <!-- GRIND -->
-      <section class="grind">
-        <video autoplay muted loop playsinline preload="metadata" aria-hidden="true">
-          <source src="assets/wine_foot.mp4" type="video/mp4">
-        </video>
-
-        <div>
-          <div class="eyebrow">// The Grind</div>
-          <h2>Pure<br>Vertical<br>Grind.</h2>
-        </div>
-      </section>
-
       <!-- ROUTE -->
       <section class="route-section" id="route">
         <div class="eyebrow">// The Route</div>
@@ -225,30 +213,39 @@
           </div>
         </div>
 
+        <!-- EVENT DATA -->
+        <div class="data">
+          <dl class="data-primary" aria-label="Essential race facts"></dl>
+
+          <button class="data-toggle" type="button" aria-expanded="false" aria-controls="event-data-details" aria-label="Show more event data">
+            <span>More data</span>
+            <span class="data-toggle-indicator" aria-hidden="true">+</span>
+          </button>
+
+          <div class="data-details" id="event-data-details" aria-hidden="true" inert>
+            <div class="data-details-inner">
+              <dl class="data-grid">
+                <div class="data-row" data-primary data-primary-label="Date"><dt>Date</dt><dd>21.08.2027</dd></div>
+                <div class="data-row" data-primary data-primary-label="Location" data-primary-value="Petzen / Austria"><dt>Location</dt><dd>Petzen-Bergbahnen / Austria</dd></div>
+                <div class="data-row" data-primary data-primary-label="Distance"><dt>Distance</dt><dd>10.1 km</dd></div>
+                <div class="data-row" data-primary data-primary-label="Elevation Gain" data-primary-prefix="↑"><dt>Elevation Gain</dt><dd>1,074 m</dd></div>
+                <div class="data-row"><dt>Start</dt><dd>Petzenbahn Talstation</dd></div>
+                <div class="data-row"><dt>Coordinates</dt><dd>46°32′12″N 14°48′36″E</dd></div>
+              </dl>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <!-- EVENT DATA -->
-      <section class="data">
-        <div class="eyebrow">// Event Data</div>
+      <!-- GRIND -->
+      <section class="grind">
+        <video autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+          <source src="assets/wine_foot.mp4" type="video/mp4">
+        </video>
 
-        <dl class="data-primary" aria-label="Essential race facts"></dl>
-
-        <button class="data-toggle" type="button" aria-expanded="false" aria-controls="event-data-details" aria-label="Show more event data">
-          <span>More data</span>
-          <span class="data-toggle-indicator" aria-hidden="true">+</span>
-        </button>
-
-        <div class="data-details" id="event-data-details" aria-hidden="true" inert>
-          <div class="data-details-inner">
-            <dl class="data-grid">
-              <div class="data-row" data-primary data-primary-label="Date"><dt>Date</dt><dd>21.08.2027</dd></div>
-              <div class="data-row" data-primary data-primary-label="Location" data-primary-value="Petzen / Austria"><dt>Location</dt><dd>Petzen-Bergbahnen / Austria</dd></div>
-              <div class="data-row" data-primary data-primary-label="Distance"><dt>Distance</dt><dd>10.1 km</dd></div>
-              <div class="data-row" data-primary data-primary-label="Elevation Gain" data-primary-prefix="↑"><dt>Elevation Gain</dt><dd>1,074 m</dd></div>
-              <div class="data-row"><dt>Start</dt><dd>Petzenbahn Talstation</dd></div>
-              <div class="data-row"><dt>Coordinates</dt><dd>46°32′12″N 14°48′36″E</dd></div>
-            </dl>
-          </div>
+        <div>
+          <div class="eyebrow">// The Grind</div>
+          <h2>Pure<br>Vertical<br>Grind.</h2>
         </div>
       </section>
 
