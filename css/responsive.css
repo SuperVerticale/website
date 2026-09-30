@@ -90,34 +90,23 @@
     font-size: clamp(3.5rem, 5vw, 7rem);
   }
 
-  .stage-statement {
-    min-height: 85vh;
-    padding: 100px 7vw;
-  }
-
-  .stage-statement h2 {
-    font-size: clamp(7rem, 11vw, 14rem);
-  }
-
   .event-intro {
     padding: 130px 7vw 60px;
   }
 
-  .event-intro-grid {
-    grid-template-columns: 1.25fr .75fr;
-    align-items: end;
-    gap: 7vw;
+  .event-overlay {
+    padding: 28px;
   }
 
   .event-intro h2 {
-    font-size: clamp(6rem, 8.5vw, 11rem);
+    font-size: 5rem;
   }
 
   .event-intro-copy {
     font-size: 17px;
   }
 
-  .event-video {
+  .event-visual {
     height: 72vh;
   }
 

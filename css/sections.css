@@ -215,48 +215,6 @@
   color: var(--gray);
 }
 
-/* SECOND STATEMENT */
-
-.stage-statement {
-  position: relative;
-  min-height: 82svh;
-  padding: 80px 22px;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  isolation: isolate;
-}
-
-.stage-statement video {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -2;
-}
-
-.stage-statement::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background: rgba(0,0,0,.42);
-}
-
-.stage-statement h2 {
-  position: relative;
-  z-index: 2;
-  max-width: 1000px;
-  font-size: clamp(4rem, 15vw, 11rem);
-  line-height: .78;
-  letter-spacing: -.07em;
-  font-weight: 900;
-  text-transform: uppercase;
-}
-
-.stage-statement h2 span { color: var(--lime); }
-
 /* EVENT INTRO */
 
 .event-intro {
@@ -264,15 +222,42 @@
   background: var(--bg);
 }
 
+.event-visual {
+  position: relative;
+  height: 62svh;
+  min-height: 430px;
+  overflow: hidden;
+}
+
+.event-visual video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.event-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 22px;
+  color: var(--white);
+  font-family: var(--display);
+  text-shadow: 0 2px 12px rgba(0,0,0,.55);
+}
+
 .event-intro-grid {
-  display: grid;
-  gap: 40px;
-  margin-top: 30px;
+  max-width: 1000px;
+  margin-top: auto;
 }
 
 .event-intro h2 {
-  max-width: 1000px;
-  font-size: clamp(3.3rem, 11vw, 8.5rem);
+  max-width: 900px;
+  font-family: var(--display);
+  font-size: 2.5rem;
   line-height: .82;
   letter-spacing: -.06em;
   font-weight: 900;
@@ -285,23 +270,10 @@
 
 .event-intro-copy {
   max-width: 560px;
+  margin-top: 30px;
   color: var(--gray);
   font-size: 15px;
   line-height: 1.35;
-}
-
-.event-video {
-  position: relative;
-  height: 62svh;
-  min-height: 430px;
-  margin-top: 50px;
-  overflow: hidden;
-}
-
-.event-video video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 /* FACTS */
