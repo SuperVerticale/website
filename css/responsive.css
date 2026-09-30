@@ -362,7 +362,34 @@
   }
 
   .route-interactive svg {
-    width: 100%;
+    width: calc(100% + 24px);
+    max-width: none;
+    margin-left: -12px;
+  }
+
+  .route-interactive text {
+    font-size: 28px;
+  }
+
+  .route-interactive text[x="63"] {
+    font-size: 22px;
+  }
+
+  .route-interactive .section-label {
+    font-size: 30px;
+    letter-spacing: 1px;
+  }
+
+  .route-interactive .route-base {
+    stroke-width: 16px;
+  }
+
+  .route-interactive .route-segment {
+    stroke-width: 8px;
+  }
+
+  .route-interactive .profile-segment {
+    stroke-width: 4.5px;
   }
 
   .route-tooltip {
@@ -371,7 +398,12 @@
 
   .route-legend {
     gap: .75rem 1rem;
-    font-size: .68rem;
+    font-size: 12px;
+  }
+
+  .route-swatch {
+    width: 2rem;
+    height: .3rem;
   }
 }
 
