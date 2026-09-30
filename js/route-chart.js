@@ -16,6 +16,11 @@ export function initRouteChart() {
   const interactionLayer = document.querySelector('#interaction-layer');
   const routeTooltip = document.querySelector('#route-tooltip');
   const isMobile = window.matchMedia('(max-width: 768px)').matches;
+  const viewBoxHeight = isMobile ? 900 : 750;
+
+  if (isMobile) {
+    routeChart.setAttribute('viewBox', `0 0 1200 ${viewBoxHeight}`);
+  }
 
   const routeBox = {
     left: 90,
@@ -25,7 +30,7 @@ export function initRouteChart() {
   };
 
   const profileBox = isMobile
-    ? { left: 4, top: 431, right: 1196, bottom: 719 }
+    ? { left: 63.5, top: 610, right: 1136.5, bottom: 860 }
     : { left: 75, top: 450, right: 1125, bottom: 700 };
 
   const routeSvgPoint = (x, y) => `${x.toFixed(1)},${y.toFixed(1)}`;
@@ -115,7 +120,7 @@ export function initRouteChart() {
       return routePoints;
     }
 
-    const routeScale = 1.18;
+    const routeScale = 1.18 * 1.2;
     const enlargedPoints = routePoints.map((point) => ({
       x: centerX + (point.x - centerX) * routeScale,
       y: centerY + (point.y - centerY) * routeScale
@@ -125,7 +130,7 @@ export function initRouteChart() {
     const enlargedMinY = Math.min(...enlargedPoints.map((point) => point.y));
     const enlargedMaxY = Math.max(...enlargedPoints.map((point) => point.y));
     const offsetX = enlargedMinX < 12 ? 12 - enlargedMinX : enlargedMaxX > 1188 ? 1188 - enlargedMaxX : 0;
-    const offsetY = enlargedMinY < 12 ? 12 - enlargedMinY : enlargedMaxY > 738 ? 738 - enlargedMaxY : 0;
+    const offsetY = enlargedMinY < 12 ? 12 - enlargedMinY : enlargedMaxY > viewBoxHeight - 12 ? viewBoxHeight - 12 - enlargedMaxY : 0;
 
     return enlargedPoints.map((point) => ({
       x: point.x + offsetX,
@@ -450,7 +455,7 @@ export function initRouteChart() {
         profileLayer,
         'ELEVATION PROFILE & GRADIENT',
         75,
-        430,
+        isMobile ? 590 : 430,
         {
           class: 'section-label'
         }
@@ -458,6 +463,7 @@ export function initRouteChart() {
 
       const elevationLabelX = isMobile ? 80 : 63;
       const distanceLabelInset = isMobile ? 20 : 0;
+      const distanceLabelY = isMobile ? 880 : 730;
 
       [800, 1100, 1400, 1700].forEach((elevation) => {
         const y = profileY(elevation);
@@ -515,7 +521,7 @@ export function initRouteChart() {
         profileLayer,
         '0 km',
         profileBox.left + distanceLabelInset,
-        730,
+        distanceLabelY,
         { class: 'axis-label' }
       );
 
@@ -523,7 +529,7 @@ export function initRouteChart() {
         profileLayer,
         '5 km',
         600,
-        730,
+        distanceLabelY,
         {
           class: 'axis-label',
           'text-anchor': 'middle'
@@ -534,7 +540,7 @@ export function initRouteChart() {
         profileLayer,
         `${routeFormatDecimal(data.stats.distanceKm, 1)} km`,
         profileBox.right - distanceLabelInset,
-        730,
+        distanceLabelY,
         {
           class: 'axis-label',
           'text-anchor': 'end'
