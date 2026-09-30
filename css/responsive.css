@@ -255,7 +255,11 @@
   /* CONCEPT — MOBILE EDITORIAL */
 
   .concept {
-    padding: 20px 22px 80px;
+    padding: 20px 22px 32px;
+  }
+
+  .event-intro {
+    padding-top: 0;
   }
 
   .concept-head {
