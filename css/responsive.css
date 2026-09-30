@@ -149,6 +149,23 @@
     gap: 1.5rem;
   }
 
+  .race-modes {
+    padding: 130px 7vw 140px;
+  }
+
+  .race-modes-head {
+    margin: 30px 0 70px;
+  }
+
+  .race-mode-trigger {
+    padding: .75rem 0;
+  }
+
+  .race-mode-description {
+    padding-bottom: 1.5rem;
+    font-size: .9rem;
+  }
+
   .grind {
     min-height: 90vh;
     padding: 50px 7vw 60px;

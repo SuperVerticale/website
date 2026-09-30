@@ -4,6 +4,27 @@ import { initRouteChart } from './route-chart.js';
 initNavigation();
 initRouteChart();
 
+const raceModeTriggers = [...document.querySelectorAll('.race-mode-trigger')];
+
+raceModeTriggers.forEach((trigger) => {
+  trigger.addEventListener('click', () => {
+    const shouldExpand = trigger.getAttribute('aria-expanded') !== 'true';
+
+    raceModeTriggers.forEach((modeTrigger) => {
+      const expanded = modeTrigger === trigger && shouldExpand;
+      const mode = modeTrigger.closest('.race-mode');
+      const panel = document.getElementById(modeTrigger.getAttribute('aria-controls'));
+      const indicator = modeTrigger.querySelector('.race-mode-icon');
+
+      modeTrigger.setAttribute('aria-expanded', String(expanded));
+      indicator.textContent = expanded ? '−' : '+';
+      panel.setAttribute('aria-hidden', String(!expanded));
+      panel.inert = !expanded;
+      mode.classList.toggle('is-open', expanded);
+    });
+  });
+});
+
 const eventNoteToggle = document.querySelector('.event-note-toggle');
 
 if (eventNoteToggle) {
