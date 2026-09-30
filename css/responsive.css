@@ -74,23 +74,40 @@
   }
 
   .event-intro {
-    padding: 130px 7vw 60px;
-  }
-
-  .event-overlay {
-    padding: 28px;
-  }
-
-  .event-intro h2 {
-    font-size: 5rem;
-  }
-
-  .event-intro-copy {
-    font-size: 17px;
+    padding: 130px 0 60px;
   }
 
   .event-visual {
-    height: 72vh;
+    height: 90vh;
+  }
+
+  .event-visual::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(to top, rgba(0,0,0,.85), rgba(0,0,0,.05) 72%);
+  }
+
+  .event-overlay {
+    z-index: 2;
+    justify-content: flex-end;
+    padding: 50px 7vw 60px;
+  }
+
+  .event-intro-grid {
+    margin-top: 20px;
+  }
+
+  .event-intro h2 {
+    font-size: clamp(7rem, 13vw, 16rem);
+    line-height: .75;
+    letter-spacing: -.07em;
+  }
+
+  .event-intro-copy {
+    margin: 30px 7vw 0;
+    font-size: 17px;
   }
 
   /* ROUTE */
