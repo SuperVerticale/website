@@ -225,7 +225,46 @@
   }
 
   .event-intro {
-    padding-top: 0;
+    padding: 0 0 40px;
+  }
+
+  .event-visual {
+    height: 88svh;
+    min-height: 430px;
+  }
+
+  .event-visual video {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .event-visual::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(to top, rgba(0,0,0,.85), rgba(0,0,0,.05) 72%);
+  }
+
+  .event-overlay {
+    z-index: 2;
+    justify-content: flex-end;
+    padding: 30px 22px 34px;
+  }
+
+  .event-intro-grid {
+    margin-top: 20px;
+  }
+
+  .event-intro h2 {
+    font-size: clamp(4rem, 17vw, 11rem);
+    line-height: .75;
+    letter-spacing: -.07em;
+  }
+
+  .event-intro-copy {
+    margin: 30px 22px 0;
   }
 
   .concept-head {
