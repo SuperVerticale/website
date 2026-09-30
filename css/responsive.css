@@ -78,11 +78,13 @@
   }
 
   .event-visual {
-    height: max(110svh, 65vw, 780px);
+    height: auto;
+    min-height: max(110svh, 65vw, 780px);
   }
 
-  .event-visual.event-note-is-expanded {
-    height: max(110svh, 65vw, 780px);
+  .event-visual video {
+    position: absolute;
+    inset: 0;
   }
 
   .event-visual::after {
@@ -94,7 +96,10 @@
   }
 
   .event-overlay {
+    position: relative;
+    inset: auto;
     z-index: 2;
+    min-height: inherit;
     justify-content: space-between;
     padding: 100px 7vw 60px;
   }
