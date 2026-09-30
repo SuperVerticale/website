@@ -638,11 +638,7 @@ export function initRouteChart() {
       let activeTouchPointerId = null;
       let touchTooltipPinned = false;
 
-      const leave = (event) => {
-        if (event.pointerType === 'touch' || touchTooltipPinned) {
-          return;
-        }
-
+      const hideTooltip = () => {
         routeTooltip.style.opacity = '0';
 
         document
@@ -653,6 +649,23 @@ export function initRouteChart() {
             node.style.opacity = '0';
           });
       };
+
+      const leave = (event) => {
+        if (event.pointerType === 'touch' || touchTooltipPinned) {
+          return;
+        }
+
+        hideTooltip();
+      };
+
+      window.addEventListener('scroll', () => {
+        if (!touchTooltipPinned) {
+          return;
+        }
+
+        touchTooltipPinned = false;
+        hideTooltip();
+      }, { passive: true });
 
       routeInteraction.addEventListener(
         'pointerdown',
