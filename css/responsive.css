@@ -60,23 +60,6 @@
     height: 82vh;
   }
 
-  .concept {
-    padding: 20px 5vw 130px;
-  }
-
-  .concept-head {
-    padding-left: 0;
-  }
-
-  .concept-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .concept-card {
-    min-height: 52vh;
-    padding: 40px;
-  }
-
   .concept-icon {
     top: 40%;
     left: 50%;
@@ -110,23 +93,6 @@
     height: 72vh;
   }
 
-  .facts {
-    padding: 110px 7vw 130px;
-  }
-
-  .facts-big {
-    font-size: clamp(6rem, 12vw, 15rem);
-  }
-
-  .facts-sub {
-    font-size: clamp(4rem, 7vw, 9rem);
-  }
-
-  .facts-location {
-    max-width: 620px;
-    margin-top: 70px;
-  }
-
   /* ROUTE */
 
   .route-section {
@@ -137,7 +103,7 @@
     grid-template-columns: 1.25fr .75fr;
     align-items: end;
     gap: 7vw;
-    margin-top: 35px;
+    margin-top: 24px;
     margin-bottom: 70px;
   }
 
@@ -342,6 +308,14 @@
   .route-section {
     padding-left: 12px;
     padding-right: 12px;
+  }
+
+  .route-facts {
+    font-size: 10px;
+  }
+
+  .route-facts-row {
+    column-gap: .9rem;
   }
 
   .route-head {
