@@ -16,7 +16,7 @@ export function initRouteChart() {
   const interactionLayer = document.querySelector('#interaction-layer');
   const routeTooltip = document.querySelector('#route-tooltip');
   const isMobile = window.matchMedia('(max-width: 768px)').matches;
-  const viewBoxHeight = isMobile ? 900 : 750;
+  const viewBoxHeight = isMobile ? 970 : 750;
 
   if (isMobile) {
     routeChart.setAttribute('viewBox', `0 0 1200 ${viewBoxHeight}`);
@@ -30,7 +30,7 @@ export function initRouteChart() {
   };
 
   const profileBox = isMobile
-    ? { left: 63.5, top: 610, right: 1136.5, bottom: 860 }
+    ? { left: 63.5, top: 680, right: 1136.5, bottom: 930 }
     : { left: 75, top: 450, right: 1125, bottom: 700 };
 
   const routeSvgPoint = (x, y) => `${x.toFixed(1)},${y.toFixed(1)}`;
@@ -120,7 +120,7 @@ export function initRouteChart() {
       return routePoints;
     }
 
-    const routeScale = 1.18 * 1.2;
+    const routeScale = 1.18 * 1.2 * 1.15;
     const enlargedPoints = routePoints.map((point) => ({
       x: centerX + (point.x - centerX) * routeScale,
       y: centerY + (point.y - centerY) * routeScale
@@ -455,7 +455,7 @@ export function initRouteChart() {
         profileLayer,
         'ELEVATION PROFILE & GRADIENT',
         75,
-        isMobile ? 590 : 430,
+        isMobile ? 660 : 430,
         {
           class: 'section-label'
         }
@@ -463,7 +463,7 @@ export function initRouteChart() {
 
       const elevationLabelX = isMobile ? 80 : 63;
       const distanceLabelInset = isMobile ? 20 : 0;
-      const distanceLabelY = isMobile ? 880 : 730;
+      const distanceLabelY = isMobile ? 950 : 730;
 
       [800, 1100, 1400, 1700].forEach((elevation) => {
         const y = profileY(elevation);
@@ -642,7 +642,7 @@ export function initRouteChart() {
 
         const y =
           (event.clientY - rect.top) *
-          900 /
+          (isMobile ? viewBoxHeight : 900) /
           rect.height;
 
         let best = 0;
