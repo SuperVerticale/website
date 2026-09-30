@@ -368,20 +368,20 @@
   }
 
   .route-interactive text {
-    font-size: 28px;
+    font-size: 16px;
   }
 
   .route-interactive .axis-label {
-    font-size: 30px;
+    font-size: 16px;
   }
 
   .route-interactive .section-label {
-    font-size: 32px;
+    font-size: 16px;
     letter-spacing: 1px;
   }
 
   .route-interactive .route-endpoint-label {
-    font-size: 40px;
+    font-size: 18px;
   }
 
   .route-interactive .route-base {

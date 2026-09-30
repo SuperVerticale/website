@@ -15,6 +15,7 @@ export function initRouteChart() {
   const profileLayer = document.querySelector('#profile-layer');
   const interactionLayer = document.querySelector('#interaction-layer');
   const routeTooltip = document.querySelector('#route-tooltip');
+  const isMobile = window.matchMedia('(max-width: 768px)').matches;
 
   const routeBox = {
     left: 90,
@@ -23,12 +24,9 @@ export function initRouteChart() {
     height: 437.5
   };
 
-  const profileBox = {
-    left: 75,
-    top: 450,
-    right: 1125,
-    bottom: 700
-  };
+  const profileBox = isMobile
+    ? { left: 4, top: 431, right: 1196, bottom: 719 }
+    : { left: 75, top: 450, right: 1125, bottom: 700 };
 
   const routeSvgPoint = (x, y) => `${x.toFixed(1)},${y.toFixed(1)}`;
 
@@ -97,12 +95,12 @@ export function initRouteChart() {
 
     const centerX = routeBox.left + routeBox.width / 2;
     const centerY = routeBox.top + routeBox.height / 2;
-    const mobileStretch = window.matchMedia('(max-width: 768px)').matches ? 1.35 : 1;
+    const mobileStretch = isMobile ? 1.35 : 1;
     const maxOffset = Math.max(...rotated.map((p) => Math.abs(p.x * fitScale)));
     const maxAllowedOffset = routeBox.width / 2 - 12;
     const stretchFactor = Math.min(mobileStretch, maxAllowedOffset / maxOffset);
 
-    return rotated.map((p) => ({
+    const routePoints = rotated.map((p) => ({
       x: Math.max(
         routeBox.left + 12,
         Math.min(
@@ -111,6 +109,27 @@ export function initRouteChart() {
         )
       ),
       y: centerY + p.y * fitScale
+    }));
+
+    if (!isMobile) {
+      return routePoints;
+    }
+
+    const routeScale = 1.18;
+    const enlargedPoints = routePoints.map((point) => ({
+      x: centerX + (point.x - centerX) * routeScale,
+      y: centerY + (point.y - centerY) * routeScale
+    }));
+    const enlargedMinX = Math.min(...enlargedPoints.map((point) => point.x));
+    const enlargedMaxX = Math.max(...enlargedPoints.map((point) => point.x));
+    const enlargedMinY = Math.min(...enlargedPoints.map((point) => point.y));
+    const enlargedMaxY = Math.max(...enlargedPoints.map((point) => point.y));
+    const offsetX = enlargedMinX < 12 ? 12 - enlargedMinX : enlargedMaxX > 1188 ? 1188 - enlargedMaxX : 0;
+    const offsetY = enlargedMinY < 12 ? 12 - enlargedMinY : enlargedMaxY > 738 ? 738 - enlargedMaxY : 0;
+
+    return enlargedPoints.map((point) => ({
+      x: point.x + offsetX,
+      y: point.y + offsetY
     }));
   };
 
@@ -437,6 +456,9 @@ export function initRouteChart() {
         }
       );
 
+      const elevationLabelX = isMobile ? 80 : 63;
+      const distanceLabelInset = isMobile ? 20 : 0;
+
       [800, 1100, 1400, 1700].forEach((elevation) => {
         const y = profileY(elevation);
 
@@ -453,7 +475,7 @@ export function initRouteChart() {
         addRouteText(
           profileLayer,
           `${elevation} m`,
-          63,
+          elevationLabelX,
           y + 4,
           {
             class: 'axis-label',
@@ -492,7 +514,7 @@ export function initRouteChart() {
       addRouteText(
         profileLayer,
         '0 km',
-        profileBox.left,
+        profileBox.left + distanceLabelInset,
         730,
         { class: 'axis-label' }
       );
@@ -511,7 +533,7 @@ export function initRouteChart() {
       addRouteText(
         profileLayer,
         `${routeFormatDecimal(data.stats.distanceKm, 1)} km`,
-        profileBox.right,
+        profileBox.right - distanceLabelInset,
         730,
         {
           class: 'axis-label',
