@@ -74,11 +74,11 @@
   }
 
   .event-intro {
-    padding: 130px 0 60px;
+    padding: 0;
   }
 
   .event-visual {
-    height: 90vh;
+    height: max(110svh, 65vw, 780px);
   }
 
   .event-visual::after {
@@ -91,8 +91,8 @@
 
   .event-overlay {
     z-index: 2;
-    justify-content: flex-end;
-    padding: 50px 7vw 60px;
+    justify-content: space-between;
+    padding: 100px 7vw 60px;
   }
 
   .event-intro-grid {
@@ -106,8 +106,8 @@
   }
 
   .event-intro-copy {
-    margin: 30px 7vw 0;
-    font-size: 17px;
+    margin: 0 0 0 15%;
+    font-size: 12px;
   }
 
   /* ROUTE */
@@ -242,7 +242,7 @@
   }
 
   .event-intro {
-    padding: 0 0 40px;
+    padding: 0;
   }
 
   .event-visual {
@@ -266,8 +266,8 @@
 
   .event-overlay {
     z-index: 2;
-    justify-content: flex-end;
-    padding: 30px 22px 34px;
+    justify-content: space-between;
+    padding: max(84px, calc(env(safe-area-inset-top, 0px) + 84px)) 22px 34px;
   }
 
   .event-intro-grid {
@@ -281,7 +281,7 @@
   }
 
   .event-intro-copy {
-    margin: 30px 22px 0;
+    margin: 0 0 0 15%;
   }
 
   .concept-head {

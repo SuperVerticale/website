@@ -218,7 +218,7 @@
 /* EVENT INTRO */
 
 .event-intro {
-  padding: 110px 22px 40px;
+  padding: 0;
   background: var(--bg);
 }
 
@@ -239,7 +239,7 @@
 .event-overlay {
   position: absolute;
   inset: 0;
-  z-index: 1;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -251,7 +251,7 @@
 
 .event-intro-grid {
   max-width: 1000px;
-  margin-top: auto;
+  margin-top: 20px;
 }
 
 .event-intro h2 {
@@ -269,11 +269,14 @@
 }
 
 .event-intro-copy {
-  max-width: 560px;
-  margin-top: 30px;
-  color: var(--gray);
-  font-size: 15px;
-  line-height: 1.35;
+  width: 85%;
+  max-width: 32rem;
+  margin: 0 0 0 15%;
+  color: var(--white);
+  font-family: var(--mono);
+  font-size: 11px;
+  line-height: 1.5;
+  text-transform: uppercase;
 }
 
 /* ROUTE */
