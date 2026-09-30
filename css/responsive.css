@@ -365,6 +365,10 @@
     width: 100%;
   }
 
+  .route-tooltip {
+    max-width: min(14rem, calc(100vw - 16px));
+  }
+
   .route-legend {
     gap: .75rem 1rem;
     font-size: .68rem;

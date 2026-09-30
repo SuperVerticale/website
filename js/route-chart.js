@@ -214,6 +214,34 @@ export function initRouteChart() {
 
     routeTooltip.style.opacity = '1';
 
+    if (event.pointerType === 'touch') {
+      routeTooltip.style.transform = 'none';
+      const tooltipRect = routeTooltip.getBoundingClientRect();
+      const edgePadding = 8;
+      const touchGap = 25;
+      const maxLeft = window.innerWidth - tooltipRect.width - edgePadding;
+      const left = Math.max(
+        edgePadding,
+        Math.min(event.clientX - tooltipRect.width / 2, maxLeft)
+      );
+      let top = event.clientY - tooltipRect.height - touchGap;
+
+      if (top < edgePadding) {
+        top = event.clientY + touchGap;
+      }
+
+      top = Math.max(
+        edgePadding,
+        Math.min(top, window.innerHeight - tooltipRect.height - edgePadding)
+      );
+
+      routeTooltip.style.left = `${left}px`;
+      routeTooltip.style.top = `${top}px`;
+      return;
+    }
+
+    routeTooltip.style.transform = '';
+
     const left = Math.min(
       event.clientX + 12,
       window.innerWidth - routeTooltip.offsetWidth - 20
@@ -593,6 +621,10 @@ export function initRouteChart() {
       };
 
       const hover = (event, source) => {
+        if (event.pointerType !== 'touch') {
+          touchTooltipPinned = false;
+        }
+
         showRouteHover(
           nearestPoint(event, source),
           event,
@@ -603,7 +635,14 @@ export function initRouteChart() {
         );
       };
 
-      const leave = () => {
+      let activeTouchPointerId = null;
+      let touchTooltipPinned = false;
+
+      const leave = (event) => {
+        if (event.pointerType === 'touch' || touchTooltipPinned) {
+          return;
+        }
+
         routeTooltip.style.opacity = '0';
 
         document
@@ -618,6 +657,11 @@ export function initRouteChart() {
       routeInteraction.addEventListener(
         'pointerdown',
         (event) => {
+          if (event.pointerType === 'touch') {
+            activeTouchPointerId = event.pointerId;
+            touchTooltipPinned = false;
+          }
+
           event.preventDefault();
           routeInteraction.setPointerCapture?.(
             event.pointerId
@@ -629,13 +673,21 @@ export function initRouteChart() {
       routeInteraction.addEventListener(
         'pointermove',
         (event) => {
-          hover(event, 'route');
+          if (event.pointerType !== 'touch' || event.pointerId === activeTouchPointerId) {
+            hover(event, 'route');
+          }
         }
       );
 
       routeInteraction.addEventListener(
         'pointerup',
         (event) => {
+          if (event.pointerType === 'touch' && event.pointerId === activeTouchPointerId) {
+            hover(event, 'route');
+            touchTooltipPinned = true;
+            activeTouchPointerId = null;
+          }
+
           routeInteraction.releasePointerCapture?.(
             event.pointerId
           );
@@ -650,6 +702,11 @@ export function initRouteChart() {
       profileInteraction.addEventListener(
         'pointerdown',
         (event) => {
+          if (event.pointerType === 'touch') {
+            activeTouchPointerId = event.pointerId;
+            touchTooltipPinned = false;
+          }
+
           event.preventDefault();
           profileInteraction.setPointerCapture?.(
             event.pointerId
@@ -661,13 +718,21 @@ export function initRouteChart() {
       profileInteraction.addEventListener(
         'pointermove',
         (event) => {
-          hover(event, 'profile');
+          if (event.pointerType !== 'touch' || event.pointerId === activeTouchPointerId) {
+            hover(event, 'profile');
+          }
         }
       );
 
       profileInteraction.addEventListener(
         'pointerup',
         (event) => {
+          if (event.pointerType === 'touch' && event.pointerId === activeTouchPointerId) {
+            hover(event, 'profile');
+            touchTooltipPinned = true;
+            activeTouchPointerId = null;
+          }
+
           profileInteraction.releasePointerCapture?.(
             event.pointerId
           );
