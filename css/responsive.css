@@ -371,13 +371,17 @@
     font-size: 28px;
   }
 
-  .route-interactive text[x="63"] {
-    font-size: 22px;
+  .route-interactive .axis-label {
+    font-size: 30px;
   }
 
   .route-interactive .section-label {
-    font-size: 30px;
+    font-size: 32px;
     letter-spacing: 1px;
+  }
+
+  .route-interactive .route-endpoint-label {
+    font-size: 40px;
   }
 
   .route-interactive .route-base {
@@ -397,8 +401,15 @@
   }
 
   .route-legend {
-    gap: .75rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .75rem .5rem;
     font-size: 12px;
+  }
+
+  .route-legend span {
+    min-width: 0;
+    gap: .3rem;
   }
 
   .route-swatch {

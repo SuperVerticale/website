@@ -97,9 +97,19 @@ export function initRouteChart() {
 
     const centerX = routeBox.left + routeBox.width / 2;
     const centerY = routeBox.top + routeBox.height / 2;
+    const mobileStretch = window.matchMedia('(max-width: 768px)').matches ? 1.35 : 1;
+    const maxOffset = Math.max(...rotated.map((p) => Math.abs(p.x * fitScale)));
+    const maxAllowedOffset = routeBox.width / 2 - 12;
+    const stretchFactor = Math.min(mobileStretch, maxAllowedOffset / maxOffset);
 
     return rotated.map((p) => ({
-      x: centerX + p.x * fitScale,
+      x: Math.max(
+        routeBox.left + 12,
+        Math.min(
+          centerX + p.x * fitScale * stretchFactor,
+          routeBox.left + routeBox.width - 12
+        )
+      ),
       y: centerY + p.y * fitScale
     }));
   };
@@ -338,6 +348,7 @@ export function initRouteChart() {
         startLabel.x,
         startLabel.y,
         {
+          class: 'route-endpoint-label',
           fill: '#ccff00',
           'font-weight': '700',
           'text-anchor': 'middle'
@@ -350,6 +361,7 @@ export function initRouteChart() {
         finishLabel.x,
         finishLabel.y,
         {
+          class: 'route-endpoint-label',
           fill: '#e85d3f',
           'font-weight': '700',
           'text-anchor': 'start'
@@ -379,8 +391,7 @@ export function initRouteChart() {
       );
 
       const compass = routeEl('g', {
-        id: 'compass',
-        transform: 'rotate(513 1060 125)'
+        id: 'compass'
       });
 
       compass.appendChild(
@@ -445,6 +456,7 @@ export function initRouteChart() {
           63,
           y + 4,
           {
+            class: 'axis-label',
             'text-anchor': 'end'
           }
         );
@@ -481,7 +493,8 @@ export function initRouteChart() {
         profileLayer,
         '0 km',
         profileBox.left,
-        730
+        730,
+        { class: 'axis-label' }
       );
 
       addRouteText(
@@ -490,6 +503,7 @@ export function initRouteChart() {
         600,
         730,
         {
+          class: 'axis-label',
           'text-anchor': 'middle'
         }
       );
@@ -500,6 +514,7 @@ export function initRouteChart() {
         profileBox.right,
         730,
         {
+          class: 'axis-label',
           'text-anchor': 'end'
         }
       );
