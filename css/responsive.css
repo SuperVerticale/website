@@ -335,12 +335,16 @@
   }
 
   .concept-display {
-    gap: 14px;
+    gap: 10px;
   }
 
   .concept-display-icon {
-    width: min(30vw, 150px);
-    max-width: 150px;
+    width: min(25vw, 125px);
+    max-width: 125px;
+  }
+
+  .concept-display-arrow {
+    font-size: 20px;
   }
 
   .concept-display-title {
@@ -348,11 +352,15 @@
   }
 
   .concept-display-description {
-    max-width: 430px;
+    max-width: min(84vw, 340px);
   }
 
   .concept-selector-list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    width: 100%;
     justify-content: center;
+    gap: clamp(6px, 2vw, 12px);
     margin-top: 18px;
   }
 
