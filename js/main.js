@@ -84,22 +84,22 @@ if (eventData) {
 
 const conceptContentMap = {
   vertical: {
-    icon: 'assets/logos/icons/Vertical.png',
+    icon: 'assets/logos/icons/Icon_Vertical.svg',
     title: 'Vertical',
     description: 'Start from the bottom. Finish at the top. No shortcuts.'
   },
   experience: {
-    icon: 'assets/logos/icons/Experience.png',
+    icon: 'assets/logos/icons/Icon_Experience.svg',
     title: 'Experience',
     description: 'Where intense alpine sport meets music, food, culture and good people'
   },
   curated: {
-    icon: 'assets/logos/icons/Curated.png',
+    icon: 'assets/logos/icons/Icon_Curated.svg',
     title: 'Curated',
     description: 'Handpicked food & beverages, live music acts, panel talks, and exclusive brand activations throughout the day.'
   },
   community: {
-    icon: 'assets/logos/icons/Community.png',
+    icon: 'assets/logos/icons/Icon_Community.svg',
     title: 'Community',
     description: 'Come for the race. Stay for the people. The ultimate excuse to get together, sweat, and celebrate as one herd.'
   }
@@ -116,22 +116,22 @@ if (conceptHorizontal) {
   const conceptHorizontalDescription = conceptHorizontal.querySelector('.concept-horizontal-display-description');
   const conceptHorizontalContent = {
     vertical: {
-      src: 'assets/logos/icons/Vertical.png',
+      src: 'assets/logos/icons/Icon_Vertical.svg',
       title: 'Vertical',
       description: 'Start from the bottom. Finish at the top. No shortcuts.'
     },
     experience: {
-      src: 'assets/logos/icons/Experience.png',
+      src: 'assets/logos/icons/Icon_Experience.svg',
       title: 'Experience',
       description: 'Where intense alpine sport meets music, food, culture and good people'
     },
     curated: {
-      src: 'assets/logos/icons/Curated.png',
+      src: 'assets/logos/icons/Icon_Curated.svg',
       title: 'Curated',
       description: 'Handpicked food & beverages, live music acts, panel talks, and exclusive brand activations throughout the day.'
     },
     community: {
-      src: 'assets/logos/icons/Community.png',
+      src: 'assets/logos/icons/Icon_Community.svg',
       title: 'Community',
       description: 'Come for the race. Stay for the people. The ultimate excuse to get together, sweat, and celebrate as one herd.'
     }
