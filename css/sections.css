@@ -248,7 +248,7 @@
 /* BIG STATEMENT */
 
 .statement {
-  min-height: 88svh;
+  min-height: 70svh;
   padding: 90px 22px;
   display: flex;
   align-items: center;
@@ -305,7 +305,7 @@
 .concept {
   position: relative;
   overflow: hidden;
-  padding: 20px 12px 110px;
+  padding: 20px 12px 80px;
   background: transparent;
 }
 
@@ -872,7 +872,7 @@ body[data-concept-variant="horizontal"] .concept-horizontal {
 /* ROUTE */
 
 .route-section {
-  padding: 100px 22px 110px;
+  padding: 82px 22px 90px;
   background: var(--bg);
 }
 
@@ -1055,7 +1055,7 @@ body[data-concept-variant="horizontal"] .concept-horizontal {
 /* RACE MODES */
 
 .race-modes {
-  padding: 100px 22px 110px;
+  padding: 76px 22px 88px;
   background: var(--bg);
 }
 
@@ -1316,7 +1316,7 @@ body[data-concept-variant="horizontal"] .concept-horizontal {
 /* CULTURE */
 
 .culture {
-  padding: 100px 0 0;
+  padding: 76px 0 0;
   background: var(--bg);
 }
 
@@ -1352,7 +1352,7 @@ body[data-concept-variant="horizontal"] .concept-horizontal {
 .culture-gallery .tall { height: 58svh; }
 
 .culture-note {
-  padding: 18px 22px 100px;
+  padding: 18px 22px 85px;
   color: var(--gray);
   font-family: var(--mono);
   font-size: 9px;

@@ -44,7 +44,7 @@
   .hero-sub { font-size: 18px; }
 
   .statement {
-    min-height: 82vh;
+    min-height: 66vh;
     padding: 100px 7vw;
   }
 
@@ -126,7 +126,7 @@
   /* ROUTE */
 
   .route-section {
-    padding: 130px 7vw 20px;
+    padding: 100px 7vw 20px;
   }
 
   .route-head {
@@ -155,7 +155,7 @@
   }
 
   .race-modes {
-    padding: 130px 7vw 140px;
+    padding: 102px 7vw 108px;
   }
 
   .race-modes-head {
@@ -212,7 +212,7 @@
   }
 
   .culture {
-    padding-top: 130px;
+    padding-top: 90px;
   }
 
   .culture-head {
@@ -238,7 +238,7 @@
   }
 
   .culture-note {
-    padding: 25px 7vw 120px;
+    padding: 25px 7vw 100px;
   }
 
   .summit {
@@ -285,7 +285,7 @@
   /* CONCEPT — MOBILE EDITORIAL */
 
   .concept {
-    padding: 20px 22px 32px;
+    padding: 20px 22px 28px;
   }
 
   .event-intro {
@@ -374,7 +374,8 @@
   .route-section {
     padding-left: 12px;
     padding-right: 12px;
-    padding-bottom: 15px;
+    padding-top: 82px;
+    padding-bottom: 8px;
   }
 
   .data {
@@ -410,7 +411,7 @@
   }
 
   .culture {
-    padding-top: 30px;
+    padding-top: 24px;
   }
 
   .route-facts {
