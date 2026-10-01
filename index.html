@@ -107,40 +107,32 @@
       <section class="concept" id="concept">
         <div class="concept-head">
           <div class="eyebrow">// Concept</div>
+          <h2 class="concept-heading">What makes<br>the day?</h2>
         </div>
 
-        <div class="concept-grid">
-          <article class="concept-card">
-            <img class="concept-icon" src="assets/logos/icons/Vertical.png" alt="" aria-hidden="true">
-            <div>
-              <h3>Vertical</h3>
-              <p>Start from the bottom. Finish at the top. No shortcuts.</p>
+        <div class="concept-shell">
+          <div class="concept-wheel-stage" aria-label="Concept selector" role="application">
+            <div class="concept-wheel-guide" aria-hidden="true"></div>
+            <div class="concept-wheel-track" aria-live="off">
+              <button class="concept-wheel-item is-active" type="button" data-concept="vertical" aria-label="Vertical concept" aria-selected="true" style="--angle: 0deg;">
+                <img class="concept-wheel-icon" src="assets/logos/icons/Vertical.png" alt="" aria-hidden="true">
+              </button>
+              <button class="concept-wheel-item" type="button" data-concept="experience" aria-label="Experience concept" aria-selected="false" style="--angle: 90deg;">
+                <img class="concept-wheel-icon" src="assets/logos/icons/Experience.png" alt="" aria-hidden="true">
+              </button>
+              <button class="concept-wheel-item" type="button" data-concept="curated" aria-label="Curated concept" aria-selected="false" style="--angle: 180deg;">
+                <img class="concept-wheel-icon" src="assets/logos/icons/Curated.png" alt="" aria-hidden="true">
+              </button>
+              <button class="concept-wheel-item" type="button" data-concept="community" aria-label="Community concept" aria-selected="false" style="--angle: 270deg;">
+                <img class="concept-wheel-icon" src="assets/logos/icons/Community.png" alt="" aria-hidden="true">
+              </button>
             </div>
-          </article>
+          </div>
 
-          <article class="concept-card">
-            <img class="concept-icon" src="assets/logos/icons/Experience.png" alt="" aria-hidden="true">
-            <div>
-              <h3>Experience</h3>
-              <p>Where intense alpine sport meets music, food, culture and good people</p>
-            </div>
-          </article>
-
-          <article class="concept-card">
-            <img class="concept-icon" src="assets/logos/icons/Curated.png" alt="" aria-hidden="true">
-            <div>
-              <h3>Curated</h3>
-              <p>Handpicked food & beverages, live music acts, panel talks, and exclusive brand activations throughout the day.</p>
-            </div>
-          </article>
-
-          <article class="concept-card">
-            <img class="concept-icon" src="assets/logos/icons/Community.png" alt="" aria-hidden="true">
-            <div>
-              <h3>Community</h3>
-              <p>Come for the race. Stay for the people. The ultimate excuse to get together, sweat, and celebrate as one herd.</p>
-            </div>
-          </article>
+          <div class="concept-content" aria-live="polite" aria-atomic="true">
+            <h3 class="concept-title">Vertical</h3>
+            <p class="concept-description">Start from the bottom. Finish at the top. No shortcuts.</p>
+          </div>
         </div>
       </section>
 
