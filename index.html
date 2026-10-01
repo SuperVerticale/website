@@ -26,9 +26,10 @@
       </a>
 
       <nav class="nav" aria-label="Main navigation">
+        <a href="#motivation">Motivation</a>
+        <a href="#race-modes">Race Modes</a>
         <a href="#concept">Concept</a>
-        <a href="#event">Event</a>
-        <a href="#culture">Culture</a>
+        <a href="#route">Route</a>
       </nav>
 
       <button class="header-menu" type="button" aria-label="Open menu" aria-expanded="false">
@@ -39,14 +40,15 @@
     <!-- MOBILE MENU -->
     <div class="mobile-menu" id="mobile-menu">
       <nav aria-label="Mobile navigation">
+        <a href="#motivation">Motivation</a>
+        <a href="#race-modes">Race Modes</a>
         <a href="#concept">Concept</a>
-        <a href="#event">Event</a>
-        <a href="#culture">Culture</a>
+        <a href="#route">Route</a>
         <a class="menu-cta" href="https://luma.com/i/ApF9Z4wEPd" target="_blank" rel="noopener noreferrer">Enter the Run</a>
       </nav>
     </div>
 
-    <main id="top">
+    <main id="top" class="production-page">
 
       <!-- HERO -->
       <section class="hero">
@@ -179,7 +181,7 @@
       </section>
 
       <!-- BIG STATEMENT -->
-      <section class="statement">
+      <section class="statement" id="motivation">
         <div>
           <div class="eyebrow">// Motivation</div>
           <h2>
@@ -190,6 +192,7 @@
       </section>
 
       <!-- MOVEMENT -->
+      <template id="movement-section-template">
       <section class="movement">
         <div class="movement-frame">
           <video autoplay muted loop playsinline preload="metadata">
@@ -203,12 +206,12 @@
           </div>
         </div>
       </section>
+      </template>
 
       <!-- CONCEPT -->
       <section class="concept" id="concept">
         <div class="concept-head">
           <div class="eyebrow">// Concept</div>
-          <h2 class="concept-heading">What makes<br>the day?</h2>
         </div>
 
         <div class="concept-selector" aria-live="polite" aria-atomic="true">
@@ -280,6 +283,7 @@
       </section>
 
       <!-- EVENT -->
+      <template id="event-section-template">
       <section class="event-intro" id="event">
         <div class="event-visual">
           <video autoplay muted loop playsinline preload="metadata" aria-hidden="true">
@@ -308,6 +312,7 @@
           </div>
         </div>
       </section>
+      </template>
 
       <!-- ROUTE -->
       <section class="route-section" id="route">
@@ -328,10 +333,6 @@
             Start at the <span>bottom.</span><br>
             Finish at the <span>top.</span>
           </h2>
-
-          <p class="route-copy">
-            Explore the route and elevation profile by moving across the course.
-          </p>
         </div>
 
         <div class="route-interactive">
@@ -379,7 +380,7 @@
           <div class="eyebrow">// RACE MODES</div>
 
           <div class="race-modes-head">
-            <h2>ONE RACE.<br>MULTIPLE WAYS<br>TO COMPETE.</h2>
+            <h2>ONE RACE.<br><span>MULTIPLE</span> <span>WAYS</span><br>TO <span>COMPETE.</span></h2>
           </div>
 
           <div class="race-modes-list">
@@ -458,7 +459,7 @@
 
         <div>
           <div class="eyebrow">// The Grind</div>
-          <h2>Pure<br>Vertical<br>Grind.</h2>
+          <h2>Pure<br><span>Vertical</span><br>Grind.</h2>
         </div>
       </section>
 
@@ -506,7 +507,7 @@
         <div>
           <div class="eyebrow">// Summit</div>
 
-          <h2>You made<br>it up.<br>Now stay.</h2>
+          <h2><span>You</span> made<br>it up.<br>Now <span>stay.</span></h2>
 
           <p class="summit-copy">
             Handpicked brands, drinks, good food, music and people.

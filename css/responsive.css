@@ -52,6 +52,10 @@
     font-size: clamp(6rem, 10vw, 12rem);
   }
 
+  .concept-head {
+    padding-left: calc(7vw - 12px);
+  }
+
   .movement {
     padding: 0 5vw 120px;
   }
@@ -125,15 +129,15 @@
   }
 
   .route-head {
-    grid-template-columns: 1.25fr .75fr;
-    align-items: end;
+    grid-template-columns: 1fr;
     gap: 7vw;
     margin-top: 24px;
     margin-bottom: 70px;
   }
 
   .route-head h2 {
-    font-size: clamp(6rem, 8.5vw, 11rem);
+    max-width: none;
+    font-size: clamp(4rem, 8.5vw, 11rem);
   }
 
   .route-copy {
