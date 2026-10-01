@@ -303,8 +303,39 @@
 /* CONCEPT */
 
 .concept {
+  position: relative;
+  overflow: hidden;
   padding: 20px 12px 110px;
-  background: var(--bg);
+  background: transparent;
+}
+
+.concept::before,
+.concept::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.concept::before {
+  z-index: 0;
+  background-image: url("../assets/pics/petzen_web_optimized.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.concept::after {
+  z-index: 1;
+  background: linear-gradient(
+    to bottom,
+    rgba(52, 40, 40, .72),
+    rgba(52, 40, 40, .58)
+  );
+}
+
+.concept > * {
+  position: relative;
+  z-index: 2;
 }
 
 .concept-head {
@@ -629,6 +660,10 @@ body[data-concept-variant="horizontal"] .concept-horizontal {
 @media (max-width: 768px) {
   .concept {
     padding: 20px 22px 40px;
+  }
+
+  .concept::before {
+    background-position: center center;
   }
 
   .concept-head {
