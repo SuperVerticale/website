@@ -103,6 +103,132 @@
   letter-spacing: 0;
 }
 
+/* PARTNERS */
+
+.partners {
+  min-width: 0;
+  padding: 24px 22px 30px;
+  overflow: hidden;
+}
+
+.partners-label {
+  max-width: 1240px;
+  margin: 0 auto 14px;
+  color: var(--gray);
+  font-family: var(--mono);
+  font-size: 8px;
+  line-height: 1;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  opacity: .62;
+}
+
+.partners-list {
+  width: 100%;
+  overflow: hidden;
+}
+
+.partners-track {
+  display: flex;
+  width: max-content;
+  animation: partners-marquee 36s linear infinite;
+  will-change: transform;
+}
+
+.partners-group {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(12px, 2vw, 28px);
+  width: max(100vw, 1240px);
+  padding: 0 clamp(56px, 6vw, 88px) 0 22px;
+}
+
+.partner-logo {
+  display: flex;
+  flex: 1 1 0;
+  min-width: 0;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray);
+  font-family: var(--mono);
+  opacity: .66;
+}
+
+.partner-logo svg {
+  display: block;
+  width: 100%;
+  max-width: 172px;
+  height: 46px;
+  overflow: visible;
+}
+
+.partner-logo text {
+  fill: currentColor;
+  font-family: inherit;
+}
+
+@keyframes partners-marquee {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-50%, 0, 0); }
+}
+
+@media (max-width: 768px) {
+  .partners {
+    padding: 22px 22px 26px;
+  }
+
+  .partners-group {
+    gap: 30px;
+    width: max-content;
+    min-width: 100vw;
+    padding-right: 56px;
+  }
+
+  .partner-logo {
+    flex: 0 0 auto;
+  }
+
+  .partner-logo svg {
+    width: auto;
+    max-width: none;
+    height: 38px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .partners-track {
+    width: 100%;
+    animation: none;
+    transform: none;
+    will-change: auto;
+  }
+
+  .partners-group[aria-hidden="true"] {
+    display: none;
+  }
+
+  .partners-group {
+    width: 100%;
+    min-width: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    padding: 0;
+  }
+
+  .partner-logo {
+    flex: 1 1 120px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .partners-track {
+    animation-duration: 40s;
+  }
+}
+
 /* BIG STATEMENT */
 
 .statement {
