@@ -103,6 +103,76 @@ const conceptContentMap = {
 
 const conceptWheelStage = document.querySelector('.concept-wheel-stage');
 
+const conceptHorizontal = document.querySelector('.concept-horizontal');
+
+if (conceptHorizontal) {
+  const conceptHorizontalButtons = [...conceptHorizontal.querySelectorAll('.concept-horizontal-nav-item')];
+  const conceptHorizontalIcon = conceptHorizontal.querySelector('.concept-horizontal-display-icon img');
+  const conceptHorizontalTitle = conceptHorizontal.querySelector('.concept-horizontal-display-title');
+  const conceptHorizontalDescription = conceptHorizontal.querySelector('.concept-horizontal-display-description');
+  const conceptHorizontalContent = {
+    vertical: {
+      src: 'assets/logos/icons/Vertical.png',
+      title: 'Vertical',
+      description: 'Start from the bottom. Finish at the top. No shortcuts.'
+    },
+    experience: {
+      src: 'assets/logos/icons/Experience.png',
+      title: 'Experience',
+      description: 'Where intense alpine sport meets music, food, culture and good people'
+    },
+    curated: {
+      src: 'assets/logos/icons/Curated.png',
+      title: 'Curated',
+      description: 'Handpicked food & beverages, live music acts, panel talks, and exclusive brand activations throughout the day.'
+    },
+    community: {
+      src: 'assets/logos/icons/Community.png',
+      title: 'Community',
+      description: 'Come for the race. Stay for the people. The ultimate excuse to get together, sweat, and celebrate as one herd.'
+    }
+  };
+
+  const setHorizontalConcept = (key) => {
+    const content = conceptHorizontalContent[key];
+
+    if (!content) return;
+
+    conceptHorizontalIcon.src = content.src;
+    conceptHorizontalTitle.textContent = content.title;
+    conceptHorizontalDescription.textContent = content.description;
+
+    conceptHorizontalButtons.forEach((button) => {
+      const isActive = button.dataset.concept === key;
+      button.classList.toggle('is-active', isActive);
+      button.setAttribute('aria-selected', String(isActive));
+    });
+  };
+
+  conceptHorizontalButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      setHorizontalConcept(button.dataset.concept);
+    });
+
+    button.addEventListener('keydown', (event) => {
+      const currentIndex = conceptHorizontalButtons.findIndex((item) => item.classList.contains('is-active'));
+      const currentKey = conceptHorizontalButtons[currentIndex]?.dataset.concept;
+      const direction = event.key === 'ArrowRight' ? 1 : event.key === 'ArrowLeft' ? -1 : 0;
+
+      if (!direction) {
+        return;
+      }
+
+      event.preventDefault();
+      const nextIndex = (currentIndex + direction + conceptHorizontalButtons.length) % conceptHorizontalButtons.length;
+      setHorizontalConcept(conceptHorizontalButtons[nextIndex].dataset.concept);
+      conceptHorizontalButtons[nextIndex].focus();
+    });
+  });
+
+  setHorizontalConcept('vertical');
+}
+
 if (conceptWheelStage) {
   const conceptWheelTrack = conceptWheelStage.querySelector('.concept-wheel-track');
   const conceptButtons = [...conceptWheelStage.querySelectorAll('.concept-wheel-item')];
