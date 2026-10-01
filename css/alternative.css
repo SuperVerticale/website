@@ -347,12 +347,12 @@ body {
   border-color: rgba(24, 53, 47, .25);
 }
 
-.grind {
+.work {
   min-height: 82svh;
   padding: 9vw 8vw;
 }
 
-.grind h2 {
+.work h2 {
   font-size: 9rem;
   line-height: .85;
   letter-spacing: 0;
@@ -610,7 +610,7 @@ body {
     padding: 2rem 20px;
   }
 
-  .grind {
+  .work {
     min-height: 76svh;
     padding: 80px 24px;
   }

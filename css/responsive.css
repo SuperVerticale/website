@@ -170,12 +170,12 @@
     font-size: .9rem;
   }
 
-  .grind {
+  .work {
     min-height: 90vh;
     padding: 50px 7vw 60px;
   }
 
-  .grind h2 {
+  .work h2 {
     font-size: clamp(7rem, 13vw, 16rem);
   }
 

@@ -113,7 +113,7 @@
 .production-page > .hero { order: 1; }
 .production-page > .partners { order: 2; }
 .production-page > .statement { order: 3; }
-.production-page > .grind { order: 4; }
+.production-page > .work { order: 4; }
 .production-page > .race-modes { order: 5; }
 .production-page > .concept { order: 6; }
 .production-page > .route-section { order: 7; }
@@ -1125,9 +1125,9 @@ body[data-concept-variant="horizontal"] .concept-horizontal {
   }
 }
 
-/* GRIND */
+/* WORK */
 
-.grind {
+.work {
   min-height: 88svh;
   position: relative;
   display: flex;
@@ -1137,7 +1137,7 @@ body[data-concept-variant="horizontal"] .concept-horizontal {
   isolation: isolate;
 }
 
-.grind video {
+.work video {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -1146,7 +1146,7 @@ body[data-concept-variant="horizontal"] .concept-horizontal {
   z-index: -2;
 }
 
-.grind::after {
+.work::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -1154,7 +1154,7 @@ body[data-concept-variant="horizontal"] .concept-horizontal {
   background: linear-gradient(to top, rgba(0,0,0,.85), rgba(0,0,0,.05) 72%);
 }
 
-.grind h2 {
+.work h2 {
   margin-top: 20px;
   color: var(--white);
   font-size: clamp(4rem, 17vw, 11rem);
@@ -1164,7 +1164,7 @@ body[data-concept-variant="horizontal"] .concept-horizontal {
   text-transform: uppercase;
 }
 
-.grind h2 span { color: var(--lime); }
+.work h2 span { color: var(--lime); }
 
 /* DATA */
 
