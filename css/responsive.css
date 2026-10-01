@@ -334,32 +334,26 @@
     padding: 0 0 26px;
   }
 
-  .concept-shell {
-    grid-template-columns: 1fr;
-    gap: 20px;
+  .concept-display {
+    gap: 14px;
   }
 
-  .concept-wheel-stage {
-    width: min(78vw, 360px);
+  .concept-display-icon {
+    width: min(30vw, 150px);
+    max-width: 150px;
   }
 
-  .concept-wheel-item {
-    --wheel-radius: clamp(72px, 30vw, 134px);
+  .concept-display-title {
+    font-size: clamp(2.3rem, 8vw, 4rem);
   }
 
-  .concept-content {
-    min-height: 0;
-    align-items: center;
-    text-align: center;
-  }
-
-  .concept-title {
-    font-size: clamp(2.3rem, 10vw, 4rem);
-  }
-
-  .concept-description {
-    margin-top: 12px;
+  .concept-display-description {
     max-width: 430px;
+  }
+
+  .concept-selector-list {
+    justify-content: flex-start;
+    margin-top: 18px;
   }
 
   /* ROUTE */

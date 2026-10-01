@@ -110,28 +110,35 @@
           <h2 class="concept-heading">What makes<br>the day?</h2>
         </div>
 
-        <div class="concept-shell">
-          <div class="concept-wheel-stage" aria-label="Concept selector" role="application">
-            <div class="concept-wheel-guide" aria-hidden="true"></div>
-            <div class="concept-wheel-track" aria-live="off">
-              <button class="concept-wheel-item is-active" type="button" data-concept="vertical" aria-label="Vertical concept" aria-selected="true" style="--angle: 0deg;">
-                <img class="concept-wheel-icon" src="assets/logos/icons/Vertical.png" alt="" aria-hidden="true">
-              </button>
-              <button class="concept-wheel-item" type="button" data-concept="experience" aria-label="Experience concept" aria-selected="false" style="--angle: 90deg;">
-                <img class="concept-wheel-icon" src="assets/logos/icons/Experience.png" alt="" aria-hidden="true">
-              </button>
-              <button class="concept-wheel-item" type="button" data-concept="curated" aria-label="Curated concept" aria-selected="false" style="--angle: 180deg;">
-                <img class="concept-wheel-icon" src="assets/logos/icons/Curated.png" alt="" aria-hidden="true">
-              </button>
-              <button class="concept-wheel-item" type="button" data-concept="community" aria-label="Community concept" aria-selected="false" style="--angle: 270deg;">
-                <img class="concept-wheel-icon" src="assets/logos/icons/Community.png" alt="" aria-hidden="true">
-              </button>
+        <div class="concept-selector" aria-live="polite" aria-atomic="true">
+          <div class="concept-display">
+            <div class="concept-display-icon">
+              <img src="assets/logos/icons/Vertical.png" alt="" aria-hidden="true">
+            </div>
+
+            <div class="concept-display-copy">
+              <h3 class="concept-display-title">Vertical</h3>
+              <p class="concept-display-description">Start from the bottom. Finish at the top. No shortcuts.</p>
             </div>
           </div>
 
-          <div class="concept-content" aria-live="polite" aria-atomic="true">
-            <h3 class="concept-title">Vertical</h3>
-            <p class="concept-description">Start from the bottom. Finish at the top. No shortcuts.</p>
+          <div class="concept-selector-list" role="tablist" aria-label="Select concept">
+            <button class="concept-selector-item is-active" type="button" data-concept="vertical" aria-label="Vertical concept" aria-selected="true" role="tab" aria-controls="concept-display-panel">
+              <img src="assets/logos/icons/Vertical.png" alt="" aria-hidden="true">
+              <span>Vertical</span>
+            </button>
+            <button class="concept-selector-item" type="button" data-concept="experience" aria-label="Experience concept" aria-selected="false" role="tab" aria-controls="concept-display-panel">
+              <img src="assets/logos/icons/Experience.png" alt="" aria-hidden="true">
+              <span>Experience</span>
+            </button>
+            <button class="concept-selector-item" type="button" data-concept="curated" aria-label="Curated concept" aria-selected="false" role="tab" aria-controls="concept-display-panel">
+              <img src="assets/logos/icons/Curated.png" alt="" aria-hidden="true">
+              <span>Curated</span>
+            </button>
+            <button class="concept-selector-item" type="button" data-concept="community" aria-label="Community concept" aria-selected="false" role="tab" aria-controls="concept-display-panel">
+              <img src="assets/logos/icons/Community.png" alt="" aria-hidden="true">
+              <span>Community</span>
+            </button>
           </div>
         </div>
 
