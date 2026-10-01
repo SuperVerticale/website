@@ -1144,6 +1144,12 @@ body[data-concept-variant="horizontal"] .concept-horizontal {
   line-height: 1.55;
 }
 
+.race-mode-lead {
+  display: block;
+  color: var(--white);
+  font-weight: 700;
+}
+
 .race-mode.is-open .race-mode-name {
   color: var(--lime);
 }
