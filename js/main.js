@@ -181,12 +181,24 @@ if (conceptSelector) {
   const displayTitle = conceptSelector.querySelector('.concept-display-title');
   const displayDescription = conceptSelector.querySelector('.concept-display-description');
   const selectorItems = [...conceptSelector.querySelectorAll('.concept-selector-item')];
+  const conceptKeys = selectorItems.map((item) => item.dataset.concept);
+  const previousButton = conceptSelector.querySelector('[aria-label="Previous concept"]');
+  const nextButton = conceptSelector.querySelector('[aria-label="Next concept"]');
+  const activeIcon = conceptSelector.querySelector('.concept-display-icon');
+  let activeConceptKey = 'vertical';
+
+  const moveConcept = (direction) => {
+    const currentIndex = conceptKeys.indexOf(activeConceptKey);
+    const nextIndex = Math.max(0, Math.min(conceptKeys.length - 1, currentIndex + direction));
+    setActiveConcept(conceptKeys[nextIndex]);
+  };
 
   const setActiveConcept = (key) => {
     const content = conceptContentMap[key];
 
     if (!content) return;
 
+    activeConceptKey = key;
     display.classList.add('is-changing');
     window.setTimeout(() => {
       displayIcon.src = content.icon;
@@ -205,7 +217,7 @@ if (conceptSelector) {
     });
   };
 
-  selectorItems.forEach((item, index) => {
+  selectorItems.forEach((item) => {
     item.addEventListener('click', () => {
       setActiveConcept(item.dataset.concept);
     });
@@ -218,10 +230,37 @@ if (conceptSelector) {
       }
 
       event.preventDefault();
-      const nextIndex = (index + direction + selectorItems.length) % selectorItems.length;
+      const currentIndex = conceptKeys.indexOf(activeConceptKey);
+      const nextIndex = Math.max(0, Math.min(conceptKeys.length - 1, currentIndex + direction));
       selectorItems[nextIndex].focus();
       setActiveConcept(selectorItems[nextIndex].dataset.concept);
     });
+  });
+
+  previousButton.addEventListener('click', () => moveConcept(-1));
+  nextButton.addEventListener('click', () => moveConcept(1));
+
+  let touchStart = null;
+
+  activeIcon.addEventListener('pointerdown', (event) => {
+    if (event.pointerType !== 'touch') return;
+    touchStart = { x: event.clientX, y: event.clientY };
+  });
+
+  activeIcon.addEventListener('pointerup', (event) => {
+    if (event.pointerType !== 'touch' || !touchStart) return;
+
+    const horizontalDistance = event.clientX - touchStart.x;
+    const verticalDistance = event.clientY - touchStart.y;
+    touchStart = null;
+
+    if (Math.abs(horizontalDistance) < 50 || Math.abs(horizontalDistance) <= Math.abs(verticalDistance)) return;
+
+    moveConcept(horizontalDistance < 0 ? 1 : -1);
+  });
+
+  activeIcon.addEventListener('pointercancel', () => {
+    touchStart = null;
   });
 
   setActiveConcept('vertical');

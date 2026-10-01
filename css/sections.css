@@ -194,6 +194,30 @@
   transition: opacity .24s ease, transform .24s ease;
 }
 
+.concept-display-icon-row {
+  display: grid;
+  grid-template-columns: 24px auto 24px;
+  align-items: center;
+  column-gap: clamp(12px, 4vw, 24px);
+}
+
+.concept-display-arrow {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--gray);
+  font: inherit;
+  font-size: 20px;
+  line-height: 1;
+  opacity: .42;
+  cursor: pointer;
+}
+
+.concept-display-arrow:focus-visible {
+  outline: 1px solid var(--lime);
+  outline-offset: 5px;
+}
+
 .concept-display.is-changing {
   opacity: .35;
   transform: translateY(8px);
@@ -205,6 +229,7 @@
   aspect-ratio: 1;
   display: grid;
   place-items: center;
+  touch-action: pan-y;
 }
 
 .concept-display-icon img {
@@ -485,7 +510,7 @@ body[data-concept-variant="horizontal"] .concept-horizontal {
   }
 
   .concept-selector-list {
-    justify-content: flex-start;
+    justify-content: center;
     margin-top: 18px;
   }
 
