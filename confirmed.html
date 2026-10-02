@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#171512">
+  <title>Confirmed | Super Verticale</title>
+  <link rel="stylesheet" href="/css/mystery.css">
+  <style>
+    .confirmation-title {
+      margin: 30px 0 0;
+      color: var(--mystery-paper);
+      font-size: clamp(26px, 8vw, 36px);
+      font-weight: 400;
+      line-height: 1.1;
+    }
+
+    .confirmation-subtitle {
+      margin: 14px 0 0;
+      color: var(--mystery-paper);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.4;
+    }
+
+    .confirmation-copy {
+      width: min(100%, 560px);
+      margin: 20px auto 0;
+      color: var(--mystery-muted);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .confirmation-copy p + p { margin-top: 12px; }
+
+    .confirmation-signoff {
+      margin: 20px 0 0;
+      color: var(--mystery-lime);
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    @media (max-width: 600px) {
+      .confirmation-title { margin-top: 24px; }
+      .confirmation-subtitle { margin-top: 12px; font-size: 14px; }
+      .confirmation-copy { margin-top: 16px; }
+      .confirmation-copy p + p { margin-top: 10px; }
+      .confirmation-signoff { margin-top: 16px; }
+    }
+
+    @media (max-height: 520px) and (orientation: landscape) {
+      .confirmation-title { margin-top: 16px; }
+      .confirmation-subtitle { margin-top: 8px; }
+      .confirmation-copy { margin-top: 10px; }
+      .confirmation-copy p + p { margin-top: 6px; }
+      .confirmation-signoff { margin-top: 10px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="mystery-page">
+    <section class="mystery-content confirmation-content" aria-labelledby="confirmation-title">
+      <img class="mystery-logo" src="/assets/logos/SuperVerticale.svg" alt="Super Verticale">
+      <h1 class="confirmation-title" id="confirmation-title">YOU’RE ON THE LIST.</h1>
+      <h2 class="confirmation-subtitle">THE CLIMB STARTS HERE.</h2>
+      <div class="confirmation-copy">
+        <p>You’re officially on the list for Super Verticale.</p>
+        <p>We’ll be in touch when it’s time to take things further. First access, important updates, and a few things worth the wait.</p>
+        <p>No noise. No spam. Just the way up.</p>
+      </div>
+      <p class="confirmation-signoff">SEE YOU AT THE TOP.</p>
+    </section>
+  </main>
+</body>
+</html>
