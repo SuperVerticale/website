@@ -1,0 +1,221 @@
+@font-face {
+  font-family: "TT Chocolates";
+  src: url("/assets/fonts/tt-chocolates-regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+:root {
+  color-scheme: dark;
+  --mystery-ink: #171512;
+  --mystery-paper: #f5f5f0;
+  --mystery-lime: #e3f15b;
+  --mystery-muted: rgba(245, 245, 240, .68);
+  --mystery-line: rgba(245, 245, 240, .36);
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  background: var(--mystery-ink);
+}
+
+body {
+  color: var(--mystery-paper);
+  font-family: "TT Chocolates", "Arial Narrow", Arial, sans-serif;
+}
+
+button, input { font: inherit; }
+
+.mystery-page {
+  position: relative;
+  display: flex;
+  min-height: 100vh;
+  min-height: 100svh;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: clamp(24px, 4.2vw, 64px);
+  isolation: isolate;
+}
+
+.mystery-page::before,
+.mystery-page::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  inset: 0;
+}
+
+.mystery-page::before {
+  background: url("/assets/pics/petzen_web_optimized.jpg") center 54% / cover no-repeat;
+  animation: mountain-arrive 1.2s ease-out both;
+}
+
+.mystery-page::after {
+  background:
+    linear-gradient(90deg, rgba(14, 13, 12, .79) 0%, rgba(14, 13, 12, .37) 60%, rgba(14, 13, 12, .12) 100%),
+    linear-gradient(0deg, rgba(14, 13, 12, .55), transparent 35%, rgba(14, 13, 12, .2));
+}
+
+.mystery-header,
+.mystery-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand-logo { width: clamp(150px, 19vw, 252px); }
+
+.header-index,
+.eyebrow,
+.mystery-footer {
+  color: var(--mystery-muted);
+  font-size: 11px;
+}
+
+.header-index { color: var(--mystery-lime); }
+
+.mystery-content {
+  width: min(100%, 780px);
+  padding: 72px 0 78px;
+  animation: content-arrive .8s .12s ease-out both;
+}
+
+.eyebrow { margin-bottom: 22px; }
+.eyebrow span { color: var(--mystery-lime); padding: 0 7px; }
+
+.mystery-content h1 {
+  max-width: 780px;
+  margin: 0 0 36px;
+  font-size: clamp(52px, 8.4vw, 112px);
+  font-weight: 400;
+  line-height: .91;
+}
+
+.signup-form {
+  display: flex;
+  width: min(100%, 560px);
+  min-height: 58px;
+  border-bottom: 1px solid var(--mystery-line);
+}
+
+.signup-form:focus-within { border-color: var(--mystery-lime); }
+
+.signup-form input {
+  width: 100%;
+  min-width: 0;
+  padding: 14px 12px 14px 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--mystery-paper);
+  font-size: 12px;
+}
+
+.signup-form input::placeholder { color: var(--mystery-muted); opacity: 1; }
+
+.signup-form button {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 13px;
+  padding: 12px 0 12px 12px;
+  border: 0;
+  background: transparent;
+  color: var(--mystery-lime);
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.signup-form button span { font-size: 19px; }
+.signup-form button:disabled { cursor: wait; opacity: .65; }
+
+.signup-status {
+  min-height: 18px;
+  margin-top: 13px;
+  color: var(--mystery-paper);
+  font-size: 12px;
+}
+
+.signup-status[data-state="error"] { color: #ffb8a9; }
+.signup-status[data-state="success"] { color: var(--mystery-lime); }
+
+.mystery-footer { font-size: 10px; }
+
+.access-page {
+  display: grid;
+  min-height: 100vh;
+  min-height: 100svh;
+  place-items: center;
+  padding: 28px;
+  background:
+    linear-gradient(rgba(18, 17, 15, .79), rgba(18, 17, 15, .88)),
+    url("/assets/pics/petzen_web_optimized.jpg") center / cover fixed;
+}
+
+.access-panel { width: min(100%, 460px); }
+.access-panel .brand-logo { width: min(220px, 62vw); margin-bottom: 58px; }
+.access-panel h1 { margin: 0 0 10px; font-size: 36px; font-weight: 400; }
+.access-panel > p { margin: 0 0 28px; color: var(--mystery-muted); font-size: 13px; }
+
+.access-form { display: flex; flex-direction: column; gap: 12px; }
+
+.access-form input {
+  width: 100%;
+  height: 52px;
+  padding: 0 15px;
+  border: 1px solid var(--mystery-line);
+  border-radius: 0;
+  outline: 0;
+  background: rgba(15, 14, 12, .4);
+  color: var(--mystery-paper);
+}
+
+.access-form input:focus { border-color: var(--mystery-lime); }
+
+.access-form button {
+  min-height: 52px;
+  border: 0;
+  background: var(--mystery-lime);
+  color: var(--mystery-ink);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.access-form button:disabled { cursor: wait; opacity: .65; }
+.access-status { min-height: 36px; margin-top: 14px; color: #ffb8a9; font-size: 12px; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; }
+
+@keyframes mountain-arrive {
+  from { transform: scale(1.035); }
+  to { transform: scale(1); }
+}
+
+@keyframes content-arrive {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+  .mystery-page { padding: 24px 22px; }
+  .mystery-page::before { background-position: 57% center; }
+  .header-index { display: none; }
+  .mystery-content { padding: 52px 0; }
+  .mystery-content h1 { margin-bottom: 30px; font-size: clamp(45px, 13vw, 68px); }
+  .signup-form { min-height: 56px; }
+  .signup-form input { font-size: 11px; }
+  .signup-form button { gap: 7px; font-size: 10px; }
+  .mystery-footer { font-size: 9px; }
+  .access-page { background-attachment: scroll; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; }
+}

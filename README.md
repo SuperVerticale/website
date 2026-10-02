@@ -1,6 +1,10 @@
 # website
 Website for Super Verticale
 
+## Mystery launch
+
+Mystery mode, the `/test` preview gate, Brevo endpoint setup, security limitations, and the live release switch are documented in [MYSTERY_LAUNCH.md](MYSTERY_LAUNCH.md).
+
 ## Privates Dashboard
 
 Die geschützte Dashboard-Seite liegt unter `dashboard.html`. Die Plotly-Datei muss als `assets/plotly-dashboard.html` abgelegt werden.

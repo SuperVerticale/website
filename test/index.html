@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#171512">
+  <title>Super Verticale Preview</title>
+  <link rel="stylesheet" href="/css/mystery.css">
+  <script src="/js/site-config.js"></script>
+  <script src="/js/preview-gate.js" defer></script>
+</head>
+<body>
+  <main class="access-page" id="access-page">
+    <section class="access-panel" aria-labelledby="access-title">
+      <img class="brand-logo" src="/assets/logos/SuperVerticale.svg" alt="Super Verticale">
+      <h1 id="access-title">Preview access</h1>
+      <p>Enter the password to continue.</p>
+      <form class="access-form" id="access-form">
+        <label class="visually-hidden" for="preview-password">Password</label>
+        <input id="preview-password" name="password" type="password" autocomplete="current-password" placeholder="PASSWORD" required>
+        <button type="submit">OPEN PREVIEW <span aria-hidden="true">→</span></button>
+      </form>
+      <p class="access-status" id="access-status" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+</body>
+</html>
