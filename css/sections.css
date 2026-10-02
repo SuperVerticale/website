@@ -1319,6 +1319,17 @@ body[data-concept-variant="horizontal"] .concept-horizontal {
 .data-row dt { color: var(--gray); }
 .data-row dd { font-weight: 500; }
 
+.data-row-text { align-items: start; }
+.data-row-full { grid-template-columns: 1fr; }
+.data-row-full dt { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+.data-row-text dd {
+  font-size: 12px;
+  line-height: 1.7;
+  letter-spacing: .3px;
+  text-transform: none;
+  overflow-wrap: break-word;
+}
+
 /* CULTURE */
 
 .culture {

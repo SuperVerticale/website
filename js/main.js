@@ -73,8 +73,8 @@ if (eventData) {
     const expanded = dataToggle.getAttribute('aria-expanded') !== 'true';
 
     dataToggle.setAttribute('aria-expanded', String(expanded));
-    dataToggle.setAttribute('aria-label', expanded ? 'Show less event data' : 'Show more event data');
-    dataToggleLabel.textContent = expanded ? 'Less data' : 'More data';
+    dataToggle.setAttribute('aria-label', expanded ? 'Show less event info' : 'Show more event info');
+    dataToggleLabel.textContent = expanded ? 'Less info' : 'More info';
     dataToggleIndicator.textContent = expanded ? '−' : '+';
     dataDetails.setAttribute('aria-hidden', String(!expanded));
     dataDetails.inert = !expanded;
