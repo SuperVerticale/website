@@ -31,13 +31,12 @@ button, input { font: inherit; }
 
 .mystery-page {
   position: relative;
-  display: flex;
+  display: grid;
   min-height: 100vh;
   min-height: 100svh;
-  flex-direction: column;
-  justify-content: space-between;
+  place-items: center;
   overflow: hidden;
-  padding: clamp(24px, 4.2vw, 64px);
+  padding: max(24px, env(safe-area-inset-top)) max(24px, env(safe-area-inset-right)) max(24px, env(safe-area-inset-bottom)) max(24px, env(safe-area-inset-left));
   isolation: isolate;
 }
 
@@ -60,46 +59,33 @@ button, input { font: inherit; }
     linear-gradient(0deg, rgba(14, 13, 12, .55), transparent 35%, rgba(14, 13, 12, .2));
 }
 
-.mystery-header,
-.mystery-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.brand-logo { width: clamp(150px, 19vw, 252px); }
-
-.header-index,
-.eyebrow,
-.mystery-footer {
-  color: var(--mystery-muted);
-  font-size: 11px;
-}
-
-.header-index { color: var(--mystery-lime); }
-
 .mystery-content {
-  width: min(100%, 780px);
-  padding: 72px 0 78px;
+  width: min(100%, 680px);
+  text-align: center;
   animation: content-arrive .8s .12s ease-out both;
 }
 
-.eyebrow { margin-bottom: 22px; }
-.eyebrow span { color: var(--mystery-lime); padding: 0 7px; }
+.mystery-logo {
+  display: block;
+  width: min(100%, 560px);
+  height: auto;
+  margin: 0 auto;
+}
 
-.mystery-content h1 {
-  max-width: 780px;
-  margin: 0 0 36px;
-  font-size: clamp(52px, 8.4vw, 112px);
+.mystery-tagline {
+  margin: 18px 0 0;
+  color: var(--mystery-paper);
+  font-size: 16px;
   font-weight: 400;
-  line-height: .91;
+  line-height: 1.4;
+  white-space: nowrap;
 }
 
 .signup-form {
   display: flex;
   width: min(100%, 560px);
   min-height: 58px;
+  margin: 32px auto 0;
   border-bottom: 1px solid var(--mystery-line);
 }
 
@@ -116,6 +102,7 @@ button, input { font: inherit; }
   font-size: 12px;
 }
 
+.signup-form input:focus-visible { outline: 0; }
 .signup-form input::placeholder { color: var(--mystery-muted); opacity: 1; }
 
 .signup-form button {
@@ -135,6 +122,7 @@ button, input { font: inherit; }
 
 .signup-form button span { font-size: 19px; }
 .signup-form button:disabled { cursor: wait; opacity: .65; }
+.signup-form button:focus-visible { outline: 2px solid var(--mystery-lime); outline-offset: 5px; }
 
 .signup-status {
   min-height: 18px;
@@ -145,8 +133,6 @@ button, input { font: inherit; }
 
 .signup-status[data-state="error"] { color: #ffb8a9; }
 .signup-status[data-state="success"] { color: var(--mystery-lime); }
-
-.mystery-footer { font-size: 10px; }
 
 .access-page {
   display: grid;
@@ -204,16 +190,29 @@ button, input { font: inherit; }
 }
 
 @media (max-width: 600px) {
-  .mystery-page { padding: 24px 22px; }
+  .mystery-page { padding: max(22px, env(safe-area-inset-top)) max(22px, env(safe-area-inset-right)) max(22px, env(safe-area-inset-bottom)) max(22px, env(safe-area-inset-left)); }
   .mystery-page::before { background-position: 57% center; }
-  .header-index { display: none; }
-  .mystery-content { padding: 52px 0; }
-  .mystery-content h1 { margin-bottom: 30px; font-size: clamp(45px, 13vw, 68px); }
+  .mystery-logo { width: min(100%, 480px); }
+  .mystery-tagline { margin-top: 14px; font-size: 14px; }
+  .signup-form { margin-top: 25px; }
   .signup-form { min-height: 56px; }
   .signup-form input { font-size: 11px; }
   .signup-form button { gap: 7px; font-size: 10px; }
-  .mystery-footer { font-size: 9px; }
   .access-page { background-attachment: scroll; }
+}
+
+@media (max-width: 380px) {
+  .signup-form { flex-direction: column; align-items: stretch; gap: 6px; border-bottom: 0; }
+  .signup-form input { min-height: 48px; padding: 12px 0; border-bottom: 1px solid var(--mystery-line); }
+  .signup-form:focus-within input { border-color: var(--mystery-lime); }
+  .signup-form button { align-self: center; min-height: 44px; padding: 8px 12px; }
+}
+
+@media (max-height: 520px) and (orientation: landscape) {
+  .mystery-page { padding-top: max(14px, env(safe-area-inset-top)); padding-bottom: max(14px, env(safe-area-inset-bottom)); }
+  .mystery-logo { width: min(62vw, 340px); }
+  .mystery-tagline { margin-top: 8px; }
+  .signup-form { min-height: 48px; margin-top: 12px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

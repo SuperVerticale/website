@@ -1,4 +1,8 @@
 (function () {
+  if (window.SV_CONFIG?.SITE_MODE === 'mystery' && window.location.pathname === '/mystery.html') {
+    window.history.replaceState(null, '', '/');
+  }
+
   const form = document.querySelector('.signup-form');
   const emailInput = document.querySelector('#signup-email');
   const submitButton = form.querySelector('button[type="submit"]');
