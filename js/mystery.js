@@ -41,7 +41,7 @@
 
       if (!response.ok) throw new Error('Signup request failed');
       form.reset();
-      showStatus("YOU'RE ON THE LIST. WE'LL BE IN TOUCH.", 'success');
+      showStatus("ONE LAST STEP. CHECK YOUR INBOX AND CONFIRM YOUR EMAIL ADDRESS TO SECURE YOUR SPOT ON THE LIST.", 'success');
     } catch {
       showStatus('WE COULD NOT COMPLETE YOUR SIGNUP. PLEASE TRY AGAIN.', 'error');
     } finally {
