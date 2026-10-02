@@ -2,7 +2,7 @@
 
 ## Routing
 
-`index.html` remains the single implementation of the complete website. Its early entry script replaces the root view with `mystery.html` only when `SITE_MODE` is `mystery`. The static `test/index.html` entry works on GitHub Pages directory routes and reveals the existing `index.html` in an iframe only after the configured password hash matches. Root-relative asset URLs keep both entry paths working.
+`index.html` remains the single implementation of the complete website. Its early entry script redirects `/` to `mystery.html` (which restores `/` in the address bar) only when `SITE_MODE` is `mystery`, so the full site is never parsed on that route. The static `test/index.html` entry works on GitHub Pages directory routes and reveals the existing `index.html` in an iframe only after the configured password hash matches. Root-relative asset URLs keep both entry paths working.
 
 ## Preview gate
 
