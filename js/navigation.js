@@ -13,10 +13,12 @@ export function initNavigation() {
 
   mobileMenuLinks.forEach(function (link) {
     link.addEventListener('click', function () {
-      mobileMenu.classList.remove('is-open');
-      menuButton.setAttribute('aria-expanded', 'false');
-      menuButton.setAttribute('aria-label', 'Open menu');
-      menuButton.textContent = '+';
+      setTimeout(function () {
+        mobileMenu.classList.remove('is-open');
+        menuButton.setAttribute('aria-expanded', 'false');
+        menuButton.setAttribute('aria-label', 'Open menu');
+        menuButton.textContent = '+';
+      }, 0);
     });
   });
 }
