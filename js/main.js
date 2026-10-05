@@ -85,23 +85,23 @@ if (eventData) {
 const conceptContentMap = {
   vertical: {
     icon: 'assets/logos/icons/Icon_Vertical.svg',
-    title: 'Vertical',
-    description: 'Start from the bottom. Finish at the top. No shortcuts.'
+    title: 'VERTICAL',
+    description: 'WE START AT THE BOTTOM. WE FINISH AT THE TOP. One direction: straight up. no shortcuts.'
   },
   experience: {
-    icon: 'assets/logos/icons/Icon_Experience.svg',
-    title: 'Experience',
-    description: 'Where intense alpine sport meets music, food, culture and good people'
+    icon: 'assets/logos/icons/Icon_Curated.svg',
+    title: 'RACE MODES',
+    description: 'We crown NOT ONLY THE FASTEST. Race to the top. Take on extra challenges. Find your own way to win.'
   },
   curated: {
-    icon: 'assets/logos/icons/Icon_Curated.svg',
-    title: 'Curated',
-    description: 'Handpicked food & beverages, live music acts, panel talks, and exclusive brand activations throughout the day.'
+    icon: 'assets/logos/icons/Icon_Summit.svg',
+    title: 'SUMMIT',
+    description: 'WE STAY FOR MORE, the race is only part of our day. Stay above the clouds, Refuel. Have drinks and Celebrate.'
   },
   community: {
-    icon: 'assets/logos/icons/Icon_Community.svg',
-    title: 'Community',
-    description: 'Come for the race. Stay for the people. The ultimate excuse to get together, sweat, and celebrate as one herd.'
+    icon: 'assets/logos/icons/Icon_Platform.svg',
+    title: 'PLATFORM',
+    description: 'We bring people, progressive brands and ideas together. Handpicked partners, good food and unexpected connections.'
   }
 };
 
@@ -117,23 +117,23 @@ if (conceptHorizontal) {
   const conceptHorizontalContent = {
     vertical: {
       src: 'assets/logos/icons/Icon_Vertical.svg',
-      title: 'Vertical',
-      description: 'Start from the bottom. Finish at the top. No shortcuts.'
+      title: 'VERTICAL',
+      description: 'WE START AT THE BOTTOM. WE FINISH AT THE TOP. One direction: straight up. no shortcuts.'
     },
     experience: {
-      src: 'assets/logos/icons/Icon_Experience.svg',
-      title: 'Experience',
-      description: 'Where intense alpine sport meets music, food, culture and good people'
+      src: 'assets/logos/icons/Icon_Curated.svg',
+      title: 'RACE MODES',
+      description: 'We crown NOT ONLY THE FASTEST. Race to the top. Take on extra challenges. Find your own way to win.'
     },
     curated: {
-      src: 'assets/logos/icons/Icon_Curated.svg',
-      title: 'Curated',
-      description: 'Handpicked food & beverages, live music acts, panel talks, and exclusive brand activations throughout the day.'
+      src: 'assets/logos/icons/Icon_Summit.svg',
+      title: 'SUMMIT',
+      description: 'WE STAY FOR MORE, the race is only part of our day. Stay above the clouds, Refuel. Have drinks and Celebrate.'
     },
     community: {
-      src: 'assets/logos/icons/Icon_Community.svg',
-      title: 'Community',
-      description: 'Come for the race. Stay for the people. The ultimate excuse to get together, sweat, and celebrate as one herd.'
+      src: 'assets/logos/icons/Icon_Platform.svg',
+      title: 'PLATFORM',
+      description: 'We bring people, progressive brands and ideas together. Handpicked partners, good food and unexpected connections.'
     }
   };
 
