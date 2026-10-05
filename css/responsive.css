@@ -496,6 +496,12 @@
   }
 }
 
+@media (min-width: 700px) and (max-width: 768px) {
+  .concept-selector-list {
+    width: 90%;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .event-visual,

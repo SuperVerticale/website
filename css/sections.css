@@ -355,7 +355,7 @@
 }
 
 .concept-selector {
-  max-width: 980px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -580,10 +580,12 @@ body[data-concept-variant="horizontal"] .concept-horizontal {
 }
 
 .concept-selector-list {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  width: min(76%, 1100px);
+  margin-right: auto;
+  margin-left: auto;
   align-items: flex-end;
-  justify-content: center;
-  gap: clamp(10px, 2vw, 28px);
   margin-top: 30px;
   padding-bottom: 4px;
   overflow-x: auto;
