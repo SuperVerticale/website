@@ -115,8 +115,8 @@
 .production-page > .partners { order: 2; }
 .production-page > .statement { order: 3; }
 .production-page > .work { order: 4; }
-.production-page > .race-modes { order: 5; }
-.production-page > .concept { order: 6; }
+.production-page > .concept { order: 5; }
+.production-page > .race-modes { order: 6; }
 .production-page > .route-section { order: 7; }
 .production-page > .culture { order: 8; }
 .production-page > .summit { order: 9; }
@@ -310,22 +310,22 @@
   background: transparent;
 }
 
-.concept::before,
-.concept::after {
+.race-modes::before,
+.race-modes::after {
   content: "";
   position: absolute;
   inset: 0;
   pointer-events: none;
 }
 
-.concept::before {
+.race-modes::before {
   z-index: 0;
   background-image: url("../assets/pics/petzen_web_optimized.jpg");
   background-size: cover;
   background-position: center;
 }
 
-.concept::after {
+.race-modes::after {
   z-index: 1;
   background: linear-gradient(
     to bottom,
@@ -665,7 +665,7 @@ body[data-concept-variant="horizontal"] .concept-horizontal {
     padding: 20px 22px 40px;
   }
 
-  .concept::before {
+  .race-modes::before {
     background-position: center center;
   }
 
@@ -1058,11 +1058,14 @@ body[data-concept-variant="horizontal"] .concept-horizontal {
 /* RACE MODES */
 
 .race-modes {
+  position: relative;
   padding: 76px 22px 88px;
-  background: var(--bg);
+  background: transparent;
 }
 
 .race-modes-inner {
+  position: relative;
+  z-index: 2;
   width: min(100%, 1400px);
   margin: 0 auto;
 }
