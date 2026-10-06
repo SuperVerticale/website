@@ -89,7 +89,7 @@ const conceptContentMap = {
     description: 'WE START AT THE BOTTOM. WE FINISH AT THE TOP. One direction: straight up. no shortcuts.'
   },
   experience: {
-    icon: 'assets/logos/icons/Icon_Curated.svg',
+    icon: 'assets/logos/icons/Icon_RaceModes.svg',
     title: 'RACE MODES',
     description: 'We crown NOT ONLY THE FASTEST. Race to the top. Take on extra challenges. Find your own way to win.'
   },
@@ -121,7 +121,7 @@ if (conceptHorizontal) {
       description: 'WE START AT THE BOTTOM. WE FINISH AT THE TOP. One direction: straight up. no shortcuts.'
     },
     experience: {
-      src: 'assets/logos/icons/Icon_Curated.svg',
+      src: 'assets/logos/icons/Icon_RaceModes.svg',
       title: 'RACE MODES',
       description: 'We crown NOT ONLY THE FASTEST. Race to the top. Take on extra challenges. Find your own way to win.'
     },
