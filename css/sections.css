@@ -958,7 +958,7 @@ body[data-concept-variant="horizontal"] .concept-horizontal {
 
 .route-visual-card,
 .elevation-card {
-  border: 1px solid rgba(244, 239, 231, .3);
+  border: 0px solid transparent;
   border-radius: 14px;
   background: rgba(16, 11, 11, .66);
   box-shadow: inset 0 1px 0 rgba(244, 239, 231, .06);
