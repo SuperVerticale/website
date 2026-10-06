@@ -876,7 +876,22 @@ body[data-concept-variant="horizontal"] .concept-horizontal {
 
 .route-section {
   padding: 82px 22px 90px;
-  background: var(--bg);
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba(52, 40, 40, .2),
+      rgba(52, 40, 40, .18) 45%,
+      rgba(52, 40, 40, .3)
+    ),
+    url("../assets/pics/Mountain_web.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.route-section .data {
+  background: transparent;
 }
 
 .route-facts {
