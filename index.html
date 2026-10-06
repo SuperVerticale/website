@@ -266,17 +266,25 @@
         </div>
 
         <div class="route-interactive">
-          <svg id="route-chart" viewBox="0 0 1200 750" role="img" aria-label="Petzen route and elevation profile">
-            <g id="route-layer"></g>
-            <g id="profile-layer"></g>
-            <g id="interaction-layer"></g>
-          </svg>
+          <div class="route-visual-card">
+            <svg id="route-chart" viewBox="0 0 1200 410" role="img" aria-label="Petzen route visualization">
+              <g id="route-layer"></g>
+              <g id="route-interaction-layer"></g>
+            </svg>
+          </div>
 
-          <div class="route-legend" aria-label="Slope legend">
-            <span><i class="route-swatch route-flat"></i><b>0–5%</b> FLAT</span>
-            <span><i class="route-swatch route-moderate"></i><b>5–10%</b> MODERATE</span>
-            <span><i class="route-swatch route-steep"></i><b>10–15%</b> STEEP</span>
-            <span><i class="route-swatch route-very-steep"></i><b>&gt;15%</b> VERY STEEP</span>
+          <div class="elevation-card">
+            <svg id="profile-chart" viewBox="0 420 1200 330" role="img" aria-label="Petzen elevation profile">
+              <g id="profile-layer"></g>
+              <g id="profile-interaction-layer"></g>
+            </svg>
+
+            <div class="route-legend" aria-label="Slope legend">
+              <span><i class="route-swatch route-flat"></i><b>0–5%</b> FLAT</span>
+              <span><i class="route-swatch route-moderate"></i><b>5–10%</b> MODERATE</span>
+              <span><i class="route-swatch route-steep"></i><b>10–15%</b> STEEP</span>
+              <span><i class="route-swatch route-very-steep"></i><b>&gt;15%</b> VERY STEEP</span>
+            </div>
           </div>
         </div>
 

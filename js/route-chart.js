@@ -11,15 +11,18 @@ export function initRouteChart() {
   const routeDataUrl = 'assets/route/PetzensuperVerticale-detailed.json';
 
   const routeChart = document.querySelector('#route-chart');
+  const profileChart = document.querySelector('#profile-chart');
   const routeLayer = document.querySelector('#route-layer');
   const profileLayer = document.querySelector('#profile-layer');
-  const interactionLayer = document.querySelector('#interaction-layer');
+  const routeInteractionLayer = document.querySelector('#route-interaction-layer');
+  const profileInteractionLayer = document.querySelector('#profile-interaction-layer');
   const routeTooltip = document.querySelector('#route-tooltip');
   const isMobile = window.matchMedia('(max-width: 768px)').matches;
-  const viewBoxHeight = isMobile ? 970 : 750;
+  const routeViewBoxHeight = isMobile ? 660 : 410;
 
+  routeChart.setAttribute('viewBox', `0 0 1200 ${routeViewBoxHeight}`);
   if (isMobile) {
-    routeChart.setAttribute('viewBox', `0 0 1200 ${viewBoxHeight}`);
+    profileChart.setAttribute('viewBox', '0 650 1200 320');
   }
 
   const routeBox = {
@@ -130,7 +133,7 @@ export function initRouteChart() {
     const enlargedMinY = Math.min(...enlargedPoints.map((point) => point.y));
     const enlargedMaxY = Math.max(...enlargedPoints.map((point) => point.y));
     const offsetX = enlargedMinX < 12 ? 12 - enlargedMinX : enlargedMaxX > 1188 ? 1188 - enlargedMaxX : 0;
-    const offsetY = enlargedMinY < 12 ? 12 - enlargedMinY : enlargedMaxY > viewBoxHeight - 12 ? viewBoxHeight - 12 - enlargedMaxY : 0;
+    const offsetY = enlargedMinY < 12 ? 12 - enlargedMinY : enlargedMaxY > routeViewBoxHeight - 12 ? routeViewBoxHeight - 12 - enlargedMaxY : 0;
 
     return enlargedPoints.map((point) => ({
       x: point.x + offsetX,
@@ -570,10 +573,8 @@ export function initRouteChart() {
         }
       );
 
-      interactionLayer.append(
-        routeInteraction,
-        profileInteraction
-      );
+      routeInteractionLayer.append(routeInteraction);
+      profileInteractionLayer.append(profileInteraction);
 
       const profileHoverLine = routeEl(
         'line',
@@ -609,15 +610,15 @@ export function initRouteChart() {
         }
       );
 
-      interactionLayer.append(
+      routeInteractionLayer.append(routeHoverIcon);
+      profileInteractionLayer.append(
         profileHoverLine,
-        routeHoverIcon,
         profileHoverIcon
       );
 
       const nearestPoint = (event, source) => {
-        const rect =
-          routeChart.getBoundingClientRect();
+        const chart = source === 'profile' ? profileChart : routeChart;
+        const rect = chart.getBoundingClientRect();
 
         const x =
           (event.clientX - rect.left) *
@@ -642,7 +643,7 @@ export function initRouteChart() {
 
         const y =
           (event.clientY - rect.top) *
-          (isMobile ? viewBoxHeight : 900) /
+          routeViewBoxHeight /
           rect.height;
 
         let best = 0;
@@ -802,7 +803,7 @@ export function initRouteChart() {
     })
     .catch(() => {
       addRouteText(
-        interactionLayer,
+        routeInteractionLayer,
         'Route data unavailable',
         75,
         100,

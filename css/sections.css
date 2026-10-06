@@ -946,11 +946,29 @@ body[data-concept-variant="horizontal"] .concept-horizontal {
 }
 
 .route-interactive {
-  width: 100%;
-  padding: 0 0 15px;
+  display: grid;
+  width: min(100%, 1200px);
+  gap: 24px;
+  margin-inline: auto;
+  padding-bottom: 15px;
   color: var(--gray);
   font-family: var(--display);
   overflow: visible;
+}
+
+.route-visual-card,
+.elevation-card {
+  border: 1px solid rgba(244, 239, 231, .14);
+  border-radius: 14px;
+  background: rgba(52, 40, 40, .64);
+}
+
+.route-visual-card {
+  padding: 16px 24px 18px;
+}
+
+.elevation-card {
+  padding: 12px 24px 18px;
 }
 
 .route-interactive svg {
@@ -1045,7 +1063,7 @@ body[data-concept-variant="horizontal"] .concept-horizontal {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-top: 0;
+  margin-top: 4px;
   padding-left: 0;
   color: var(--gray);
   font-family: var(--display);

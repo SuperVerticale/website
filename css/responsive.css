@@ -149,6 +149,14 @@
     padding-bottom: 20px;
   }
 
+  .route-visual-card {
+    padding: 14px 18px 16px;
+  }
+
+  .elevation-card {
+    padding: 12px 18px 16px;
+  }
+
   .route-legend {
     font-size: .8rem;
     gap: 1.5rem;
@@ -436,13 +444,21 @@
   }
 
   .route-interactive {
+    gap: 16px;
     overflow: visible;
   }
 
-  .route-interactive svg {
-    width: calc(100% + 24px);
+  .route-visual-card,
+  .elevation-card {
+    padding: 10px 12px 14px;
+    border-radius: 12px;
+  }
+
+  .route-interactive .route-visual-card svg,
+  .route-interactive .elevation-card svg {
+    width: 100%;
     max-width: none;
-    margin-left: -12px;
+    margin-left: 0;
   }
 
   .route-interactive text {
