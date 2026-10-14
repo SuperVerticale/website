@@ -1321,7 +1321,7 @@ body[data-concept-variant="horizontal"] .concept-horizontal {
 .data-details {
   display: grid;
   grid-template-rows: 0fr;
-  max-width: 950px;
+  max-width: 1100px;
   margin-top: 0;
   opacity: 0;
   transition: grid-template-rows .3s ease, opacity .2s ease, margin-top .3s ease;
